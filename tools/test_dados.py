@@ -35,5 +35,17 @@ class TabelasPorPosicaoTest(unittest.TestCase):
                             self.assertNotIn("level", p["label"]["en"])
 
 
+class FontesDasTabelasTest(unittest.TestCase):
+    def test_no_table_lists_the_same_source_url_twice(self):
+        for path in sorted(list((ROOT / "tables").glob("*.json")) + list((ROOT / "tax").glob("*.json"))):
+            urls = [s["url"] for s in json.loads(path.read_text(encoding="utf-8")).get("sources", [])]
+            self.assertEqual(len(urls), len(set(urls)), path.name)
+
+    def test_position_tables_do_not_cite_the_35_hour_law_as_a_value_source(self):
+        for career in ("enfermagem", "farmaceutico"):
+            titles = [s["title"] for s in load(f"tables/{career}.2026-01-01.json")["sources"]]
+            self.assertFalse([t for t in titles if "18/2016" in t], career)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -348,15 +348,15 @@
     },
     {
       "path": "tables/enfermagem.2026-01-01.json",
-      "sha256": "b77cb231b79180d698f55fa95d560677933cca4f15118843028f9870eceae808",
-      "bytes": 2923,
+      "sha256": "05e36f39a48ca865dade08e5f9fea3a90b24dbaae51271f04e93e082e5a44e4c",
+      "bytes": 2208,
       "format": 2,
       "published": "2026-10-11"
     },
     {
       "path": "tables/farmaceutico.2026-01-01.json",
-      "sha256": "3c889308ac9cc04e5d84c6e827ff26db4553ba07b32789e27caf5ba19debfa41",
-      "bytes": 2453,
+      "sha256": "33434bf9550d4199a54919830829533c4efe305db75bb986bab2e0306b8994e5",
+      "bytes": 1738,
       "format": 2,
       "published": "2026-10-11"
     },

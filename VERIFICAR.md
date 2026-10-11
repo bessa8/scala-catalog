@@ -41,9 +41,6 @@ Fontes:
   - Lei n.º 51/2025, de 7 de abril (elimina as posições intermédias; não altera a tabela de 2026) — https://files.diariodarepublica.pt/1s/2025/04/06800/0000700009.pdf (consultado em 2026-10-10)
   - Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026) — https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf (consultado em 2026-10-10)
   - DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026) — https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf (consultado em 2026-10-10)
-  - Lei n.º 18/2016, de 20 de junho (artigo 105.º da LTFP: período normal de trabalho de 35 horas por semana) — https://files.diariodarepublica.pt/1s/2016/06/11600/0190401905.pdf (consultado em 2026-10-10)
-  - Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026) — https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf (consultado em 2026-10-10)
-  - DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026) — https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf (consultado em 2026-10-10)
 
 ### Carreira especial farmacêutica (`farmaceutico`) — vigência 2026-01-01, publicada 2026-10-11
 
@@ -69,9 +66,6 @@ Fontes:
 Fontes:
   - Decreto-Lei n.º 109/2017, de 30 de agosto (artigos 5.º e 15.º: categorias e posições da carreira especial farmacêutica) — https://files.diariodarepublica.pt/1s/2017/08/16700/0523305238.pdf (consultado em 2026-10-10)
   - Decreto-Lei n.º 45/2025, de 27 de março (artigos 5.º e 6.º e anexo III: tabela de 2026) — https://files.diariodarepublica.pt/1s/2025/03/06100/0001900025.pdf (consultado em 2026-10-10)
-  - Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026) — https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf (consultado em 2026-10-10)
-  - DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026) — https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf (consultado em 2026-10-10)
-  - Lei n.º 18/2016, de 20 de junho (artigo 105.º da LTFP: período normal de trabalho de 35 horas por semana) — https://files.diariodarepublica.pt/1s/2016/06/11600/0190401905.pdf (consultado em 2026-10-10)
   - Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026) — https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf (consultado em 2026-10-10)
   - DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026) — https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf (consultado em 2026-10-10)
 
