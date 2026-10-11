@@ -44,6 +44,8 @@ Como rever: abrir `VERIFICAR.md`, conferir cada valor com a fonte indicada (os n
 
 Automático: a vigia (`tools/vigia.py`, todos os dias) procura novidades nas fontes oficiais; às segundas abre uma *issue* `novidade` que dispara a rotina do Claude (`ROTINA.md`); a rotina faz push de um ramo `claude/…` e a Action «Publicar» valida, junta ao `main`, publica o Pages e abre as *issues* «Publicado» e «Precisa de ti». À mão: editar no `main`, correr `validate`, `build`, `report` e os testes, e fazer push; a Action «Pages» publica.
 
+A rotina é disparada pelo endpoint `/fire` do gatilho de API da rotina (os gatilhos de GitHub da rotina só aceitam `pull_request` e `release`, e as *issues* criadas com o `GITHUB_TOKEN` não disparam outros workflows). Para isso o repositório precisa de dois *secrets*, criados no claude.ai quando a rotina ganha um gatilho de API: `ROTINA_URL` (o endereço `https://api.anthropic.com/…/fire`) e `ROTINA_TOKEN`. Sem eles a vigia só abre *issues* (sem IA) e o disparo diz «Rotina não configurada». Para repetir uma corrida: pôr a etiqueta `rever` na *issue* (só conta se for o `bessa8`) ou correr à mão a Action «Rotina» com o número da *issue* (`gh workflow run rotina.yml -f numero=N`).
+
 Mudar de endereço: no `manifest.json` publicado, `"movedTo": "https://novo-endereco/"` (só `https://`); na próxima consulta, as apps passam a usar o endereço novo.
 
 ### Se a publicação falhar

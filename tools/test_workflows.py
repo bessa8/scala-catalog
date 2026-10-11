@@ -36,6 +36,33 @@ class WorkflowsTest(unittest.TestCase):
         self.assertEqual(text.count("--abertas"), 1)  # o modo diário não leva a listagem
         self.assertIn("updatedAt", text[listing:listing + 200])
 
+    def test_vigia_saves_state_before_firing_the_routine(self):
+        text = read("vigia.yml")
+        opening = text[text.index("- name: Abrir issues"):text.index("- name: Guardar o estado")]
+        self.assertIn('--criadas "$RUNNER_TEMP/criadas.json"', opening)
+        saving = text.index("- name: Guardar o estado")
+        firing = text.index("python3 tools/disparar.py")
+        self.assertLess(saving, firing)
+        step = text[text.index("- name: Disparar a rotina"):]
+        self.assertIn("steps.modo.outputs.modo == 'semanal'", step)
+        self.assertIn('--criadas "$RUNNER_TEMP/criadas.json"', step)
+        self.assertIn("ROTINA_URL: ${{ secrets.ROTINA_URL }}", step)
+        self.assertIn("ROTINA_TOKEN: ${{ secrets.ROTINA_TOKEN }}", step)
+
+    def test_rotina_only_for_bessa8_and_never_interpolates_into_the_script(self):
+        text = read("rotina.yml")
+        self.assertRegex(text, r"(?m)^permissions:\n  contents: read$")
+        self.assertIn("types: [labeled]", text)
+        self.assertIn("github.event.label.name == 'rever'", text)
+        self.assertIn("github.event.sender.login == 'bessa8'", text)
+        self.assertIn("github.actor == 'bessa8'", text)
+        self.assertIn("NUMERO: ${{ github.event.issue.number || inputs.numero }}", text)
+        script = text[text.index("run: python3 tools/disparar.py"):]
+        self.assertNotIn("${{", script.splitlines()[0])
+        self.assertIn('--issue "$NUMERO"', script)
+        self.assertIn("ROTINA_URL: ${{ secrets.ROTINA_URL }}", text)
+        self.assertIn("ROTINA_TOKEN: ${{ secrets.ROTINA_TOKEN }}", text)
+
     def test_publicar_failure_message_depends_on_whether_the_merge_happened(self):
         text = read("publicar.yml")
         self.assertRegex(text, r"- name: Juntar ao main\n        id: juntar\n")

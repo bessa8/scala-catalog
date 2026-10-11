@@ -54,7 +54,7 @@ jobs:
       - name: Abrir issues
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python3 tools/issues.py "$RUNNER_TEMP/issues.json"
+        run: python3 tools/issues.py "$RUNNER_TEMP/issues.json" --criadas "$RUNNER_TEMP/criadas.json"
       - name: Guardar o estado
         run: |
           git config user.name 'scala-vigia'
@@ -62,3 +62,12 @@ jobs:
           git add tools/estado.json
           git diff --cached --quiet || git commit -m "Vigia: $(date -u +%F)"
           git push
+      # Só depois de guardar o estado: uma falha ao disparar nunca perde o estado (a issue já existe
+      # e a vigia semanal avisa se a rotina não a tratar). `!cancelled()` dispara mesmo se o push
+      # falhou. Sem ROTINA_URL/ROTINA_TOKEN não faz nada (só abre issues).
+      - name: Disparar a rotina
+        if: ${{ !cancelled() && steps.modo.outputs.modo == 'semanal' }}
+        env:
+          ROTINA_URL: ${{ secrets.ROTINA_URL }}
+          ROTINA_TOKEN: ${{ secrets.ROTINA_TOKEN }}
+        run: python3 tools/disparar.py --criadas "$RUNNER_TEMP/criadas.json"

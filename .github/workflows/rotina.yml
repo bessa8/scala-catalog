@@ -1,0 +1,31 @@
+name: Rotina
+# Dispara a rotina do Claude para uma issue: pondo a etiqueta `rever` (só o Carlos) ou à mão.
+on:
+  issues:
+    types: [labeled]
+  workflow_dispatch:
+    inputs:
+      numero:
+        description: 'número da issue'
+        required: true
+permissions:
+  contents: read
+jobs:
+  disparar:
+    if: >-
+      (github.event_name == 'issues' && github.event.label.name == 'rever' && github.event.sender.login == 'bessa8')
+      || (github.event_name == 'workflow_dispatch' && github.actor == 'bessa8')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Disparar a rotina
+        env:
+          NUMERO: ${{ github.event.issue.number || inputs.numero }}
+          ROTINA_URL: ${{ secrets.ROTINA_URL }}
+          ROTINA_TOKEN: ${{ secrets.ROTINA_TOKEN }}
+        run: python3 tools/disparar.py --issue "$NUMERO"

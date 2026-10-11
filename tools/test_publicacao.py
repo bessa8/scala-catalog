@@ -1,3 +1,5 @@
+import contextlib
+import io
 import json
 import os
 import subprocess
@@ -7,6 +9,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import disparar  # noqa: E402
 import issues  # noqa: E402
 import portao  # noqa: E402
 import relatorio  # noqa: E402
@@ -328,6 +331,8 @@ class IssuesTest(unittest.TestCase):
     def _gh_for(self, view, calls):
         def gh(args, stdin=None):
             calls.append(args)
+            if args[:2] == ["issue", "create"]:
+                return "https://github.com/bessa8/scala-catalog/issues/88"
             return view if args[:2] == ["issue", "view"] else ""
         return gh
 
@@ -363,8 +368,135 @@ class IssuesTest(unittest.TestCase):
         self.assertEqual(r.returncode, 1)
         self.assertNotIn("Traceback", r.stderr)
 
+    def test_run_returns_the_created_issues_with_number_and_labels(self):
+        acts = [{"tipo": "criar", "titulo": "A", "corpo": "c", "etiquetas": ["novidade"]},
+                {"tipo": "criar", "titulo": "B", "corpo": "c", "etiquetas": ["publicado"], "fechar": True}]
+        urls = iter(["https://github.com/bessa8/scala-catalog/issues/41", "https://github.com/bessa8/scala-catalog/issues/42"])
+
+        def gh(args, stdin=None):
+            return next(urls) if args[:2] == ["issue", "create"] else ""
+
+        self.assertEqual(issues.run(acts, gh), [{"numero": 41, "titulo": "A", "etiquetas": ["novidade"]},
+                                                 {"numero": 42, "titulo": "B", "etiquetas": ["publicado"]}])
+        self.assertEqual(issues.run([{"tipo": "fechar", "numero": 5, "comentario": "x"}],
+                                    lambda a, stdin=None: json.dumps({"state": "OPEN", "labels": [{"name": "rever"}]})
+                                    if a[:2] == ["issue", "view"] else ""), [])
+
+    def test_criadas_option_writes_the_list_and_missing_input_writes_an_empty_one(self):
+        d = Path(tempfile.mkdtemp())
+        (d / "a.json").write_text(json.dumps([{"tipo": "criar", "titulo": "A", "corpo": "c", "etiquetas": ["novidade"]}]))
+        fake = d / "bin"
+        fake.mkdir()
+        gh = fake / "gh"
+        gh.write_text('#!/bin/sh\nif [ "$1 $2" = "issue create" ]; then echo https://github.com/bessa8/scala-catalog/issues/9; fi\n')
+        gh.chmod(0o755)
+        env = dict(os.environ, PATH=f"{fake}:{os.environ['PATH']}")
+        r = subprocess.run([sys.executable, str(Path(issues.__file__)), str(d / "a.json"), "--criadas", str(d / "c.json")],
+                           capture_output=True, text=True, env=env)
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertEqual(json.loads((d / "c.json").read_text()), [{"numero": 9, "titulo": "A", "etiquetas": ["novidade"]}])
+        issues.main([str(d / "nao-existe.json"), "--criadas", str(d / "vazia.json")])
+        self.assertEqual(json.loads((d / "vazia.json").read_text()), [])
+
     def test_no_argument_does_nothing(self):
         issues.main([])
+
+
+TOKEN = "segredo-do-token-123"
+URL = "https://api.anthropic.com/v1/claude_code/routines/abc/fire"
+OK = (200, {"type": "routine_fire", "claude_code_session_url": "https://claude.ai/code/session_1"})
+
+
+class DispararTest(unittest.TestCase):
+    def run_main(self, argv, env, responses=None):
+        calls = []
+        queue = list(responses or [OK])
+
+        def post(url, headers, body):
+            calls.append((url, headers, body))
+            return queue.pop(0) if len(queue) > 1 else queue[0]
+
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            code = disparar.main(argv, env, post)
+        return code, calls, out.getvalue()
+
+    def criadas(self, items):
+        p = Path(tempfile.mkdtemp()) / "criadas.json"
+        p.write_text(json.dumps(items))
+        return str(p)
+
+    def test_not_configured_is_a_dry_run(self):
+        for env in ({}, {"ROTINA_URL": URL}, {"ROTINA_TOKEN": TOKEN}, {"ROTINA_URL": "", "ROTINA_TOKEN": ""}):
+            code, calls, out = self.run_main(["--issue", "7"], env)
+            self.assertEqual((code, calls), (0, []))
+            self.assertIn("Rotina não configurada (sem ROTINA_URL/ROTINA_TOKEN): nada disparado.", out)
+
+    def test_fires_with_the_right_url_headers_and_body(self):
+        code, calls, out = self.run_main(["--issue", "7"], {"ROTINA_URL": URL, "ROTINA_TOKEN": TOKEN})
+        self.assertEqual(code, 0)
+        self.assertEqual(len(calls), 1)
+        url, headers, body = calls[0]
+        self.assertEqual(url, URL)
+        self.assertEqual(headers, {"Authorization": f"Bearer {TOKEN}",
+                                   "anthropic-beta": "experimental-cc-routine-2026-04-01",
+                                   "anthropic-version": "2023-06-01", "Content-Type": "application/json"})
+        self.assertEqual(json.loads(body), {"text": "Trata a issue #7 do repositório bessa8/scala-catalog. Segue o ROTINA.md."})
+        self.assertNotIn(TOKEN, body.decode() if isinstance(body, bytes) else body)
+        self.assertEqual([k for k, v in headers.items() if TOKEN in v], ["Authorization"])
+        self.assertIn("https://claude.ai/code/session_1", out)
+        self.assertNotIn(TOKEN, out)
+
+    def test_http_error_or_wrong_response_exits_1_without_the_token(self):
+        for resp in ((500, {"error": TOKEN}), (200, {"type": "outra-coisa"}), (200, "nao é json"), (200, ["x"]), (0, None)):
+            code, calls, out = self.run_main(["--issue", "7"], {"ROTINA_URL": URL, "ROTINA_TOKEN": TOKEN}, [resp])
+            self.assertEqual(code, 1, resp)
+            self.assertNotIn(TOKEN, out)
+
+    def test_post_that_raises_exits_1_without_the_token(self):
+        def post(url, headers, body):
+            raise OSError(f"falhou {TOKEN}")
+
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            code = disparar.main(["--issue", "7"], {"ROTINA_URL": URL, "ROTINA_TOKEN": TOKEN}, post)
+        self.assertEqual(code, 1)
+        self.assertNotIn(TOKEN, out.getvalue())
+
+    def test_criadas_fires_only_for_novidade(self):
+        f = self.criadas([{"numero": 3, "titulo": "a", "etiquetas": ["novidade"]},
+                          {"numero": 4, "titulo": "b", "etiquetas": ["publicado"]},
+                          {"numero": 5, "titulo": "c", "etiquetas": ["precisa-de-ti"]},
+                          {"numero": 6, "titulo": "d", "etiquetas": ["novidade", "x"]}])
+        code, calls, _ = self.run_main(["--criadas", f], {"ROTINA_URL": URL, "ROTINA_TOKEN": TOKEN})
+        self.assertEqual(code, 0)
+        self.assertEqual([json.loads(c[2])["text"][:17] for c in calls], ["Trata a issue #3 ", "Trata a issue #6 "])
+
+    def test_criadas_missing_or_empty_fires_nothing_and_a_failure_does_not_stop_the_others(self):
+        env = {"ROTINA_URL": URL, "ROTINA_TOKEN": TOKEN}
+        for argv in (["--criadas", str(Path(tempfile.mkdtemp()) / "nao-existe.json")], ["--criadas", self.criadas([])]):
+            self.assertEqual(self.run_main(argv, env)[:2], (0, []))
+        f = self.criadas([{"numero": 3, "titulo": "a", "etiquetas": ["novidade"]},
+                          {"numero": 4, "titulo": "b", "etiquetas": ["novidade"]}])
+        code, calls, _ = self.run_main(["--criadas", f], env, [(500, None), OK])
+        self.assertEqual((code, len(calls)), (1, 2))
+
+    def test_bad_url_is_refused_before_any_call(self):
+        for url in ("http://api.anthropic.com/v1/x", "https://evil.example/v1/x", "https://api.anthropic.com.evil.example/x",
+                    "https://api.anthropic.com@evil.example/x"):
+            code, calls, out = self.run_main(["--issue", "7"], {"ROTINA_URL": url, "ROTINA_TOKEN": TOKEN})
+            self.assertEqual((code, calls), (1, []), url)
+            self.assertNotIn(TOKEN, out)
+
+    def test_issue_must_be_a_positive_number(self):
+        for bad in ("abc", "7; rm -rf", "-1", "0"):
+            with self.assertRaises(SystemExit), contextlib.redirect_stderr(io.StringIO()):
+                disparar.main(["--issue", bad], {"ROTINA_URL": URL, "ROTINA_TOKEN": TOKEN}, lambda *a: OK)
+
+    def test_needs_exactly_one_of_issue_or_criadas(self):
+        for argv in ([], ["--issue", "1", "--criadas", "x.json"]):
+            with self.assertRaises(SystemExit), contextlib.redirect_stderr(io.StringIO()):
+                disparar.main(argv, {}, lambda *a: OK)
 
 
 if __name__ == "__main__":
