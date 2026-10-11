@@ -228,7 +228,7 @@ def stale_issues(abertas, now):
             "corpo": f"A issue #{issue['number']} («{issue['title']}») está aberta há mais de {STALE_DAYS} dias "
                      f"({since.date().isoformat()}) com a etiqueta `{'rever' if 'rever' in names else 'novidade'}` "
                      "e a rotina não a tratou.\n\nVer a execução da rotina e a Action «Publicar». Para voltar a tentar, "
-                     "tirar e voltar a pôr a etiqueta `novidade` (ou `rever`) nessa issue.",
+                     "pôr a etiqueta `rever` (ou correr a Action «Rotina» com o número da issue).",
             "etiquetas": ["precisa-de-ti"],
             "fechar": False,
         })

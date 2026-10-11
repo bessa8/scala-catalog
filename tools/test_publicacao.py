@@ -6,6 +6,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import urllib.error
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -431,6 +432,7 @@ class DispararTest(unittest.TestCase):
             code, calls, out = self.run_main(["--issue", "7"], env)
             self.assertEqual((code, calls), (0, []))
             self.assertIn("Rotina não configurada (sem ROTINA_URL/ROTINA_TOKEN): nada disparado.", out)
+            self.assertIn("::warning::Rotina não configurada", out)
 
     def test_fires_with_the_right_url_headers_and_body(self):
         code, calls, out = self.run_main(["--issue", "7"], {"ROTINA_URL": URL, "ROTINA_TOKEN": TOKEN})
@@ -480,6 +482,15 @@ class DispararTest(unittest.TestCase):
                           {"numero": 4, "titulo": "b", "etiquetas": ["novidade"]}])
         code, calls, _ = self.run_main(["--criadas", f], env, [(500, None), OK])
         self.assertEqual((code, len(calls)), (1, 2))
+
+    def test_redirects_are_not_followed(self):
+        import urllib.request
+        handler = [h for h in disparar.OPENER.handlers if isinstance(h, urllib.request.HTTPRedirectHandler)]
+        self.assertEqual(len(handler), 1)
+        self.assertIsInstance(handler[0], disparar.SemRedirecionar)
+        req = urllib.request.Request(URL, data=b"{}", method="POST")
+        with self.assertRaises(urllib.error.HTTPError):
+            handler[0].redirect_request(req, None, 302, "Found", {}, "https://evil.example/")
 
     def test_bad_url_is_refused_before_any_call(self):
         for url in ("http://api.anthropic.com/v1/x", "https://evil.example/v1/x", "https://api.anthropic.com.evil.example/x",

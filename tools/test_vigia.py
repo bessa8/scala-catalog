@@ -272,6 +272,9 @@ class StaleIssuesTest(unittest.TestCase):
             self.assertEqual(i["etiquetas"], ["precisa-de-ti"])
             self.assertFalse(i["fechar"])
         self.assertIn("#5", out[0]["corpo"])
+        for i in out:
+            self.assertIn("pôr a etiqueta `rever` (ou correr a Action «Rotina» com o número da issue)", i["corpo"])
+            self.assertNotIn("tirar e voltar a pôr", i["corpo"])
 
     def test_recent_unlabelled_and_other_issues_are_ignored(self):
         abertas = [open_issue(5, ["novidade"], "2027-01-09T08:00:00Z"),            # 1 dia 23 h: ainda não

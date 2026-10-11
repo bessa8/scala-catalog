@@ -62,6 +62,8 @@ class WorkflowsTest(unittest.TestCase):
         self.assertIn('--issue "$NUMERO"', script)
         self.assertIn("ROTINA_URL: ${{ secrets.ROTINA_URL }}", text)
         self.assertIn("ROTINA_TOKEN: ${{ secrets.ROTINA_TOKEN }}", text)
+        self.assertRegex(text, r"(?m)^concurrency:\n  group: rotina\n  cancel-in-progress: false$")
+        self.assertIn("persist-credentials: false", text)
 
     def test_publicar_failure_message_depends_on_whether_the_merge_happened(self):
         text = read("publicar.yml")

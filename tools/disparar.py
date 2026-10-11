@@ -21,11 +21,21 @@ REPO = "bessa8/scala-catalog"
 NAO_CONFIGURADA = "Rotina não configurada (sem ROTINA_URL/ROTINA_TOKEN): nada disparado."
 
 
+class SemRedirecionar(urllib.request.HTTPRedirectHandler):
+    """Não segue redirecionamentos: o pedido leva o token e só vai para o endereço configurado."""
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        raise urllib.error.HTTPError(req.full_url, code, msg, headers, fp)
+
+
+OPENER = urllib.request.build_opener(SemRedirecionar)
+
+
 def post(url, headers, body):
     """POST com urllib; devolve (estado HTTP, JSON ou texto). Estado 0 se não houve resposta."""
     req = urllib.request.Request(url, data=body, headers=headers, method="POST")
     try:
-        with urllib.request.urlopen(req, timeout=60) as r:
+        with OPENER.open(req, timeout=60) as r:
             status, raw = r.status, r.read()
     except urllib.error.HTTPError as e:
         status, raw = e.code, e.read()
@@ -71,6 +81,7 @@ def main(argv=None, env=None, post=post):
     url, token = (env.get("ROTINA_URL") or "").strip(), (env.get("ROTINA_TOKEN") or "").strip()
     if not url or not token:
         print(NAO_CONFIGURADA)
+        print(f"::warning::{NAO_CONFIGURADA}")
         return 0
     if not url.startswith(PREFIXO) or "@" in url.split("/")[2]:
         print(f"ROTINA_URL tem de começar por {PREFIXO}: nada disparado.")

@@ -10,6 +10,9 @@ on:
         required: true
 permissions:
   contents: read
+concurrency:
+  group: rotina
+  cancel-in-progress: false
 jobs:
   disparar:
     if: >-
@@ -20,6 +23,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
