@@ -2,11 +2,13 @@
 
 Este é o manual da rotina do Claude que mantém o catálogo. Corre quando abre uma *issue* com a etiqueta `novidade` (a vigia abre-a às segundas) ou `rever` (o Carlos reabre uma «Precisa de ti» com a decisão nos comentários). Segue-o à letra; em caso de dúvida, não publiques: escreve um «Precisa de ti».
 
+Numa `rever`, a decisão vem dos comentários do Carlos na *issue* reaberta; o número dessa *issue* vai em `issue` no relatório. Uma decisão «não» (ou «deixa estar») vai para `semAlteracoes` com o motivo que ele deu. Uma decisão «sim» não dispensa nada deste manual: voltas a extrair e a verificar tudo como de costume.
+
 ## Limites
 
-- Trata **só** as pistas da *issue* (o bloco JSON no fim do texto) e, numa `rever`, a decisão do Carlos nos comentários. Não faças pesquisas gerais na web.
+- Trata **só** as pistas da *issue* (o bloco JSON no fim do texto) e, numa `rever`, a decisão do Carlos nos comentários. Não faças pesquisas gerais na web. Lê só a página ou o anexo de que precisas, não o Diário inteiro.
 - Só lês páginas destes domínios: `diariodarepublica.pt`, `files.diariodarepublica.pt`, `joram.madeira.gov.pt`, `jo.azores.gov.pt`, `info.portaldasfinancas.gov.pt`, `at.madeira.gov.pt`, `dgaep.gov.pt`, `dgert.gov.pt`, `seg-social.pt`, `cga.pt`, `adse.pt`, `acss.min-saude.pt`. Uma pista noutro domínio vai para `semAlteracoes` com o motivo «fonte fora da lista».
-- Nunca fazes push para `main`, nunca mexes em *issues*, nunca editas `tools/` (incluindo `tools/aceites.json`, que só o Carlos altera), `.github/`, `ROTINA.md` nem `README.md`. Só fazes push de um ramo `claude/atualizacao-AAAA-MM-DD` (se já existir, ou se esta for a segunda corrida do dia, `-2`, `-3`…).
+- Nunca fazes push para `main`, nunca comentas, fechas nem editas *issues* (lê-las é preciso), nunca editas `tools/` (incluindo `tools/aceites.json`, que só o Carlos altera), `.github/`, `ROTINA.md` nem `README.md`, e nunca pões `tools/` no *stage*. Só fazes push de um ramo `claude/atualizacao-AAAA-MM-DD[-N]` (ver «Preparar o ramo»).
 - Nunca crias estrutura: carreiras, regimes, posições, perguntas, regras, profissões, instituições, ou tabelas com um `id` que ainda não existe em `tables/` ou `tax/`. Nunca apagas ficheiros.
 - O ramo só pode acrescentar ou alterar ficheiros `.json` em `tables/` e `tax/`, mais `manifest.json`, `VERIFICAR.md`, `por-confirmar.md` e o relatório novo. Os caminhos só usam letras, algarismos, `.`, `_`, `-` e `/`. Qualquer outra coisa faz o portão da Action recusar o ramo inteiro.
 
@@ -15,6 +17,14 @@ Este é o manual da rotina do Claude que mantém o catálogo. Corre quando abre 
 - **Valores e data de início** só de um diploma publicado em jornal oficial, com número e data (Diário da República, JORAM, Jornal Oficial dos Açores), ou de um documento da entidade competente que o reproduz (AT, DGAEP, DGERT, Segurança Social, CGA, ADSE, ACSS).
 - **Nunca** de propostas de lei (incluindo o Orçamento do Estado antes de publicado), acordos, comunicados, notícias, consultoras ou bancos.
 - A data de início (`effective`) é a que o diploma diz, mesmo que já tenha passado (efeitos retroativos). `published` é a data de hoje.
+
+## Preparar o ramo
+
+Faz isto **primeiro**, antes de editares o que quer que seja, haja ou não algo para publicar:
+
+1. `git fetch origin`.
+2. Escolhe o nome: olha para `relatorios/` em `origin/main` (`git ls-tree --name-only origin/main relatorios/`) e para os ramos existentes (`git ls-remote --heads origin 'claude/*'`). Usa o primeiro nome livre entre `AAAA-MM-DD`, `AAAA-MM-DD-2`, `AAAA-MM-DD-3`… (hoje), livre nas duas listas. O **mesmo sufixo** serve o ramo (`claude/atualizacao-<sufixo>`) e o relatório (`relatorios/<sufixo>.json`).
+3. `git checkout -b claude/atualizacao-<sufixo> origin/main`. O portão recusa um ramo que não parta do `origin/main` atual.
 
 ## Para cada pista
 
@@ -26,14 +36,13 @@ Este é o manual da rotina do Claude que mantém o catálogo. Corre quando abre 
 
 ## Preparar uma versão
 
-1. Antes de começares, `git fetch origin` e cria o ramo a partir do `origin/main` atual: o portão recusa um ramo que não parta dele.
-2. Copia a versão anterior da mesma tabela como modelo: as mesmas chaves, a mesma ordem, o mesmo formato. O nome é `<pasta>/<id>.<effective>.json`. Uma retificação altera o ficheiro da vigência retificada (não cria outro) e acrescenta a declaração de retificação a `sources`.
-3. Preenche `effective`, `published` (hoje), os valores e `sources` (o diploma e, se houver, a segunda fonte; `consulted` = hoje).
-4. **Verificação dupla:**
+1. Copia a versão anterior da mesma tabela como modelo: as mesmas chaves, a mesma ordem, o mesmo formato. O nome é `<pasta>/<id>.<effective>.json`. Uma retificação altera o ficheiro da vigência retificada (não cria outro) e acrescenta a declaração de retificação a `sources`.
+2. Preenche `effective`, `published` (hoje), os valores e `sources` (o diploma e, se houver, a segunda fonte; `consulted` = hoje). Em `tables/`, os valores são inteiros (cêntimos), como na versão anterior; nada de decimais.
+3. **Verificação dupla:**
    - Se há duas fontes oficiais (despacho no DR + circular da AT; decreto-lei + SRAP da DGAEP), extrai os valores de cada uma para `/tmp/a.json` e `/tmp/b.json` (no formato do ficheiro) e corre `python3 tools/comparar.py /tmp/a.json /tmp/b.json` (sai com 1 se houver qualquer diferença ou chave repetida).
-   - Se só há uma, pede a um subagente do modelo Haiku que extraia os mesmos valores da mesma fonte sem ver a tua extração, e compara com `comparar.py`.
+   - Se só há uma, pede a um subagente do modelo Haiku que extraia os mesmos valores da mesma fonte sem ver a tua extração, e compara com `comparar.py`. Isto vale também para os níveis lidos nos anexos da `medica`.
    - Qualquer diferença: não publiques essa tabela; `precisaDeTi` com as diferenças.
-5. Corre, por esta ordem, e tudo tem de passar:
+4. Com os ficheiros prontos, faz commit local (só dados; nunca `tools/`) e corre, por esta ordem, tudo tem de passar:
    ```bash
    python3 tools/catalog.py validate
    python3 tools/plausivel.py --desde origin/main
@@ -41,9 +50,11 @@ Este é o manual da rotina do Claude que mantém o catálogo. Corre quando abre 
    python3 tools/catalog.py build
    python3 tools/catalog.py report
    ```
-   O `plausivel.py` falha se um valor mudar mais de 15 %, se desaparecer ou aparecer uma chave, se mudar a unidade, se a TRU deixar de crescer de nível para nível, se o salário mínimo ou o IAS descerem, se a percentagem do IRS Jovem mudar, se o conjunto de tabelas ou extras do IRS mudar, ou se houver um `id` de imposto desconhecido. Também aceita ficheiros à mão: `python3 tools/plausivel.py <ficheiros novos ou alterados>`.
-   Se o `plausivel.py` se queixar e o diploma confirmar o valor (um aumento grande mas legal), não publiques essa tabela (apaga a tua versão do ramo, não a deixes lá): `precisaDeTi` a pedir ao Carlos que acrescente a `tools/aceites.json` a entrada `{"caminho": "<caminho do ficheiro>", "sha256": "<sha256 do ficheiro>"}`. Dá os dois valores no `texto` (o sha256 calcula-se com `shasum -a 256 <ficheiro>` ao ficheiro tal como o prepararias). A entrada só vale enquanto o ficheiro tiver exatamente esse sha256: o Carlos reabre a *issue* com a etiqueta `rever`, e na rodada seguinte tens de gerar o ficheiro byte a byte igual (mesmas chaves, mesma ordem, mesmo formato, `published` e `consulted` com a data da primeira corrida, que o `texto` do «Precisa de ti» também deve indicar). Se o sha256 não coincidir, o `plausivel.py` volta a falhar: pede de novo com o sha256 novo.
-6. Os mapas já conhecidos (abaixo) dizem como calcular as tabelas por posição a partir da TRU.
+   O `plausivel.py --desde origin/main` só vê o que já está em commit, por isso o commit vem antes. Depois do `build` e do `report`, junta ao commit o `manifest.json` e o `VERIFICAR.md` regenerados (`git add manifest.json VERIFICAR.md && git commit --amend --no-edit`). Se tirares alguma coisa do ramo (ver abaixo), repete **todas** as verificações.
+   O `plausivel.py` falha se um valor mudar mais de 15 %, se desaparecer ou aparecer uma chave, se mudar a unidade, se a TRU deixar de crescer de nível para nível, se o salário mínimo ou o IAS descerem, se a percentagem do IRS Jovem mudar, se o conjunto de tabelas ou extras do IRS mudar, ou se houver um `id` de imposto desconhecido.
+5. Se o `plausivel.py` se queixar e o diploma confirmar o valor (um aumento grande mas legal), não publiques essa tabela e retira-a do ramo: se o ficheiro é novo (acrescentado por ti), tira-o do ramo, de modo que o ramo nunca o traga; se já existia em `origin/main`, repõe-no com `git checkout origin/main -- <ficheiro>`. Nunca deixes uma alteração que apague um ficheiro que está em `origin/main`. Junta isto ao commit (`--amend`) e repete as verificações. Escreve um `precisaDeTi` a pedir ao Carlos que acrescente a `tools/aceites.json` a entrada `{"caminho": "<caminho do ficheiro>", "sha256": "<hash>"}`. O `texto` tem de trazer, para ele ver o que aprova: o JSON completo proposto da tabela (num bloco de código) e o hash, que é o que `python3 tools/plausivel.py --hash <ficheiro>` imprime (corre-o antes de retirares o ficheiro). O hash cobre os **dados** (tudo menos `published`, `sources` e `title`), não os bytes. Quando o Carlos reabre a *issue* com `rever`, voltas a extrair e a verificar como de costume e preparas a tabela; ela só passa no `plausivel.py` se o hash dos dados coincidir com o aprovado.
+6. Se a TRU de 2027 ficar de fora (por qualquer motivo), não publiques as versões de 2027 de `medica`, `enfermagem` e `farmaceutico` (derivam dela): `precisaDeTi` também para essas.
+7. Os mapas já conhecidos (abaixo) dizem como calcular as tabelas por posição a partir da TRU.
 
 ## Mapas conhecidos
 
@@ -57,7 +68,7 @@ Fontes destas versões: o diploma da carreira, o decreto-lei da TRU de 2027 e, q
 
 ## Acabar
 
-1. Escreve o relatório `relatorios/AAAA-MM-DD.json` (hoje). Se esta for a segunda corrida do dia (ou mais), `relatorios/AAAA-MM-DD-2.json`, `-3`…, com o mesmo sufixo do ramo (`claude/atualizacao-AAAA-MM-DD-2`). O ramo acrescenta **um único** relatório novo, e não mexe em relatórios antigos.
+1. Escreve o relatório `relatorios/<sufixo>.json`, com o sufixo que escolheste em «Preparar o ramo» (`AAAA-MM-DD`, `AAAA-MM-DD-2`…), igual ao do ramo. O ramo acrescenta **um único** relatório novo e não mexe em relatórios antigos.
    ```json
    {
      "issue": 12,
@@ -66,9 +77,9 @@ Fontes destas versões: o diploma da carreira, o decreto-lei da TRU de 2027 e, q
      "semAlteracoes": [{"pista": "Despacho n.º 2/2027", "motivo": "subdelegação de competências"}]
    }
    ```
-   - `issue` é o número da *issue* que desencadeou esta corrida (a `novidade` ou `rever` aberta); se não estiver aberta e com uma dessas etiquetas, a Action recusa-se a fechá-la.
+   - `issue` é o número da *issue* que desencadeou esta corrida (a `novidade`, ou a `rever` reaberta pelo Carlos); se não estiver aberta e com uma dessas etiquetas, a Action recusa-se a fechá-la.
    - Cada pista da *issue* aparece numa das três listas.
    - Cada `caminho` de `publicado` é um `.json` de `tables/` ou `tax/` que o ramo acrescenta ou altera; `vigencia` é `AAAA-MM-DD`; `fontes` é uma lista de textos.
    - Os títulos com mais de 250 caracteres são cortados: mantém-nos curtos.
-2. Cria o ramo `claude/atualizacao-AAAA-MM-DD` (ver acima), faz commit de tudo (dados, `manifest.json`, `VERIFICAR.md`, relatório) e push. Mesmo sem nada para publicar, o ramo leva o relatório: é a Action «Publicar» que fecha a *issue* e abre as «Publicado» e «Precisa de ti».
+2. Junta o relatório ao commit do ramo (`git add relatorios/<sufixo>.json && git commit --amend --no-edit`; se não houve nada para publicar e ainda não há commit, faz um commit só com o relatório, e o `manifest.json` e o `VERIFICAR.md` só entram se mudaram). Corre o portão como última verificação antes do push: `python3 tools/portao.py --base origin/main`. Tem de acabar em «portão: ok»; se falhar, corrige e repete (e, se mexeste em dados, repete também todas as verificações do passo 4 de «Preparar uma versão»). Só então `git push origin claude/atualizacao-<sufixo>`. Mesmo sem nada para publicar, o ramo leva o relatório: é a Action «Publicar» que fecha a *issue* e abre as «Publicado» e «Precisa de ti».
 3. Termina. Não esperes pela Action.

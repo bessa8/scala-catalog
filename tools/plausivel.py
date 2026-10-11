@@ -3,6 +3,7 @@
 
     python3 tools/plausivel.py --desde origin/main   # o que o ramo mudou em tables/ e tax/
     python3 tools/plausivel.py tables/tru.2027-01-01.json ...
+    python3 tools/plausivel.py --hash tables/tru.2027-01-01.json   # hash dos dados, para aceites.json
 
 Regras: nenhum valor muda mais de 15 %; nenhuma chave desaparece; a TRU cresce
 de nível para nível; o salário mínimo e o IAS nunca descem; as tabelas de IRS
@@ -10,7 +11,8 @@ são as mesmas (I a VII); nenhuma chave nova nem unidade diferente (a rotina nã
 cria estrutura); nada fora do padrão <pasta>/<id>.<AAAA-MM-DD>.json. Com --desde,
 os ficheiros que já existiam em REF (retificações) também se conferem contra o
 conteúdo antigo. tools/aceites.json é uma lista de {"caminho", "sha256"} aceites
-pelo Carlos: um ficheiro só se salta enquanto o seu sha256 for esse. Falha
+pelo Carlos: um ficheiro só se salta enquanto o hash dos seus dados (tudo menos
+published, sources e title) for esse; `--hash CAMINHO` imprime esse hash. Falha
 fechado: qualquer erro ao ler ou conferir um ficheiro é um problema. Sai com 1
 e lista os problemas.
 """
@@ -151,8 +153,17 @@ def _normalize(rel):
     return rel
 
 
+NOT_DATA = ("published", "sources", "title")
+
+
 def sha256(src, rel):
-    return hashlib.sha256((Path(src) / rel).read_bytes()).hexdigest()
+    """Hash dos DADOS do ficheiro (sem published, sources nem title; chaves ordenadas), não dos bytes."""
+    data = _load(src, rel)
+    if not isinstance(data, dict):
+        raise ValueError("o ficheiro não é um objeto JSON")
+    canonical = json.dumps({k: v for k, v in data.items() if k not in NOT_DATA},
+                           sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+    return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
 
 
 def accepted_map(accepted):
@@ -203,8 +214,16 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--src", type=Path, default=ROOT)
     parser.add_argument("--desde")
+    parser.add_argument("--hash", metavar="CAMINHO", help="imprime o hash dos dados do ficheiro e sai")
     parser.add_argument("caminhos", nargs="*")
     args = parser.parse_args(argv)
+    if args.hash:
+        try:
+            print(sha256(args.src, _normalize(args.hash)))
+        except (ValueError, OSError) as e:
+            print(f"não foi possível calcular o hash ({type(e).__name__}: {e})")
+            sys.exit(1)
+        return
     try:
         base = None
         paths = args.caminhos

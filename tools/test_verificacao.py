@@ -116,6 +116,35 @@ class PlausivelTest(unittest.TestCase):
         self.put(new, table("patrulha", "2027-01-01", {"x": 12000}))
         self.assertNotEqual(plausivel.check(self.src, [new], accepted=accepted), [])
 
+    def test_hash_covers_data_not_metadata(self):
+        base = table("patrulha", "2027-01-01", {"x": 11503})
+        base["published"], base["sources"], base["title"] = "2026-10-01", [{"url": "a"}], "A"
+        rel = self.put("tables/patrulha.2027-01-01.json", base)
+        h = plausivel.sha256(self.src, rel)
+        other = dict(base, published="2026-12-31", sources=[{"url": "b"}, {"url": "c"}], title="B")
+        self.put(rel, other)
+        self.assertEqual(plausivel.sha256(self.src, rel), h)
+        self.put(rel, dict(other, values={"x": 11504}))
+        self.assertNotEqual(plausivel.sha256(self.src, rel), h)
+
+    def test_accepted_survives_metadata_change(self):
+        self.put("tables/patrulha.2026-01-01.json", table("patrulha", "2026-01-01", {"x": 9003}))
+        new = self.put("tables/patrulha.2027-01-01.json", table("patrulha", "2027-01-01", {"x": 11503}))
+        accepted = [self.accept(new)]
+        v = table("patrulha", "2027-01-01", {"x": 11503})
+        v["published"], v["sources"] = "2027-02-02", [{"url": "z"}]
+        self.put(new, v)
+        self.assertEqual(plausivel.check(self.src, [new], accepted=accepted), [])
+
+    def test_hash_option_prints_hash(self):
+        import io
+        from contextlib import redirect_stdout
+        new = self.put("tables/patrulha.2027-01-01.json", table("patrulha", "2027-01-01", {"x": 1}))
+        buf = io.StringIO()
+        with redirect_stdout(buf):
+            plausivel.main(["--src", str(self.src), "--hash", new])
+        self.assertEqual(buf.getvalue().strip(), plausivel.sha256(self.src, new))
+
     def test_old_accepted_format_is_rejected(self):
         with self.assertRaises(ValueError):
             plausivel.check(self.src, [], accepted=["tables/patrulha.2027-01-01.json"])
