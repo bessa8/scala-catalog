@@ -17,10 +17,33 @@ def gh(args, stdin=None):
     return r.stdout.strip()
 
 
+CLOSABLE_LABELS = ("novidade", "rever")
+
+
+def _check_closable(action, gh):
+    """Só se fecha uma issue aberta das que a rotina trata (etiqueta novidade ou rever)."""
+    n = action.get("numero")
+    if not isinstance(n, int) or isinstance(n, bool) or n <= 0:
+        raise ValueError(f"número de issue inválido: {n!r}")
+    try:
+        info = json.loads(gh(["issue", "view", str(n), "--json", "state,labels"]))
+        state = info["state"]
+        names = {label["name"] for label in info["labels"]}
+    except (ValueError, KeyError, TypeError) as e:
+        raise ValueError(f"não consegui ler a issue #{n}: {e!r}")
+    if state != "OPEN":
+        raise ValueError(f"a issue #{n} não está aberta; não a fecho")
+    if not names & set(CLOSABLE_LABELS):
+        raise ValueError(f"a issue #{n} não tem a etiqueta novidade nem rever; não a fecho")
+
+
 def run(actions, gh=gh):
     for a in actions:  # valida tudo antes de mexer no GitHub
         if a.get("tipo") not in ("criar", "fechar"):
             raise ValueError(f"ação desconhecida: {a.get('tipo')}")
+    for a in actions:
+        if a["tipo"] == "fechar":
+            _check_closable(a, gh)
     labels = sorted({label for a in actions if a["tipo"] == "criar" for label in a.get("etiquetas", [])})
     for label in labels:
         gh(["label", "create", label, "--force"])

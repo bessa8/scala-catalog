@@ -9,6 +9,7 @@ import re
 import sys
 from pathlib import Path
 
+MAX_TITLE = 250
 DATE = re.compile(r"\d{4}-\d{2}-\d{2}\Z")
 
 
@@ -24,6 +25,10 @@ def _strings(v):
 def _data_path(p):
     return (isinstance(p, str) and p.startswith(("tables/", "tax/")) and p.endswith(".json")
             and all(part not in ("", ".", "..") for part in p.split("/")))
+
+
+def _title(text):
+    return text if len(text) <= MAX_TITLE else text[:MAX_TITLE - 1] + "…"
 
 
 def check(rep):
@@ -56,14 +61,14 @@ def actions(rep):
         for p in pub:
             lines.append(f"- **{p['titulo']}** (`{p['caminho']}`), em vigor a {p['vigencia']}")
             lines += [f"  - Fonte: {s}" for s in p["fontes"]]
-        out.append({"tipo": "criar", "titulo": "Publicado: " + "; ".join(p["titulo"] for p in pub),
+        out.append({"tipo": "criar", "titulo": _title("Publicado: " + "; ".join(p["titulo"] for p in pub)),
                     "corpo": "\n".join(lines), "etiquetas": ["publicado"], "fechar": True})
     for n in rep["precisaDeTi"]:
         corpo = n["texto"]
         if n["fontes"]:
             corpo += "\n\nFontes:\n" + "\n".join(f"- {s}" for s in n["fontes"])
         corpo += "\n\nPara a rotina voltar a esta questão: comentar com a decisão e pôr a etiqueta `rever`."
-        out.append({"tipo": "criar", "titulo": f"Precisa de ti: {n['titulo']}", "corpo": corpo,
+        out.append({"tipo": "criar", "titulo": _title(f"Precisa de ti: {n['titulo']}"), "corpo": corpo,
                     "etiquetas": ["precisa-de-ti"], "fechar": False})
     resumo = ([f"- Publicado: {p['titulo']}" for p in pub]
               + [f"- Precisa de ti: {n['titulo']}" for n in rep["precisaDeTi"]]

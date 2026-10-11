@@ -29,11 +29,11 @@ class PortaoTest(unittest.TestCase):
 
     def test_tools_github_and_rotina_are_refused(self):
         problems, _ = portao.problems([("M", "tools/plausivel.py"), ("M", ".github/workflows/publicar.yml"),
-                                       ("M", "ROTINA.md"), ("A", "relatorios/r.json")])
+                                       ("M", "ROTINA.md"), ("A", "relatorios/2027-01-31.json")])
         self.assertEqual(len(problems), 3)
 
     def test_deleting_a_table_is_refused(self):
-        problems, _ = portao.problems([("D", "tables/tru.2026-01-01.json"), ("A", "relatorios/r.json")])
+        problems, _ = portao.problems([("D", "tables/tru.2026-01-01.json"), ("A", "relatorios/2027-01-31.json")])
         self.assertTrue(any("apagar" in p for p in problems))
 
     def test_exactly_one_new_report(self):
@@ -42,36 +42,64 @@ class PortaoTest(unittest.TestCase):
 
     def test_only_added_or_modified_statuses_pass(self):
         for status in ("T", "U", "X", "C", ""):
-            problems, _ = portao.problems([(status, "tables/tru.2026-01-01.json"), ("A", "relatorios/r.json")])
+            problems, _ = portao.problems([(status, "tables/tru.2026-01-01.json"), ("A", "relatorios/2027-01-31.json")])
             self.assertTrue(problems, status)
 
     def test_only_json_tables_and_taxes(self):
-        problems, _ = portao.problems([("A", "tables/run.sh"), ("A", "tax/x.py"), ("A", "relatorios/r.json")])
+        problems, _ = portao.problems([("A", "tables/run.sh"), ("A", "tax/x.py"), ("A", "relatorios/2027-01-31.json")])
         self.assertEqual(len(problems), 2)
 
     def test_report_must_be_a_new_json_file_directly_in_relatorios(self):
         for changes in ([("M", "relatorios/2027-01-31.json")],
                         [("A", "relatorios/sub/r.json")],
                         [("A", "relatorios/r.txt")],
-                        [("A", "relatorios/a.json"), ("A", "relatorios/b.json")]):
+                        [("A", "relatorios/2027-01-31.json"), ("A", "relatorios/2027-01-31-2.json")]):
             problems, _ = portao.problems(changes)
             self.assertTrue(problems, changes)
 
     def test_quoted_or_odd_paths_are_refused(self):
         problems, _ = portao.problems([("A", '"tables/\\303\\251.json"'), ("A", "tables/../tools/x.json"),
-                                       ("A", "relatorios/r.json")])
+                                       ("A", "relatorios/2027-01-31.json")])
         self.assertEqual(len(problems), 2)
 
     def test_symlinks_and_executables_are_refused(self):
         for mode in ("120000", "160000", "100755"):
-            problems, _ = portao.problems([("A", "tables/x.json", mode), ("A", "relatorios/r.json", "100644")])
+            problems, _ = portao.problems([("A", "tables/x.json", mode), ("A", "relatorios/2027-01-31.json", "100644")])
             self.assertTrue(any("modo" in p for p in problems), mode)
-        problems, _ = portao.problems([("A", "tables/x.json", "100644"), ("A", "relatorios/r.json", "100644")])
+        problems, _ = portao.problems([("A", "tables/x.json", "100644"), ("A", "relatorios/2027-01-31.json", "100644")])
         self.assertEqual(problems, [])
 
     def test_parse_raw_z(self):
         raw = ":000000 100644 0000 abcd A\0tables/x.json\0:100644 000000 abcd 0000 D\0tables/y.json\0"
         self.assertEqual(portao.parse_raw(raw), [("A", "tables/x.json", "100644"), ("D", "tables/y.json", "100644")])
+
+    def test_report_name_must_be_a_date(self):
+        for name in ("relatorios/x\nfoo=bar.json", "relatorios/$(id).json", "relatorios/2027-01-31.json\n",
+                     "relatorios/r.json", "relatorios/2027-01-31-.json", "relatorios/2027-01-31-x.json"):
+            problems, reports = portao.problems([("A", name)])
+            self.assertTrue(problems, repr(name))
+            self.assertEqual(reports, [], repr(name))
+        problems, reports = portao.problems([("A", "relatorios/2027-01-31-2.json")])
+        self.assertEqual((problems, reports), ([], ["relatorios/2027-01-31-2.json"]))
+
+    def test_every_path_is_whitelisted(self):
+        for name in ("tables/a\nb.json", "tables/$x.json", "tables/a b.json", "tables/a'b.json", "tables/\u00e9.json",
+                     "tables/a\x00.json", "tables/a;b.json"):
+            problems, _ = portao.problems([("A", name), ("A", "relatorios/2027-01-31.json")])
+            self.assertTrue(any("suspeito" in p for p in problems), repr(name))
+
+    def test_report_must_match_published_paths(self):
+        tmp = Path(tempfile.mkdtemp()) / "r.json"
+        tmp.write_text(json.dumps(REPORT))
+        read = lambda path: tmp.read_text()  # noqa: E731
+        self.assertEqual(portao.report_problems("r", {"tables/tru.2027-01-01.json"}, read), [])
+        out = portao.report_problems("r", {"tables/outra.json"}, read)
+        self.assertEqual(len(out), 1)
+        self.assertIn("tables/tru.2027-01-01.json", out[0])
+        for text in ("{nao", "[]", json.dumps({"issue": 1}), json.dumps({"publicado": [1]})):
+            tmp.write_text(text)
+            self.assertEqual(len(portao.report_problems("r", set(), read)), 1, text)
+        self.assertEqual(len(portao.report_problems("r", set(), lambda p: open("/nao/existe/x").read())), 1)
 
 
 class PortaoGitTest(unittest.TestCase):
@@ -95,7 +123,8 @@ class PortaoGitTest(unittest.TestCase):
 
     def test_cli_ok_writes_output(self):
         (Path(self.dir) / "relatorios").mkdir()
-        (Path(self.dir) / "relatorios" / "2027-01-31.json").write_text("{}")
+        (Path(self.dir) / "relatorios" / "2027-01-31.json").write_text(json.dumps(
+            {**REPORT, "publicado": [{**REPORT["publicado"][0], "caminho": "tables/a.json"}]}))
         (Path(self.dir) / "tables" / "a.json").write_text('{"x":1}')
         self.git("add", "-A")
         self.git("commit", "-q", "-m", "dados")
@@ -106,7 +135,7 @@ class PortaoGitTest(unittest.TestCase):
 
     def test_cli_refuses_symlink_and_tools(self):
         (Path(self.dir) / "relatorios").mkdir()
-        (Path(self.dir) / "relatorios" / "r.json").write_text("{}")
+        (Path(self.dir) / "relatorios" / "2027-01-31.json").write_text("{}")
         os.symlink("../tools", Path(self.dir) / "tables" / "ln.json")
         (Path(self.dir) / "tools").mkdir()
         (Path(self.dir) / "tools" / "x.py").write_text("")
@@ -118,9 +147,28 @@ class PortaoGitTest(unittest.TestCase):
         self.assertIn("tables/ln.json", r.stdout)
         self.assertNotIn("Traceback", r.stderr)
 
+    def test_cli_refuses_report_that_lies_about_published(self):
+        (Path(self.dir) / "relatorios").mkdir()
+        (Path(self.dir) / "relatorios" / "2027-01-31.json").write_text(json.dumps(REPORT))
+        self.git("add", "-A")
+        self.git("commit", "-q", "-m", "r")
+        r = self.run_gate()
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("tables/tru.2027-01-01.json", r.stdout)
+        self.assertNotIn("Traceback", r.stderr)
+
+    def test_cli_refuses_malformed_report(self):
+        (Path(self.dir) / "relatorios").mkdir()
+        (Path(self.dir) / "relatorios" / "2027-01-31.json").write_text("{nao")
+        self.git("add", "-A")
+        self.git("commit", "-q", "-m", "r")
+        r = self.run_gate()
+        self.assertEqual(r.returncode, 1)
+        self.assertNotIn("Traceback", r.stderr)
+
     def test_cli_refuses_branch_behind_main(self):
         (Path(self.dir) / "relatorios").mkdir()
-        (Path(self.dir) / "relatorios" / "r.json").write_text("{}")
+        (Path(self.dir) / "relatorios" / "2027-01-31.json").write_text("{}")
         self.git("add", "-A")
         self.git("commit", "-q", "-m", "r")
         self.git("checkout", "-q", "main")
@@ -191,6 +239,14 @@ class RelatorioTest(unittest.TestCase):
         relatorio.main([str(d / "r.json"), "--issues", str(d / "i.json")])
         self.assertEqual(json.loads((d / "i.json").read_text())[-1]["numero"], 12)
 
+    def test_long_titles_are_capped(self):
+        rep = {**REPORT, "precisaDeTi": [{"titulo": "x" * 400, "texto": "t", "fontes": []}],
+               "publicado": [{**REPORT["publicado"][0], "titulo": "y" * 400}]}
+        for a in relatorio.actions(rep):
+            if a["tipo"] == "criar":
+                self.assertLessEqual(len(a["titulo"]), 250)
+                self.assertTrue(a["titulo"].endswith("…"))
+
 
 class IssuesTest(unittest.TestCase):
     def test_run_creates_labels_issues_and_closes(self):
@@ -198,14 +254,39 @@ class IssuesTest(unittest.TestCase):
 
         def gh(args, stdin=None):
             calls.append((args, stdin))
+            if args[:2] == ["issue", "view"]:
+                return json.dumps({"state": "OPEN", "labels": [{"name": "novidade"}]})
             return "https://github.com/bessa8/scala-catalog/issues/77" if args[:2] == ["issue", "create"] else ""
 
         issues.run(relatorio.actions(REPORT), gh)
+        self.assertEqual(calls[0][0], ["issue", "view", "12", "--json", "state,labels"])
+        calls.pop(0)
         self.assertEqual(calls[0][0], ["label", "create", "precisa-de-ti", "--force"])
         self.assertEqual(calls[1][0], ["label", "create", "publicado", "--force"])
         self.assertEqual(calls[2][0][:4], ["issue", "create", "--title", "Publicado: TRU 2027"])
         self.assertEqual(calls[3][0], ["issue", "close", "77"])
         self.assertEqual(calls[-1][0][:3], ["issue", "close", "12"])
+
+    def _gh_for(self, view, calls):
+        def gh(args, stdin=None):
+            calls.append(args)
+            return view if args[:2] == ["issue", "view"] else ""
+        return gh
+
+    def test_close_only_open_issue_with_novidade_or_rever_and_before_any_mutation(self):
+        acts = relatorio.actions(REPORT)
+        for view in (json.dumps({"state": "CLOSED", "labels": [{"name": "novidade"}]}),
+                     json.dumps({"state": "OPEN", "labels": [{"name": "precisa-de-ti"}]}),
+                     json.dumps({"state": "OPEN", "labels": []}),
+                     "nao é json", json.dumps([]), json.dumps({"state": "OPEN", "labels": "x"})):
+            calls = []
+            with self.assertRaises(ValueError):
+                issues.run(acts, self._gh_for(view, calls))
+            self.assertTrue(all(c[:2] == ["issue", "view"] for c in calls), (view, calls))
+        for label in ("novidade", "rever"):
+            calls = []
+            issues.run(acts, self._gh_for(json.dumps({"state": "OPEN", "labels": [{"name": label}]}), calls))
+            self.assertEqual(calls[-1][:3], ["issue", "close", "12"])
 
     def test_missing_file_does_nothing(self):
         issues.main([str(Path(tempfile.mkdtemp()) / "nao-existe.json")])
