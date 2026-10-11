@@ -12,6 +12,7 @@ O formato está descrito no README.md.
 """
 import argparse
 import datetime
+import fnmatch
 import hashlib
 import json
 import re
@@ -336,7 +337,54 @@ def check_institutions(d):
         text(i.get("holidayName"), f"{iw}: holidayName")
 
 
-def validate(src=SRC):
+WATCH = Path("tools") / "vigia.json"
+WATCH_TYPES = ("rss", "links", "circulares")
+
+
+def check_watch(src, files):
+    """Cada tabela de tables/ e tax/ tem de estar num tema de tools/vigia.json."""
+    name = WATCH.as_posix()
+    path = Path(src) / WATCH
+    need(path.exists(), f"falta {name}")
+    try:
+        config = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        raise Invalid(f"{name}: JSON inválido ({e})")
+    need(isinstance(config, dict), f"{name}: tem de ser um objeto")
+    temas = config.get("temas")
+    need(isinstance(temas, list) and temas, f"{name}: «temas» vazio")
+    patterns, ids = [], set()
+    for i, t in enumerate(temas, 1):
+        w = f"{name}: tema {i}"
+        need(isinstance(t, dict) and isinstance(t.get("id"), str) and ID.match(t["id"]), f"{w}: «id» inválido")
+        need(t["id"] not in ids, f"{w}: «id» repetido")
+        ids.add(t["id"])
+        need(isinstance(t.get("tabelas"), list) and all(isinstance(p, str) for p in t["tabelas"]),
+             f"{w}: «tabelas» tem de ser uma lista de padrões")
+        need(isinstance(t.get("palavras"), list) and t["palavras"]
+             and all(isinstance(p, str) and p.strip() for p in t["palavras"]), f"{w}: «palavras» vazio")
+        patterns += t["tabelas"]
+    fontes = config.get("fontes")
+    need(isinstance(fontes, dict) and fontes, f"{name}: «fontes» vazio")
+    for fid, f in fontes.items():
+        w = f"{name}: {fid}"
+        need(isinstance(f, dict) and f.get("tipo") in WATCH_TYPES, f"{w}: «tipo» tem de ser {', '.join(WATCH_TYPES)}")
+        need(isinstance(f.get("url"), str) and f["url"].startswith("https://"), f"{w}: «url» tem de começar por https://")
+        if f["tipo"] != "rss":
+            need(f.get("tema") in ids, f"{w}: «tema» desconhecido")
+        if f["tipo"] == "links":
+            need(isinstance(f.get("padrao"), str) and f["padrao"], f"{w}: falta «padrao»")
+        if f["tipo"] == "circulares":
+            need(isinstance(f.get("nomes"), list) and f["nomes"], f"{w}: falta «nomes»")
+    for rel in files:
+        m = re.fullmatch(r"(tables|tax)/([a-z0-9-]+)\.\d{4}-\d{2}-\d{2}\.json", rel)
+        if m:
+            table = f"{m[1]}/{m[2]}"
+            need(any(fnmatch.fnmatchcase(table, p) for p in patterns),
+                 f"{rel}: nenhum tema da vigia cobre «{table}» ({name})")
+
+
+def validate(src=SRC, watch=True):
     files = load(src)
     for name in ROOT_FILES:
         need(name in files, f"falta {name}")
@@ -370,6 +418,8 @@ def validate(src=SRC):
             check_career(rel, d, files, tables)
     check_professions(files["professions.json"], files)
     check_institutions(files["institutions.json"])
+    if watch:  # a pasta publicada (verify) não leva tools/
+        check_watch(src, files)
     return files
 
 
@@ -409,7 +459,7 @@ def build(src=SRC, out=OUT):
 
 def verify(root):
     root = Path(root)
-    files = validate(root)
+    files = validate(root, watch=False)
     manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
     listed = {e["path"]: e for e in manifest.get("files", [])}
     for rel in files:

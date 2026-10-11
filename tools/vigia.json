@@ -1,0 +1,26 @@
+{
+  "fontes": {
+    "dr1": {"tipo": "rss", "url": "https://files.diariodarepublica.pt/rss/serie1-html.xml"},
+    "dr2": {"tipo": "rss", "url": "https://files.diariodarepublica.pt/rss/serie2-html.xml"},
+    "srap": {
+      "tipo": "links",
+      "url": "https://www.dgaep.gov.pt/index.cfm?OBJID=2509248D-289A-4B8D-8E44-034CE9B38C22",
+      "padrao": "SRAP[^\"'/]*\\.pdf",
+      "tema": "tru"
+    },
+    "at-circulares": {
+      "tipo": "circulares",
+      "url": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/",
+      "nomes": ["Circular_{n}_{ano}.pdf", "Circular_{n}_{ano}_RAM.pdf", "Circular_{n}_{ano}_RF_RAA.pdf"],
+      "tema": "irs"
+    }
+  },
+  "temas": [
+    {"id": "irs", "tabelas": ["tax/irs-*"], "palavras": ["retencao na fonte", "tabelas de retencao"]},
+    {"id": "contribuicoes", "tabelas": ["tax/contributions"], "palavras": ["regimes contributivos", "taxa contributiva", "ADSE", "assistencia na doenca"]},
+    {"id": "ias-jovem", "tabelas": ["tax/youth"], "palavras": ["indexante dos apoios sociais", "IRS Jovem"]},
+    {"id": "tru", "tabelas": ["tables/tru", "tables/medica", "tables/enfermagem", "tables/farmaceutico"], "palavras": ["tabela remuneratoria unica", "base remuneratoria", "niveis remuneratorios"]},
+    {"id": "smn", "tabelas": ["tables/smn"], "palavras": ["retribuicao minima mensal garantida"]},
+    {"id": "carreiras", "tabelas": ["tables/patrulha", "tables/ssr", "tables/teph-supl", "tables/tss"], "palavras": ["carreira especial de enfermagem", "carreira especial farmaceutica", "carreira especial medica", "tecnico auxiliar de saude", "tecnico superior de diagnostico e terapeutica", "tecnico superior de saude", "emergencia pre-hospitalar", "bombeiro sapador", "Policia de Seguranca Publica", "Guarda Nacional Republicana", "guarda prisional", "suplemento de patrulha", "suplemento por servico e risco"]}
+  ]
+}

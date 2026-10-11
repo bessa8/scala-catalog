@@ -40,12 +40,23 @@ def minimal():
     }
 
 
+def minimal_watch(tables=("tables/*", "tax/*")):
+    return {
+        "fontes": {
+            "dr1": {"tipo": "rss", "url": "https://files.diariodarepublica.pt/rss/serie1-html.xml"},
+            "srap": {"tipo": "links", "url": "https://www.dgaep.gov.pt/x", "padrao": "SRAP[^\"']*\\.pdf", "tema": "tudo"},
+        },
+        "temas": [{"id": "tudo", "tabelas": list(tables), "palavras": ["tabela remuneratoria unica"]}],
+    }
+
+
 class CatalogTest(unittest.TestCase):
     def setUp(self):
         self.dir = Path(tempfile.mkdtemp())
         self.src = self.dir / "data"
         self.out = self.dir / "out"
         self.write(minimal())
+        self.write({"tools/vigia.json": minimal_watch()})
 
     def tearDown(self):
         shutil.rmtree(self.dir)
@@ -66,6 +77,35 @@ class CatalogTest(unittest.TestCase):
         with self.assertRaises(catalog.Invalid) as ctx:
             catalog.validate(self.src)
         self.assertIn(fragment, str(ctx.exception))
+
+    def test_every_table_needs_a_watch_theme(self):
+        self.write({"tools/vigia.json": minimal_watch(tables=("tax/*",))})
+        with self.assertRaisesRegex(catalog.Invalid, "nenhum tema da vigia cobre «tables/tru»"):
+            catalog.validate(self.src)
+
+    def test_watch_file_is_required(self):
+        (self.src / "tools" / "vigia.json").unlink()
+        with self.assertRaisesRegex(catalog.Invalid, "falta tools/vigia.json"):
+            catalog.validate(self.src)
+
+    def test_watch_source_type_and_theme(self):
+        w = minimal_watch()
+        w["fontes"]["srap"]["tema"] = "nao-existe"
+        self.write({"tools/vigia.json": w})
+        with self.assertRaisesRegex(catalog.Invalid, "srap: «tema» desconhecido"):
+            catalog.validate(self.src)
+        w = minimal_watch()
+        w["fontes"]["dr1"]["tipo"] = "email"
+        self.write({"tools/vigia.json": w})
+        with self.assertRaisesRegex(catalog.Invalid, "dr1: «tipo»"):
+            catalog.validate(self.src)
+
+    def test_watch_theme_needs_words(self):
+        w = minimal_watch()
+        w["temas"][0]["palavras"] = []
+        self.write({"tools/vigia.json": w})
+        with self.assertRaisesRegex(catalog.Invalid, "«palavras» vazio"):
+            catalog.validate(self.src)
 
     def test_minimal_is_valid(self):
         catalog.validate(self.src)
