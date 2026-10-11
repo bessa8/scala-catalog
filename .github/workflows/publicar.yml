@@ -1,7 +1,11 @@
 name: Publicar
+# A rotina trabalha noutro repositório (scala-catalog-propostas), onde está a app Claude: aqui nunca tem escrita.
+# De hora a hora, a partir do main, copiamos o main para lá e trazemos no máximo um ramo claude/…, que passa
+# pelo portão de sempre. O ramo é dados não confiáveis: os scripts correm sempre do main (confiavel/).
 on:
-  push:
-    branches: ['claude/**']
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
 permissions:
   contents: write
   issues: write
@@ -9,11 +13,41 @@ permissions:
 concurrency:
   group: main
   cancel-in-progress: false
+env:
+  PROPOSTAS_HTTPS: https://github.com/bessa8/scala-catalog-propostas.git
+  PROPOSTAS_SSH: git@github.com:bessa8/scala-catalog-propostas.git
 jobs:
-  publicar:
+  ver:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    outputs:
+      ramo: ${{ steps.ver.outputs.ramo }}
+      espelhar: ${{ steps.ver.outputs.espelhar }}
     steps:
-      # O ramo da rotina é dados não confiáveis: os scripts correm sempre do main (confiavel/).
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Ver as propostas
+        id: ver
+        run: |
+          if ! git ls-remote --heads "$PROPOSTAS_HTTPS" > "$RUNNER_TEMP/ls.txt"; then
+            echo "::warning::Repositório das propostas inacessível"
+            exit 0
+          fi
+          python3 tools/propostas.py ver --ls-remote "$RUNNER_TEMP/ls.txt" --main "$(git rev-parse HEAD)" --github-output "$GITHUB_OUTPUT"
+  publicar:
+    needs: ver
+    if: needs.ver.outputs.ramo != '' || needs.ver.outputs.espelhar == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: propostas
+    steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -21,13 +55,50 @@ jobs:
         with:
           ref: main
           path: confiavel
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Chave
+        id: chave
+        env:
+          CHAVE: ${{ secrets.PROPOSTAS_CHAVE }}
+        run: |
+          if [ -z "$CHAVE" ]; then
+            echo "::warning::Falta o secret PROPOSTAS_CHAVE no ambiente propostas: nada publicado."
+            echo "pronto=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          printf '%s\n' "$CHAVE" > "$RUNNER_TEMP/propostas"
+          chmod 600 "$RUNNER_TEMP/propostas"
+          echo "github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl" > "$RUNNER_TEMP/known_hosts"
+          echo "GIT_SSH_COMMAND=ssh -i $RUNNER_TEMP/propostas -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$RUNNER_TEMP/known_hosts" >> "$GITHUB_ENV"
+          echo "pronto=true" >> "$GITHUB_OUTPUT"
+      - name: Espelhar o main
+        if: steps.chave.outputs.pronto == 'true'
+        run: git push --force "$PROPOSTAS_SSH" HEAD:refs/heads/main
+      - name: Nome do ramo
+        if: steps.chave.outputs.pronto == 'true' && needs.ver.outputs.ramo != ''
+        env:
+          RAMO: ${{ needs.ver.outputs.ramo }}
+        run: |
+          python3 -c 'import sys; sys.path.insert(0, "confiavel/tools"); import propostas; sys.exit(0 if propostas.nome_valido(sys.argv[1]) else "nome de ramo inválido")' "$RAMO"
+      - name: Trazer o ramo
+        if: steps.chave.outputs.pronto == 'true' && needs.ver.outputs.ramo != ''
+        env:
+          RAMO: ${{ needs.ver.outputs.ramo }}
+        run: |
+          git fetch "$PROPOSTAS_SSH" "refs/heads/$RAMO:refs/remotes/propostas/ramo"
+          git checkout -B proposta refs/remotes/propostas/ramo
+          git config user.name scala-publicar
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git rebase origin/main
       - name: Portão
         id: portao
+        if: steps.chave.outputs.pronto == 'true' && needs.ver.outputs.ramo != ''
         run: python3 confiavel/tools/portao.py --base origin/main --github-output "$GITHUB_OUTPUT"
       - name: Validar
+        if: steps.chave.outputs.pronto == 'true' && needs.ver.outputs.ramo != ''
         env:
           RELATORIO: ${{ steps.portao.outputs.relatorio }}
         run: |
@@ -40,22 +111,29 @@ jobs:
           python3 confiavel/tools/relatorio.py "$RELATORIO" --issues "$RUNNER_TEMP/issues.json"
       - name: Juntar ao main
         id: juntar
+        if: steps.chave.outputs.pronto == 'true' && needs.ver.outputs.ramo != ''
         run: git push origin HEAD:main
       - name: Publicar o Pages
+        if: steps.chave.outputs.pronto == 'true' && needs.ver.outputs.ramo != ''
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run pages.yml --ref main
       - name: Issues
+        if: steps.chave.outputs.pronto == 'true' && needs.ver.outputs.ramo != ''
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 confiavel/tools/issues.py "$RUNNER_TEMP/issues.json"
-      - name: Apagar o ramo
-        run: git push origin --delete "$GITHUB_REF_NAME"
+      - name: Espelhar e apagar o ramo
+        if: steps.chave.outputs.pronto == 'true' && needs.ver.outputs.ramo != ''
+        env:
+          RAMO: ${{ needs.ver.outputs.ramo }}
+        run: git push --atomic --force "$PROPOSTAS_SSH" HEAD:refs/heads/main ":refs/heads/$RAMO"
       - name: Avisar a falha
-        if: failure()
+        if: failure() && steps.chave.outputs.pronto == 'true' && needs.ver.outputs.ramo != ''
         env:
           GH_TOKEN: ${{ github.token }}
           JUNTAR: ${{ steps.juntar.outcome }}
+          RAMO: ${{ needs.ver.outputs.ramo }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           if [ "$JUNTAR" = "success" ]; then
@@ -65,5 +143,21 @@ jobs:
           fi
           gh label create precisa-de-ti --force
           gh issue create --label precisa-de-ti \
-            --title "Precisa de ti: a publicação de $GITHUB_REF_NAME falhou" \
-            --body "$ESTADO Ver $RUN_URL"
+            --title "Precisa de ti: a publicação de $RAMO falhou" \
+            --body "$ESTADO O ramo foi movido para recusados/$RAMO no repositório das propostas. Ver $RUN_URL"
+          git push --force "$PROPOSTAS_SSH" "refs/remotes/propostas/ramo:refs/heads/recusados/$RAMO" ":refs/heads/$RAMO" \
+            || git push "$PROPOSTAS_SSH" ":refs/heads/$RAMO"
+      - name: Avisar outra falha
+        if: failure() && needs.ver.outputs.ramo == ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          TITULO: 'Precisa de ti: a Action Publicar falhou'
+        run: |
+          # uma só issue aberta, para não abrir uma por hora
+          JA=$(gh issue list --state open --search "in:title \"$TITULO\"" --json title --jq "[.[] | select(.title == \"$TITULO\")] | length")
+          if [ "$JA" = "0" ]; then
+            gh label create precisa-de-ti --force
+            gh issue create --label precisa-de-ti --title "$TITULO" \
+              --body "O espelho do main para o repositório das propostas falhou. Ver $RUN_URL"
+          fi
