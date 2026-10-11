@@ -132,7 +132,7 @@ class PlausivelTest(unittest.TestCase):
         new = self.put("tables/patrulha.2027-01-01.json", table("patrulha", "2027-01-01", {"x": 11503}))
         accepted = [self.accept(new)]
         v = table("patrulha", "2027-01-01", {"x": 11503})
-        v["published"], v["sources"] = "2027-02-02", [{"url": "z"}]
+        v["published"], v["sources"] = "2027-02-02", [{"url": "https://diariodarepublica.pt/z"}]
         self.put(new, v)
         self.assertEqual(plausivel.check(self.src, [new], accepted=accepted), [])
 
@@ -235,6 +235,55 @@ class PlausivelTest(unittest.TestCase):
         rel = self.put("tables/x.2026-01-01.json", table("x", "2026-01-01", {"a": 1}))
         problems = plausivel.check(self.src, [rel], desde="nao-existe")
         self.assertTrue(any("não foi possível conferir (RuntimeError" in p for p in problems), problems)
+
+    def test_tru_may_gain_numeric_levels_but_nothing_else_may_be_new(self):
+        self.put("tables/tru.2026-01-01.json", table("tru", "2026-01-01", {"43": 100000, "45": 110000}))
+        ok = self.put("tables/tru.2027-01-01.json", table("tru", "2027-01-01", {"43": 100000, "44": 105000, "45": 110000, "51": 118000}))
+        self.assertEqual(plausivel.check(self.src, [ok]), [])
+        # a TRU não pode perder níveis, nem ter chaves que não sejam níveis, nem descer de nível para nível
+        bad = self.put("tables/tru.2028-01-01.json", table("tru", "2028-01-01", {"43": 100000, "44": 99000, "x": 5, "-1": 5}))
+        problems = plausivel.check(self.src, [bad])
+        self.assertTrue(any("«45» existia" in p for p in problems), problems)
+        self.assertTrue(any("«x» é nova" in p for p in problems), problems)
+        self.assertTrue(any("«-1» é nova" in p for p in problems), problems)
+        # outras tabelas continuam sem chaves novas, mesmo numéricas
+        self.put("tables/medica.2026-01-01.json", table("medica", "2026-01-01", {"43": 100000}))
+        other = self.put("tables/medica.2027-01-01.json", table("medica", "2027-01-01", {"43": 100000, "44": 100000}))
+        self.assertTrue(any("«44» é nova" in p for p in plausivel.check(self.src, [other])))
+
+    def test_sources_must_be_on_official_domains(self):
+        def with_sources(*urls):
+            t = table("x", "2027-01-01", {"a": 1})
+            t["sources"] = [{"title": "T", "url": u, "consulted": "2027-01-31"} for u in urls]
+            return t
+        official = ("https://diariodarepublica.pt/dr/x", "https://files.diariodarepublica.pt/1s/a.pdf", "https://files.dre.pt/a.pdf",
+                    "https://www.dgaep.gov.pt/x.pdf", "https://info.portaldasfinancas.gov.pt/x", "https://www2.adse.pt/x",
+                    "https://www.acss.min-saude.pt/x", "https://joram.madeira.gov.pt/x", "https://www.cga.pt/x")
+        self.assertEqual(plausivel.check(self.src, [self.put("tables/x.2027-01-01.json", with_sources(*official))]), [])
+        bad = ("https://noticias.pt/x", "https://diariodarepublica.pt.evil.com/x", "https://evildiariodarepublica.pt/x",
+               "https://diariodarepublica.pt@evil.com/x", "https://portaldasfinancas.gov.pt/x", "https://example.com/dgaep.gov.pt")
+        problems = plausivel.check(self.src, [self.put("tables/y.2027-01-01.json", with_sources(*bad))])
+        self.assertEqual(len([p for p in problems if "fonte fora dos domínios oficiais" in p]), len(bad), problems)
+        # sem «url», ou «sources» que não é lista
+        t = table("z", "2027-01-01", {"a": 1})
+        t["sources"] = [{"title": "T"}]
+        self.assertEqual(len(plausivel.check(self.src, [self.put("tables/z.2027-01-01.json", t)])), 1)
+        t["sources"] = "x"
+        self.assertEqual(len(plausivel.check(self.src, [self.put("tables/w.2027-01-01.json", t)])), 1)
+
+    def test_sources_are_checked_even_for_accepted_files(self):
+        t = table("patrulha", "2027-01-01", {"x": 11503})
+        t["sources"] = [{"title": "T", "url": "https://noticias.pt/x", "consulted": "2027-01-31"}]
+        new = self.put("tables/patrulha.2027-01-01.json", t)
+        problems = plausivel.check(self.src, [new], accepted=[self.accept(new)])
+        self.assertEqual(len(problems), 1, problems)
+        self.assertIn("fora dos domínios oficiais", problems[0])
+
+    def test_every_catalog_file_passes_the_source_rule(self):
+        root = Path(plausivel.ROOT)
+        paths = sorted(str(p.relative_to(root)) for f in ("tables", "tax") for p in (root / f).glob("*.json"))
+        bad = [p for p in plausivel.check(root, paths) if "fora dos domínios" in p]
+        self.assertEqual(bad, [])
 
     def test_first_version_has_nothing_to_compare(self):
         new = self.put("tables/enfermagem.2026-01-01.json", table("enfermagem", "2026-01-01", {"enfermeiro-1": 165704}))

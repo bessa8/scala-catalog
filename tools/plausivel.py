@@ -5,7 +5,10 @@
     python3 tools/plausivel.py tables/tru.2027-01-01.json ...
     python3 tools/plausivel.py --hash tables/tru.2027-01-01.json   # hash dos dados, para aceites.json
 
-Regras: nenhum valor muda mais de 15 %; nenhuma chave desaparece; a TRU cresce
+Regras: nenhum valor muda mais de 15 %; nenhuma chave desaparece (a TRU pode
+ganhar níveis novos, com chaves numéricas); todos os endereços de `sources` ficam
+em domínios oficiais (OFFICIAL_DOMAINS, o mesmo que o ROTINA.md; verifica-se até
+nos ficheiros aceites, porque o hash não cobre as fontes); a TRU cresce
 de nível para nível; o salário mínimo e o IAS nunca descem; as tabelas de IRS
 são as mesmas (I a VII); nenhuma chave nova nem unidade diferente (a rotina não
 cria estrutura); nada fora do padrão <pasta>/<id>.<AAAA-MM-DD>.json. Com --desde,
@@ -23,10 +26,17 @@ import re
 import subprocess
 import sys
 from pathlib import Path
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 NAME = re.compile(r"(tables|tax)/([a-z0-9-]+)\.(\d{4}-\d{2}-\d{2})\.json$")
 LIMIT = 0.15
+# Domínios oficiais (ROTINA.md, «Limites»; spec 4.2). Um endereço serve se o anfitrião for um destes ou um subdomínio (www., files., …).
+OFFICIAL_DOMAINS = (
+    "diariodarepublica.pt", "dre.pt", "joram.madeira.gov.pt", "jo.azores.gov.pt",
+    "info.portaldasfinancas.gov.pt", "at.madeira.gov.pt", "dgaep.gov.pt", "dgert.gov.pt",
+    "seg-social.pt", "cga.pt", "adse.pt", "acss.min-saude.pt",
+)
 
 
 def _load(src, rel):
@@ -67,6 +77,27 @@ def _shape(rel, new):
             for k, v in values.items() if type(v) is not int]
 
 
+def _official(url):
+    try:
+        host = (urlparse(url).hostname or "").lower()
+    except ValueError:
+        return False
+    return any(host == d or host.endswith("." + d) for d in OFFICIAL_DOMAINS)
+
+
+def _sources(rel, data):
+    """Cada «sources[].url» tem de ser de um domínio oficial."""
+    sources = data.get("sources", []) if isinstance(data, dict) else []
+    if not isinstance(sources, list):
+        return [f"{rel}: «sources» não é uma lista"]
+    out = []
+    for source in sources:
+        url = source.get("url") if isinstance(source, dict) else None
+        if not isinstance(url, str) or not _official(url):
+            out.append(f"{rel}: fonte fora dos domínios oficiais ({url!r})")
+    return out
+
+
 def check_pair(rel, prev, new):
     folder, tid, _ = NAME.match(rel).groups()
     out = []
@@ -80,7 +111,7 @@ def check_pair(rel, prev, new):
             elif tid == "smn" and nv[k] < a:
                 out.append(f"{rel}: «{k}» desce {a} → {nv[k]}")
         for k in nv:
-            if k not in pv:
+            if k not in pv and not (tid == "tru" and k.isdigit()):  # a TRU de um ano novo usa mais níveis do mesmo anexo
                 out.append(f"{rel}: «{k}» é nova (a rotina não cria estrutura)")
         if prev.get("unit") != new.get("unit"):
             out.append(f"{rel}: «unit» muda {prev.get('unit')} → {new.get('unit')}")
@@ -188,10 +219,12 @@ def check_counted(src, paths, accepted=(), desde=None):
             out.append(f"{rel}: ficheiro fora do padrão <pasta>/<id>.<AAAA-MM-DD>.json")
             continue
         try:
+            bad_sources = _sources(rel, _load(src, rel))  # o hash dos aceites não cobre as fontes
             if rel in ok and sha256(src, rel) == ok[rel]:
                 skipped += 1
+                out += bad_sources
                 continue
-            problems = _check_file(src, rel, m, desde)
+            problems = bad_sources + _check_file(src, rel, m, desde)
         except Exception as e:  # falha fechado: nada de tracebacks nem de saltos silenciosos
             problems = [f"{rel}: não foi possível conferir ({type(e).__name__}: {e})"]
         checked += 1
