@@ -36,11 +36,28 @@ def diff(a, b, path="$"):
     return []
 
 
+def _no_duplicates(pairs):
+    out = {}
+    for k, v in pairs:
+        if k in out:
+            raise ValueError(f"chave repetida: {k}")
+        out[k] = v
+    return out
+
+
+def load(path):
+    return json.loads(Path(path).read_text(encoding="utf-8"), object_pairs_hook=_no_duplicates)
+
+
 def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
     if len(argv) != 2:
         sys.exit("uso: python3 tools/comparar.py A.json B.json")
-    a, b = (json.loads(Path(p).read_text(encoding="utf-8")) for p in argv)
+    try:
+        a, b = (load(p) for p in argv)
+    except (ValueError, OSError) as e:
+        print(f"não foi possível ler: {e}")
+        sys.exit(1)
     problems = diff(a, b)
     if problems:
         print("\n".join(problems))

@@ -1,3 +1,6 @@
 [
-  "tables/patrulha.2027-01-01.json"
+  {
+    "caminho": "tables/patrulha.2027-01-01.json",
+    "sha256": "d20baaec2ed20849ed4cd795e0592a78f43131ed7a0249a997a4db88e1626927"
+  }
 ]
