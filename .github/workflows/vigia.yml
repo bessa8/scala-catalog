@@ -1,0 +1,46 @@
+name: Vigia
+on:
+  schedule:
+    - cron: '0 6 * * *'   # todos os dias, 06:00 UTC (07:00 em Lisboa no verão)
+    - cron: '0 7 * * 1'   # às segundas, 07:00 UTC: a issue semanal
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: 'diario ou semanal'
+        required: true
+        default: diario
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: main
+  cancel-in-progress: false
+jobs:
+  vigia:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Ler as fontes
+        env:
+          AGENDA: ${{ github.event.schedule }}
+          MODO_PEDIDO: ${{ inputs.modo }}
+        run: |
+          MODO=diario
+          if [ "$AGENDA" = "0 7 * * 1" ]; then MODO=semanal; fi
+          if [ -n "$MODO_PEDIDO" ]; then MODO="$MODO_PEDIDO"; fi
+          python3 tools/vigia.py "$MODO" --issues "$RUNNER_TEMP/issues.json"
+      # As issues abrem-se antes de guardar o estado: se falhar, as pistas não se perdem.
+      - name: Abrir issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 tools/issues.py "$RUNNER_TEMP/issues.json"
+      - name: Guardar o estado
+        run: |
+          git config user.name 'scala-vigia'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add tools/estado.json
+          git diff --cached --quiet || git commit -m "Vigia: $(date -u +%F)"
+          git push

@@ -1,0 +1,61 @@
+name: Publicar
+on:
+  push:
+    branches: ['claude/**']
+permissions:
+  contents: write
+  issues: write
+  actions: write
+concurrency:
+  group: main
+  cancel-in-progress: false
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      # O ramo da rotina é dados não confiáveis: os scripts correm sempre do main (confiavel/).
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: confiavel
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Portão
+        id: portao
+        run: python3 confiavel/tools/portao.py --base origin/main --github-output "$GITHUB_OUTPUT"
+      - name: Validar
+        env:
+          RELATORIO: ${{ steps.portao.outputs.relatorio }}
+        run: |
+          python3 confiavel/tools/catalog.py validate --src .
+          python3 confiavel/tools/plausivel.py --src . --desde origin/main
+          python3 confiavel/tools/catalog.py build --src . --out .
+          python3 confiavel/tools/catalog.py report --src . --out VERIFICAR.md
+          git diff --exit-code -- manifest.json VERIFICAR.md
+          python3 confiavel/tools/catalog.py verify .
+          python3 confiavel/tools/relatorio.py "$RELATORIO" --issues "$RUNNER_TEMP/issues.json"
+      - name: Juntar ao main
+        run: git push origin HEAD:main
+      - name: Publicar o Pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main
+      - name: Issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 confiavel/tools/issues.py "$RUNNER_TEMP/issues.json"
+      - name: Apagar o ramo
+        run: git push origin --delete "$GITHUB_REF_NAME"
+      - name: Avisar a falha
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create precisa-de-ti --force
+          gh issue create --label precisa-de-ti \
+            --title "Precisa de ti: a publicação de $GITHUB_REF_NAME falhou" \
+            --body "O ramo ficou por juntar. Ver ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
