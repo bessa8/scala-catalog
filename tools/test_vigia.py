@@ -123,6 +123,88 @@ class VigiaTest(unittest.TestCase):
         self.assertEqual(state["pistas"], [])
         self.assertIsNone(vigia.weekly(state, NOW))
 
+    def test_failed_first_circular_run_does_not_flood_next_run(self):
+        calls = {"n": 0}
+        def flaky(url):
+            calls["n"] += 1
+            if calls["n"] == 3:
+                raise OSError("falhou a meio")
+            return url.rsplit("/", 1)[-1] in ("Circular_1_2027.pdf", "Circular_2_2027.pdf")
+        fetch, _ = pages()
+        state, _ = vigia.daily(vigia.empty_state(), CONFIG, fetch, flaky, NOW)
+        self.assertEqual(state["falhas"].get("at"), ["2027-01-05"])
+        self.assertFalse(state["fontes"]["at"].get("ultimas"))
+        self.assertEqual(state["pistas"] and [p for p in state["pistas"] if p["fonte"] == "at"], [])
+        _, exists = pages(circulars=("Circular_1_2027.pdf", "Circular_2_2027.pdf"))
+        state, _ = vigia.daily(state, CONFIG, fetch, exists, NOW + datetime.timedelta(days=1))
+        self.assertEqual([p for p in state["pistas"] if p["fonte"] == "at"], [])
+        self.assertEqual(state["fontes"]["at"]["ultimas"]["2027"], 2)
+
+    def test_december_error_in_next_year_keeps_state_unchanged(self):
+        dec = datetime.datetime(2026, 12, 20, 6, 0, tzinfo=datetime.timezone.utc)
+        fetch, _ = pages()
+        state = vigia.empty_state()
+        state["fontes"]["at"] = {"ultimas": {"2026": 4}}
+        def exists(url):
+            if "_2027" in url:
+                raise OSError("falhou")
+            return url.rsplit("/", 1)[-1] == "Circular_5_2026.pdf"
+        state, _ = vigia.daily(state, CONFIG, fetch, exists, dec)
+        self.assertEqual(state["fontes"]["at"]["ultimas"], {"2026": 4})
+        self.assertEqual([p for p in state["pistas"] if p["fonte"] == "at"], [])
+        self.assertIn("at", state["falhas"])
+
+    def test_circular_probe_stops_at_the_cap(self):
+        fetch, _ = pages()
+        state = vigia.empty_state()
+        state["fontes"]["at"] = {"ultimas": {"2027": 1}}
+        state, _ = vigia.daily(state, CONFIG, fetch, lambda url: True, NOW)
+        leads = [p for p in state["pistas"] if p["fonte"] == "at"]
+        self.assertEqual(len(leads), vigia.MAX_CIRCULARS_PER_RUN)
+        self.assertEqual(state["fontes"]["at"]["ultimas"]["2027"], 1 + vigia.MAX_CIRCULARS_PER_RUN)
+
+    def test_first_run_with_an_always_true_probe_terminates(self):
+        fetch, _ = pages()
+        state, _ = vigia.daily(vigia.empty_state(), CONFIG, fetch, lambda url: True, NOW)
+        self.assertEqual([p for p in state["pistas"] if p["fonte"] == "at"], [])
+        self.assertEqual(state["fontes"]["at"]["ultimas"]["2027"], vigia.MAX_CIRCULARS_FIRST_RUN)
+
+    def test_exists_requires_a_pdf(self):
+        class Resp:
+            def __init__(self, kind):
+                self.status = 200
+                self.headers = {"Content-Type": kind}
+            def __enter__(self):
+                return self
+            def __exit__(self, *a):
+                return False
+        original = vigia.urllib.request.urlopen
+        try:
+            vigia.urllib.request.urlopen = lambda req, timeout=0: Resp("application/pdf")
+            self.assertTrue(vigia.exists("https://x/a.pdf"))
+            vigia.urllib.request.urlopen = lambda req, timeout=0: Resp("text/html; charset=utf-8")
+            self.assertFalse(vigia.exists("https://x/a.pdf"))
+        finally:
+            vigia.urllib.request.urlopen = original
+
+    def test_rss_only_remembers_links_that_became_leads(self):
+        fetch, exists = pages()
+        state, _ = vigia.daily(vigia.empty_state(), CONFIG, fetch, exists, NOW)
+        self.assertEqual(list(state["fontes"]["dr2"]["vistos"]),
+                         ["https://diariodarepublica.pt/dr/detalhe/despacho/1-a-2027-1"])
+        state, _ = vigia.daily(state, CONFIG, fetch, exists, NOW + datetime.timedelta(days=1))
+        self.assertEqual(len([p for p in state["pistas"] if p["fonte"] == "dr2"]), 1)
+
+    def test_weekly_long_body_keeps_only_the_json_block(self):
+        leads = [{"temas": ["irs"], "titulo": "T" * 200, "resumo": "R" * 500, "link": f"https://x/{i}",
+                  "fonte": "dr2", "vistaEm": "2027-01-04"} for i in range(60)]
+        state = vigia.empty_state()
+        state["pistas"] = leads
+        issue = vigia.weekly(state, NOW)
+        self.assertIn("Lista longa: ver o bloco JSON.", issue["corpo"])
+        self.assertIn("```json", issue["corpo"])
+        self.assertNotIn("- **[irs]**", issue["corpo"])
+
     def test_cli_writes_state_and_issues(self):
         d = Path(tempfile.mkdtemp())
         (d / "vigia.json").write_text(json.dumps(CONFIG), encoding="utf-8")

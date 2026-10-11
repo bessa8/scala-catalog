@@ -26,6 +26,9 @@ USER_AGENT = "Mozilla/5.0 (compatible; scala-catalog-vigia; +https://github.com/
 KEEP_DAYS = 60       # quanto tempo um link do RSS fica registado como visto
 FAILS_FOR_ISSUE = 3  # dias seguidos sem abrir até haver uma issue
 LOOKAHEAD = 3        # números de circular espreitados à frente (há buracos)
+MAX_CIRCULARS_PER_RUN = 20   # circulares novas por ano e por corrida (trava contra respostas «sempre sim»)
+MAX_CIRCULARS_FIRST_RUN = 200  # na primeira corrida só se regista o ponto de partida, com folga
+MAX_BODY_CHARS = 60000       # o GitHub aceita 65536 caracteres no corpo de uma issue
 
 
 def normalize(text):
@@ -70,9 +73,9 @@ def _rss(f, mem, temas, fetch, today):
     for item in rss_items(fetch(f["url"])):
         if not item["link"] or item["link"] in seen:
             continue
-        seen[item["link"]] = today.isoformat()
         temas_item = themes_for(f"{item['titulo']} {item['resumo']}", temas)
-        if temas_item:
+        if temas_item:  # só as pistas ficam registadas: o resto não gera nada, não precisa de deduplicação
+            seen[item["link"]] = today.isoformat()
             leads.append({"temas": temas_item, **item})
     return leads
 
@@ -90,13 +93,16 @@ def _links(f, mem, fetch):
 
 
 def _circulars(f, mem, exists, today):
-    first = "ultimas" not in mem
-    last = mem.setdefault("ultimas", {})
+    first = not mem.get("ultimas")
+    cap = MAX_CIRCULARS_FIRST_RUN if first else MAX_CIRCULARS_PER_RUN
+    previous = mem.get("ultimas", {})
+    new_last = {}
     years = [today.year] + ([today.year + 1] if today.month == 12 else [])
     leads = []
     for year in years:
-        n = last.get(str(year), 0)
-        while True:
+        n = previous.get(str(year), 0)
+        found = 0
+        while found < cap:
             hit = None
             for ahead in range(1, LOOKAHEAD + 1):
                 for name in f["nomes"]:
@@ -109,9 +115,12 @@ def _circulars(f, mem, exists, today):
             if hit is None:
                 break
             n = hit[0]
+            found += 1
             if not first:
                 leads.append({"temas": [f["tema"]], "titulo": f"Circular n.º {n}/{year} da AT", "resumo": "", "link": hit[1]})
-        last[str(year)] = n
+        new_last[str(year)] = n
+    # só se grava depois de todos os anos terem sido espreitados sem erro
+    mem["ultimas"] = {**previous, **new_last}
     return leads
 
 
@@ -160,9 +169,11 @@ def weekly(state, now):
         lines.append(f"- **[{', '.join(p['temas'])}]** {p['titulo']} — {p['link']} (fonte: {p['fonte']}, vista em {p['vistaEm']})")
         if p["resumo"]:
             lines.append(f"  {p['resumo']}")
-    corpo = ("A vigia encontrou isto nas fontes oficiais. A rotina segue o `ROTINA.md`.\n\n"
-             + "\n".join(lines)
-             + "\n\n```json\n" + json.dumps(leads, ensure_ascii=False, indent=2) + "\n```\n")
+    head = "A vigia encontrou isto nas fontes oficiais. A rotina segue o `ROTINA.md`.\n\n"
+    block = "```json\n" + json.dumps(leads, ensure_ascii=False, indent=2) + "\n```\n"
+    corpo = head + "\n".join(lines) + "\n\n" + block
+    if len(corpo) > MAX_BODY_CHARS:
+        corpo = head + "Lista longa: ver o bloco JSON.\n\n" + block
     return {"tipo": "criar", "titulo": f"Novidades da semana ({now.date().isoformat()})",
             "corpo": corpo, "etiquetas": ["novidade"], "fechar": False}
 
@@ -177,7 +188,8 @@ def exists(url):
     req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": USER_AGENT})
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
-            return r.status == 200
+            kind = r.headers.get("Content-Type", "")
+            return r.status == 200 and kind.lower().startswith("application/pdf")
     except urllib.error.HTTPError as e:
         if e.code == 404:
             return False

@@ -21,6 +21,6 @@
     {"id": "ias-jovem", "tabelas": ["tax/youth"], "palavras": ["indexante dos apoios sociais", "IRS Jovem"]},
     {"id": "tru", "tabelas": ["tables/tru", "tables/medica", "tables/enfermagem", "tables/farmaceutico"], "palavras": ["tabela remuneratoria unica", "base remuneratoria", "niveis remuneratorios"]},
     {"id": "smn", "tabelas": ["tables/smn"], "palavras": ["retribuicao minima mensal garantida"]},
-    {"id": "carreiras", "tabelas": ["tables/patrulha", "tables/ssr", "tables/teph-supl", "tables/tss"], "palavras": ["carreira especial de enfermagem", "carreira especial farmaceutica", "carreira especial medica", "tecnico auxiliar de saude", "tecnico superior de diagnostico e terapeutica", "tecnico superior de saude", "emergencia pre-hospitalar", "bombeiro sapador", "Policia de Seguranca Publica", "Guarda Nacional Republicana", "guarda prisional", "suplemento de patrulha", "suplemento por servico e risco"]}
+    {"id": "carreiras", "tabelas": ["tables/patrulha", "tables/ssr", "tables/teph-supl", "tables/tss"], "palavras": ["carreira especial de enfermagem", "carreira especial farmaceutica", "carreira especial medica", "tecnico auxiliar de saude", "tecnico superior de diagnostico e terapeutica", "tecnico superior de saude", "emergencia pre-hospitalar", "243/2015", "298/2009", "30/2017", "decreto-lei n.º 3/2014", "106/2002", "decreto-lei n.º 51/2025", "decreto-lei n.º 19/2016", "decreto-lei n.º 60/2025", "suplemento de patrulha", "suplemento por servico e risco"]}
   ]
 }
