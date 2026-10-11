@@ -6,6 +6,7 @@
 Falha sempre «para o lado seguro»: o que não for claramente permitido é recusado.
 """
 import argparse
+import datetime
 import json
 import re
 import subprocess
@@ -60,6 +61,48 @@ def report_problems(path, touched, read=lambda p: open(p, encoding="utf-8").read
             for p in rep["publicado"] if p["caminho"] not in touched]
 
 
+def _date(value):
+    """AAAA-MM-DD válido, ou None."""
+    try:
+        return datetime.date.fromisoformat(value) if isinstance(value, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", value) else None
+    except ValueError:
+        return None
+
+
+def data_problems(report, changes, read_new, read_old):
+    """O relatório e os ficheiros de dados têm de contar a mesma história.
+
+    changes: (estado, caminho, …); read_new(caminho) e read_old(caminho) devolvem o JSON já lido
+    (read_old só se chama para ficheiros alterados). Qualquer erro de leitura é um problema, não um traceback.
+    """
+    out = []
+    listed = {p["caminho"]: p for p in report["publicado"]}
+    for change in changes:
+        status, path = change[0], change[1]
+        if status not in ("A", "M") or not path.startswith(DATA_PREFIXES):
+            continue
+        if path not in listed:
+            out.append(f"{path}: mudou mas não está em publicado no relatório")
+            continue
+        try:
+            new = read_new(path)
+            effective = new.get("effective")
+            if listed[path]["vigencia"] != effective:
+                out.append(f"{path}: o relatório diz vigência {listed[path]['vigencia']} mas o ficheiro tem effective {effective}")
+            if status == "M":
+                old = read_old(path)
+                if _date(new.get("published")) is None or _date(old.get("published")) is None:
+                    out.append(f"{path}: retificação sem «published» válido (antes e depois)")
+                elif _date(new["published"]) <= _date(old["published"]):
+                    out.append(f"{path}: retificação sem published novo (continua {new['published']}, antes {old['published']})")
+                if not (isinstance(new.get("sources"), list) and isinstance(old.get("sources"), list)
+                        and len(new["sources"]) > len(old["sources"])):
+                    out.append(f"{path}: retificação sem fonte nova (a declaração de retificação entra em sources)")
+        except (OSError, ValueError, AttributeError, TypeError, subprocess.CalledProcessError) as e:
+            out.append(f"{path}: não consegui conferir o ficheiro com o relatório ({type(e).__name__}: {e})")
+    return out
+
+
 def parse_raw(raw):
     """Lê a saída de `git diff --raw -z --no-renames` em (estado, caminho, modo)."""
     tokens = raw.split("\0")
@@ -94,6 +137,17 @@ def main(argv=None):
         sys.exit(1)
     if len(reports) == 1:
         found += report_problems(reports[0], {c[1] for c in diff if c[0] in ("A", "M")})
+        try:  # com o relatório válido, confere-se o resto contra os ficheiros de dados (só ficheiros normais)
+            report = json.loads(open(reports[0], encoding="utf-8").read())
+            relatorio.check(report)
+        except (OSError, ValueError):
+            report = None  # report_problems já o disse
+        if report is not None:
+            found += data_problems(
+                report, [c for c in diff if c[2] == FILE_MODE],
+                lambda p: json.loads(open(p, encoding="utf-8").read()),
+                lambda p: json.loads(subprocess.run(["git", "show", f"{args.base}:{p}"], capture_output=True,
+                                                    text=True, check=True).stdout))
     if subprocess.run(["git", "merge-base", "--is-ancestor", args.base, "HEAD"]).returncode != 0:
         found.append(f"o ramo não parte do {args.base} atual (não dá para juntar sem merge)")
     if found:

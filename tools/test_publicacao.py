@@ -102,6 +102,12 @@ class PortaoTest(unittest.TestCase):
         self.assertEqual(len(portao.report_problems("r", set(), lambda p: open("/nao/existe/x").read())), 1)
 
 
+def table_json(effective, published, sources, **extra):
+    return json.dumps({"format": 2, "id": "a", "effective": effective, "published": published,
+                       "sources": [{"title": f"F{i}", "url": f"https://diariodarepublica.pt/{i}", "consulted": published}
+                                   for i in range(sources)], "values": {"k": 1}, **extra})
+
+
 class PortaoGitTest(unittest.TestCase):
     def git(self, *args):
         return subprocess.run(["git", "-C", self.dir, "-c", "user.name=t", "-c", "user.email=t@t", *args],
@@ -111,7 +117,7 @@ class PortaoGitTest(unittest.TestCase):
         self.dir = tempfile.mkdtemp()
         self.git("init", "-q", "-b", "main")
         (Path(self.dir) / "tables").mkdir()
-        (Path(self.dir) / "tables" / "a.json").write_text("{}")
+        (Path(self.dir) / "tables" / "a.json").write_text(table_json("2026-01-01", "2026-01-01", 1))
         self.git("add", "-A")
         self.git("commit", "-q", "-m", "base")
         self.git("checkout", "-q", "-b", "claude/x")
@@ -124,14 +130,66 @@ class PortaoGitTest(unittest.TestCase):
     def test_cli_ok_writes_output(self):
         (Path(self.dir) / "relatorios").mkdir()
         (Path(self.dir) / "relatorios" / "2027-01-31.json").write_text(json.dumps(
-            {**REPORT, "publicado": [{**REPORT["publicado"][0], "caminho": "tables/a.json"}]}))
-        (Path(self.dir) / "tables" / "a.json").write_text('{"x":1}')
+            {**REPORT, "publicado": [{**REPORT["publicado"][0], "caminho": "tables/a.json", "vigencia": "2026-01-01"}]}))
+        (Path(self.dir) / "tables" / "a.json").write_text(table_json("2026-01-01", "2026-10-11", 2))
         self.git("add", "-A")
         self.git("commit", "-q", "-m", "dados")
         out = Path(self.dir) / "out.txt"
         r = self.run_gate("--github-output", str(out))
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertEqual(out.read_text(), "relatorio=relatorios/2027-01-31.json\n")
+
+    def branch(self, files, published):
+        """Um commit no ramo com ficheiros {caminho: texto} e um relatório que declara `published` [(caminho, vigencia)]."""
+        for rel, text in files.items():
+            (Path(self.dir) / rel).parent.mkdir(parents=True, exist_ok=True)
+            (Path(self.dir) / rel).write_text(text)
+        (Path(self.dir) / "relatorios").mkdir(exist_ok=True)
+        (Path(self.dir) / "relatorios" / "2027-01-31.json").write_text(json.dumps(
+            {**REPORT, "publicado": [{**REPORT["publicado"][0], "caminho": c, "vigencia": v} for c, v in published]}))
+        self.git("add", "-A")
+        self.git("commit", "-q", "-m", "ramo")
+
+    def assert_refused(self, *fragments):
+        r = self.run_gate()
+        self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+        for fragment in fragments:
+            self.assertIn(fragment, r.stdout)
+        self.assertNotIn("Traceback", r.stderr)
+
+    def test_cli_refuses_changed_data_file_missing_from_publicado(self):
+        self.branch({"tables/a.json": table_json("2026-01-01", "2026-10-11", 2),
+                     "tables/b.json": table_json("2026-01-01", "2026-10-11", 1)}, [("tables/a.json", "2026-01-01")])
+        self.assert_refused("tables/b.json: mudou mas não está em publicado")
+
+    def test_cli_refuses_retification_without_newer_published(self):
+        self.branch({"tables/a.json": table_json("2026-01-01", "2026-01-01", 2)}, [("tables/a.json", "2026-01-01")])
+        self.assert_refused("tables/a.json: retificação sem published novo")
+
+    def test_cli_refuses_retification_with_older_published(self):
+        self.branch({"tables/a.json": table_json("2026-01-01", "2025-12-31", 2)}, [("tables/a.json", "2026-01-01")])
+        self.assert_refused("sem published novo")
+
+    def test_cli_refuses_retification_without_new_source(self):
+        self.branch({"tables/a.json": table_json("2026-01-01", "2026-10-11", 1)}, [("tables/a.json", "2026-01-01")])
+        self.assert_refused("tables/a.json: retificação sem fonte nova")
+
+    def test_cli_refuses_vigencia_that_differs_from_effective(self):
+        self.branch({"tables/a.json": table_json("2026-01-01", "2026-10-11", 2)}, [("tables/a.json", "2027-01-01")])
+        self.assert_refused("vigência 2027-01-01 mas o ficheiro tem effective 2026-01-01")
+
+    def test_cli_new_file_needs_no_retification_proof_but_a_matching_vigencia(self):
+        self.branch({"tables/a.2027-01-01.json": table_json("2027-01-01", "2026-10-11", 1)}, [("tables/a.2027-01-01.json", "2027-01-01")])
+        r = self.run_gate()
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+
+    def test_cli_unreadable_data_file_is_a_problem_not_a_traceback(self):
+        self.branch({"tables/a.json": "{nao"}, [("tables/a.json", "2026-01-01")])
+        self.assert_refused("tables/a.json: não consegui conferir")
+
+    def test_cli_retification_with_missing_published_is_a_problem(self):
+        self.branch({"tables/a.json": json.dumps({"effective": "2026-01-01", "sources": [1, 2, 3]})}, [("tables/a.json", "2026-01-01")])
+        self.assert_refused("retificação sem «published» válido")
 
     def test_cli_refuses_symlink_and_tools(self):
         (Path(self.dir) / "relatorios").mkdir()
