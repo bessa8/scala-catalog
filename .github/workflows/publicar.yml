@@ -26,6 +26,7 @@ jobs:
     outputs:
       ramo: ${{ steps.ver.outputs.ramo }}
       espelhar: ${{ steps.ver.outputs.espelhar }}
+      invalidos: ${{ steps.ver.outputs.invalidos }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,13 +41,25 @@ jobs:
             echo "::warning::Repositório das propostas inacessível"
             exit 0
           fi
-          python3 tools/propostas.py ver --ls-remote "$RUNNER_TEMP/ls.txt" --main "$(git rev-parse HEAD)" --github-output "$GITHUB_OUTPUT"
+          python3 -I tools/propostas.py ver --ls-remote "$RUNNER_TEMP/ls.txt" --main "$(git rev-parse HEAD)" --github-output "$GITHUB_OUTPUT"
   publicar:
     needs: ver
-    if: needs.ver.outputs.ramo != '' || needs.ver.outputs.espelhar == 'true'
+    if: needs.ver.outputs.ramo != '' || needs.ver.outputs.espelhar == 'true' || (needs.ver.outputs.invalidos != '' && needs.ver.outputs.invalidos != '0')
     runs-on: ubuntu-latest
     timeout-minutes: 20
     environment: propostas
+    env:
+      # o ramo é dados não confiáveis: nada de filtros LFS a correr ao tirar o ramo
+      GIT_LFS_SKIP_SMUDGE: '1'
+      GIT_CONFIG_COUNT: '4'
+      GIT_CONFIG_KEY_0: filter.lfs.process
+      GIT_CONFIG_VALUE_0: ''
+      GIT_CONFIG_KEY_1: filter.lfs.smudge
+      GIT_CONFIG_VALUE_1: ''
+      GIT_CONFIG_KEY_2: filter.lfs.clean
+      GIT_CONFIG_VALUE_2: ''
+      GIT_CONFIG_KEY_3: filter.lfs.required
+      GIT_CONFIG_VALUE_3: 'false'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -59,6 +72,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      # A base fica fixada (um sha) antes de qualquer fetch do repositório das propostas: um nome curto
+      # como origin/main podia ser sombreado por uma tag vinda de lá.
+      - name: Fixar a base
+        run: |
+          BASE=$(git rev-parse --verify 'refs/remotes/origin/main^{commit}')
+          echo "BASE=$BASE" >> "$GITHUB_ENV"
+          git for-each-ref refs/tags > "$RUNNER_TEMP/tags-antes.txt"
       - name: Chave
         id: chave
         env:
@@ -74,36 +94,64 @@ jobs:
           echo "github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl" > "$RUNNER_TEMP/known_hosts"
           echo "GIT_SSH_COMMAND=ssh -i $RUNNER_TEMP/propostas -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$RUNNER_TEMP/known_hosts" >> "$GITHUB_ENV"
           echo "pronto=true" >> "$GITHUB_OUTPUT"
-      - name: Espelhar o main
-        if: steps.chave.outputs.pronto == 'true'
-        run: git push --force "$PROPOSTAS_SSH" HEAD:refs/heads/main
       - name: Nome do ramo
         if: steps.chave.outputs.pronto == 'true' && needs.ver.outputs.ramo != ''
         env:
           RAMO: ${{ needs.ver.outputs.ramo }}
-        run: |
-          python3 -c 'import sys; sys.path.insert(0, "confiavel/tools"); import propostas; sys.exit(0 if propostas.nome_valido(sys.argv[1]) else "nome de ramo inválido")' "$RAMO"
+        run: python3 -I confiavel/tools/propostas.py nome "$RAMO"
       - name: Trazer o ramo
         if: steps.chave.outputs.pronto == 'true' && needs.ver.outputs.ramo != ''
         env:
           RAMO: ${{ needs.ver.outputs.ramo }}
         run: |
-          git fetch "$PROPOSTAS_SSH" "refs/heads/$RAMO:refs/remotes/propostas/ramo"
+          git fetch --no-tags "$PROPOSTAS_SSH" "refs/heads/$RAMO:refs/remotes/propostas/ramo"
+          if ! git for-each-ref refs/tags | diff -q - "$RUNNER_TEMP/tags-antes.txt" > /dev/null; then
+            echo "::error::As tags mudaram durante o fetch do ramo"
+            exit 1
+          fi
+      - name: Espelhar o main
+        id: espelhar
+        if: steps.chave.outputs.pronto == 'true'
+        continue-on-error: true
+        run: git push --force "$PROPOSTAS_SSH" HEAD:refs/heads/main
+      - name: Apagar os ramos de nome inválido
+        if: steps.chave.outputs.pronto == 'true' && needs.ver.outputs.invalidos != '' && needs.ver.outputs.invalidos != '0'
+        continue-on-error: true
+        run: |
+          git ls-remote --heads "$PROPOSTAS_SSH" > "$RUNNER_TEMP/ls-ssh.txt"
+          python3 -I confiavel/tools/propostas.py invalidos --ls-remote "$RUNNER_TEMP/ls-ssh.txt" --saida "$RUNNER_TEMP/invalidos.txt"
+          mapfile -t NOMES < "$RUNNER_TEMP/invalidos.txt"
+          if [ "${#NOMES[@]}" -eq 0 ]; then exit 0; fi
+          APAGAR=()
+          for NOME in "${NOMES[@]}"; do APAGAR+=(":refs/heads/$NOME"); done
+          if git push "$PROPOSTAS_SSH" "${APAGAR[@]}"; then
+            echo "::warning::Apagados ${#NOMES[@]} ramos claude/ de nome inválido no repositório das propostas"
+          else
+            echo "::warning::Não consegui apagar ${#NOMES[@]} ramos claude/ de nome inválido no repositório das propostas"
+          fi
+      - name: Conferir os caminhos
+        if: steps.chave.outputs.pronto == 'true' && needs.ver.outputs.ramo != ''
+        run: |
+          git diff --name-only -z "$BASE"...refs/remotes/propostas/ramo > "$RUNNER_TEMP/caminhos.bin"
+          python3 -I confiavel/tools/propostas.py caminhos "$RUNNER_TEMP/caminhos.bin"
+      - name: Preparar o ramo
+        if: steps.chave.outputs.pronto == 'true' && needs.ver.outputs.ramo != ''
+        run: |
           git checkout -B proposta refs/remotes/propostas/ramo
           git config user.name scala-publicar
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git rebase origin/main
+          git rebase "$BASE"
       - name: Portão
         id: portao
         if: steps.chave.outputs.pronto == 'true' && needs.ver.outputs.ramo != ''
-        run: python3 confiavel/tools/portao.py --base origin/main --github-output "$GITHUB_OUTPUT"
+        run: python3 confiavel/tools/portao.py --base "$BASE" --github-output "$GITHUB_OUTPUT"
       - name: Validar
         if: steps.chave.outputs.pronto == 'true' && needs.ver.outputs.ramo != ''
         env:
           RELATORIO: ${{ steps.portao.outputs.relatorio }}
         run: |
           python3 confiavel/tools/catalog.py validate --src .
-          python3 confiavel/tools/plausivel.py --src . --desde origin/main
+          python3 confiavel/tools/plausivel.py --src . --desde "$BASE"
           python3 confiavel/tools/catalog.py build --src . --out .
           python3 confiavel/tools/catalog.py report --src . --out VERIFICAR.md
           git diff --exit-code -- manifest.json VERIFICAR.md
@@ -112,7 +160,13 @@ jobs:
       - name: Juntar ao main
         id: juntar
         if: steps.chave.outputs.pronto == 'true' && needs.ver.outputs.ramo != ''
-        run: git push origin HEAD:main
+        run: |
+          if [ "$(git rev-parse refs/remotes/origin/main)" != "$BASE" ]; then
+            echo "::error::O main mudou durante a publicação"
+            exit 1
+          fi
+          git merge-base --is-ancestor "$BASE" HEAD
+          git push origin HEAD:refs/heads/main
       - name: Publicar o Pages
         if: steps.chave.outputs.pronto == 'true' && needs.ver.outputs.ramo != ''
         env:
@@ -141,14 +195,27 @@ jobs:
           else
             ESTADO="O ramo ficou por juntar."
           fi
-          gh label create precisa-de-ti --force
-          gh issue create --label precisa-de-ti \
-            --title "Precisa de ti: a publicação de $RAMO falhou" \
-            --body "$ESTADO O ramo foi movido para recusados/$RAMO no repositório das propostas. Ver $RUN_URL"
-          git push --force "$PROPOSTAS_SSH" "refs/remotes/propostas/ramo:refs/heads/recusados/$RAMO" ":refs/heads/$RAMO" \
-            || git push "$PROPOSTAS_SSH" ":refs/heads/$RAMO"
+          # o ramo sai do caminho para não ser tratado outra vez; a frase diz o que aconteceu de facto
+          if git rev-parse --verify -q refs/remotes/propostas/ramo > /dev/null; then
+            if git push --atomic --force "$PROPOSTAS_SSH" "refs/remotes/propostas/ramo:refs/heads/recusados/$RAMO" ":refs/heads/$RAMO"; then
+              DESTINO="O ramo foi movido para recusados/$RAMO no repositório das propostas."
+            else
+              DESTINO="O ramo ficou no repositório das propostas."
+            fi
+          elif ! python3 -I confiavel/tools/propostas.py nome "$RAMO" && git push "$PROPOSTAS_SSH" ":refs/heads/$RAMO"; then
+            DESTINO="O ramo foi apagado do repositório das propostas."
+          else
+            DESTINO="O ramo ficou no repositório das propostas."
+          fi
+          TITULO="Precisa de ti: a publicação de $RAMO falhou"
+          JA=$(gh issue list --state open --search "in:title \"$TITULO\"" --json title --jq "[.[] | select(.title == \"$TITULO\")] | length")
+          if [ "$JA" = "0" ]; then
+            gh label create precisa-de-ti --force
+            gh issue create --label precisa-de-ti --title "$TITULO" \
+              --body "$ESTADO $DESTINO Ver $RUN_URL"
+          fi
       - name: Avisar outra falha
-        if: failure() && needs.ver.outputs.ramo == ''
+        if: (failure() && needs.ver.outputs.ramo == '') || steps.espelhar.outcome == 'failure'
         env:
           GH_TOKEN: ${{ github.token }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
@@ -159,5 +226,5 @@ jobs:
           if [ "$JA" = "0" ]; then
             gh label create precisa-de-ti --force
             gh issue create --label precisa-de-ti --title "$TITULO" \
-              --body "O espelho do main para o repositório das propostas falhou. Ver $RUN_URL"
+              --body "Falhou a Action Publicar (por exemplo, o espelho do main para o repositório das propostas). Ver $RUN_URL"
           fi
