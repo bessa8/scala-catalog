@@ -1,0 +1,22 @@
+{
+  "format": 2,
+  "id": "patrulha",
+  "published": "2026-10-10",
+  "effective": "2026-01-01",
+  "title": {
+    "pt": "Suplemento de patrulha (PSP e GNR)",
+    "en": "Patrol supplement (PSP and GNR)"
+  },
+  "unit": "monthly",
+  "values": {
+    "chefe-sargento": 9003,
+    "agente-guarda": 8413
+  },
+  "sources": [
+    {
+      "title": "Lei n.º 73-A/2025, de 30 de dezembro, artigo 255.º (GNR: sargentos 90,03 €, guardas 84,13 € em 2026) e artigo 257.º (PSP: artigo 154.º-A do Decreto-Lei n.º 243/2015, chefes 90,03 €, agentes 84,13 € em 2026)",
+      "url": "https://files.diariodarepublica.pt/1s/2025/12/25002/0000200271.pdf",
+      "consulted": "2026-10-10"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "format": 2,
+  "id": "medico-familiar",
+  "published": "2026-10-10",
+  "job": {
+    "color": 4293668883,
+    "colorMode": "tonal",
+    "weeklyHours": 35,
+    "maxConsecutive": 6,
+    "prohibitNightMorning": false,
+    "prohibitTriple": false,
+    "allExtra": false,
+    "overlapTolerance": 30,
+    "templates": [
+      {
+        "id": "M",
+        "name": "Manhã",
+        "category": "M",
+        "start": 480,
+        "end": 840,
+        "timed": true
+      },
+      {
+        "id": "T",
+        "name": "Tarde",
+        "category": "T",
+        "start": 840,
+        "end": 1200,
+        "timed": true
+      }
+    ],
+    "reminders": []
+  },
+  "pay": {
+    "calculationHours": 35,
+    "supplementDelay": 1,
+    "extraDelay": 1,
+    "extraFirst": 0,
+    "extraLater": 0
+  }
+}

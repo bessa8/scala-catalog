@@ -1,0 +1,14 @@
+{
+  "format": 2,
+  "id": "youth",
+  "published": "2026-10-11",
+  "effective": "2026-01-01",
+  "title": {"pt": "IRS Jovem (art. 12.º-B do CIRS)", "en": "Youth IRS scheme (CIRS art. 12-B)"},
+  "percent": [100, 75, 75, 75, 50, 50, 50, 25, 25, 25],
+  "ias": 53713,
+  "sources": [
+    {"title": "Código do IRS, artigo 12.º-B (IRS Jovem): percentagem isenta por ano e limite de 55 vezes o IAS (n.º 5)", "url": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/cirs_rep/Pages/irs12b.aspx", "consulted": "2026-10-11"},
+    {"title": "Ofício-Circulado n.º 20274/2025 (AT, 5 fev 2025): retenção na fonte no IRS Jovem, parte isenta limitada a 55 × IAS ÷ 14", "url": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Oficio_circulado_20274_2025.pdf", "consulted": "2026-10-11"},
+    {"title": "Portaria n.º 480-A/2025/1, de 30 de dezembro (Diário da República, 1.ª série, n.º 250, suplemento): o valor do IAS para 2026 é de 537,13 €", "url": "https://files.diariodarepublica.pt/1s/2025/12/25001/0000200002.pdf", "consulted": "2026-10-11"}
+  ]
+}

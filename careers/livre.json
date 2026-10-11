@@ -1,0 +1,36 @@
+{
+  "format": 2,
+  "id": "livre",
+  "published": "2026-10-07",
+  "title": {
+    "pt": "Trabalho livre",
+    "en": "Free work"
+  },
+  "sectors": {
+    "private": {
+      "templates": "templates/livre.json",
+      "institutions": false,
+      "categories": [
+        {
+          "id": "livre",
+          "title": {
+            "pt": "Trabalho livre",
+            "en": "Free work"
+          },
+          "regimes": [
+            {
+              "id": "livre",
+              "title": {
+                "pt": "Sem horas fixas",
+                "en": "No fixed hours"
+              },
+              "weeklyHours": 0.0,
+              "pay": "monthly",
+              "positions": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

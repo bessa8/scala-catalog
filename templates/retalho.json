@@ -1,0 +1,51 @@
+{
+  "format": 2,
+  "id": "retalho",
+  "published": "2026-10-10",
+  "job": {
+    "color": 4293668883,
+    "colorMode": "tonal",
+    "weeklyHours": 40,
+    "maxConsecutive": 6,
+    "prohibitNightMorning": false,
+    "prohibitTriple": true,
+    "allExtra": false,
+    "overlapTolerance": 30,
+    "templates": [
+      {
+        "id": "A",
+        "name": "Abertura",
+        "category": "A",
+        "start": 540,
+        "end": 1020,
+        "timed": true,
+        "color": 4294952120
+      },
+      {
+        "id": "I",
+        "name": "Intermédio",
+        "category": "I",
+        "start": 720,
+        "end": 1200,
+        "timed": true
+      },
+      {
+        "id": "C",
+        "name": "Fecho",
+        "category": "C",
+        "start": 780,
+        "end": 1260,
+        "timed": true,
+        "color": 4280294941
+      }
+    ],
+    "reminders": []
+  },
+  "pay": {
+    "calculationHours": 40,
+    "supplementDelay": 1,
+    "extraDelay": 1,
+    "extraFirst": 0,
+    "extraLater": 0
+  }
+}

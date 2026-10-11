@@ -1,0 +1,84 @@
+{
+  "format": 2,
+  "id": "ti",
+  "published": "2026-10-10",
+  "job": {
+    "color": 4293668883,
+    "colorMode": "tonal",
+    "weeklyHours": 40,
+    "maxConsecutive": 6,
+    "prohibitNightMorning": true,
+    "prohibitTriple": true,
+    "allExtra": false,
+    "overlapTolerance": 30,
+    "templates": [
+      {
+        "id": "D",
+        "name": "Dia",
+        "category": "D",
+        "start": 540,
+        "end": 1080,
+        "timed": true
+      },
+      {
+        "id": "M",
+        "name": "Manhã",
+        "category": "M",
+        "start": 420,
+        "end": 900,
+        "timed": true,
+        "color": 4294952120
+      },
+      {
+        "id": "T",
+        "name": "Tarde",
+        "category": "T",
+        "start": 900,
+        "end": 1380,
+        "timed": true
+      },
+      {
+        "id": "N",
+        "name": "Noite",
+        "category": "N",
+        "start": 1380,
+        "end": 420,
+        "timed": true,
+        "color": 4280294941
+      },
+      {
+        "id": "D12",
+        "name": "Dia 12 h",
+        "category": "D",
+        "start": 420,
+        "end": 1140,
+        "timed": true
+      },
+      {
+        "id": "N12",
+        "name": "Noite 12 h",
+        "category": "N",
+        "start": 1140,
+        "end": 420,
+        "timed": true,
+        "color": 4280294941
+      },
+      {
+        "id": "P",
+        "name": "Prevenção",
+        "category": "P",
+        "start": 1080,
+        "end": 480,
+        "timed": true
+      }
+    ],
+    "reminders": []
+  },
+  "pay": {
+    "calculationHours": 40,
+    "supplementDelay": 1,
+    "extraDelay": 1,
+    "extraFirst": 0,
+    "extraLater": 0
+  }
+}

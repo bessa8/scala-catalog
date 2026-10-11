@@ -1,0 +1,80 @@
+{
+  "format": 2,
+  "id": "tripulante-cabine",
+  "published": "2026-10-10",
+  "title": {
+    "pt": "Tripulante de cabine",
+    "en": "Cabin crew"
+  },
+  "sectors": {
+    "private": {
+      "templates": "templates/cabine.json",
+      "institutions": false,
+      "categories": [
+        {
+          "id": "tripulante-cabine",
+          "title": {
+            "pt": "Tripulante de cabine",
+            "en": "Cabin crew"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana",
+                "en": "40 h/week"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": []
+            }
+          ]
+        }
+      ],
+      "rules": "rules/ct-2026.json",
+      "rotations": [
+        {
+          "id": "5-3-manha",
+          "title": {
+            "pt": "5 dias de voo de manhã, 3 de folga",
+            "en": "5 morning flight days, 3 days off"
+          },
+          "codes": [
+            "M",
+            "M",
+            "M",
+            "M",
+            "M",
+            "F",
+            "F",
+            "F"
+          ]
+        },
+        {
+          "id": "5-3-tarde",
+          "title": {
+            "pt": "5 dias de voo de tarde, 3 de folga",
+            "en": "5 afternoon flight days, 3 days off"
+          },
+          "codes": [
+            "T",
+            "T",
+            "T",
+            "T",
+            "T",
+            "F",
+            "F",
+            "F"
+          ]
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Código do Trabalho (Lei n.º 7/2009, de 12 de fevereiro), artigos 203.º, 221.º, 266.º e 268.º (texto consolidado do Diário da República)",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2009-34546475",
+      "consulted": "2026-10-10"
+    }
+  ]
+}

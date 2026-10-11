@@ -1,0 +1,94 @@
+{
+  "format": 2,
+  "id": "irs-madeira",
+  "published": "2026-10-11",
+  "effective": "2025-08-01",
+  "title": {"pt": "Retenção na fonte de IRS — trabalho dependente (Madeira), agosto e setembro de 2025", "en": "IRS withholding — employment income (Madeira), August and September 2025"},
+  "tables": {
+    "I": [
+      {"upTo": 91500, "rate": 0, "deduction": 0, "perDependent": 0, "effectiveAtLimit": 0},
+      {"upTo": 99300, "rate": 0, "deduction": 0, "perDependent": 2143, "effectiveAtLimit": 0},
+      {"upTo": 106200, "rate": 0, "deduction": 0, "perDependent": 2143, "effectiveAtLimit": 0},
+      {"upTo": 117700, "rate": 0, "deduction": 0, "perDependent": 2143, "effectiveAtLimit": 0},
+      {"upTo": 159100, "rate": 179, "deduction": 2107, "perDependent": 2143, "effectiveAtLimit": 5},
+      {"upTo": 228600, "rate": 225, "deduction": 2839, "perDependent": 2143, "effectiveAtLimit": 10},
+      {"upTo": 314000, "rate": 339, "deduction": 5446, "perDependent": 2143, "effectiveAtLimit": 17},
+      {"upTo": 354300, "rate": 550, "deduction": 12072, "perDependent": 2143, "effectiveAtLimit": 21},
+      {"upTo": 645600, "rate": 1077, "deduction": 30744, "perDependent": 2143, "effectiveAtLimit": 60},
+      {"upTo": 681800, "rate": 1417, "deduction": 52695, "perDependent": 2143, "effectiveAtLimit": 64},
+      {"upTo": 2099100, "rate": 4220, "deduction": 243804, "perDependent": 2143, "effectiveAtLimit": 306},
+      {"upTo": null, "rate": 4574, "deduction": 318113, "perDependent": 2143}
+    ],
+    "II": [
+      {"upTo": 91500, "rate": 0, "deduction": 0, "perDependent": 0, "effectiveAtLimit": 0},
+      {"upTo": 99300, "rate": 0, "deduction": 0, "perDependent": 3429, "effectiveAtLimit": 0},
+      {"upTo": 106200, "rate": 0, "deduction": 0, "perDependent": 3429, "effectiveAtLimit": 0},
+      {"upTo": 117700, "rate": 0, "deduction": 0, "perDependent": 3429, "effectiveAtLimit": 0},
+      {"upTo": 159100, "rate": 179, "deduction": 2107, "perDependent": 3429, "effectiveAtLimit": 5},
+      {"upTo": 228600, "rate": 225, "deduction": 2839, "perDependent": 3429, "effectiveAtLimit": 10},
+      {"upTo": 314000, "rate": 339, "deduction": 5446, "perDependent": 3429, "effectiveAtLimit": 17},
+      {"upTo": 354300, "rate": 550, "deduction": 12072, "perDependent": 3429, "effectiveAtLimit": 21},
+      {"upTo": 645600, "rate": 1077, "deduction": 30744, "perDependent": 3429, "effectiveAtLimit": 60},
+      {"upTo": 681800, "rate": 1417, "deduction": 52695, "perDependent": 3429, "effectiveAtLimit": 64},
+      {"upTo": 2099100, "rate": 4220, "deduction": 243804, "perDependent": 3429, "effectiveAtLimit": 306},
+      {"upTo": null, "rate": 4574, "deduction": 318113, "perDependent": 3429}
+    ],
+    "III": [
+      {"upTo": 97700, "rate": 0, "deduction": 0, "perDependent": 0, "effectiveAtLimit": 0},
+      {"upTo": 106200, "rate": 0, "deduction": 0, "perDependent": 4286, "effectiveAtLimit": 0},
+      {"upTo": 111900, "rate": 0, "deduction": 0, "perDependent": 4286, "effectiveAtLimit": 0},
+      {"upTo": 182100, "rate": 53, "deduction": 594, "perDependent": 4286, "effectiveAtLimit": 2},
+      {"upTo": 243600, "rate": 111, "deduction": 1651, "perDependent": 4286, "effectiveAtLimit": 4},
+      {"upTo": 326600, "rate": 124, "deduction": 1968, "perDependent": 4286, "effectiveAtLimit": 6},
+      {"upTo": 381900, "rate": 281, "deduction": 7096, "perDependent": 4286, "effectiveAtLimit": 10},
+      {"upTo": 654200, "rate": 599, "deduction": 19241, "perDependent": 4286, "effectiveAtLimit": 30},
+      {"upTo": 674300, "rate": 877, "deduction": 37428, "perDependent": 4286, "effectiveAtLimit": 32},
+      {"upTo": 2099100, "rate": 3789, "deduction": 233785, "perDependent": 4286, "effectiveAtLimit": 268},
+      {"upTo": null, "rate": 4574, "deduction": 398565, "perDependent": 4286}
+    ],
+    "IV": [
+      {"upTo": 201300, "rate": 0, "deduction": 0, "perDependent": 0, "effectiveAtLimit": 0},
+      {"upTo": 254000, "rate": 93, "deduction": 1873, "perDependent": 0, "effectiveAtLimit": 2},
+      {"upTo": 355100, "rate": 194, "deduction": 4439, "perDependent": 0, "effectiveAtLimit": 7},
+      {"upTo": 457600, "rate": 300, "deduction": 8204, "perDependent": 0, "effectiveAtLimit": 12},
+      {"upTo": 692700, "rate": 843, "deduction": 33052, "perDependent": 0, "effectiveAtLimit": 37},
+      {"upTo": 702700, "rate": 1090, "deduction": 50162, "perDependent": 0, "effectiveAtLimit": 38},
+      {"upTo": 2120100, "rate": 4354, "deduction": 279524, "perDependent": 0, "effectiveAtLimit": 304},
+      {"upTo": null, "rate": 4574, "deduction": 326167, "perDependent": 0}
+    ],
+    "V": [
+      {"upTo": 229900, "rate": 0, "deduction": 0, "perDependent": 0, "effectiveAtLimit": 0},
+      {"upTo": 254000, "rate": 70, "deduction": 1610, "perDependent": 4286, "effectiveAtLimit": 1},
+      {"upTo": 355100, "rate": 100, "deduction": 2372, "perDependent": 4286, "effectiveAtLimit": 3},
+      {"upTo": 457600, "rate": 322, "deduction": 10256, "perDependent": 4286, "effectiveAtLimit": 10},
+      {"upTo": 692700, "rate": 545, "deduction": 20461, "perDependent": 4286, "effectiveAtLimit": 25},
+      {"upTo": 702700, "rate": 1012, "deduction": 52811, "perDependent": 4286, "effectiveAtLimit": 26},
+      {"upTo": 2120100, "rate": 4354, "deduction": 287654, "perDependent": 4286, "effectiveAtLimit": 300},
+      {"upTo": null, "rate": 4574, "deduction": 334297, "perDependent": 4286}
+    ],
+    "VI": [
+      {"upTo": 197900, "rate": 0, "deduction": 0, "perDependent": 0, "effectiveAtLimit": 0},
+      {"upTo": 247800, "rate": 0, "deduction": 0, "perDependent": 2143, "effectiveAtLimit": 0},
+      {"upTo": 298900, "rate": 88, "deduction": 2181, "perDependent": 2143, "effectiveAtLimit": 2},
+      {"upTo": 418800, "rate": 178, "deduction": 4872, "perDependent": 2143, "effectiveAtLimit": 6},
+      {"upTo": 562200, "rate": 322, "deduction": 10903, "perDependent": 2143, "effectiveAtLimit": 13},
+      {"upTo": 692700, "rate": 552, "deduction": 23834, "perDependent": 2143, "effectiveAtLimit": 21},
+      {"upTo": 740200, "rate": 1012, "deduction": 55699, "perDependent": 2143, "effectiveAtLimit": 26},
+      {"upTo": 2120100, "rate": 4354, "deduction": 303074, "perDependent": 2143, "effectiveAtLimit": 292},
+      {"upTo": null, "rate": 4574, "deduction": 349717, "perDependent": 2143}
+    ],
+    "VII": [
+      {"upTo": 300100, "rate": 0, "deduction": 0, "perDependent": 0, "effectiveAtLimit": 0},
+      {"upTo": 457600, "rate": 148, "deduction": 4442, "perDependent": 4286, "effectiveAtLimit": 5},
+      {"upTo": 692700, "rate": 353, "deduction": 13823, "perDependent": 4286, "effectiveAtLimit": 15},
+      {"upTo": 702700, "rate": 760, "deduction": 42016, "perDependent": 4286, "effectiveAtLimit": 16},
+      {"upTo": 2120100, "rate": 4106, "deduction": 277140, "perDependent": 4286, "effectiveAtLimit": 280},
+      {"upTo": null, "rate": 4574, "deduction": 376361, "perDependent": 4286}
+    ]
+  },
+  "extras": {"disabledDependent": {"single": 8482, "married1": 8482, "married2": 4241}, "spouseDisabled": 13571, "threePlusCut": 100, "overtimeShare": 50},
+  "sources": [
+    {"title": "Despacho n.º 605/2025 (Secretário Regional das Finanças, 4 ago 2025; JORAM, II Série, n.º 138, suplemento): tabelas para pagamentos de 1 ago a 30 set 2025", "url": "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%202025/IISerie-138-2025-08-04Supl.pdf", "consulted": "2026-10-11"},
+    {"title": "Circular n.º 5/2025 (AT): divulgação das tabelas I a XI do Despacho n.º 605/2025 para a Madeira", "url": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Circular_5_2025_RAM.pdf", "consulted": "2026-10-11"}
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "format": 2,
+  "id": "callcenter",
+  "published": "2026-10-07",
+  "job": {
+    "color": 4293668883,
+    "colorMode": "tonal",
+    "weeklyHours": 40,
+    "maxConsecutive": 5,
+    "prohibitNightMorning": false,
+    "prohibitTriple": true,
+    "allExtra": false,
+    "overlapTolerance": 30,
+    "templates": [
+      {
+        "id": "M",
+        "name": "Manhã",
+        "category": "M",
+        "start": 480,
+        "end": 960,
+        "timed": true,
+        "color": 4294952120
+      },
+      {
+        "id": "I",
+        "name": "Intermédio",
+        "category": "I",
+        "start": 720,
+        "end": 1200,
+        "timed": true
+      },
+      {
+        "id": "T",
+        "name": "Tarde",
+        "category": "T",
+        "start": 960,
+        "end": 1440,
+        "timed": true
+      }
+    ],
+    "reminders": []
+  },
+  "pay": {
+    "calculationHours": 40,
+    "supplementDelay": 1,
+    "extraDelay": 1,
+    "extraFirst": 0,
+    "extraLater": 0
+  }
+}

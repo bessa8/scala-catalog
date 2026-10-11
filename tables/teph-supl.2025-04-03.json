@@ -1,0 +1,23 @@
+{
+  "format": 2,
+  "id": "teph-supl",
+  "published": "2026-10-10",
+  "effective": "2025-04-03",
+  "title": {
+    "pt": "Suplementos mensais dos TEPH (responsável de turno e coordenadores)",
+    "en": "TEPH monthly supplements (shift leader and coordinators)"
+  },
+  "unit": "monthly",
+  "values": {
+    "responsavel-turno": 10000,
+    "coordenador-operacional": 20000,
+    "coordenador-geral": 25000
+  },
+  "sources": [
+    {
+      "title": "Decreto-Lei n.º 60/2025, de 2 de abril (artigo 12.º, n.os 3 e 4, do Decreto-Lei n.º 19/2016, na redação do artigo 2.º; em vigor a 2025-04-03)",
+      "url": "https://files.diariodarepublica.pt/1s/2025/04/06500/0000200011.pdf",
+      "consulted": "2026-10-10"
+    }
+  ]
+}

@@ -1,0 +1,1162 @@
+{
+  "format": 2,
+  "id": "gnr",
+  "published": "2026-10-10",
+  "title": {
+    "pt": "Guarda Nacional Republicana (GNR)",
+    "en": "National Republican Guard (GNR)"
+  },
+  "sources": [
+    {
+      "title": "Decreto-Lei n.º 298/2009, de 14 de outubro (artigo 13.º e anexo I: níveis e posições remuneratórias dos postos)",
+      "url": "https://files.diariodarepublica.pt/1s/2009/10/19900/0770007708.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 298/2009, versão consolidada de 2025-12-30 (artigos 13.º, 20.º e 22.º)",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/2009-107722681",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 84-F/2022, de 16 de dezembro (artigo 13.º e anexo VIII: estrutura remuneratória do posto de guarda)",
+      "url": "https://files.diariodarepublica.pt/1s/2022/12/24101/0000200031.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Portaria n.º 222/2016, de 22 de julho (artigo 2.º: período máximo de trabalho de 40 horas semanais, em cômputo mensal ou trimestral)",
+      "url": "https://diariodarepublica.pt/dr/detalhe/portaria/222-2016-75010348",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 30/2017, de 22 de março, Estatuto dos Militares da GNR (artigo 27.º: horário de referência semanal; o preâmbulo indica a Portaria n.º 222/2016 como a regulamentação do horário de referência)",
+      "url": "https://files.diariodarepublica.pt/1s/2017/03/05800/0150701550.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026)",
+      "url": "https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026): posições e níveis remuneratórios",
+      "url": "https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 50-A/2024, de 23 de agosto (componente fixa do suplemento por serviço e risco nas forças de segurança)",
+      "url": "https://files.diariodarepublica.pt/1s/2024/08/16301/0000200004.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Lei n.º 73-A/2025, de 30 de dezembro (Orçamento do Estado para 2026), artigos 255.º a 257.º",
+      "url": "https://files.diariodarepublica.pt/1s/2025/12/25002/0000200271.pdf",
+      "consulted": "2026-10-10"
+    }
+  ],
+  "sectors": {
+    "public": {
+      "templates": "templates/forcas.json",
+      "institutions": false,
+      "categories": [
+        {
+          "id": "guarda",
+          "title": {
+            "pt": "Guarda · Guarda",
+            "en": "Guard · Guarda"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 8",
+                    "en": "1st position · level 8"
+                  },
+                  "table": "tru",
+                  "key": "8"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 9",
+                    "en": "2nd position · level 9"
+                  },
+                  "table": "tru",
+                  "key": "9"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 10",
+                    "en": "3rd position · level 10"
+                  },
+                  "table": "tru",
+                  "key": "10"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 11",
+                    "en": "4th position · level 11"
+                  },
+                  "table": "tru",
+                  "key": "11"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 12",
+                    "en": "5th position · level 12"
+                  },
+                  "table": "tru",
+                  "key": "12"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 13",
+                    "en": "6th position · level 13"
+                  },
+                  "table": "tru",
+                  "key": "13"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição · nível 14",
+                    "en": "7th position · level 14"
+                  },
+                  "table": "tru",
+                  "key": "14"
+                },
+                {
+                  "id": "8",
+                  "label": {
+                    "pt": "8.ª posição · nível 15",
+                    "en": "8th position · level 15"
+                  },
+                  "table": "tru",
+                  "key": "15"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "guarda-principal",
+          "title": {
+            "pt": "Guarda · Guarda principal",
+            "en": "Guard · Guarda principal"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 11",
+                    "en": "1st position · level 11"
+                  },
+                  "table": "tru",
+                  "key": "11"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 12",
+                    "en": "2nd position · level 12"
+                  },
+                  "table": "tru",
+                  "key": "12"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 13",
+                    "en": "3rd position · level 13"
+                  },
+                  "table": "tru",
+                  "key": "13"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 14",
+                    "en": "4th position · level 14"
+                  },
+                  "table": "tru",
+                  "key": "14"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 15",
+                    "en": "5th position · level 15"
+                  },
+                  "table": "tru",
+                  "key": "15"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 16",
+                    "en": "6th position · level 16"
+                  },
+                  "table": "tru",
+                  "key": "16"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cabo",
+          "title": {
+            "pt": "Guarda · Cabo",
+            "en": "Guard · Cabo"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 14",
+                    "en": "1st position · level 14"
+                  },
+                  "table": "tru",
+                  "key": "14"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 16",
+                    "en": "2nd position · level 16"
+                  },
+                  "table": "tru",
+                  "key": "16"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 17",
+                    "en": "3rd position · level 17"
+                  },
+                  "table": "tru",
+                  "key": "17"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 18",
+                    "en": "4th position · level 18"
+                  },
+                  "table": "tru",
+                  "key": "18"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 19",
+                    "en": "5th position · level 19"
+                  },
+                  "table": "tru",
+                  "key": "19"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cabo-chefe",
+          "title": {
+            "pt": "Guarda · Cabo-chefe",
+            "en": "Guard · Cabo-chefe"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 18",
+                    "en": "1st position · level 18"
+                  },
+                  "table": "tru",
+                  "key": "18"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 19",
+                    "en": "2nd position · level 19"
+                  },
+                  "table": "tru",
+                  "key": "19"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 20",
+                    "en": "3rd position · level 20"
+                  },
+                  "table": "tru",
+                  "key": "20"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cabo-mor",
+          "title": {
+            "pt": "Guarda · Cabo-mor",
+            "en": "Guard · Cabo-mor"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 20",
+                    "en": "1st position · level 20"
+                  },
+                  "table": "tru",
+                  "key": "20"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 21",
+                    "en": "2nd position · level 21"
+                  },
+                  "table": "tru",
+                  "key": "21"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "furriel",
+          "title": {
+            "pt": "Sargento · Furriel",
+            "en": "Sergeant · Furriel"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 14",
+                    "en": "1st position · level 14"
+                  },
+                  "table": "tru",
+                  "key": "14"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 15",
+                    "en": "2nd position · level 15"
+                  },
+                  "table": "tru",
+                  "key": "15"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "segundo-sargento",
+          "title": {
+            "pt": "Sargento · Segundo-sargento",
+            "en": "Sergeant · Segundo-sargento"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 16",
+                    "en": "1st position · level 16"
+                  },
+                  "table": "tru",
+                  "key": "16"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 17",
+                    "en": "2nd position · level 17"
+                  },
+                  "table": "tru",
+                  "key": "17"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "primeiro-sargento",
+          "title": {
+            "pt": "Sargento · Primeiro-sargento",
+            "en": "Sergeant · Primeiro-sargento"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 18",
+                    "en": "1st position · level 18"
+                  },
+                  "table": "tru",
+                  "key": "18"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 19",
+                    "en": "2nd position · level 19"
+                  },
+                  "table": "tru",
+                  "key": "19"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 20",
+                    "en": "3rd position · level 20"
+                  },
+                  "table": "tru",
+                  "key": "20"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 21",
+                    "en": "4th position · level 21"
+                  },
+                  "table": "tru",
+                  "key": "21"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sargento-ajudante",
+          "title": {
+            "pt": "Sargento · Sargento-ajudante",
+            "en": "Sergeant · Sargento-ajudante"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 22",
+                    "en": "1st position · level 22"
+                  },
+                  "table": "tru",
+                  "key": "22"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 23",
+                    "en": "2nd position · level 23"
+                  },
+                  "table": "tru",
+                  "key": "23"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 24",
+                    "en": "3rd position · level 24"
+                  },
+                  "table": "tru",
+                  "key": "24"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 25",
+                    "en": "4th position · level 25"
+                  },
+                  "table": "tru",
+                  "key": "25"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 26",
+                    "en": "5th position · level 26"
+                  },
+                  "table": "tru",
+                  "key": "26"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sargento-chefe",
+          "title": {
+            "pt": "Sargento · Sargento-chefe",
+            "en": "Sergeant · Sargento-chefe"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 26",
+                    "en": "1st position · level 26"
+                  },
+                  "table": "tru",
+                  "key": "26"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 27",
+                    "en": "2nd position · level 27"
+                  },
+                  "table": "tru",
+                  "key": "27"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 28",
+                    "en": "3rd position · level 28"
+                  },
+                  "table": "tru",
+                  "key": "28"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 29",
+                    "en": "4th position · level 29"
+                  },
+                  "table": "tru",
+                  "key": "29"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sargento-mor",
+          "title": {
+            "pt": "Sargento · Sargento-mor",
+            "en": "Sergeant · Sargento-mor"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 29",
+                    "en": "1st position · level 29"
+                  },
+                  "table": "tru",
+                  "key": "29"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 32",
+                    "en": "2nd position · level 32"
+                  },
+                  "table": "tru",
+                  "key": "32"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "alferes",
+          "title": {
+            "pt": "Oficial · Alferes",
+            "en": "Officer · Alferes"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 18",
+                    "en": "1st position · level 18"
+                  },
+                  "table": "tru",
+                  "key": "18"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 19",
+                    "en": "2nd position · level 19"
+                  },
+                  "table": "tru",
+                  "key": "19"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 20",
+                    "en": "3rd position · level 20"
+                  },
+                  "table": "tru",
+                  "key": "20"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tenente",
+          "title": {
+            "pt": "Oficial · Tenente",
+            "en": "Officer · Tenente"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 21",
+                    "en": "1st position · level 21"
+                  },
+                  "table": "tru",
+                  "key": "21"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 23",
+                    "en": "2nd position · level 23"
+                  },
+                  "table": "tru",
+                  "key": "23"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 24",
+                    "en": "3rd position · level 24"
+                  },
+                  "table": "tru",
+                  "key": "24"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capitao",
+          "title": {
+            "pt": "Oficial · Capitão",
+            "en": "Officer · Capitão"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 29",
+                    "en": "1st position · level 29"
+                  },
+                  "table": "tru",
+                  "key": "29"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 30",
+                    "en": "2nd position · level 30"
+                  },
+                  "table": "tru",
+                  "key": "30"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 31",
+                    "en": "3rd position · level 31"
+                  },
+                  "table": "tru",
+                  "key": "31"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 32",
+                    "en": "4th position · level 32"
+                  },
+                  "table": "tru",
+                  "key": "32"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 33",
+                    "en": "5th position · level 33"
+                  },
+                  "table": "tru",
+                  "key": "33"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 34",
+                    "en": "6th position · level 34"
+                  },
+                  "table": "tru",
+                  "key": "34"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "major",
+          "title": {
+            "pt": "Oficial · Major",
+            "en": "Officer · Major"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 35",
+                    "en": "1st position · level 35"
+                  },
+                  "table": "tru",
+                  "key": "35"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 37",
+                    "en": "2nd position · level 37"
+                  },
+                  "table": "tru",
+                  "key": "37"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 39",
+                    "en": "3rd position · level 39"
+                  },
+                  "table": "tru",
+                  "key": "39"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 40",
+                    "en": "4th position · level 40"
+                  },
+                  "table": "tru",
+                  "key": "40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tenente-coronel",
+          "title": {
+            "pt": "Oficial · Tenente-coronel",
+            "en": "Officer · Tenente-coronel"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 41",
+                    "en": "1st position · level 41"
+                  },
+                  "table": "tru",
+                  "key": "41"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 43",
+                    "en": "2nd position · level 43"
+                  },
+                  "table": "tru",
+                  "key": "43"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 45",
+                    "en": "3rd position · level 45"
+                  },
+                  "table": "tru",
+                  "key": "45"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 46",
+                    "en": "4th position · level 46"
+                  },
+                  "table": "tru",
+                  "key": "46"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 47",
+                    "en": "5th position · level 47"
+                  },
+                  "table": "tru",
+                  "key": "47"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "coronel",
+          "title": {
+            "pt": "Oficial · Coronel",
+            "en": "Officer · Coronel"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 48",
+                    "en": "1st position · level 48"
+                  },
+                  "table": "tru",
+                  "key": "48"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 53",
+                    "en": "2nd position · level 53"
+                  },
+                  "table": "tru",
+                  "key": "53"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 57",
+                    "en": "3rd position · level 57"
+                  },
+                  "table": "tru",
+                  "key": "57"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "brigadeiro-general",
+          "title": {
+            "pt": "Oficial · Brigadeiro-general",
+            "en": "Officer · Brigadeiro-general"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 58",
+                    "en": "1st position · level 58"
+                  },
+                  "table": "tru",
+                  "key": "58"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 59",
+                    "en": "2nd position · level 59"
+                  },
+                  "table": "tru",
+                  "key": "59"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "major-general",
+          "title": {
+            "pt": "Oficial · Major-general",
+            "en": "Officer · Major-general"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 60",
+                    "en": "1st position · level 60"
+                  },
+                  "table": "tru",
+                  "key": "60"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 64",
+                    "en": "2nd position · level 64"
+                  },
+                  "table": "tru",
+                  "key": "64"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tenente-general",
+          "title": {
+            "pt": "Oficial · Tenente-general",
+            "en": "Officer · Tenente-general"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana (horário de referência)",
+                "en": "40 h/week (reference schedule)"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 69",
+                    "en": "1st position · level 69"
+                  },
+                  "table": "tru",
+                  "key": "69"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 73",
+                    "en": "2nd position · level 73"
+                  },
+                  "table": "tru",
+                  "key": "73"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssr-fixa",
+          "label": {
+            "pt": "Suplemento por serviço e risco · componente fixa de 400 € (1 = recebo, 0 = não); os outros 20 % da remuneração base não entram aqui",
+            "en": "Service and risk supplement · fixed component of €400 (1 = I get it, 0 = no); the other 20% of base pay is not included here"
+          },
+          "effect": {
+            "monthlySupplement": {
+              "table": "ssr",
+              "key": "fixa"
+            }
+          }
+        },
+        {
+          "id": "patrulha-sargento",
+          "label": {
+            "pt": "Suplemento de ronda ou patrulha · sargentos (90,03 € em 2026, 115,03 € em 2027; só com escala de serviço aprovada e serviço no exterior das instalações) (1 = recebo, 0 = não)",
+            "en": "Round or patrol supplement · sergeants (€90.03 in 2026, €115.03 in 2027; only with an approved duty roster and service outside the premises) (1 = I get it, 0 = no)"
+          },
+          "effect": {
+            "monthlySupplement": {
+              "table": "patrulha",
+              "key": "chefe-sargento"
+            }
+          }
+        },
+        {
+          "id": "patrulha-guarda",
+          "label": {
+            "pt": "Suplemento de ronda ou patrulha · guardas (84,13 € em 2026, 109,13 € em 2027; só com escala de serviço aprovada e serviço no exterior das instalações) (1 = recebo, 0 = não)",
+            "en": "Round or patrol supplement · guards (€84.13 in 2026, €109.13 in 2027; only with an approved duty roster and service outside the premises) (1 = I get it, 0 = no)"
+          },
+          "effect": {
+            "monthlySupplement": {
+              "table": "patrulha",
+              "key": "agente-guarda"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "format": 2,
+  "id": "serv",
+  "published": "2026-10-07",
+  "title": {
+    "pt": "Prestação de serviços",
+    "en": "Freelance services"
+  },
+  "sectors": {
+    "services": {
+      "templates": "templates/serv.json",
+      "institutions": false,
+      "categories": [
+        {
+          "id": "serv",
+          "title": {
+            "pt": "Prestação de serviços",
+            "en": "Freelance services"
+          },
+          "regimes": [
+            {
+              "id": "livre",
+              "title": {
+                "pt": "Sem horas fixas",
+                "en": "No fixed hours"
+              },
+              "weeklyHours": 0.0,
+              "pay": "monthly",
+              "positions": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

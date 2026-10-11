@@ -1,0 +1,56 @@
+{
+  "format": 2,
+  "id": "tss",
+  "published": "2026-10-10",
+  "effective": "2026-01-01",
+  "title": {
+    "pt": "Técnico superior de saúde · tabela por escalão",
+    "en": "Health senior technician · pay by step"
+  },
+  "unit": "monthly",
+  "values": {
+    "assessor-superior-35h-1": 295568,
+    "assessor-superior-42h-1": 390150,
+    "assessor-superior-35h-2": 310724,
+    "assessor-superior-42h-2": 410156,
+    "assessor-superior-35h-3": 325881,
+    "assessor-superior-42h-3": 430163,
+    "assessor-superior-35h-4": 348618,
+    "assessor-superior-42h-4": 460176,
+    "assessor-35h-1": 244596,
+    "assessor-42h-1": 322867,
+    "assessor-35h-2": 265958,
+    "assessor-42h-2": 351065,
+    "assessor-35h-3": 280570,
+    "assessor-42h-3": 370352,
+    "assessor-35h-4": 295568,
+    "assessor-42h-4": 390150,
+    "assistente-principal-35h-1": 208993,
+    "assistente-principal-42h-1": 275871,
+    "assistente-principal-35h-2": 216113,
+    "assistente-principal-42h-2": 285269,
+    "assistente-principal-35h-3": 223234,
+    "assistente-principal-42h-3": 294669,
+    "assistente-principal-35h-4": 237475,
+    "assistente-principal-42h-4": 313467,
+    "assistente-principal-35h-5": 251717,
+    "assistente-principal-42h-5": 332266,
+    "assistente-35h-1": 187759,
+    "assistente-42h-1": 247842,
+    "assistente-35h-2": 194751,
+    "assistente-42h-2": 257071,
+    "assistente-35h-3": 208993,
+    "assistente-42h-3": 275871,
+    "assistente-35h-4": 216113,
+    "assistente-42h-4": 285269,
+    "assistente-35h-5": 223234,
+    "assistente-42h-5": 294669
+  },
+  "sources": [
+    {
+      "title": "DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026), carreiras/categorias não revistas de corpos especiais: Técnico superior de saúde",
+      "url": "https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf",
+      "consulted": "2026-10-10"
+    }
+  ]
+}

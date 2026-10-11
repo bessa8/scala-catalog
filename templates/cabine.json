@@ -1,0 +1,51 @@
+{
+  "format": 2,
+  "id": "cabine",
+  "published": "2026-10-10",
+  "job": {
+    "color": 4293668883,
+    "colorMode": "tonal",
+    "weeklyHours": 40,
+    "maxConsecutive": 6,
+    "prohibitNightMorning": true,
+    "prohibitTriple": true,
+    "allExtra": false,
+    "overlapTolerance": 30,
+    "templates": [
+      {
+        "id": "M",
+        "name": "Voo da manhã",
+        "category": "M",
+        "start": 360,
+        "end": 840,
+        "timed": true,
+        "color": 4294952120
+      },
+      {
+        "id": "T",
+        "name": "Voo da tarde",
+        "category": "T",
+        "start": 840,
+        "end": 1320,
+        "timed": true
+      },
+      {
+        "id": "N",
+        "name": "Voo da noite",
+        "category": "N",
+        "start": 1320,
+        "end": 360,
+        "timed": true,
+        "color": 4280294941
+      }
+    ],
+    "reminders": []
+  },
+  "pay": {
+    "calculationHours": 40,
+    "supplementDelay": 1,
+    "extraDelay": 1,
+    "extraFirst": 0,
+    "extraLater": 0
+  }
+}

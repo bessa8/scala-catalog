@@ -1,0 +1,31 @@
+{
+  "format": 2,
+  "id": "ssr",
+  "published": "2026-10-10",
+  "effective": "2026-01-01",
+  "title": {
+    "pt": "Suplemento por serviço e risco nas forças de segurança · componente fixa",
+    "en": "Service and risk supplement in the security forces · fixed component"
+  },
+  "unit": "monthly",
+  "values": {
+    "fixa": 40000
+  },
+  "sources": [
+    {
+      "title": "Decreto-Lei n.º 50-A/2024, de 23 de agosto (componente fixa do suplemento por serviço e risco nas forças de segurança)",
+      "url": "https://files.diariodarepublica.pt/1s/2024/08/16301/0000200004.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 243/2015 (artigo 154.º, n.º 2, na redação da Lei n.º 73-A/2025, artigo 256.º) e Decreto-Lei n.º 298/2009 (artigo 20.º, n.º 1, alínea b), na redação do Decreto-Lei n.º 50-A/2024): € 400 a 1 de janeiro de 2026",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/2015-114584637",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Lei n.º 73-A/2025, de 30 de dezembro (Orçamento do Estado para 2026), artigos 255.º a 257.º",
+      "url": "https://files.diariodarepublica.pt/1s/2025/12/25002/0000200271.pdf",
+      "consulted": "2026-10-10"
+    }
+  ]
+}

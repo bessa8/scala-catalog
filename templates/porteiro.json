@@ -1,0 +1,51 @@
+{
+  "format": 2,
+  "id": "porteiro",
+  "published": "2026-10-10",
+  "job": {
+    "color": 4293668883,
+    "colorMode": "tonal",
+    "weeklyHours": 40,
+    "maxConsecutive": 6,
+    "prohibitNightMorning": true,
+    "prohibitTriple": true,
+    "allExtra": false,
+    "overlapTolerance": 30,
+    "templates": [
+      {
+        "id": "M",
+        "name": "Manhã",
+        "category": "M",
+        "start": 420,
+        "end": 900,
+        "timed": true,
+        "color": 4294952120
+      },
+      {
+        "id": "T",
+        "name": "Tarde",
+        "category": "T",
+        "start": 900,
+        "end": 1380,
+        "timed": true
+      },
+      {
+        "id": "N",
+        "name": "Noite",
+        "category": "N",
+        "start": 1380,
+        "end": 420,
+        "timed": true,
+        "color": 4280294941
+      }
+    ],
+    "reminders": []
+  },
+  "pay": {
+    "calculationHours": 40,
+    "supplementDelay": 1,
+    "extraDelay": 1,
+    "extraFirst": 0,
+    "extraLater": 0
+  }
+}

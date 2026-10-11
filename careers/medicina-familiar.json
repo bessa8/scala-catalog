@@ -1,0 +1,749 @@
+{
+  "format": 2,
+  "id": "medicina-familiar",
+  "published": "2026-10-10",
+  "title": {
+    "pt": "Médico de família · USF modelo A / UCSP",
+    "en": "Family doctor · USF model A / UCSP"
+  },
+  "sources": [
+    {
+      "title": "Decreto-Lei n.º 46/2025, de 27 de março (anexos VII e VIII: tabelas da dedicação plena, das 40 h e dos regimes transitórios)",
+      "url": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/46-2025-912653923",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 46/2025, de 27 de março (texto no Diário da República, 1.ª série n.º 61)",
+      "url": "https://files.diariodarepublica.pt/1s/2025/03/06100/0002600033.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: valores dos níveis da TRU em 2026)",
+      "url": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/29-a-2026-1031110272",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026), carreira médica",
+      "url": "https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 103/2023, de 7 de novembro, artigo 36.º do anexo I (transição das USF modelo A e das UCSP)",
+      "url": "https://files.diariodarepublica.pt/1s/2023/11/21500/0002100048.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "ACSS, FAQ sobre o regime de dedicação plena (22-12-2023), perguntas 18, 19, 24, 25 e 26",
+      "url": "https://www.acss.min-saude.pt/wp-content/uploads/2016/09/FAQs-Dedicacao-Plena_22DEZ2023_VF.pdf",
+      "consulted": "2026-10-10"
+    }
+  ],
+  "sectors": {
+    "public": {
+      "templates": "templates/medico-familiar.json",
+      "institutions": true,
+      "categories": [
+        {
+          "id": "assistente",
+          "title": {
+            "pt": "Assistente",
+            "en": "Specialist doctor"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana",
+                "en": "40 h/week"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 53 · DL 46/2025, anexo VII",
+                    "en": "1st position · level 53 · DL 46/2025, annex VII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-40h-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 55 · DL 46/2025, anexo VII",
+                    "en": "2nd position · level 55 · DL 46/2025, annex VII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-40h-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 57 · DL 46/2025, anexo VII",
+                    "en": "3rd position · level 57 · DL 46/2025, annex VII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-40h-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 58 · DL 46/2025, anexo VII",
+                    "en": "4th position · level 58 · DL 46/2025, annex VII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-40h-4"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 59 · DL 46/2025, anexo VII",
+                    "en": "5th position · level 59 · DL 46/2025, annex VII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-40h-5"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 60 · DL 46/2025, anexo VII",
+                    "en": "6th position · level 60 · DL 46/2025, annex VII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-40h-6"
+                }
+              ]
+            },
+            {
+              "id": "35h-exclusiva",
+              "title": {
+                "pt": "35 h/semana · dedicação exclusiva (regime transitório)",
+                "en": "35 h/week · exclusive dedication (transitional regime)"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 43 · DL 46/2025, anexo VIII",
+                    "en": "1st position · level 43 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-35h-exclusiva-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 47 · DL 46/2025, anexo VIII",
+                    "en": "2nd position · level 47 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-35h-exclusiva-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 49 · DL 46/2025, anexo VIII",
+                    "en": "3rd position · level 49 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-35h-exclusiva-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 52 · DL 46/2025, anexo VIII",
+                    "en": "4th position · level 52 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-35h-exclusiva-4"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 54 · DL 46/2025, anexo VIII",
+                    "en": "5th position · level 54 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-35h-exclusiva-5"
+                }
+              ]
+            },
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana · tempo completo (regime transitório)",
+                "en": "35 h/week · full time (transitional regime)"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 35 · DL 46/2025, anexo VIII",
+                    "en": "1st position · level 35 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-35h-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 37 · DL 46/2025, anexo VIII",
+                    "en": "2nd position · level 37 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-35h-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 38 · DL 46/2025, anexo VIII",
+                    "en": "3rd position · level 38 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-35h-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 40 · DL 46/2025, anexo VIII",
+                    "en": "4th position · level 40 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-35h-4"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 42 · DL 46/2025, anexo VIII",
+                    "en": "5th position · level 42 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-35h-5"
+                }
+              ]
+            },
+            {
+              "id": "42h-exclusiva",
+              "title": {
+                "pt": "42 h/semana · dedicação exclusiva (regime transitório)",
+                "en": "42 h/week · exclusive dedication (transitional regime)"
+              },
+              "weeklyHours": 42,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 64 · DL 46/2025, anexo VIII",
+                    "en": "1st position · level 64 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-42h-exclusiva-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 70 · DL 46/2025, anexo VIII",
+                    "en": "2nd position · level 70 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-42h-exclusiva-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 73 · DL 46/2025, anexo VIII",
+                    "en": "3rd position · level 73 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-42h-exclusiva-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 76 · DL 46/2025, anexo VIII",
+                    "en": "4th position · level 76 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-42h-exclusiva-4"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 79 · DL 46/2025, anexo VIII",
+                    "en": "5th position · level 79 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-42h-exclusiva-5"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "assistente-graduado",
+          "title": {
+            "pt": "Assistente graduado",
+            "en": "Consultant"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana",
+                "en": "40 h/week"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 61 · DL 46/2025, anexo VII",
+                    "en": "1st position · level 61 · DL 46/2025, annex VII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-40h-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 63 · DL 46/2025, anexo VII",
+                    "en": "2nd position · level 63 · DL 46/2025, annex VII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-40h-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 65 · DL 46/2025, anexo VII",
+                    "en": "3rd position · level 65 · DL 46/2025, annex VII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-40h-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 67 · DL 46/2025, anexo VII",
+                    "en": "4th position · level 67 · DL 46/2025, annex VII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-40h-4"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 69 · DL 46/2025, anexo VII",
+                    "en": "5th position · level 69 · DL 46/2025, annex VII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-40h-5"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 71 · DL 46/2025, anexo VII",
+                    "en": "6th position · level 71 · DL 46/2025, annex VII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-40h-6"
+                }
+              ]
+            },
+            {
+              "id": "35h-exclusiva",
+              "title": {
+                "pt": "35 h/semana · dedicação exclusiva (regime transitório)",
+                "en": "35 h/week · exclusive dedication (transitional regime)"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 57 · DL 46/2025, anexo VIII",
+                    "en": "1st position · level 57 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-35h-exclusiva-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 63 · DL 46/2025, anexo VIII",
+                    "en": "2nd position · level 63 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-35h-exclusiva-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 67 · DL 46/2025, anexo VIII",
+                    "en": "3rd position · level 67 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-35h-exclusiva-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 69 · DL 46/2025, anexo VIII",
+                    "en": "4th position · level 69 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-35h-exclusiva-4"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 71 · DL 46/2025, anexo VIII",
+                    "en": "5th position · level 71 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-35h-exclusiva-5"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 73 · DL 46/2025, anexo VIII",
+                    "en": "6th position · level 73 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-35h-exclusiva-6"
+                }
+              ]
+            },
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana · tempo completo (regime transitório)",
+                "en": "35 h/week · full time (transitional regime)"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 42 · DL 46/2025, anexo VIII",
+                    "en": "1st position · level 42 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-35h-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 46 · DL 46/2025, anexo VIII",
+                    "en": "2nd position · level 46 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-35h-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 49 · DL 46/2025, anexo VIII",
+                    "en": "3rd position · level 49 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-35h-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 51 · DL 46/2025, anexo VIII",
+                    "en": "4th position · level 51 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-35h-4"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 53 · DL 46/2025, anexo VIII",
+                    "en": "5th position · level 53 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-35h-5"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 55 · DL 46/2025, anexo VIII",
+                    "en": "6th position · level 55 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-35h-6"
+                }
+              ]
+            },
+            {
+              "id": "42h-exclusiva",
+              "title": {
+                "pt": "42 h/semana · dedicação exclusiva (regime transitório)",
+                "en": "42 h/week · exclusive dedication (transitional regime)"
+              },
+              "weeklyHours": 42,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 78 · DL 46/2025, anexo VIII",
+                    "en": "1st position · level 78 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-42h-exclusiva-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 86 · DL 46/2025, anexo VIII",
+                    "en": "2nd position · level 86 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-42h-exclusiva-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 92 · DL 46/2025, anexo VIII",
+                    "en": "3rd position · level 92 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-42h-exclusiva-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 96 · DL 46/2025, anexo VIII",
+                    "en": "4th position · level 96 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-42h-exclusiva-4"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 99 · DL 46/2025, anexo VIII",
+                    "en": "5th position · level 99 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-42h-exclusiva-5"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 102 · DL 46/2025, anexo VIII",
+                    "en": "6th position · level 102 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-42h-exclusiva-6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "assistente-graduado-senior",
+          "title": {
+            "pt": "Assistente graduado sénior",
+            "en": "Senior consultant"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana",
+                "en": "40 h/week"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 76 · DL 46/2025, anexo VII",
+                    "en": "1st position · level 76 · DL 46/2025, annex VII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-40h-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 86 · DL 46/2025, anexo VII",
+                    "en": "2nd position · level 86 · DL 46/2025, annex VII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-40h-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 96 · DL 46/2025, anexo VII",
+                    "en": "3rd position · level 96 · DL 46/2025, annex VII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-40h-3"
+                }
+              ]
+            },
+            {
+              "id": "35h-exclusiva",
+              "title": {
+                "pt": "35 h/semana · dedicação exclusiva (regime transitório)",
+                "en": "35 h/week · exclusive dedication (transitional regime)"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 70 · DL 46/2025, anexo VIII",
+                    "en": "1st position · level 70 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-35h-exclusiva-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 74 · DL 46/2025, anexo VIII",
+                    "en": "2nd position · level 74 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-35h-exclusiva-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 77 · DL 46/2025, anexo VIII",
+                    "en": "3rd position · level 77 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-35h-exclusiva-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 80 · DL 46/2025, anexo VIII",
+                    "en": "4th position · level 80 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-35h-exclusiva-4"
+                }
+              ]
+            },
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana · tempo completo (regime transitório)",
+                "en": "35 h/week · full time (transitional regime)"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 51 · DL 46/2025, anexo VIII",
+                    "en": "1st position · level 51 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-35h-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 54 · DL 46/2025, anexo VIII",
+                    "en": "2nd position · level 54 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-35h-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 57 · DL 46/2025, anexo VIII",
+                    "en": "3rd position · level 57 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-35h-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 59 · DL 46/2025, anexo VIII",
+                    "en": "4th position · level 59 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-35h-4"
+                }
+              ]
+            },
+            {
+              "id": "42h-exclusiva",
+              "title": {
+                "pt": "42 h/semana · dedicação exclusiva (regime transitório)",
+                "en": "42 h/week · exclusive dedication (transitional regime)"
+              },
+              "weeklyHours": 42,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 94 · DL 46/2025, anexo VIII",
+                    "en": "1st position · level 94 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-42h-exclusiva-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 100 · DL 46/2025, anexo VIII",
+                    "en": "2nd position · level 100 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-42h-exclusiva-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 105 · DL 46/2025, anexo VIII",
+                    "en": "3rd position · level 105 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-42h-exclusiva-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 108 · DL 46/2025, anexo VIII",
+                    "en": "4th position · level 108 · DL 46/2025, annex VIII"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-42h-exclusiva-4"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rotations": []
+    }
+  }
+}

@@ -1,0 +1,694 @@
+{
+  "format": 2,
+  "published": "2026-10-11",
+  "areas": [
+    {
+      "id": "saude",
+      "title": {
+        "pt": "Saúde",
+        "en": "Health"
+      },
+      "professions": [
+        {
+          "id": "enfermagem",
+          "title": {
+            "pt": "Enfermagem",
+            "en": "Nursing"
+          },
+          "subtitle": {
+            "pt": "Enfermeiro, especialista ou gestor · hospital público",
+            "en": "Nurse, specialist or manager · public hospital"
+          },
+          "search": "enfermagem enfermeiro hospital público sns uls sep dl 62/79 enfermagem enfermeiro hospital público sns uls sep dl 62/79 enfermagem enfermeiro hospital público sns uls sep dl 62/79 expansão extra horas extraordinárias enfermagem hospital",
+          "icon": "hospital",
+          "career": "careers/enfermagem.json"
+        },
+        {
+          "id": "medicina",
+          "title": {
+            "pt": "Médico · hospital",
+            "en": "Doctor · hospital"
+          },
+          "subtitle": {
+            "pt": "Dia, noite e urgência; assistente, graduado, graduado sénior e internos; escolhes o regime e a posição",
+            "en": "Day, night and emergency; specialist, consultant, senior consultant and residents; you pick the regime and position"
+          },
+          "search": "medico medica medicina doutor hospital urgencia banco guarda sns uls assistente graduado senior interno internato especialidade dedicacao plena 35 40 horas",
+          "icon": "health",
+          "career": "careers/medicina.json"
+        },
+        {
+          "id": "medicina-familiar",
+          "title": {
+            "pt": "Médico de família · USF modelo A / UCSP",
+            "en": "Family doctor · USF model A / UCSP"
+          },
+          "subtitle": {
+            "pt": "Centro de saúde (USF modelo A ou UCSP); assistente, graduado ou graduado sénior; escolhes o regime e a posição; dedicação plena individual na UCSP: escolhe USF modelo B",
+            "en": "Health centre (USF model A or UCSP); specialist, consultant or senior consultant; you pick the regime and position; individual full dedication in a UCSP: pick USF model B"
+          },
+          "search": "medico medica familia medicina geral familiar mgf centro saude cuidados primarios usf modelo a ucsp unidade cuidados saude personalizados sns uls assistente graduado senior consulta",
+          "icon": "health",
+          "career": "careers/medicina-familiar.json"
+        },
+        {
+          "id": "medicina-usf-b",
+          "title": {
+            "pt": "Médico de família · USF modelo B",
+            "en": "Family doctor · USF model B"
+          },
+          "subtitle": {
+            "pt": "Dedicação plena; base da carreira mais suplementos da USF (unidades ponderadas da lista, domicílios, orientador, coordenador); serve também à dedicação plena individual na UCSP; sem a compensação pelo desempenho (IDE): regista-a no suplemento mensal fixo",
+            "en": "Full dedication; career base plus USF supplements (weighted units on the list, home visits, trainer, coordinator); also fits individual full dedication in a UCSP; without the performance compensation (IDE): record it in the fixed monthly supplement"
+          },
+          "search": "medico medica familia medicina geral familiar mgf centro saude cuidados primarios usf modelo b ucsp dedicacao plena unidades ponderadas up lista utentes ide domicilios orientador coordenador sns uls assistente graduado senior",
+          "icon": "health",
+          "career": "careers/medicina-usf-b.json"
+        },
+        {
+          "id": "tas",
+          "title": {
+            "pt": "Técnico auxiliar de saúde / assistente operacional · hospital público",
+            "en": "Healthcare assistant / operational assistant · public hospital"
+          },
+          "subtitle": {
+            "pt": "Técnico auxiliar de saúde e assistente operacional; 35 h/semana, manhã, tarde e noite; escolhes a categoria e a posição",
+            "en": "Healthcare assistant and operational assistant; 35 h/week, morning, afternoon and night; you pick the category and position"
+          },
+          "search": "auxiliar saude tas tecnico auxiliar assistente operacional encarregado operacional hospital sns uls ajudante enfermagem",
+          "icon": "health",
+          "career": "careers/tas.json"
+        },
+        {
+          "id": "tsdt",
+          "title": {
+            "pt": "Técnico superior de diagnóstico e terapêutica (TSDT) · hospital público",
+            "en": "Diagnostic and therapeutic technician (TSDT) · public hospital"
+          },
+          "subtitle": {
+            "pt": "Técnico, especialista ou especialista principal; 35 h/semana, manhã, tarde e noite; escolhes a posição",
+            "en": "Technician, specialist or lead specialist; 35 h/week, morning, afternoon and night; you pick the position"
+          },
+          "search": "tsdt tecnico superior diagnostico terapeutica radiologia analises cardiopneumologia fisioterapia medicina nuclear anatomia patologica hospital sns uls especialista principal",
+          "icon": "health",
+          "career": "careers/tsdt.json"
+        },
+        {
+          "id": "farmaceutico",
+          "title": {
+            "pt": "Farmacêutico · hospital público",
+            "en": "Pharmacist · public hospital"
+          },
+          "subtitle": {
+            "pt": "Assistente, assessor ou assessor sénior; 35 h/semana; escolhes a posição",
+            "en": "Assistant, senior or principal pharmacist; 35 h/week; you pick the position"
+          },
+          "search": "farmaceutico farmacia hospitalar analises clinicas genetica humana assessor senior assistente hospital sns uls carreira farmaceutica",
+          "icon": "health",
+          "career": "careers/farmaceutico.json"
+        },
+        {
+          "id": "tss",
+          "title": {
+            "pt": "Técnico superior de saúde · hospital público",
+            "en": "Health senior technician · public hospital"
+          },
+          "subtitle": {
+            "pt": "Assessor superior, assessor, assistente principal ou assistente; 35 h ou 42 h/semana; escolhes o escalão",
+            "en": "Principal advisor, advisor, principal assistant or assistant; 35 h or 42 h/week; you pick the step"
+          },
+          "search": "tecnico superior saude tss hospital sns uls assessor superior assessor assistente principal",
+          "icon": "health",
+          "career": "careers/tss.json"
+        },
+        {
+          "id": "assistente-tecnico",
+          "title": {
+            "pt": "Assistente técnico · hospital público",
+            "en": "Technical assistant · public hospital"
+          },
+          "subtitle": {
+            "pt": "Assistente técnico ou coordenador técnico; 35 h/semana; escolhes a posição",
+            "en": "Technical assistant or coordinator; 35 h/week; you pick the position"
+          },
+          "search": "assistente tecnico coordenador tecnico administrativo secretariado hospital sns uls carreira geral",
+          "icon": "health",
+          "career": "careers/assistente-tecnico.json"
+        },
+        {
+          "id": "enfermeiro-privado",
+          "title": {
+            "pt": "Enfermeiro · hospital ou clínica privada",
+            "en": "Nurse · private hospital or clinic"
+          },
+          "subtitle": {
+            "pt": "Turnos habituais de 8 h (7:00, 15:00, 23:00) ou de 12 h; salário à mão, editável",
+            "en": "Usual 8 h shifts (7:00, 15:00, 23:00) or 12 h shifts; enter your own pay, editable"
+          },
+          "search": "enfermeiro enfermeira enfermagem hospital clinica privado privada cuf luz lusiadas turnos",
+          "icon": "hospital",
+          "career": "careers/enfermeiro-privado.json"
+        },
+        {
+          "id": "medico-privado",
+          "title": {
+            "pt": "Médico · hospital ou clínica privada",
+            "en": "Doctor · private hospital or clinic"
+          },
+          "subtitle": {
+            "pt": "Dia, urgência de 12 h e de 24 h; salário à mão, editável",
+            "en": "Day, 12 h and 24 h emergency shifts; enter your own pay, editable"
+          },
+          "search": "medico medica doutor clinica hospital privado privada urgencia consulta banco guarda",
+          "icon": "health",
+          "career": "careers/medico-privado.json"
+        },
+        {
+          "id": "auxiliar-saude-privado",
+          "title": {
+            "pt": "Auxiliar de saúde · hospital ou clínica privada",
+            "en": "Healthcare assistant · private hospital or clinic"
+          },
+          "subtitle": {
+            "pt": "Turnos habituais de 8 h (7:00, 15:00, 23:00) ou de 12 h; salário mínimo 2026 como ponto de partida",
+            "en": "Usual 8 h shifts (7:00, 15:00, 23:00) or 12 h shifts; 2026 minimum wage as a starting point"
+          },
+          "search": "auxiliar saude acao medica ajudante enfermagem hospital clinica privado privada",
+          "icon": "health",
+          "career": "careers/auxiliar-saude-privado.json"
+        },
+        {
+          "id": "farmacia",
+          "title": {
+            "pt": "Farmácia · com turnos de serviço",
+            "en": "Pharmacy · with on-duty shifts"
+          },
+          "subtitle": {
+            "pt": "Dia de 9:00 às 18:00 e turno de serviço de 24 h; o calendário de serviço é o da tua farmácia; salário mínimo 2026 como ponto de partida",
+            "en": "Day shift 9:00 to 18:00 and 24 h on-duty shift; the on-duty calendar is your pharmacy's; 2026 minimum wage as a starting point"
+          },
+          "search": "farmacia farmaceutico tecnico auxiliar farmacia turno servico permanente",
+          "icon": "health",
+          "career": "careers/farmacia.json"
+        },
+        {
+          "id": "lar",
+          "title": {
+            "pt": "Lar e cuidados · ajudante de ação direta",
+            "en": "Care home · direct care assistant"
+          },
+          "subtitle": {
+            "pt": "Manhã, tarde e noite; salário mínimo 2026 como ponto de partida",
+            "en": "Morning, afternoon and night; 2026 minimum wage as a starting point"
+          },
+          "search": "lar idosos cuidador ajudante acao direta cuidados ipss apoio domiciliario erpi residencia",
+          "icon": "care",
+          "career": "careers/lar.json"
+        },
+        {
+          "id": "apoio-domiciliario",
+          "title": {
+            "pt": "Apoio domiciliário",
+            "en": "Home care"
+          },
+          "subtitle": {
+            "pt": "Manhã e tarde; salário mínimo 2026 como ponto de partida",
+            "en": "Morning and afternoon; 2026 minimum wage as a starting point"
+          },
+          "search": "apoio domiciliario sad ajudante acao direta cuidador domicilio idosos ipss",
+          "icon": "care",
+          "career": "careers/apoio-domiciliario.json"
+        }
+      ]
+    },
+    {
+      "id": "seguranca",
+      "title": {
+        "pt": "Segurança e emergência",
+        "en": "Security and emergency"
+      },
+      "professions": [
+        {
+          "id": "psp",
+          "title": {
+            "pt": "Polícia de Segurança Pública (PSP)",
+            "en": "Public Security Police (PSP)"
+          },
+          "subtitle": {
+            "pt": "Agente, chefe ou oficial de polícia; 36 h/semana, turnos de 8 h; escolhes a categoria e a posição",
+            "en": "Constable, sergeant or officer; 36 h/week, 8-hour shifts; you pick the category and position"
+          },
+          "search": "psp policia seguranca publica agente chefe oficial subcomissario comissario patrulha esquadra turnos",
+          "icon": "security",
+          "career": "careers/psp.json"
+        },
+        {
+          "id": "gnr",
+          "title": {
+            "pt": "Guarda Nacional Republicana (GNR)",
+            "en": "National Republican Guard (GNR)"
+          },
+          "subtitle": {
+            "pt": "Guarda, sargento ou oficial; 40 h/semana, turnos de 8 h; escolhes o posto e a posição",
+            "en": "Guard, sergeant or officer; 40 h/week, 8-hour shifts; you pick the rank and position"
+          },
+          "search": "gnr guarda nacional republicana militar cabo furriel sargento alferes tenente capitao posto patrulha turnos",
+          "icon": "security",
+          "career": "careers/gnr.json"
+        },
+        {
+          "id": "guarda-prisional",
+          "title": {
+            "pt": "Guarda prisional",
+            "en": "Prison guard"
+          },
+          "subtitle": {
+            "pt": "Guarda, guarda principal, chefe ou comissário prisional; 35 h/semana, turnos de 8 h; escolhes a categoria e a posição",
+            "en": "Guard, principal guard, chief or commissioner; 35 h/week, 8-hour shifts; you pick the category and position"
+          },
+          "search": "guarda prisional cgp prisao estabelecimento prisional chefe comissario prisional turnos justica dgrsp",
+          "icon": "security",
+          "career": "careers/guarda-prisional.json"
+        },
+        {
+          "id": "bombeiro-sapador",
+          "title": {
+            "pt": "Bombeiro sapador",
+            "en": "Sapper firefighter"
+          },
+          "subtitle": {
+            "pt": "Bombeiros profissionais da administração local; 35 h/semana, turnos de 12 h; tabela do anexo IV do DL 51/2025 (quem está na tabela de transição pode estar um nível abaixo: confirma no recibo)",
+            "en": "Professional firefighters of local government; 35 h/week, 12-hour shifts; annex IV table of DL 51/2025 (if you are on the transition table you may be one level lower: check your payslip)"
+          },
+          "search": "bombeiro sapador bombeiros profissionais municipais camara municipal regimento batalhao subchefe chefe",
+          "icon": "security",
+          "career": "careers/bombeiro-sapador.json"
+        },
+        {
+          "id": "teph",
+          "title": {
+            "pt": "Técnico de emergência pré-hospitalar (TEPH) · INEM",
+            "en": "Pre-hospital emergency technician (TEPH) · INEM"
+          },
+          "subtitle": {
+            "pt": "Técnico, avançado ou principal; 35 h/semana, turnos; escolhes a categoria e a posição",
+            "en": "Technician, advanced or senior; 35 h/week, shifts; you pick the category and position"
+          },
+          "search": "teph inem tecnico emergencia pre hospitalar ambulancia codu emergencia medica socorro turnos",
+          "icon": "health",
+          "career": "careers/teph.json"
+        },
+        {
+          "id": "seguranca",
+          "title": {
+            "pt": "Vigilante · segurança privada",
+            "en": "Security guard · private security"
+          },
+          "subtitle": {
+            "pt": "Turnos de 12 h de dia e de noite; salário mínimo 2026 como ponto de partida",
+            "en": "12-hour day and night shifts; 2026 minimum wage as a starting point"
+          },
+          "search": "vigilante seguranca privada porteiro rondas",
+          "icon": "security",
+          "career": "careers/seguranca.json"
+        },
+        {
+          "id": "porteiro-condominio",
+          "title": {
+            "pt": "Porteiro ou rececionista de condomínio",
+            "en": "Condominium doorman or receptionist"
+          },
+          "subtitle": {
+            "pt": "Manhã, tarde e noite de 8 h; salário mínimo 2026 como ponto de partida",
+            "en": "8 h morning, afternoon and night; 2026 minimum wage as a starting point"
+          },
+          "search": "porteiro rececionista condominio predio portaria guarda edificio",
+          "icon": "security",
+          "career": "careers/porteiro-condominio.json"
+        }
+      ]
+    },
+    {
+      "id": "comercio",
+      "title": {
+        "pt": "Comércio",
+        "en": "Retail"
+      },
+      "professions": [
+        {
+          "id": "retalho",
+          "title": {
+            "pt": "Comércio · loja de rua",
+            "en": "Retail · high-street shop"
+          },
+          "subtitle": {
+            "pt": "Abertura, intermédio e fecho; salário mínimo 2026 como ponto de partida",
+            "en": "Opening, middle and closing; 2026 minimum wage as a starting point"
+          },
+          "search": "loja retalho comercio supermercado centro comercial caixa repositor loja rua comercio",
+          "icon": "shop",
+          "career": "careers/retalho.json"
+        },
+        {
+          "id": "centro-comercial",
+          "title": {
+            "pt": "Comércio · centro comercial",
+            "en": "Retail · shopping centre"
+          },
+          "subtitle": {
+            "pt": "Abertura, intermédio e fecho (9:30 às 23:00); salário mínimo 2026 como ponto de partida",
+            "en": "Opening, middle and closing (9:30 to 23:00); 2026 minimum wage as a starting point"
+          },
+          "search": "loja centro comercial shopping retalho vendedor caixa operador loja",
+          "icon": "shop",
+          "career": "careers/centro-comercial.json"
+        },
+        {
+          "id": "supermercado",
+          "title": {
+            "pt": "Supermercado ou hipermercado",
+            "en": "Supermarket or hypermarket"
+          },
+          "subtitle": {
+            "pt": "Manhã, intermédio e tarde; salário mínimo 2026 como ponto de partida",
+            "en": "Morning, middle and afternoon; 2026 minimum wage as a starting point"
+          },
+          "search": "supermercado hipermercado repositor operador caixa talho padaria peixaria loja",
+          "icon": "shop",
+          "career": "careers/supermercado.json"
+        }
+      ]
+    },
+    {
+      "id": "hotelaria-restauracao",
+      "title": {
+        "pt": "Hotelaria e restauração",
+        "en": "Hotels and catering"
+      },
+      "professions": [
+        {
+          "id": "hotelaria",
+          "title": {
+            "pt": "Hotel · receção (com noite)",
+            "en": "Hotel · front desk (with night shift)"
+          },
+          "subtitle": {
+            "pt": "Manhã, tarde e noite de 8 h; salário mínimo 2026 como ponto de partida",
+            "en": "8 h morning, afternoon and night; 2026 minimum wage as a starting point"
+          },
+          "search": "hotel restaurante hotelaria rececao empregado mesa cozinha bar rececao rececionista hotel noite alojamento",
+          "icon": "hotel",
+          "career": "careers/hotelaria.json"
+        },
+        {
+          "id": "cozinha",
+          "title": {
+            "pt": "Restauração · cozinha",
+            "en": "Catering · kitchen"
+          },
+          "subtitle": {
+            "pt": "Manhã, intermédio e tarde de 8 h; salário mínimo 2026 como ponto de partida",
+            "en": "8 h morning, middle and afternoon; 2026 minimum wage as a starting point"
+          },
+          "search": "cozinha cozinheiro ajudante cozinha restaurante copa pasteleiro",
+          "icon": "hotel",
+          "career": "careers/cozinha.json"
+        },
+        {
+          "id": "sala-bar",
+          "title": {
+            "pt": "Restauração · sala e bar",
+            "en": "Catering · dining room and bar"
+          },
+          "subtitle": {
+            "pt": "Almoço, jantar e bar de noite; salário mínimo 2026 como ponto de partida",
+            "en": "Lunch, dinner and night bar; 2026 minimum wage as a starting point"
+          },
+          "search": "sala bar empregado mesa balcao restaurante cafe bartender barman",
+          "icon": "hotel",
+          "career": "careers/sala-bar.json"
+        }
+      ]
+    },
+    {
+      "id": "industria-logistica",
+      "title": {
+        "pt": "Indústria e logística",
+        "en": "Industry and logistics"
+      },
+      "professions": [
+        {
+          "id": "industria",
+          "title": {
+            "pt": "Indústria · três turnos",
+            "en": "Industry · three shifts"
+          },
+          "subtitle": {
+            "pt": "06:00–14:00, 14:00–22:00 e 22:00–06:00; salário mínimo 2026 como ponto de partida",
+            "en": "06:00–14:00, 14:00–22:00 and 22:00–06:00; 2026 minimum wage as a starting point"
+          },
+          "search": "fabrica industria operador producao linha montagem armazem logistica turnos",
+          "icon": "factory",
+          "career": "careers/industria.json"
+        },
+        {
+          "id": "industria-continua",
+          "title": {
+            "pt": "Indústria · laboração contínua",
+            "en": "Industry · continuous operation"
+          },
+          "subtitle": {
+            "pt": "5 equipas de 8 h ou 4 equipas de 12 h; salário mínimo 2026 como ponto de partida",
+            "en": "5 teams on 8 h or 4 teams on 12 h; 2026 minimum wage as a starting point"
+          },
+          "search": "laboracao continua cinco equipas fabrica industria operador producao turnos noite",
+          "icon": "factory",
+          "career": "careers/industria-continua.json"
+        },
+        {
+          "id": "armazem",
+          "title": {
+            "pt": "Armazém e logística",
+            "en": "Warehouse and logistics"
+          },
+          "subtitle": {
+            "pt": "Manhã, intermédio, tarde e noite de 8 h; salário mínimo 2026 como ponto de partida",
+            "en": "8 h morning, middle, afternoon and night; 2026 minimum wage as a starting point"
+          },
+          "search": "armazem logistica operador empilhador carga descarga picking distribuicao centro",
+          "icon": "factory",
+          "career": "careers/armazem.json"
+        },
+        {
+          "id": "estafeta",
+          "title": {
+            "pt": "Estafeta e distribuição",
+            "en": "Courier and delivery"
+          },
+          "subtitle": {
+            "pt": "Manhã e tarde de 8 h; por conta de outrem (com contrato) ou a recibos verdes",
+            "en": "8 h morning and afternoon; employed (with contract) or freelance"
+          },
+          "search": "estafeta entregas distribuicao correio encomendas mota moto bicicleta glovo uber eats",
+          "icon": "bus",
+          "career": "careers/estafeta.json"
+        }
+      ]
+    },
+    {
+      "id": "transporte",
+      "title": {
+        "pt": "Transportes",
+        "en": "Transport"
+      },
+      "professions": [
+        {
+          "id": "transportes",
+          "title": {
+            "pt": "Motorista de autocarro",
+            "en": "Bus driver"
+          },
+          "subtitle": {
+            "pt": "Cedo, tarde e noite; salário mínimo 2026 como ponto de partida",
+            "en": "Early, afternoon and night; 2026 minimum wage as a starting point"
+          },
+          "search": "motorista autocarro transportes metro comboio condutor taxi tvde autocarro transportes urbanos carris stcp",
+          "icon": "bus",
+          "career": "careers/transportes.json"
+        },
+        {
+          "id": "ferroviario-metro",
+          "title": {
+            "pt": "Ferroviário ou metro",
+            "en": "Rail or metro"
+          },
+          "subtitle": {
+            "pt": "Manhã (5:30), tarde e noite (até à 1:30); salário mínimo 2026 como ponto de partida",
+            "en": "Morning (5:30), afternoon and night (until 1:30); 2026 minimum wage as a starting point"
+          },
+          "search": "ferroviario comboio metro metropolitano maquinista condutor bilheteira agente estacao cp",
+          "icon": "bus",
+          "career": "careers/ferroviario-metro.json"
+        },
+        {
+          "id": "motorista-pesados",
+          "title": {
+            "pt": "Motorista de pesados",
+            "en": "Heavy goods driver"
+          },
+          "subtitle": {
+            "pt": "Cedo, dia e noite; os horários reais dependem do transporte; salário mínimo 2026 como ponto de partida",
+            "en": "Early, day and night; real hours depend on the haul; 2026 minimum wage as a starting point"
+          },
+          "search": "motorista pesados camiao tir mercadorias transporte rodoviario",
+          "icon": "bus",
+          "career": "careers/motorista-pesados.json"
+        },
+        {
+          "id": "tvde",
+          "title": {
+            "pt": "TVDE",
+            "en": "Ride-hailing driver (TVDE)"
+          },
+          "subtitle": {
+            "pt": "Manhã, tarde e noite; com contrato ou a recibos verdes",
+            "en": "Morning, afternoon and night; employed (with contract) or freelance"
+          },
+          "search": "tvde uber bolt motorista plataforma ride",
+          "icon": "bus",
+          "career": "careers/tvde.json"
+        },
+        {
+          "id": "handling-aeroportuario",
+          "title": {
+            "pt": "Handling aeroportuário",
+            "en": "Airport ground handling"
+          },
+          "subtitle": {
+            "pt": "Manhã (5:00), tarde e noite de 8 h; salário mínimo 2026 como ponto de partida",
+            "en": "8 h morning (5:00), afternoon and night; 2026 minimum wage as a starting point"
+          },
+          "search": "handling aeroporto aeroportuario bagagem rampa check in portaria carga aviao",
+          "icon": "bus",
+          "career": "careers/handling-aeroportuario.json"
+        },
+        {
+          "id": "tripulante-cabine",
+          "title": {
+            "pt": "Tripulante de cabine",
+            "en": "Cabin crew"
+          },
+          "subtitle": {
+            "pt": "Voos da manhã, tarde e noite; escalas de 5 dias de voo e 3 de folga; salário à mão",
+            "en": "Morning, afternoon and night flights; rosters of 5 days on and 3 days off; enter your own pay"
+          },
+          "search": "tripulante cabine hospedeira assistente bordo voo aviao companhia aerea",
+          "icon": "bus",
+          "career": "careers/tripulante-cabine.json"
+        }
+      ]
+    },
+    {
+      "id": "servicos",
+      "title": {
+        "pt": "Serviços",
+        "en": "Services"
+      },
+      "professions": [
+        {
+          "id": "callcenter",
+          "title": {
+            "pt": "Call center e apoio ao cliente",
+            "en": "Call centre and customer support"
+          },
+          "subtitle": {
+            "pt": "Turnos de 8 h entre as 8:00 e as 24:00; salário mínimo 2026 como ponto de partida",
+            "en": "8-hour shifts between 8:00 and 24:00; 2026 minimum wage as a starting point"
+          },
+          "search": "call center apoio cliente contact center telemarketing suporte atendimento",
+          "icon": "headset",
+          "career": "careers/callcenter.json"
+        },
+        {
+          "id": "limpeza",
+          "title": {
+            "pt": "Limpeza",
+            "en": "Cleaning"
+          },
+          "subtitle": {
+            "pt": "Manhã, tarde e fim de dia; salário mínimo 2026 como ponto de partida",
+            "en": "Morning, afternoon and end of day; 2026 minimum wage as a starting point"
+          },
+          "search": "limpeza auxiliar limpezas empresa escritorios condominio higiene",
+          "icon": "services",
+          "career": "careers/limpeza.json"
+        },
+        {
+          "id": "ti-operacoes",
+          "title": {
+            "pt": "TI e operações · NOC e prevenção",
+            "en": "IT and operations · NOC and on-call"
+          },
+          "subtitle": {
+            "pt": "Dia, 3 turnos de 8 h, equipas de 12 h e prevenção; salário à mão",
+            "en": "Day, 3 shifts of 8 h, 12 h teams and on-call; enter your own pay"
+          },
+          "search": "ti informatica operacoes noc suporte sysadmin devops service desk prevencao on call piquete",
+          "icon": "office",
+          "career": "careers/ti-operacoes.json"
+        }
+      ]
+    },
+    {
+      "id": "outras",
+      "title": {
+        "pt": "Outras profissões",
+        "en": "Other jobs"
+      },
+      "professions": [
+        {
+          "id": "fixo",
+          "title": {
+            "pt": "Horário fixo · 9h às 17h",
+            "en": "Fixed hours · 9am to 5pm"
+          },
+          "subtitle": {
+            "pt": "Um turno de dia, de segunda a sexta, sem avisos de escala",
+            "en": "A day shift, Monday to Friday, no schedule alerts"
+          },
+          "search": "escritório horário fixo nove às cinco 9 17 dia",
+          "icon": "office",
+          "career": "careers/fixo.json"
+        },
+        {
+          "id": "serv",
+          "title": {
+            "pt": "Prestação de serviços",
+            "en": "Freelance services"
+          },
+          "subtitle": {
+            "pt": "Manhã, Tarde e Noite sem objetivo de horas nem avisos; defines o valor/hora",
+            "en": "Morning, Afternoon and Night with no hours goal or alerts; you set the hourly rate"
+          },
+          "search": "recibos verdes independente freelancer prestador serviços hora",
+          "icon": "services",
+          "career": "careers/serv.json"
+        },
+        {
+          "id": "livre",
+          "title": {
+            "pt": "Trabalho livre",
+            "en": "Free work"
+          },
+          "subtitle": {
+            "pt": "Sem modelos: registas cada trabalho com o horário que tiver",
+            "en": "No templates: you record each job with whatever hours it has"
+          },
+          "search": "livre sem modelos biscates avulso",
+          "icon": "free",
+          "career": "careers/livre.json"
+        }
+      ]
+    }
+  ]
+}

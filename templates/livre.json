@@ -1,0 +1,18 @@
+{
+  "format": 2,
+  "id": "livre",
+  "published": "2026-10-07",
+  "job": {
+    "color": 4293668883,
+    "colorMode": "tonal",
+    "weeklyHours": 0.0,
+    "maxConsecutive": 0,
+    "prohibitNightMorning": false,
+    "prohibitTriple": false,
+    "allExtra": false,
+    "overlapTolerance": 30,
+    "templates": [],
+    "reminders": []
+  },
+  "pay": {}
+}

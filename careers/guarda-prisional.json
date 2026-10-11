@@ -1,0 +1,475 @@
+{
+  "format": 2,
+  "id": "guarda-prisional",
+  "published": "2026-10-11",
+  "title": {
+    "pt": "Corpo da Guarda Prisional",
+    "en": "Prison Guard Corps"
+  },
+  "sources": [
+    {
+      "title": "Decreto-Lei n.º 3/2014, de 9 de janeiro, Estatuto do Pessoal do Corpo da Guarda Prisional (texto publicado: anexo I, carreiras e categorias)",
+      "url": "https://files.diariodarepublica.pt/1s/2014/01/00600/0007100086.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 3/2014, versão consolidada de 2026-03-09 (artigos 28.º e 45.º: equiparação à PSP e tabela remuneratória; artigo 62.º: duração do trabalho; artigos 49.º e 51.º: suplementos)",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/2014-106542310",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 243/2015, de 19 de outubro (anexo II: níveis e posições remuneratórias da PSP a que o artigo 45.º do estatuto da guarda prisional remete)",
+      "url": "https://files.diariodarepublica.pt/1s/2015/10/20400/0905409086.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 84-F/2022, de 16 de dezembro (anexo IX: estrutura remuneratória da categoria de agente, a que corresponde a de guarda)",
+      "url": "https://files.diariodarepublica.pt/1s/2022/12/24101/0000200031.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026)",
+      "url": "https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026): posições e níveis remuneratórios",
+      "url": "https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Lei n.º 18/2016, de 20 de junho (artigo 105.º da LTFP: período normal de trabalho de 35 horas por semana)",
+      "url": "https://files.diariodarepublica.pt/1s/2016/06/11600/0190401905.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 50-A/2024, de 23 de agosto (componente fixa do suplemento por serviço e risco nas forças de segurança)",
+      "url": "https://files.diariodarepublica.pt/1s/2024/08/16301/0000200004.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Lei n.º 73-A/2025, de 30 de dezembro (Orçamento do Estado para 2026), artigos 255.º a 257.º",
+      "url": "https://files.diariodarepublica.pt/1s/2025/12/25002/0000200271.pdf",
+      "consulted": "2026-10-10"
+    }
+  ],
+  "sectors": {
+    "public": {
+      "templates": "templates/forcas.json",
+      "institutions": false,
+      "categories": [
+        {
+          "id": "guarda",
+          "title": {
+            "pt": "Guarda prisional · Guarda",
+            "en": "Prison guard · Guarda"
+          },
+          "regimes": [
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana (regime geral)",
+                "en": "35 h/week (general regime)"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 8",
+                    "en": "1st position · level 8"
+                  },
+                  "table": "tru",
+                  "key": "8"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 9",
+                    "en": "2nd position · level 9"
+                  },
+                  "table": "tru",
+                  "key": "9"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 11",
+                    "en": "3rd position · level 11"
+                  },
+                  "table": "tru",
+                  "key": "11"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 12",
+                    "en": "4th position · level 12"
+                  },
+                  "table": "tru",
+                  "key": "12"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 13",
+                    "en": "5th position · level 13"
+                  },
+                  "table": "tru",
+                  "key": "13"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 14",
+                    "en": "6th position · level 14"
+                  },
+                  "table": "tru",
+                  "key": "14"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição · nível 15",
+                    "en": "7th position · level 15"
+                  },
+                  "table": "tru",
+                  "key": "15"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "guarda-principal",
+          "title": {
+            "pt": "Guarda prisional · Guarda principal",
+            "en": "Prison guard · Guarda principal"
+          },
+          "regimes": [
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana (regime geral)",
+                "en": "35 h/week (general regime)"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 15",
+                    "en": "1st position · level 15"
+                  },
+                  "table": "tru",
+                  "key": "15"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 16",
+                    "en": "2nd position · level 16"
+                  },
+                  "table": "tru",
+                  "key": "16"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 17",
+                    "en": "3rd position · level 17"
+                  },
+                  "table": "tru",
+                  "key": "17"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 18",
+                    "en": "4th position · level 18"
+                  },
+                  "table": "tru",
+                  "key": "18"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 19",
+                    "en": "5th position · level 19"
+                  },
+                  "table": "tru",
+                  "key": "19"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 20",
+                    "en": "6th position · level 20"
+                  },
+                  "table": "tru",
+                  "key": "20"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chefe",
+          "title": {
+            "pt": "Chefe da guarda prisional · Chefe",
+            "en": "Prison guard chief · Chefe"
+          },
+          "regimes": [
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana (regime geral)",
+                "en": "35 h/week (general regime)"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 17",
+                    "en": "1st position · level 17"
+                  },
+                  "table": "tru",
+                  "key": "17"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 18",
+                    "en": "2nd position · level 18"
+                  },
+                  "table": "tru",
+                  "key": "18"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 19",
+                    "en": "3rd position · level 19"
+                  },
+                  "table": "tru",
+                  "key": "19"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 20",
+                    "en": "4th position · level 20"
+                  },
+                  "table": "tru",
+                  "key": "20"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 21",
+                    "en": "5th position · level 21"
+                  },
+                  "table": "tru",
+                  "key": "21"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 23",
+                    "en": "6th position · level 23"
+                  },
+                  "table": "tru",
+                  "key": "23"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chefe-principal",
+          "title": {
+            "pt": "Chefe da guarda prisional · Chefe principal",
+            "en": "Prison guard chief · Chefe principal"
+          },
+          "regimes": [
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana (regime geral)",
+                "en": "35 h/week (general regime)"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 25",
+                    "en": "1st position · level 25"
+                  },
+                  "table": "tru",
+                  "key": "25"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 26",
+                    "en": "2nd position · level 26"
+                  },
+                  "table": "tru",
+                  "key": "26"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 27",
+                    "en": "3rd position · level 27"
+                  },
+                  "table": "tru",
+                  "key": "27"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 28",
+                    "en": "4th position · level 28"
+                  },
+                  "table": "tru",
+                  "key": "28"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 29",
+                    "en": "5th position · level 29"
+                  },
+                  "table": "tru",
+                  "key": "29"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "comissario-prisional",
+          "title": {
+            "pt": "Chefe da guarda prisional · Comissário prisional",
+            "en": "Prison guard chief · Comissário prisional"
+          },
+          "regimes": [
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana (regime geral)",
+                "en": "35 h/week (general regime)"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 30",
+                    "en": "1st position · level 30"
+                  },
+                  "table": "tru",
+                  "key": "30"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 31",
+                    "en": "2nd position · level 31"
+                  },
+                  "table": "tru",
+                  "key": "31"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 32",
+                    "en": "3rd position · level 32"
+                  },
+                  "table": "tru",
+                  "key": "32"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 33",
+                    "en": "4th position · level 33"
+                  },
+                  "table": "tru",
+                  "key": "33"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 34",
+                    "en": "5th position · level 34"
+                  },
+                  "table": "tru",
+                  "key": "34"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 35",
+                    "en": "6th position · level 35"
+                  },
+                  "table": "tru",
+                  "key": "35"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssr-fixa",
+          "label": {
+            "pt": "Suplemento por serviço e risco · componente fixa de 400 € (1 = recebo, 0 = não); os outros 20 % da remuneração base não entram aqui",
+            "en": "Service and risk supplement · fixed component of €400 (1 = I get it, 0 = no); the other 20% of base pay is not included here"
+          },
+          "effect": {
+            "monthlySupplement": {
+              "table": "ssr",
+              "key": "fixa"
+            }
+          }
+        },
+        {
+          "id": "seguranca-prisional-chefe",
+          "label": {
+            "pt": "Segurança prisional · chefes (e principais): 90,03 € em 2026, 115,03 € em 2027; só com escala aprovada; sem acumular com o suplemento especial (1 = recebo, 0 = não)",
+            "en": "Prison security · chiefs (and principal): €90.03 in 2026, €115.03 in 2027; only with an approved roster; not with the special supplement (1 = I get it, 0 = no)"
+          },
+          "effect": {
+            "monthlySupplement": {
+              "table": "patrulha",
+              "key": "chefe-sargento"
+            }
+          }
+        },
+        {
+          "id": "seguranca-prisional-guarda",
+          "label": {
+            "pt": "Segurança prisional · guardas (e principais): 84,13 € em 2026, 109,13 € em 2027; só com escala aprovada; sem acumular com o suplemento especial (1 = recebo, 0 = não)",
+            "en": "Prison security · guards (and principal): €84.13 in 2026, €109.13 in 2027; only with an approved roster; not with the special supplement (1 = I get it, 0 = no)"
+          },
+          "effect": {
+            "monthlySupplement": {
+              "table": "patrulha",
+              "key": "agente-guarda"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

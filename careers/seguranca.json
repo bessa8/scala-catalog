@@ -1,0 +1,73 @@
+{
+  "format": 2,
+  "id": "seguranca",
+  "published": "2026-10-10",
+  "title": {
+    "pt": "Vigilante · segurança privada",
+    "en": "Security guard · private security"
+  },
+  "sectors": {
+    "private": {
+      "templates": "templates/seguranca.json",
+      "institutions": false,
+      "categories": [
+        {
+          "id": "seguranca",
+          "title": {
+            "pt": "Vigilante · segurança privada",
+            "en": "Security guard · private security"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana",
+                "en": "40 h/week"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "smn",
+                  "label": {
+                    "pt": "Salário mínimo",
+                    "en": "Minimum wage"
+                  },
+                  "table": "smn",
+                  "key": "smn"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rules": "rules/ct-2026.json",
+      "rotations": [
+        {
+          "id": "12h-2d2n4f",
+          "title": {
+            "pt": "12 h · 2 dias, 2 noites, 4 folgas · média 42 h/semana, acima das 40 h",
+            "en": "12 h · 2 days, 2 nights, 4 days off · average 42 h/week, above 40 h"
+          },
+          "codes": [
+            "D",
+            "D",
+            "N",
+            "N",
+            "F",
+            "F",
+            "F",
+            "F"
+          ]
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Código do Trabalho (Lei n.º 7/2009, de 12 de fevereiro), artigos 203.º, 221.º, 266.º e 268.º (texto consolidado do Diário da República)",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2009-34546475",
+      "consulted": "2026-10-10"
+    }
+  ]
+}

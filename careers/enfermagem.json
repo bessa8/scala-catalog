@@ -1,0 +1,656 @@
+{
+  "format": 2,
+  "id": "enfermagem",
+  "published": "2026-10-10",
+  "title": {
+    "pt": "Enfermagem",
+    "en": "Nursing"
+  },
+  "sectors": {
+    "public": {
+      "templates": "templates/enf.json",
+      "institutions": true,
+      "categories": [
+        {
+          "id": "enfermeiro",
+          "title": {
+            "pt": "Enfermeiro",
+            "en": "Nurse"
+          },
+          "regimes": [
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana",
+                "en": "35 h/week"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 19",
+                    "en": "1st position · level 19"
+                  },
+                  "table": "tru",
+                  "key": "19"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 23",
+                    "en": "2nd position · level 23"
+                  },
+                  "table": "tru",
+                  "key": "23"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 27",
+                    "en": "3rd position · level 27"
+                  },
+                  "table": "tru",
+                  "key": "27"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 31",
+                    "en": "4th position · level 31"
+                  },
+                  "table": "tru",
+                  "key": "31"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 34",
+                    "en": "5th position · level 34"
+                  },
+                  "table": "tru",
+                  "key": "34"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 37",
+                    "en": "6th position · level 37"
+                  },
+                  "table": "tru",
+                  "key": "37"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição · nível 40",
+                    "en": "7th position · level 40"
+                  },
+                  "table": "tru",
+                  "key": "40"
+                },
+                {
+                  "id": "8",
+                  "label": {
+                    "pt": "8.ª posição · nível 43",
+                    "en": "8th position · level 43"
+                  },
+                  "table": "tru",
+                  "key": "43"
+                },
+                {
+                  "id": "9",
+                  "label": {
+                    "pt": "9.ª posição · nível 46",
+                    "en": "9th position · level 46"
+                  },
+                  "table": "tru",
+                  "key": "46"
+                },
+                {
+                  "id": "10",
+                  "label": {
+                    "pt": "10.ª posição · nível 49",
+                    "en": "10th position · level 49"
+                  },
+                  "table": "tru",
+                  "key": "49"
+                },
+                {
+                  "id": "11",
+                  "label": {
+                    "pt": "11.ª posição · nível 52",
+                    "en": "11th position · level 52"
+                  },
+                  "table": "tru",
+                  "key": "52"
+                }
+              ]
+            },
+            {
+              "id": "so-extra",
+              "title": {
+                "pt": "Só horas extra (expansão)",
+                "en": "Extra hours only"
+              },
+              "weeklyHours": 0,
+              "pay": "hourlyFromMonthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 19",
+                    "en": "1st position · level 19"
+                  },
+                  "table": "tru",
+                  "key": "19"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 23",
+                    "en": "2nd position · level 23"
+                  },
+                  "table": "tru",
+                  "key": "23"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 27",
+                    "en": "3rd position · level 27"
+                  },
+                  "table": "tru",
+                  "key": "27"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 31",
+                    "en": "4th position · level 31"
+                  },
+                  "table": "tru",
+                  "key": "31"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 34",
+                    "en": "5th position · level 34"
+                  },
+                  "table": "tru",
+                  "key": "34"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 37",
+                    "en": "6th position · level 37"
+                  },
+                  "table": "tru",
+                  "key": "37"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição · nível 40",
+                    "en": "7th position · level 40"
+                  },
+                  "table": "tru",
+                  "key": "40"
+                },
+                {
+                  "id": "8",
+                  "label": {
+                    "pt": "8.ª posição · nível 43",
+                    "en": "8th position · level 43"
+                  },
+                  "table": "tru",
+                  "key": "43"
+                },
+                {
+                  "id": "9",
+                  "label": {
+                    "pt": "9.ª posição · nível 46",
+                    "en": "9th position · level 46"
+                  },
+                  "table": "tru",
+                  "key": "46"
+                },
+                {
+                  "id": "10",
+                  "label": {
+                    "pt": "10.ª posição · nível 49",
+                    "en": "10th position · level 49"
+                  },
+                  "table": "tru",
+                  "key": "49"
+                },
+                {
+                  "id": "11",
+                  "label": {
+                    "pt": "11.ª posição · nível 52",
+                    "en": "11th position · level 52"
+                  },
+                  "table": "tru",
+                  "key": "52"
+                }
+              ],
+              "calculationHours": 35,
+              "templates": "templates/extra.json",
+              "rules": "rules/dl62-79-extra.json"
+            }
+          ]
+        },
+        {
+          "id": "especialista",
+          "title": {
+            "pt": "Enfermeiro especialista",
+            "en": "Specialist nurse"
+          },
+          "regimes": [
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana",
+                "en": "35 h/week"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 24",
+                    "en": "1st position · level 24"
+                  },
+                  "table": "tru",
+                  "key": "24"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 28",
+                    "en": "2nd position · level 28"
+                  },
+                  "table": "tru",
+                  "key": "28"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 31",
+                    "en": "3rd position · level 31"
+                  },
+                  "table": "tru",
+                  "key": "31"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 34",
+                    "en": "4th position · level 34"
+                  },
+                  "table": "tru",
+                  "key": "34"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 37",
+                    "en": "5th position · level 37"
+                  },
+                  "table": "tru",
+                  "key": "37"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 40",
+                    "en": "6th position · level 40"
+                  },
+                  "table": "tru",
+                  "key": "40"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição · nível 43",
+                    "en": "7th position · level 43"
+                  },
+                  "table": "tru",
+                  "key": "43"
+                },
+                {
+                  "id": "8",
+                  "label": {
+                    "pt": "8.ª posição · nível 46",
+                    "en": "8th position · level 46"
+                  },
+                  "table": "tru",
+                  "key": "46"
+                },
+                {
+                  "id": "9",
+                  "label": {
+                    "pt": "9.ª posição · nível 49",
+                    "en": "9th position · level 49"
+                  },
+                  "table": "tru",
+                  "key": "49"
+                },
+                {
+                  "id": "10",
+                  "label": {
+                    "pt": "10.ª posição · nível 52",
+                    "en": "10th position · level 52"
+                  },
+                  "table": "tru",
+                  "key": "52"
+                }
+              ]
+            },
+            {
+              "id": "so-extra",
+              "title": {
+                "pt": "Só horas extra (expansão)",
+                "en": "Extra hours only"
+              },
+              "weeklyHours": 0,
+              "pay": "hourlyFromMonthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 24",
+                    "en": "1st position · level 24"
+                  },
+                  "table": "tru",
+                  "key": "24"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 28",
+                    "en": "2nd position · level 28"
+                  },
+                  "table": "tru",
+                  "key": "28"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 31",
+                    "en": "3rd position · level 31"
+                  },
+                  "table": "tru",
+                  "key": "31"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 34",
+                    "en": "4th position · level 34"
+                  },
+                  "table": "tru",
+                  "key": "34"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 37",
+                    "en": "5th position · level 37"
+                  },
+                  "table": "tru",
+                  "key": "37"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 40",
+                    "en": "6th position · level 40"
+                  },
+                  "table": "tru",
+                  "key": "40"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição · nível 43",
+                    "en": "7th position · level 43"
+                  },
+                  "table": "tru",
+                  "key": "43"
+                },
+                {
+                  "id": "8",
+                  "label": {
+                    "pt": "8.ª posição · nível 46",
+                    "en": "8th position · level 46"
+                  },
+                  "table": "tru",
+                  "key": "46"
+                },
+                {
+                  "id": "9",
+                  "label": {
+                    "pt": "9.ª posição · nível 49",
+                    "en": "9th position · level 49"
+                  },
+                  "table": "tru",
+                  "key": "49"
+                },
+                {
+                  "id": "10",
+                  "label": {
+                    "pt": "10.ª posição · nível 52",
+                    "en": "10th position · level 52"
+                  },
+                  "table": "tru",
+                  "key": "52"
+                }
+              ],
+              "calculationHours": 35,
+              "templates": "templates/extra.json",
+              "rules": "rules/dl62-79-extra.json"
+            }
+          ]
+        },
+        {
+          "id": "gestor",
+          "title": {
+            "pt": "Enfermeiro gestor",
+            "en": "Nurse manager"
+          },
+          "regimes": [
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana",
+                "en": "35 h/week"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 38",
+                    "en": "1st position · level 38"
+                  },
+                  "table": "tru",
+                  "key": "38"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 42",
+                    "en": "2nd position · level 42"
+                  },
+                  "table": "tru",
+                  "key": "42"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 46",
+                    "en": "3rd position · level 46"
+                  },
+                  "table": "tru",
+                  "key": "46"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 50",
+                    "en": "4th position · level 50"
+                  },
+                  "table": "tru",
+                  "key": "50"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 53",
+                    "en": "5th position · level 53"
+                  },
+                  "table": "tru",
+                  "key": "53"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 56",
+                    "en": "6th position · level 56"
+                  },
+                  "table": "tru",
+                  "key": "56"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição · nível 58",
+                    "en": "7th position · level 58"
+                  },
+                  "table": "tru",
+                  "key": "58"
+                }
+              ]
+            },
+            {
+              "id": "so-extra",
+              "title": {
+                "pt": "Só horas extra (expansão)",
+                "en": "Extra hours only"
+              },
+              "weeklyHours": 0,
+              "pay": "hourlyFromMonthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 38",
+                    "en": "1st position · level 38"
+                  },
+                  "table": "tru",
+                  "key": "38"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 42",
+                    "en": "2nd position · level 42"
+                  },
+                  "table": "tru",
+                  "key": "42"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 46",
+                    "en": "3rd position · level 46"
+                  },
+                  "table": "tru",
+                  "key": "46"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 50",
+                    "en": "4th position · level 50"
+                  },
+                  "table": "tru",
+                  "key": "50"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 53",
+                    "en": "5th position · level 53"
+                  },
+                  "table": "tru",
+                  "key": "53"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 56",
+                    "en": "6th position · level 56"
+                  },
+                  "table": "tru",
+                  "key": "56"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição · nível 58",
+                    "en": "7th position · level 58"
+                  },
+                  "table": "tru",
+                  "key": "58"
+                }
+              ],
+              "calculationHours": 35,
+              "templates": "templates/extra.json",
+              "rules": "rules/dl62-79-extra.json"
+            }
+          ]
+        }
+      ],
+      "rules": "rules/dl62-79.json"
+    }
+  },
+  "sources": [
+    {
+      "title": "Decreto-Lei n.º 111/2024, de 19 de dezembro (artigo 4.º e anexo III: tabela remuneratória de 2026)",
+      "url": "https://files.diariodarepublica.pt/1s/2024/12/24600/0001200016.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 71/2019, de 27 de maio (regime da carreira especial de enfermagem)",
+      "url": "https://files.diariodarepublica.pt/1s/2019/05/10100/0262602642.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Lei n.º 51/2025, de 7 de abril (elimina as posições intermédias; não altera a tabela de 2026)",
+      "url": "https://files.diariodarepublica.pt/1s/2025/04/06800/0000700009.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026)",
+      "url": "https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026)",
+      "url": "https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Lei n.º 18/2016, de 20 de junho (artigo 105.º da LTFP: período normal de trabalho de 35 horas por semana)",
+      "url": "https://files.diariodarepublica.pt/1s/2016/06/11600/0190401905.pdf",
+      "consulted": "2026-10-10"
+    }
+  ]
+}

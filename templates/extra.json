@@ -1,0 +1,55 @@
+{
+  "format": 2,
+  "id": "extra",
+  "published": "2026-10-07",
+  "job": {
+    "color": 4293668883,
+    "colorMode": "tonal",
+    "weeklyHours": 0.0,
+    "maxConsecutive": 0,
+    "prohibitNightMorning": false,
+    "prohibitTriple": false,
+    "allExtra": true,
+    "overlapTolerance": 30,
+    "templates": [
+      {
+        "id": "M",
+        "name": "Manhã",
+        "category": "M",
+        "start": 480,
+        "end": 900,
+        "color": 4294952120,
+        "tone": 0.7,
+        "timed": true
+      },
+      {
+        "id": "T",
+        "name": "Tarde",
+        "category": "T",
+        "start": 870,
+        "end": 1290,
+        "color": 4293668883,
+        "tone": 0.0,
+        "timed": true
+      },
+      {
+        "id": "N",
+        "name": "Noite",
+        "category": "N",
+        "start": 1260,
+        "end": 510,
+        "color": 4280294941,
+        "tone": -0.48,
+        "timed": true
+      }
+    ],
+    "reminders": []
+  },
+  "pay": {
+    "calculationHours": 35.0,
+    "supplementDelay": 1,
+    "extraDelay": 1,
+    "extraFirst": 0,
+    "extraLater": 0
+  }
+}

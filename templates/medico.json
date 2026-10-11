@@ -1,0 +1,59 @@
+{
+  "format": 2,
+  "id": "medico",
+  "published": "2026-10-07",
+  "job": {
+    "color": 4293668883,
+    "colorMode": "tonal",
+    "weeklyHours": 40,
+    "maxConsecutive": 4,
+    "prohibitNightMorning": false,
+    "prohibitTriple": true,
+    "allExtra": false,
+    "overlapTolerance": 30,
+    "templates": [
+      {
+        "id": "D",
+        "name": "Dia",
+        "category": "D",
+        "start": 480,
+        "end": 960,
+        "timed": true
+      },
+      {
+        "id": "U12",
+        "name": "Urgência 12 h",
+        "category": "U",
+        "start": 480,
+        "end": 1200,
+        "timed": true
+      },
+      {
+        "id": "N12",
+        "name": "Urgência noite 12 h",
+        "category": "N",
+        "start": 1200,
+        "end": 480,
+        "timed": true,
+        "color": 4280294941
+      },
+      {
+        "id": "G24",
+        "name": "Urgência 24 h",
+        "category": "G",
+        "start": 480,
+        "end": 480,
+        "timed": true,
+        "color": 4284505437
+      }
+    ],
+    "reminders": []
+  },
+  "pay": {
+    "calculationHours": 40,
+    "supplementDelay": 1,
+    "extraDelay": 1,
+    "extraFirst": 0,
+    "extraLater": 0
+  }
+}

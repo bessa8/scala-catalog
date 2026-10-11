@@ -1,0 +1,109 @@
+{
+  "format": 2,
+  "id": "transportes",
+  "published": "2026-10-10",
+  "title": {
+    "pt": "Motorista de autocarro",
+    "en": "Bus driver"
+  },
+  "sectors": {
+    "private": {
+      "templates": "templates/transportes.json",
+      "institutions": false,
+      "categories": [
+        {
+          "id": "transportes",
+          "title": {
+            "pt": "Motorista de autocarro",
+            "en": "Bus driver"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana",
+                "en": "40 h/week"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "smn",
+                  "label": {
+                    "pt": "Salário mínimo",
+                    "en": "Minimum wage"
+                  },
+                  "table": "smn",
+                  "key": "smn"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rules": "rules/ct-2026.json",
+      "rotations": [
+        {
+          "id": "2-turnos-semanal",
+          "title": {
+            "pt": "Cedo e tarde · uma semana de cada",
+            "en": "Early and afternoon · one week of each"
+          },
+          "codes": [
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "F",
+            "F",
+            "T",
+            "T",
+            "T",
+            "T",
+            "T",
+            "F",
+            "F"
+          ]
+        },
+        {
+          "id": "3-turnos-semanal",
+          "title": {
+            "pt": "Cedo, tarde e noite · uma semana de cada",
+            "en": "Early, afternoon, night · one week of each"
+          },
+          "codes": [
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "F",
+            "F",
+            "T",
+            "T",
+            "T",
+            "T",
+            "T",
+            "F",
+            "F",
+            "N",
+            "N",
+            "N",
+            "N",
+            "N",
+            "F",
+            "F"
+          ]
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Código do Trabalho (Lei n.º 7/2009, de 12 de fevereiro), artigos 203.º, 221.º, 266.º e 268.º (texto consolidado do Diário da República)",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2009-34546475",
+      "consulted": "2026-10-10"
+    }
+  ]
+}

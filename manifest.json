@@ -1,0 +1,756 @@
+{
+  "format": 2,
+  "published": "2026-10-11",
+  "movedTo": null,
+  "files": [
+    {
+      "path": "careers/apoio-domiciliario.json",
+      "sha256": "89c7609bef06e9424393278e9be8143edbc9e7c157112cc2cb4ba5cd459b75cb",
+      "bytes": 1915,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/armazem.json",
+      "sha256": "4cfe21e853f56a6a4ed7bc1ddab71c14da1e938a36a4943856e09c38c1923286",
+      "bytes": 2525,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/assistente-tecnico.json",
+      "sha256": "6c4bd7bb58f2cc37c480c097866deaf345e0eda0d6d2d805fbe706fda9538a39",
+      "bytes": 8145,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/auxiliar-saude-privado.json",
+      "sha256": "92940728a586ed7880f639c75cd2e7baf0d0f434c3ffa2839be2a3af4acee7c2",
+      "bytes": 3108,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/bombeiro-sapador.json",
+      "sha256": "e93a38f1e5e137ebebe78d596b399022f3ed3f97c24b6208d1f39058d24d857b",
+      "bytes": 19478,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "careers/callcenter.json",
+      "sha256": "a8821d7867b23ba2d3e3684e794db990092e4d981c8acdabed412d2fadea1abf",
+      "bytes": 2577,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/centro-comercial.json",
+      "sha256": "9438a4d805e9a812f6fb016b8d3f7883b008487d0976e09b1604f97e41302ccd",
+      "bytes": 1961,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/cozinha.json",
+      "sha256": "02bc14b936d298662e91569f230fe7d4f24595029ec9e8313dbc06d8b57ead4a",
+      "bytes": 1912,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/enfermagem.json",
+      "sha256": "536d029c3ade6fed28bb754b5c65c2072305b20611fced00e34030650ccb0cb8",
+      "bytes": 20790,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/enfermeiro-privado.json",
+      "sha256": "431b42c78892f5e47b8689fe75c8e034c14ac0cf12afa173297f44e3eb1ddb2d",
+      "bytes": 2770,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/estafeta.json",
+      "sha256": "0f7f5974e19b2f23b277139276ae0060d46c8712065ef7c8be53b7b82ff55c43",
+      "bytes": 2532,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/farmaceutico.json",
+      "sha256": "2ea851b31d73c0709d3785a2a54cc728ccadfd1ba5915ff69944594843478871",
+      "bytes": 8282,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/farmacia.json",
+      "sha256": "10e1eafa341649bcaa3b4c3e7d8dd06256a80846cda242051d66c3da0507c25f",
+      "bytes": 1451,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/ferroviario-metro.json",
+      "sha256": "bace6c33fe9fc6a77ddd13f86effe407291c314fc3232a02db55732d7a7eb7e2",
+      "bytes": 2523,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/fixo.json",
+      "sha256": "31321d747a19fc561074a915178e0ac79bfbc786074ebdfa29b17134717ed26a",
+      "bytes": 777,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "careers/gnr.json",
+      "sha256": "36645657db39b26ef047567612ee4680c2726d8b13811a7833ccf03e7663c530",
+      "bytes": 36421,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/guarda-prisional.json",
+      "sha256": "032d7b9bb4de232ed311f0411e56dc5980dd3a217df8629c0e0d44304ae10bbc",
+      "bytes": 16080,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "careers/handling-aeroportuario.json",
+      "sha256": "e897e27b70de38c90b209c73baabdbbb53b07f4e0c4acb430177fca7a1f83071",
+      "bytes": 2554,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/hotelaria.json",
+      "sha256": "ccc6924a05f5f97fe001172acd5446a80277d54dc36fae68dae166806c9ccabb",
+      "bytes": 2098,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/industria-continua.json",
+      "sha256": "27cbfe2a6277c1b6f74aa0b73fd297e86adf17ebe32a762578737735f54dc235",
+      "bytes": 2870,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/industria.json",
+      "sha256": "171cba42944429fbf0dd77dca209437a7150dd4fd813c920c98b3e96ed8405eb",
+      "bytes": 2975,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/lar.json",
+      "sha256": "ecb73754e340da9dc689f87213576cad800bb601ed21c4a27b704fba83e8e118",
+      "bytes": 2319,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/limpeza.json",
+      "sha256": "a070d7d79665aedbb2a6cd40333bdf4729bf88ad18a524a586c6f08ad908bf77",
+      "bytes": 1856,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/livre.json",
+      "sha256": "627b9cae594ff6f486d41cb645fd6486de443059025757d21d806d6a16c86dc0",
+      "bytes": 732,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "careers/medicina-familiar.json",
+      "sha256": "1463d80b1a235e385cbc4b2151379cde7eb58d121dd693e182b2d15a98a31d10",
+      "bytes": 28967,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/medicina-usf-b.json",
+      "sha256": "e060a4233c96df2dfd601f986aee26cbb2bfcde1c5d7a30774d6de3d8b7f730b",
+      "bytes": 15953,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "careers/medicina.json",
+      "sha256": "0dca86749ddc90a16d6e4f30ab9cbc3befbc7677dee1de0fc96d587afa74e950",
+      "bytes": 38398,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/medico-privado.json",
+      "sha256": "b4105c45206e5f762dde1962354ff99bc359e5c62255d9109c8ef56b4f83f410",
+      "bytes": 1701,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/motorista-pesados.json",
+      "sha256": "96e568bd1c14a119f12625880572c3f640bfbe9c1c0ba454bf6119f8b35078fe",
+      "bytes": 1412,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/porteiro-condominio.json",
+      "sha256": "60dddf243b40dc427751d4df7d2c77d2358eb0c9084aeaad5a940270992d5921",
+      "bytes": 2610,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/psp.json",
+      "sha256": "816ad38347639685e1b6ece2d60c8abaa740df78d74833029675ad43a7a1ee73",
+      "bytes": 27137,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/retalho.json",
+      "sha256": "1f9a48706246269bf9384106fde6829b839449ba318e853cbcc65b141e42998d",
+      "bytes": 1926,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/sala-bar.json",
+      "sha256": "09295a88c19adf6e43df61ac875f9c0285244854ddf467569182bd9778f30fc2",
+      "bytes": 1942,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/seguranca.json",
+      "sha256": "8ff2d481d55e5d993774f73d80493fd54e6c845643527d1f787fbcc0dc6886ad",
+      "bytes": 1918,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/serv.json",
+      "sha256": "a57662a6077190b1b4885997748ed4a341489cc5c46cfa922518b07328c2b69a",
+      "bytes": 768,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "careers/supermercado.json",
+      "sha256": "774a94d0e899ad7ab91691b779bcbdbad9be5baad01044609b3e42e785ff715f",
+      "bytes": 1949,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/tas.json",
+      "sha256": "67dc70a12140122a254d3dd0f28b91827b1203ba093c7cc5d8da6241248e96ce",
+      "bytes": 13774,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "careers/teph.json",
+      "sha256": "3683ce6ba421eaa91894e1cfe67d30fda130183f0b07721f8bfa7bfd0e006fd7",
+      "bytes": 9465,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/ti-operacoes.json",
+      "sha256": "079fe3045f4c0564673475521718e03a6aad8ceb562cf48b25029d6c76d82bad",
+      "bytes": 2268,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/transportes.json",
+      "sha256": "d48b293f4d219a73ec090347861e0e7741ffababa45c3189b6bb314b444d6c35",
+      "bytes": 2505,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/tripulante-cabine.json",
+      "sha256": "7487848d2743b1fa605755e169e44330ca299b9211eae5d982043e17275f3cfb",
+      "bytes": 1867,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/tsdt.json",
+      "sha256": "e9d7d2f55e26f2808aeabf26c0d927cf0e12ea426261223f76c45bcf8c76a6a6",
+      "bytes": 10405,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "careers/tss.json",
+      "sha256": "8f10e1234fc9e535ff03231de9ecaaadefa74aca7e0aa4e835b3724c852df3b6",
+      "bytes": 15147,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "careers/tvde.json",
+      "sha256": "7a08fcda936835edcaefafd02a4b4b1a0cffa846827fbb39abb37ca9926ee08d",
+      "bytes": 1972,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "institutions.json",
+      "sha256": "169ffeb3305036bbb69e0ca01f938f2247a4a8ee7789b7542acc3483889dbac5",
+      "bytes": 26814,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "professions.json",
+      "sha256": "f1a2728ba9a51580aa8a73d8256f29917b18ad2a64bc7686762ab4496eb4a0c2",
+      "bytes": 29406,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "rules/ct-2026.json",
+      "sha256": "3f03689dc5b3a8916e79eba1ed66586f0f5e5955cf797e53d5589ab23d382a98",
+      "bytes": 1826,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "rules/dl62-79-extra.json",
+      "sha256": "f82a1e644f30ad0eeb8c3e1e5a49899ce2ea901f6062445038e1253891343faf",
+      "bytes": 4194,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "rules/dl62-79.json",
+      "sha256": "a988c363105b9f54bdfdca51a7ddbeb9c3f2b8ab5d93b99dbddb52e5fd1cdb43",
+      "bytes": 5860,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "tables/medica.2026-01-01.json",
+      "sha256": "c5c0159f141648dc8a52f9c763dfbb99674326fa1f66ae271b4c2287e69c7b0f",
+      "bytes": 5054,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "tables/patrulha.2026-01-01.json",
+      "sha256": "ad5c0859110f538da86727db31d873ed62543819eada9ffa2bf1faaf5f2f16b2",
+      "bytes": 685,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "tables/patrulha.2027-01-01.json",
+      "sha256": "d20baaec2ed20849ed4cd795e0592a78f43131ed7a0249a997a4db88e1626927",
+      "bytes": 701,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "tables/smn.2026-01-01.json",
+      "sha256": "5a2bd86338626170085aca276719c1a50ed729fc11f226ee0189c3ed608d835f",
+      "bytes": 613,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "tables/ssr.2026-01-01.json",
+      "sha256": "ec66bb5a0675c5502474fbe255922bcd39623f66f35f79c98aab0acfba94558b",
+      "bytes": 1270,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "tables/teph-supl.2025-04-03.json",
+      "sha256": "a7076d9ee622a55777fdf248ae878e536875c919f6a8c3fee067fd8aa6bcbeda",
+      "bytes": 720,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "tables/tru.2026-01-01.json",
+      "sha256": "c58f0967d56689d0326feca21de9f0d3e8c408af7bd2594c3a412112eac3c290",
+      "bytes": 1699,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "tables/tss.2026-01-01.json",
+      "sha256": "988a7f84c9096f88cc87d7d2df19243c18a62b1b0c467a8b686466fb64a4dab6",
+      "bytes": 1870,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "tax/contributions.2025-01-01.json",
+      "sha256": "8c9bcd4b6a6ab03417707abb8f85603efd32ba3978400ce68ec1f504accd1c72",
+      "bytes": 1622,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "tax/irs-acores.2025-01-01.json",
+      "sha256": "dbd0142863ad824aae27afdcd752334325f673c5d5ed9ee8e2179d1b7c67fcbd",
+      "bytes": 7389,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "tax/irs-acores.2025-08-01.json",
+      "sha256": "72461d1c2c77a47e3fbfed86b0031816d620e62b7094ee4ac127536af31c0046",
+      "bytes": 7670,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "tax/irs-acores.2025-10-01.json",
+      "sha256": "4809f398501e994aa0aed80933381f12d8f326f255ce07a45719e8bbf62770c0",
+      "bytes": 7629,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "tax/irs-acores.2026-01-01.json",
+      "sha256": "8033fc897657f75ce7c34e7c93daf898bb69edcc3ef340ec78ef9587d82828de",
+      "bytes": 7559,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "tax/irs-continente.2025-01-01.json",
+      "sha256": "f5641f4c02138739d3f0df340853b9b1fcb53a978a75616b0986e84090188398",
+      "bytes": 8382,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "tax/irs-continente.2025-08-01.json",
+      "sha256": "c739eb2f53966371e3c0237cf290b7358e0b09f5ad6587997d1c53f14506fa04",
+      "bytes": 7778,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "tax/irs-continente.2025-10-01.json",
+      "sha256": "d7dc8fcee61848003efff229bee3fa45465255f2228ba0d22b4a411ee9b60fa6",
+      "bytes": 8511,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "tax/irs-continente.2026-01-01.json",
+      "sha256": "f8e179e20c40ed84356fdf24e3ed1490718e0401cfb718f405bbcbed90c2ab96",
+      "bytes": 8037,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "tax/irs-madeira.2025-01-01.json",
+      "sha256": "e0119e17c27461e4fba358f1ca59f718e2f6370bdb8513a583cdd3116c14a464",
+      "bytes": 8734,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "tax/irs-madeira.2025-08-01.json",
+      "sha256": "b3105e198343b4c973ab68861b3c888fbdd4170e26d36311d163b9b337d3b3cb",
+      "bytes": 7673,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "tax/irs-madeira.2025-10-01.json",
+      "sha256": "8f43c8f784e70bef09902264dd0fbca6d6d4eb6a0c8a08d7cee8b2e873837367",
+      "bytes": 8358,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "tax/irs-madeira.2026-01-01.json",
+      "sha256": "97a272f2eb4d928a719df4d00afa54ed18b28c81aa902b40d49ac14cd4dfa78e",
+      "bytes": 8298,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "tax/youth.2025-01-01.json",
+      "sha256": "21b750187c169a2614c02d4ffc4a26f6854337cc32d7c3630a7e28e19a953123",
+      "bytes": 1134,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "tax/youth.2026-01-01.json",
+      "sha256": "6656b39c80f757079b59f89b4ed5a128ca4350e649907e364708a5771a4b3b87",
+      "bytes": 1140,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "templates/apoio-domiciliario.json",
+      "sha256": "aedda1fef652ddafc2937d0cfecd1e0df01c3895963497c1507d37637bcd1221",
+      "bytes": 814,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/armazem.json",
+      "sha256": "a4f4868c8ba47ba445ebdc1a9c29fd278643116f284662c64509d37a72d56c02",
+      "bytes": 1139,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/bombeiro.json",
+      "sha256": "994182e34449897d261ce3d5a2b592557a5750aa02c60c4bb1bdbbcfa26c5369",
+      "bytes": 811,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/cabine.json",
+      "sha256": "2d6225ccd2281027131c7426206015ae38c882fa0b9557694f5914cbf4e59628",
+      "bytes": 1002,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/callcenter.json",
+      "sha256": "04b241c7c54a6225e338a5d2b4f0afb36af6d20386b6cfac0010c8ea3e19c56e",
+      "bytes": 963,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "templates/centro-comercial.json",
+      "sha256": "dd11962bb418cab93212eedf38fd88ae7271e231e8eaa6da81099521f65e878a",
+      "bytes": 1001,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/cozinha.json",
+      "sha256": "29cbe26ecfb94f355d11d9b7640e909cacaf2a1c39e0df893f058444b9aa5559",
+      "bytes": 960,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/enf.json",
+      "sha256": "e568574412a9e58c95e7bdc9cacec69ffe03f5170c68c67c1a337d7f4fb5322d",
+      "bytes": 1076,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "templates/estafeta.json",
+      "sha256": "cd871681aa99d1df53a77fa7273f7ea1a4aae1b5720dac1ba6b0e3f1b1d1d68d",
+      "bytes": 804,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/extra.json",
+      "sha256": "726005dd442b3e5c81cd3f7e4cddf4518f80cd02abd0b3d568ae1457f9cf1367",
+      "bytes": 1078,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "templates/farmacia.json",
+      "sha256": "39c86186f2ba79dc56cf5f527669ac110be5d4a6a1b54df1050812fc69f52338",
+      "bytes": 848,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/ferroviario.json",
+      "sha256": "3c6f028551b0c82304ad11d4079bee091e46901e93c66fe9766e61b35b71d104",
+      "bytes": 985,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/fixo.json",
+      "sha256": "bfe53a0e80cf9e5a9a802d53d3b91dc4c4df7e352ae9b52613069bbceb513d41",
+      "bytes": 551,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "templates/forcas.json",
+      "sha256": "e51668148959561c2ffbdebe846458da26882d0185788051ea993f49789554a1",
+      "bytes": 978,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "templates/handling.json",
+      "sha256": "5569cbbb9144e224b5b5d20529c415f27fd77e9c5100ac510d3b94d260531456",
+      "bytes": 983,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/hotelaria.json",
+      "sha256": "db938bf1beb58c3fc58ece39f4568301f2e5ffec38748296d39927d074d36d12",
+      "bytes": 985,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "templates/industria-continua.json",
+      "sha256": "fa7fc1b5bc47f95d66b34aec8de665d4f9d9127ce7b8b985936823e06e071911",
+      "bytes": 1336,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/industria.json",
+      "sha256": "bebffaff1dc11e1084943ef096d41a06dc61e41cab4399e269c2225527f44b80",
+      "bytes": 984,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "templates/lar.json",
+      "sha256": "d297f1fbb3d040240ae58240762351340646dd7235631945f4c0a96cb397d7b0",
+      "bytes": 978,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "templates/limpeza.json",
+      "sha256": "cfb463512314bedfdc60fef71deeaa7a20d34c619107c8764466fa4e6cb27629",
+      "bytes": 961,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/livre.json",
+      "sha256": "a9576cd321e76e9795fb68bbbf013cf0fd21a3bfd120ac24e12083959c1a91b0",
+      "bytes": 349,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "templates/medico-familiar.json",
+      "sha256": "36406ce7fa3f8510eaed541719eb12b1c71b1c2b64cebfdc6ca9b41a30736cf7",
+      "bytes": 783,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/medico.json",
+      "sha256": "7ac4847694430840ed479c3b4921dbf43634ffa9d4c00fa49fb350909151ba54",
+      "bytes": 1168,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "templates/pesados.json",
+      "sha256": "cd136b16ae53bb63f087dfcffc185e8c3110e4aba187fc6015de3c47b76d3a6e",
+      "bytes": 978,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/porteiro.json",
+      "sha256": "22fe2dd932997a3186fae43f9fa4d458f874a038b006839df2aa39bd97692b80",
+      "bytes": 983,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/retalho.json",
+      "sha256": "e91e4902c2646e824e883e68d5c6173923c5bb550ee030c7d789d1bc32fbff56",
+      "bytes": 992,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/sala-bar.json",
+      "sha256": "1a9d414bd059fb46013e3b17f30cbefaf3999731161baa5f9c96d0e038e3cde9",
+      "bytes": 994,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/saude-privada.json",
+      "sha256": "a9075fdd0a0ecfa131f3d9188c7dfa73a0a6b66c0a0794811736d52cd7c85bad",
+      "bytes": 1329,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/seguranca.json",
+      "sha256": "8974495887b9b21e39451cd019ab17f073d7fd5d9cc5f7f27ce4f420a70b7dd4",
+      "bytes": 812,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "templates/serv.json",
+      "sha256": "f0a8b9d0cf55a3522564f5f7729d238c6bb382c824f3d6c7cc5d4b07933f3f30",
+      "bytes": 1078,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "templates/supermercado.json",
+      "sha256": "23be7a0c6f2fa3a6af3ea83b025076f431371e59a04923c20b57ce917316ede2",
+      "bytes": 965,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/tas.json",
+      "sha256": "a5e68668aae92ca1e1cea3425fd6e0296de3acffc67be734e6a243ac003f6246",
+      "bytes": 978,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "templates/ti.json",
+      "sha256": "c79217626a0af34fd42b3642ce2baf5d4743638d38ab3c141d00b277f0bf1145",
+      "bytes": 1626,
+      "format": 2,
+      "published": "2026-10-10"
+    },
+    {
+      "path": "templates/transportes.json",
+      "sha256": "5647843c8f4f164806372bc3c081d206401514a07dbb75690f17796f4e48a05d",
+      "bytes": 983,
+      "format": 2,
+      "published": "2026-10-07"
+    },
+    {
+      "path": "templates/tvde.json",
+      "sha256": "d52fb6d1cbaf3656007f2b076b234a6662e828f8ec439ca9c9b9c840de13d5d6",
+      "bytes": 981,
+      "format": 2,
+      "published": "2026-10-10"
+    }
+  ]
+}

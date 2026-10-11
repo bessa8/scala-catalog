@@ -1,0 +1,308 @@
+{
+  "format": 2,
+  "id": "tsdt",
+  "published": "2026-10-11",
+  "title": {
+    "pt": "Técnico superior de diagnóstico e terapêutica (TSDT) · hospital público",
+    "en": "Diagnostic and therapeutic technician (TSDT) · public hospital"
+  },
+  "sources": [
+    {
+      "title": "Decreto-Lei n.º 111/2017, de 31 de agosto (artigos 7.º e 18.º: categorias; posições e níveis em diploma próprio)",
+      "url": "https://files.diariodarepublica.pt/1s/2017/08/16800/0524405249.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 25/2019, de 11 de fevereiro (regime remuneratório da carreira TSDT)",
+      "url": "https://files.diariodarepublica.pt/1s/2019/02/02900/0102101023.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Lei n.º 34/2021, de 8 de junho (anexos I e II do DL 25/2019: posições e níveis em vigor desde 2022-01-01)",
+      "url": "https://files.diariodarepublica.pt/1s/2021/06/11000/0000300006.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026)",
+      "url": "https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026)",
+      "url": "https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Lei n.º 18/2016, de 20 de junho (artigo 105.º da LTFP: período normal de trabalho de 35 horas por semana)",
+      "url": "https://files.diariodarepublica.pt/1s/2016/06/11600/0190401905.pdf",
+      "consulted": "2026-10-10"
+    }
+  ],
+  "sectors": {
+    "public": {
+      "templates": "templates/tas.json",
+      "institutions": true,
+      "categories": [
+        {
+          "id": "tsdt",
+          "title": {
+            "pt": "Técnico superior de diagnóstico e terapêutica",
+            "en": "Diagnostic and therapeutic technician"
+          },
+          "regimes": [
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana",
+                "en": "35 h/week"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 15",
+                    "en": "1st position · level 15"
+                  },
+                  "table": "tru",
+                  "key": "15"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 19",
+                    "en": "2nd position · level 19"
+                  },
+                  "table": "tru",
+                  "key": "19"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 23",
+                    "en": "3rd position · level 23"
+                  },
+                  "table": "tru",
+                  "key": "23"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 27",
+                    "en": "4th position · level 27"
+                  },
+                  "table": "tru",
+                  "key": "27"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 30",
+                    "en": "5th position · level 30"
+                  },
+                  "table": "tru",
+                  "key": "30"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 33",
+                    "en": "6th position · level 33"
+                  },
+                  "table": "tru",
+                  "key": "33"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição · nível 36",
+                    "en": "7th position · level 36"
+                  },
+                  "table": "tru",
+                  "key": "36"
+                },
+                {
+                  "id": "8",
+                  "label": {
+                    "pt": "8.ª posição · nível 39",
+                    "en": "8th position · level 39"
+                  },
+                  "table": "tru",
+                  "key": "39"
+                },
+                {
+                  "id": "9",
+                  "label": {
+                    "pt": "9.ª posição complementar · nível 29 · só para quem transitou (lista nominativa)",
+                    "en": "9th complementary position · level 29 · only for those who transitioned (nominal list)"
+                  },
+                  "table": "tru",
+                  "key": "29"
+                },
+                {
+                  "id": "10",
+                  "label": {
+                    "pt": "10.ª posição complementar · nível 31 · só para quem transitou (lista nominativa)",
+                    "en": "10th complementary position · level 31 · only for those who transitioned (nominal list)"
+                  },
+                  "table": "tru",
+                  "key": "31"
+                },
+                {
+                  "id": "11",
+                  "label": {
+                    "pt": "11.ª posição complementar · nível 35 · só para quem transitou (lista nominativa)",
+                    "en": "11th complementary position · level 35 · only for those who transitioned (nominal list)"
+                  },
+                  "table": "tru",
+                  "key": "35"
+                },
+                {
+                  "id": "12",
+                  "label": {
+                    "pt": "12.ª posição complementar · nível 38 · só para quem transitou (lista nominativa)",
+                    "en": "12th complementary position · level 38 · only for those who transitioned (nominal list)"
+                  },
+                  "table": "tru",
+                  "key": "38"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tsdt-especialista",
+          "title": {
+            "pt": "Técnico superior de diagnóstico e terapêutica especialista",
+            "en": "Specialist diagnostic and therapeutic technician"
+          },
+          "regimes": [
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana",
+                "en": "35 h/week"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 33",
+                    "en": "1st position · level 33"
+                  },
+                  "table": "tru",
+                  "key": "33"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 36",
+                    "en": "2nd position · level 36"
+                  },
+                  "table": "tru",
+                  "key": "36"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 38",
+                    "en": "3rd position · level 38"
+                  },
+                  "table": "tru",
+                  "key": "38"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 40",
+                    "en": "4th position · level 40"
+                  },
+                  "table": "tru",
+                  "key": "40"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 41",
+                    "en": "5th position · level 41"
+                  },
+                  "table": "tru",
+                  "key": "41"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tsdt-especialista-principal",
+          "title": {
+            "pt": "TSDT especialista principal",
+            "en": "Lead specialist diagnostic and therapeutic technician"
+          },
+          "regimes": [
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana",
+                "en": "35 h/week"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 38",
+                    "en": "1st position · level 38"
+                  },
+                  "table": "tru",
+                  "key": "38"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 42",
+                    "en": "2nd position · level 42"
+                  },
+                  "table": "tru",
+                  "key": "42"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 47",
+                    "en": "3rd position · level 47"
+                  },
+                  "table": "tru",
+                  "key": "47"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 52",
+                    "en": "4th position · level 52"
+                  },
+                  "table": "tru",
+                  "key": "52"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 57",
+                    "en": "5th position · level 57"
+                  },
+                  "table": "tru",
+                  "key": "57"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rules": "rules/ct-2026.json"
+    }
+  }
+}

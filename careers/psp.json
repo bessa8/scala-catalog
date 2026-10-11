@@ -1,0 +1,853 @@
+{
+  "format": 2,
+  "id": "psp",
+  "published": "2026-10-10",
+  "title": {
+    "pt": "Polícia de Segurança Pública (PSP)",
+    "en": "Public Security Police (PSP)"
+  },
+  "sources": [
+    {
+      "title": "Decreto-Lei n.º 243/2015, de 19 de outubro (artigo 57.º: período normal de trabalho de 36 horas; artigo 134.º e anexo II: níveis e posições remuneratórias)",
+      "url": "https://files.diariodarepublica.pt/1s/2015/10/20400/0905409086.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 243/2015, versão consolidada de 2025-12-30 (artigos 57.º, 134.º e 154.º; o anexo II tem a redação do Decreto-Lei n.º 84-F/2022)",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/2015-114584637",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 84-F/2022, de 16 de dezembro (artigo 14.º e anexo IX: estrutura remuneratória da categoria de agente)",
+      "url": "https://files.diariodarepublica.pt/1s/2022/12/24101/0000200031.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026)",
+      "url": "https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026): posições e níveis remuneratórios",
+      "url": "https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 50-A/2024, de 23 de agosto (componente fixa do suplemento por serviço e risco nas forças de segurança)",
+      "url": "https://files.diariodarepublica.pt/1s/2024/08/16301/0000200004.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Lei n.º 73-A/2025, de 30 de dezembro (Orçamento do Estado para 2026), artigos 255.º a 257.º",
+      "url": "https://files.diariodarepublica.pt/1s/2025/12/25002/0000200271.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 299/2009, de 14 de outubro (artigo 104.º: condições do suplemento de patrulha, mantido em vigor pelo artigo 154.º-A do Decreto-Lei n.º 243/2015)",
+      "url": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/299-2009-491437",
+      "consulted": "2026-10-10"
+    }
+  ],
+  "sectors": {
+    "public": {
+      "templates": "templates/forcas.json",
+      "institutions": false,
+      "categories": [
+        {
+          "id": "agente",
+          "title": {
+            "pt": "Agente de polícia · Agente",
+            "en": "Police constable · Agente"
+          },
+          "regimes": [
+            {
+              "id": "36h",
+              "title": {
+                "pt": "36 h/semana",
+                "en": "36 h/week"
+              },
+              "weeklyHours": 36,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 8 · período experimental de um ano",
+                    "en": "1st position · level 8 · one-year probation period"
+                  },
+                  "table": "tru",
+                  "key": "8"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 9",
+                    "en": "2nd position · level 9"
+                  },
+                  "table": "tru",
+                  "key": "9"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 11",
+                    "en": "3rd position · level 11"
+                  },
+                  "table": "tru",
+                  "key": "11"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 12",
+                    "en": "4th position · level 12"
+                  },
+                  "table": "tru",
+                  "key": "12"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 13",
+                    "en": "5th position · level 13"
+                  },
+                  "table": "tru",
+                  "key": "13"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 14",
+                    "en": "6th position · level 14"
+                  },
+                  "table": "tru",
+                  "key": "14"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição · nível 15",
+                    "en": "7th position · level 15"
+                  },
+                  "table": "tru",
+                  "key": "15"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "agente-principal",
+          "title": {
+            "pt": "Agente de polícia · Agente principal",
+            "en": "Police constable · Agente principal"
+          },
+          "regimes": [
+            {
+              "id": "36h",
+              "title": {
+                "pt": "36 h/semana",
+                "en": "36 h/week"
+              },
+              "weeklyHours": 36,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 15",
+                    "en": "1st position · level 15"
+                  },
+                  "table": "tru",
+                  "key": "15"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 16",
+                    "en": "2nd position · level 16"
+                  },
+                  "table": "tru",
+                  "key": "16"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 17",
+                    "en": "3rd position · level 17"
+                  },
+                  "table": "tru",
+                  "key": "17"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 18",
+                    "en": "4th position · level 18"
+                  },
+                  "table": "tru",
+                  "key": "18"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 19",
+                    "en": "5th position · level 19"
+                  },
+                  "table": "tru",
+                  "key": "19"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 20",
+                    "en": "6th position · level 20"
+                  },
+                  "table": "tru",
+                  "key": "20"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "agente-coordenador",
+          "title": {
+            "pt": "Agente de polícia · Agente coordenador",
+            "en": "Police constable · Agente coordenador"
+          },
+          "regimes": [
+            {
+              "id": "36h",
+              "title": {
+                "pt": "36 h/semana",
+                "en": "36 h/week"
+              },
+              "weeklyHours": 36,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 20",
+                    "en": "1st position · level 20"
+                  },
+                  "table": "tru",
+                  "key": "20"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 21",
+                    "en": "2nd position · level 21"
+                  },
+                  "table": "tru",
+                  "key": "21"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chefe",
+          "title": {
+            "pt": "Chefe de polícia · Chefe",
+            "en": "Police sergeant · Chefe"
+          },
+          "regimes": [
+            {
+              "id": "36h",
+              "title": {
+                "pt": "36 h/semana",
+                "en": "36 h/week"
+              },
+              "weeklyHours": 36,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 17",
+                    "en": "1st position · level 17"
+                  },
+                  "table": "tru",
+                  "key": "17"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 18",
+                    "en": "2nd position · level 18"
+                  },
+                  "table": "tru",
+                  "key": "18"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 19",
+                    "en": "3rd position · level 19"
+                  },
+                  "table": "tru",
+                  "key": "19"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 20",
+                    "en": "4th position · level 20"
+                  },
+                  "table": "tru",
+                  "key": "20"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 21",
+                    "en": "5th position · level 21"
+                  },
+                  "table": "tru",
+                  "key": "21"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 23",
+                    "en": "6th position · level 23"
+                  },
+                  "table": "tru",
+                  "key": "23"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chefe-principal",
+          "title": {
+            "pt": "Chefe de polícia · Chefe principal",
+            "en": "Police sergeant · Chefe principal"
+          },
+          "regimes": [
+            {
+              "id": "36h",
+              "title": {
+                "pt": "36 h/semana",
+                "en": "36 h/week"
+              },
+              "weeklyHours": 36,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 25",
+                    "en": "1st position · level 25"
+                  },
+                  "table": "tru",
+                  "key": "25"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 26",
+                    "en": "2nd position · level 26"
+                  },
+                  "table": "tru",
+                  "key": "26"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 27",
+                    "en": "3rd position · level 27"
+                  },
+                  "table": "tru",
+                  "key": "27"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 28",
+                    "en": "4th position · level 28"
+                  },
+                  "table": "tru",
+                  "key": "28"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 29",
+                    "en": "5th position · level 29"
+                  },
+                  "table": "tru",
+                  "key": "29"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chefe-coordenador",
+          "title": {
+            "pt": "Chefe de polícia · Chefe coordenador",
+            "en": "Police sergeant · Chefe coordenador"
+          },
+          "regimes": [
+            {
+              "id": "36h",
+              "title": {
+                "pt": "36 h/semana",
+                "en": "36 h/week"
+              },
+              "weeklyHours": 36,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 29",
+                    "en": "1st position · level 29"
+                  },
+                  "table": "tru",
+                  "key": "29"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 30",
+                    "en": "2nd position · level 30"
+                  },
+                  "table": "tru",
+                  "key": "30"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "subcomissario",
+          "title": {
+            "pt": "Oficial de polícia · Subcomissário",
+            "en": "Police officer · Subcomissário"
+          },
+          "regimes": [
+            {
+              "id": "36h",
+              "title": {
+                "pt": "36 h/semana",
+                "en": "36 h/week"
+              },
+              "weeklyHours": 36,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 21 · período experimental de um ano",
+                    "en": "1st position · level 21 · one-year probation period"
+                  },
+                  "table": "tru",
+                  "key": "21"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 23",
+                    "en": "2nd position · level 23"
+                  },
+                  "table": "tru",
+                  "key": "23"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 24",
+                    "en": "3rd position · level 24"
+                  },
+                  "table": "tru",
+                  "key": "24"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 25",
+                    "en": "4th position · level 25"
+                  },
+                  "table": "tru",
+                  "key": "25"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 26",
+                    "en": "5th position · level 26"
+                  },
+                  "table": "tru",
+                  "key": "26"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 28",
+                    "en": "6th position · level 28"
+                  },
+                  "table": "tru",
+                  "key": "28"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição · nível 29",
+                    "en": "7th position · level 29"
+                  },
+                  "table": "tru",
+                  "key": "29"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "comissario",
+          "title": {
+            "pt": "Oficial de polícia · Comissário",
+            "en": "Police officer · Comissário"
+          },
+          "regimes": [
+            {
+              "id": "36h",
+              "title": {
+                "pt": "36 h/semana",
+                "en": "36 h/week"
+              },
+              "weeklyHours": 36,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 30",
+                    "en": "1st position · level 30"
+                  },
+                  "table": "tru",
+                  "key": "30"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 31",
+                    "en": "2nd position · level 31"
+                  },
+                  "table": "tru",
+                  "key": "31"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 32",
+                    "en": "3rd position · level 32"
+                  },
+                  "table": "tru",
+                  "key": "32"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 33",
+                    "en": "4th position · level 33"
+                  },
+                  "table": "tru",
+                  "key": "33"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 34",
+                    "en": "5th position · level 34"
+                  },
+                  "table": "tru",
+                  "key": "34"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 35",
+                    "en": "6th position · level 35"
+                  },
+                  "table": "tru",
+                  "key": "35"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "subintendente",
+          "title": {
+            "pt": "Oficial de polícia · Subintendente",
+            "en": "Police officer · Subintendente"
+          },
+          "regimes": [
+            {
+              "id": "36h",
+              "title": {
+                "pt": "36 h/semana",
+                "en": "36 h/week"
+              },
+              "weeklyHours": 36,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 36",
+                    "en": "1st position · level 36"
+                  },
+                  "table": "tru",
+                  "key": "36"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 37",
+                    "en": "2nd position · level 37"
+                  },
+                  "table": "tru",
+                  "key": "37"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 39",
+                    "en": "3rd position · level 39"
+                  },
+                  "table": "tru",
+                  "key": "39"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 40",
+                    "en": "4th position · level 40"
+                  },
+                  "table": "tru",
+                  "key": "40"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 41",
+                    "en": "5th position · level 41"
+                  },
+                  "table": "tru",
+                  "key": "41"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "intendente",
+          "title": {
+            "pt": "Oficial de polícia · Intendente",
+            "en": "Police officer · Intendente"
+          },
+          "regimes": [
+            {
+              "id": "36h",
+              "title": {
+                "pt": "36 h/semana",
+                "en": "36 h/week"
+              },
+              "weeklyHours": 36,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 42",
+                    "en": "1st position · level 42"
+                  },
+                  "table": "tru",
+                  "key": "42"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 43",
+                    "en": "2nd position · level 43"
+                  },
+                  "table": "tru",
+                  "key": "43"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 45",
+                    "en": "3rd position · level 45"
+                  },
+                  "table": "tru",
+                  "key": "45"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 46",
+                    "en": "4th position · level 46"
+                  },
+                  "table": "tru",
+                  "key": "46"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 47",
+                    "en": "5th position · level 47"
+                  },
+                  "table": "tru",
+                  "key": "47"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "superintendente",
+          "title": {
+            "pt": "Oficial de polícia · Superintendente",
+            "en": "Police officer · Superintendente"
+          },
+          "regimes": [
+            {
+              "id": "36h",
+              "title": {
+                "pt": "36 h/semana",
+                "en": "36 h/week"
+              },
+              "weeklyHours": 36,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 49",
+                    "en": "1st position · level 49"
+                  },
+                  "table": "tru",
+                  "key": "49"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 53",
+                    "en": "2nd position · level 53"
+                  },
+                  "table": "tru",
+                  "key": "53"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 57",
+                    "en": "3rd position · level 57"
+                  },
+                  "table": "tru",
+                  "key": "57"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 58",
+                    "en": "4th position · level 58"
+                  },
+                  "table": "tru",
+                  "key": "58"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "superintendente-chefe",
+          "title": {
+            "pt": "Oficial de polícia · Superintendente-chefe",
+            "en": "Police officer · Superintendente-chefe"
+          },
+          "regimes": [
+            {
+              "id": "36h",
+              "title": {
+                "pt": "36 h/semana",
+                "en": "36 h/week"
+              },
+              "weeklyHours": 36,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 60",
+                    "en": "1st position · level 60"
+                  },
+                  "table": "tru",
+                  "key": "60"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 64",
+                    "en": "2nd position · level 64"
+                  },
+                  "table": "tru",
+                  "key": "64"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssr-fixa",
+          "label": {
+            "pt": "Suplemento por serviço e risco · componente fixa de 400 € (1 = recebo, 0 = não); os outros 20 % da remuneração base não entram aqui",
+            "en": "Service and risk supplement · fixed component of €400 (1 = I get it, 0 = no); the other 20% of base pay is not included here"
+          },
+          "effect": {
+            "monthlySupplement": {
+              "table": "ssr",
+              "key": "fixa"
+            }
+          }
+        },
+        {
+          "id": "patrulha-chefe",
+          "label": {
+            "pt": "Suplemento de patrulha · chefes (90,03 € em 2026, 115,03 € em 2027; só com escala de serviço aprovada e serviço no exterior das instalações) (1 = recebo, 0 = não)",
+            "en": "Patrol supplement · sergeants (€90.03 in 2026, €115.03 in 2027; only with an approved duty roster and service outside the premises) (1 = I get it, 0 = no)"
+          },
+          "effect": {
+            "monthlySupplement": {
+              "table": "patrulha",
+              "key": "chefe-sargento"
+            }
+          }
+        },
+        {
+          "id": "patrulha-agente",
+          "label": {
+            "pt": "Suplemento de patrulha · agentes (84,13 € em 2026, 109,13 € em 2027; só com escala de serviço aprovada e serviço no exterior das instalações) (1 = recebo, 0 = não)",
+            "en": "Patrol supplement · constables (€84.13 in 2026, €109.13 in 2027; only with an approved duty roster and service outside the premises) (1 = I get it, 0 = no)"
+          },
+          "effect": {
+            "monthlySupplement": {
+              "table": "patrulha",
+              "key": "agente-guarda"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

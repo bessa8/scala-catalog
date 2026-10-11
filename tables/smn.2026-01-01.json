@@ -1,0 +1,21 @@
+{
+  "format": 2,
+  "id": "smn",
+  "published": "2026-10-10",
+  "effective": "2026-01-01",
+  "title": {
+    "pt": "Retribuição mínima mensal garantida (território continental)",
+    "en": "Guaranteed minimum monthly wage (mainland Portugal)"
+  },
+  "unit": "monthly",
+  "values": {
+    "smn": 92000
+  },
+  "sources": [
+    {
+      "title": "Decreto-Lei n.º 139/2025, de 29 de dezembro, artigos 2.º e 3.º (RMMG de 920,00 € desde 2026-01-01, só no território continental)",
+      "url": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/139-2025-992879809",
+      "consulted": "2026-10-10"
+    }
+  ]
+}

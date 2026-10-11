@@ -1,0 +1,54 @@
+{
+  "format": 2,
+  "id": "motorista-pesados",
+  "published": "2026-10-10",
+  "title": {
+    "pt": "Motorista de pesados",
+    "en": "Heavy goods driver"
+  },
+  "sectors": {
+    "private": {
+      "templates": "templates/pesados.json",
+      "institutions": false,
+      "categories": [
+        {
+          "id": "motorista-pesados",
+          "title": {
+            "pt": "Motorista de pesados",
+            "en": "Heavy goods driver"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana",
+                "en": "40 h/week"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "smn",
+                  "label": {
+                    "pt": "Salário mínimo",
+                    "en": "Minimum wage"
+                  },
+                  "table": "smn",
+                  "key": "smn"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rules": "rules/ct-2026.json"
+    }
+  },
+  "sources": [
+    {
+      "title": "Código do Trabalho (Lei n.º 7/2009, de 12 de fevereiro), artigos 203.º, 221.º, 266.º e 268.º (texto consolidado do Diário da República)",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2009-34546475",
+      "consulted": "2026-10-10"
+    }
+  ]
+}

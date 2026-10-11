@@ -1,0 +1,36 @@
+{
+  "format": 2,
+  "id": "fixo",
+  "published": "2026-10-07",
+  "title": {
+    "pt": "Horário fixo · 9h às 17h",
+    "en": "Fixed hours · 9am to 5pm"
+  },
+  "sectors": {
+    "private": {
+      "templates": "templates/fixo.json",
+      "institutions": false,
+      "categories": [
+        {
+          "id": "fixo",
+          "title": {
+            "pt": "Horário fixo · 9h às 17h",
+            "en": "Fixed hours · 9am to 5pm"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana",
+                "en": "40 h/week"
+              },
+              "weeklyHours": 40.0,
+              "pay": "monthly",
+              "positions": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

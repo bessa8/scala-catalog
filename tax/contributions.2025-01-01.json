@@ -1,0 +1,16 @@
+{
+  "format": 2,
+  "id": "contributions",
+  "published": "2026-10-11",
+  "effective": "2025-01-01",
+  "title": {"pt": "Contribuições do trabalhador (Segurança Social, CGA, subsistema de saúde)", "en": "Employee contributions (Social Security, CGA, health subsystem)"},
+  "ss": 1100,
+  "cga": 1100,
+  "health": 350,
+  "sources": [
+    {"title": "Lei n.º 110/2009, de 16 de setembro (Código dos Regimes Contributivos), Diário da República, 1.ª série, n.º 180: artigo 53.º (11 % a cargo do trabalhador) e artigo 46.º, n.º 2, alínea e) (o trabalho suplementar integra a base de incidência)", "url": "https://files.dre.pt/gratuitos/1s/2009/09/18000.pdf", "consulted": "2026-10-11"},
+    {"title": "Caixa Geral de Aposentações, Inscrição de subscritores: quota mensal de 11 % e isenção das remunerações que não influem na pensão, como o trabalho extraordinário", "url": "https://www.cga.pt/inscricao-de-subscritores", "consulted": "2026-10-11"},
+    {"title": "ADSE, Decreto-Lei n.º 118/83 (texto atualizado): artigo 46.º, desconto de 3,50 % sobre a remuneração base, na redação da Lei n.º 30/2014", "url": "https://www2.adse.pt/wp-content/uploads/2023/10/DL_118_83_actualizado-janeiro-2021_2.pdf", "consulted": "2026-10-11"},
+    {"title": "Lei n.º 30/2014, de 19 de maio (Diário da República, 1.ª série, n.º 95): artigos 3.º e 4.º, desconto de 3,50 % sobre a remuneração base no SAD (Decreto-Lei n.º 158/2005, artigo 24.º) e na ADM (Decreto-Lei n.º 167/2005, artigo 13.º)", "url": "https://diariodarepublica.pt/dr/detalhe/lei/30-2014-25343710", "consulted": "2026-10-11"}
+  ]
+}

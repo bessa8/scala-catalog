@@ -1,0 +1,68 @@
+{
+  "format": 2,
+  "id": "industria-continua",
+  "published": "2026-10-10",
+  "job": {
+    "color": 4293668883,
+    "colorMode": "tonal",
+    "weeklyHours": 40,
+    "maxConsecutive": 6,
+    "prohibitNightMorning": true,
+    "prohibitTriple": true,
+    "allExtra": false,
+    "overlapTolerance": 30,
+    "templates": [
+      {
+        "id": "M",
+        "name": "Manhã",
+        "category": "M",
+        "start": 360,
+        "end": 840,
+        "timed": true,
+        "color": 4294952120
+      },
+      {
+        "id": "T",
+        "name": "Tarde",
+        "category": "T",
+        "start": 840,
+        "end": 1320,
+        "timed": true
+      },
+      {
+        "id": "N",
+        "name": "Noite",
+        "category": "N",
+        "start": 1320,
+        "end": 360,
+        "timed": true,
+        "color": 4280294941
+      },
+      {
+        "id": "D12",
+        "name": "Dia 12 h",
+        "category": "D",
+        "start": 360,
+        "end": 1080,
+        "timed": true
+      },
+      {
+        "id": "N12",
+        "name": "Noite 12 h",
+        "category": "N",
+        "start": 1080,
+        "end": 360,
+        "timed": true,
+        "color": 4280294941
+      }
+    ],
+    "reminders": []
+  },
+  "pay": {
+    "calculationHours": 40,
+    "supplementDelay": 1,
+    "extraDelay": 1,
+    "extraFirst": 0,
+    "extraLater": 0
+  }
+}

@@ -1,0 +1,759 @@
+{
+  "format": 2,
+  "published": "2026-10-10",
+  "sources": [
+    {
+      "title": "Decreto-Lei n.º 102/2023, de 7 de novembro: artigo 1.º (as ULS), artigo 3.º e anexo (sedes); alterado pelo Decreto-Lei n.º 54/2024, de 6 de setembro (artigo 25.º)",
+      "url": "https://files.diariodarepublica.pt/1s/2023/11/21500/0000400020.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Estatuto do Serviço Nacional de Saúde (Decreto-Lei n.º 52/2022), versão consolidada em vigor: anexo I (IPO e ULS com as respetivas sedes)",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/2022-187129978",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "SNS, Entidades de Saúde: ULS, IPO, hospital em PPP e hospitais geridos pelas Misericórdias",
+      "url": "https://www.sns.gov.pt/institucional/entidades-de-saude/",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Aviso de procedimento da ULS do Tâmega e Sousa (Diário da República): concelho de Penafiel",
+      "url": "https://files.diariodarepublica.pt/cp_hora/2026/06/105/419962999.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Évora: Município de Évora, Feriado Municipal: 29 de junho",
+      "url": "https://www.cm-evora.pt/en/municipe/evora/concelho/feriado-municipal/",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Évora: Decreto n.º 43030, de 24 de junho de 1960: autoriza a Câmara Municipal de Évora a considerar feriado municipal o dia 29 de junho",
+      "url": "https://diariodarepublica.pt/dr/detalhe/decreto/43030-1960-503385",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Faro: Loja de Cidadão de Faro (gov.pt): encerrado no feriado municipal de Faro, 7 de setembro",
+      "url": "https://www.gov.pt/locais-de-atendimento/loja-de-cidadao-de-faro",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Almada: Município de Almada, notícia de 24-6-2024: feriado municipal, dia de S. João",
+      "url": "https://www.cm-almada.pt/50-almadenses-distinguidos-com-medalhas-de-merito-municipal",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Portalegre: Arquivo Distrital de Portalegre (DGLAB): encerrado a 23 de maio de 2025 por ser feriado municipal",
+      "url": "https://adptg.dglab.gov.pt/2025/05/20/encerramento-do-arquivo-dia-23-de-maio-5/",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Portalegre: Município de Portalegre, Festas da Cidade 2026: 23 de maio, aniversário da elevação a cidade",
+      "url": "https://www.cm-portalegre.pt/blog/eventos/festas-da-cidade-de-portalegre-2026/",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Guimarães: Município de Guimarães, notícia de 17-11-2025: 24 de junho, feriado municipal",
+      "url": "https://www.cm-guimaraes.pt/areas-de-intervencao/noticia/ricardo-araujo-quer-24-de-junho-celebrado-como-feriado-nacional-em-2028",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Viana do Castelo: Município de Viana do Castelo, notícia: feriado municipal no dia de Nossa Senhora d'Agonia, 20 de agosto",
+      "url": "https://www.cm-viana-castelo.pt/areas-de-atividade/comunicacao/noticias/noticia/nova-travessia-sobre-o-rio-lima-entrou-em-funcionamento-no-dia-de-nossa-senhora-d-agonia",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Amadora: Espaço Cidadão da Amadora (gov.pt): encerra no feriado municipal da Amadora, 11 de setembro",
+      "url": "https://www.gov.pt/locais-de-atendimento/espaco-cidadao-da-amadora",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Barreiro: Município do Barreiro, Dia da Cidade | Feriado Municipal: 28 de junho",
+      "url": "https://www.cm-barreiro.pt/eventos/dia-da-cidade-feriado-municipal/",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Setúbal: Município de Setúbal, notícia: feriado municipal de 15 de setembro, Dia de Bocage e da Cidade",
+      "url": "https://noticias.mun-setubal.pt/cultura/setubal-celebra-dia-da-cidade-de-olhos-postos-no-futuro/",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Beja: Município de Beja, Festas, Feiras e Romarias: Feriado Municipal / 5.ª feira da Ascensão",
+      "url": "https://cm-beja.pt/pt/2099/festas-feiras-romarias.aspx",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Beja: Arquivo Distrital de Beja (DGLAB): encerrado a 14 de maio de 2026 por ser feriado municipal",
+      "url": "https://adbja.dglab.gov.pt/encerramento-do-adbja-no-dia-14-de-maio-feriado-municipal/",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Figueira da Foz: Município da Figueira da Foz, Festas da Cidade: dia 24, São João, feriado municipal",
+      "url": "https://www.cm-figfoz.pt/pages/1010?news_id=1619",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Barcelos: Município de Barcelos, Calendário de Festas e Romarias: 3 de maio, feriado municipal",
+      "url": "https://www.cm-barcelos.pt/visitar/festas-feiras-e-romarias/calendario-de-festas-e-romarias/",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Braga: Espaço Cidadão de Braga (gov.pt): encerra no feriado municipal de Braga, 24 de junho",
+      "url": "https://www.gov.pt/locais-de-atendimento/espaco-cidadao-de-braga-municipio",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Castelo Branco: Município de Castelo Branco, Posto de Turismo: feriado municipal na terceira 3.ª feira após o Domingo de Páscoa",
+      "url": "https://www.cm-castelobranco.pt/visitante/o-posto-de-turismo-recomenda/",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Castelo Branco: Município de Castelo Branco, notícia: terça-feira, 21 de abril de 2026, Feriado Municipal",
+      "url": "https://www.cm-castelobranco.pt/municipe/noticias/detalhe-noticia/?id=22592",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Coimbra: Loja de Cidadão de Coimbra (gov.pt): encerrado no feriado municipal de Coimbra, 4 de julho",
+      "url": "https://www.gov.pt/locais-de-atendimento/loja-de-cidadao-de-coimbra",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Covilhã: Município da Covilhã, notícia: 20 de outubro, feriado municipal",
+      "url": "https://www.cm-covilha.pt/?cix=noticia120562&lang=1",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Santa Maria da Feira: Município de Santa Maria da Feira, Fogaceiras 2021: 20 de janeiro, Feriado Municipal",
+      "url": "https://cm-feira.pt/fogaceiras2021",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Vila Franca de Xira: Município de Vila Franca de Xira, notícia de 30-5-2025: Quinta-Feira de Ascensão, Feriado Municipal (2026: 14 de maio)",
+      "url": "https://www.cm-vfxira.pt/municipio/camara-municipal/comunicacao/noticias/noticia/feriado-municipal-assinalado-com-festividade-de-raizes-centenarias",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Vila Nova de Gaia: Município de Vila Nova de Gaia, notícia: Decreto n.º 186/70 autoriza o feriado municipal a 24 de junho",
+      "url": "https://www.cm-gaia.pt/pt/noticias/feriado-municipal-festas-de-sao-joao/",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Guarda: Loja de Cidadão da Guarda (gov.pt): encerra no feriado municipal da Guarda, 27 de novembro",
+      "url": "https://www.gov.pt/locais-de-atendimento/loja-de-cidadao-da-guarda",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Santarém: Município de Santarém, Festas de São José: Feriado Municipal a 19 de março",
+      "url": "https://www.cm-santarem.pt/servicos-municipais/cultura-turismo/associativismo-cultural/outras-atividades/festas/item/2120-festas-de-sao-jose",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Lisboa: Câmara Municipal de Lisboa, Informação Lisboa: 13 de junho, Dia de Santo António e feriado municipal",
+      "url": "https://informacao.lisboa.pt/noticias/arquivo/detalhe/procissao-de-santo-antonio-2",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Santiago do Cacém: Loja de Cidadão de Santiago do Cacém (gov.pt): encerra no feriado municipal, 25 de julho",
+      "url": "https://www.gov.pt/locais-de-atendimento/loja-de-cidadao-de-santiago-do-cacem",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Loures: Município de Loures, Festas de Loures: dia 26 de julho, feriado municipal",
+      "url": "https://cm-loures.pt/agenda.aspx?displayid=13457",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Matosinhos: IRN, Registo Civil de Matosinhos: feriado municipal na terça-feira após o domingo de Pentecostes",
+      "url": "https://irn.justica.gov.pt/Contactos-do-Registo/Registo-Civil-de-Matosinhos",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Matosinhos: Espaço Cidadão de Matosinhos (gov.pt): terça-feira de Pentecostes, em 2026 a 26 de maio",
+      "url": "https://www.gov.pt/locais-de-atendimento/espaco-cidadao-de-matosinhos",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Santo Tirso: Município de Santo Tirso, notícia: 11 de julho, feriado municipal",
+      "url": "https://www.cm-stirso.pt/conhecer/comunicacao/noticias/noticia/festas-de-sao-bento-voltam-a-animar-santo-tirso-de-5-a-12-de-julho",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Tomar: Município de Tomar, Geografia: feriado municipal a 1 de março",
+      "url": "https://www.cm-tomar.pt/index.php/municipio/concelho/geografia",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Bragança: Município de Bragança, Turismo: Festas de Bragança culminam a 22 de agosto, feriado municipal",
+      "url": "https://turismo.cm-braganca.pt/estacoes-do-ano/verao",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Caldas da Rainha: Município das Caldas da Rainha, Condecorações 2024: 15 de maio, dia da cidade e feriado municipal",
+      "url": "https://www.mcr.pt/municipio/distincoes-e-premios/condecoracoes-municipais/2024",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Póvoa de Varzim: Município da Póvoa de Varzim, notícia de 29-06-2023: feriado municipal de São Pedro",
+      "url": "https://www.cm-pvarzim.pt/comunicacao/noticias/s-pedro-e-na-povoa-de-varzim/",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Aveiro: Município de Aveiro, notícia de 2-5-2024: Comemorações do Feriado Municipal até 12 de maio",
+      "url": "https://www.cm-aveiro.pt/municipio/comunicacao/noticias/noticia/aveiro-celebra-o-feriado-municipal",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Leiria: Município de Leiria, discurso do Presidente no Dia do Município: 22 de maio, feriado municipal",
+      "url": "https://www.cm-leiria.pt/noticia/discurso-do-presidente-da-camara-municipal-no-dia-do-municipio",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Porto: Espaço Cidadão de Aldoar (gov.pt): encerra no feriado municipal do Porto, 24 de junho",
+      "url": "https://www.gov.pt/locais-de-atendimento/espaco-cidadao-de-aldoar",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Penafiel: Município de Penafiel, Calendário por Freguesia: 11 de novembro, Feriado Municipal",
+      "url": "https://www.cm-penafiel.pt/visitar/festas-e-romarias/calendario-por-freguesia",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Vila Real: Espaço Cidadão de Mouçós e Lamares (gov.pt): encerrado no feriado municipal de Vila Real, 13 de junho",
+      "url": "https://www.gov.pt/locais-de-atendimento/espaco-cidadao-de-moucos-e-lamares",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Viseu: Município de Viseu, notícia: 21 de setembro, Dia Municipal, feriado",
+      "url": "https://www.cm-viseu.pt/pt/noticias/dia-de-viseu-celebra-se-a-21-de-setembro-com-homenagens-de-merito-municipal-de-valor-e-altruismo/",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Cascais: Loja de Cidadão de Cascais (gov.pt): encerrado no feriado municipal de Cascais, 13 de junho",
+      "url": "https://www.gov.pt/locais-de-atendimento/loja-de-cidadao-de-cascais",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Serpa: Loja de Cidadão de Serpa (gov.pt): feriado municipal na terça-feira depois do domingo de Páscoa",
+      "url": "https://www.gov.pt/locais-de-atendimento/loja-de-cidadao-de-serpa",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Anadia: Loja de Cidadão de Anadia (gov.pt): feriado municipal na quinta-feira da Ascensão",
+      "url": "https://www.gov.pt/locais-de-atendimento/loja-de-cidadao-de-anadia",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Feriado municipal de Fafe: Espaço Cidadão de Arões de São Romão (gov.pt): encerra no feriado municipal de Fafe, 16 de maio",
+      "url": "https://www.gov.pt/locais-de-atendimento/espaco-cidadao-de-aroes-de-sao-romao",
+      "consulted": "2026-10-10"
+    }
+  ],
+  "institutions": [
+    {
+      "id": "uls-alentejo-central",
+      "name": "ULS do Alentejo Central",
+      "short": "ULS Alentejo Central",
+      "municipality": "Évora",
+      "holiday": "06-29",
+      "holidayName": {
+        "pt": "São Pedro",
+        "en": "São Pedro"
+      }
+    },
+    {
+      "id": "uls-algarve",
+      "name": "ULS do Algarve",
+      "short": "ULS Algarve",
+      "municipality": "Faro",
+      "holiday": "09-07",
+      "holidayName": {
+        "pt": "Dia do Município",
+        "en": "Municipality Day"
+      }
+    },
+    {
+      "id": "uls-almada-seixal",
+      "name": "ULS de Almada-Seixal",
+      "short": "ULS Almada-Seixal",
+      "municipality": "Almada",
+      "holiday": "06-24",
+      "holidayName": {
+        "pt": "São João",
+        "en": "São João"
+      }
+    },
+    {
+      "id": "uls-alto-alentejo",
+      "name": "ULS do Alto Alentejo",
+      "short": "ULS Alto Alentejo",
+      "municipality": "Portalegre",
+      "holiday": "05-23",
+      "holidayName": {
+        "pt": "Dia da Cidade",
+        "en": "City Day"
+      }
+    },
+    {
+      "id": "uls-alto-ave",
+      "name": "ULS do Alto Ave",
+      "short": "ULS Alto Ave",
+      "municipality": "Guimarães",
+      "holiday": "06-24",
+      "holidayName": {
+        "pt": "Batalha de São Mamede",
+        "en": "Battle of São Mamede"
+      }
+    },
+    {
+      "id": "uls-alto-minho",
+      "name": "ULS do Alto Minho",
+      "short": "ULS Alto Minho",
+      "municipality": "Viana do Castelo",
+      "holiday": "08-20",
+      "holidayName": {
+        "pt": "Nossa Senhora da Agonia",
+        "en": "Nossa Senhora da Agonia"
+      }
+    },
+    {
+      "id": "uls-amadora-sintra",
+      "name": "ULS de Amadora/Sintra",
+      "short": "ULS Amadora/Sintra",
+      "municipality": "Amadora",
+      "holiday": "09-11",
+      "holidayName": {
+        "pt": "Dia do Município",
+        "en": "Municipality Day"
+      }
+    },
+    {
+      "id": "uls-arco-ribeirinho",
+      "name": "ULS do Arco Ribeirinho",
+      "short": "ULS Arco Ribeirinho",
+      "municipality": "Barreiro",
+      "holiday": "06-28",
+      "holidayName": {
+        "pt": "Dia da Cidade",
+        "en": "City Day"
+      }
+    },
+    {
+      "id": "uls-arrabida",
+      "name": "ULS da Arrábida",
+      "short": "ULS Arrábida",
+      "municipality": "Setúbal",
+      "holiday": "09-15",
+      "holidayName": {
+        "pt": "Dia de Bocage e da Cidade",
+        "en": "Bocage and City Day"
+      }
+    },
+    {
+      "id": "uls-baixo-alentejo",
+      "name": "ULS do Baixo Alentejo",
+      "short": "ULS Baixo Alentejo",
+      "municipality": "Beja",
+      "holiday": "easter+39",
+      "holidayName": {
+        "pt": "Quinta-feira da Ascensão (Dia da Cidade)",
+        "en": "Ascension Thursday (City Day)"
+      }
+    },
+    {
+      "id": "uls-baixo-mondego",
+      "name": "ULS do Baixo Mondego",
+      "short": "ULS Baixo Mondego",
+      "municipality": "Figueira da Foz",
+      "holiday": "06-24",
+      "holidayName": {
+        "pt": "São João",
+        "en": "São João"
+      }
+    },
+    {
+      "id": "uls-barcelos-esposende",
+      "name": "ULS de Barcelos/Esposende",
+      "short": "ULS Barcelos/Esposende",
+      "municipality": "Barcelos",
+      "holiday": "05-03",
+      "holidayName": {
+        "pt": "Festa das Cruzes",
+        "en": "Festa das Cruzes"
+      }
+    },
+    {
+      "id": "uls-braga",
+      "name": "ULS de Braga",
+      "short": "ULS Braga",
+      "municipality": "Braga",
+      "holiday": "06-24",
+      "holidayName": {
+        "pt": "São João",
+        "en": "São João"
+      }
+    },
+    {
+      "id": "uls-castelo-branco",
+      "name": "ULS de Castelo Branco",
+      "short": "ULS Castelo Branco",
+      "municipality": "Castelo Branco",
+      "holiday": "easter+16",
+      "holidayName": {
+        "pt": "Nossa Senhora de Mércoles",
+        "en": "Nossa Senhora de Mércoles"
+      }
+    },
+    {
+      "id": "uls-coimbra",
+      "name": "ULS de Coimbra",
+      "short": "ULS Coimbra",
+      "municipality": "Coimbra",
+      "holiday": "07-04",
+      "holidayName": {
+        "pt": "Rainha Santa Isabel",
+        "en": "Rainha Santa Isabel"
+      }
+    },
+    {
+      "id": "uls-cova-da-beira",
+      "name": "ULS da Cova da Beira",
+      "short": "ULS Cova da Beira",
+      "municipality": "Covilhã",
+      "holiday": "10-20",
+      "holidayName": {
+        "pt": "Dia da Cidade",
+        "en": "City Day"
+      }
+    },
+    {
+      "id": "uls-entre-douro-e-vouga",
+      "name": "ULS de Entre Douro e Vouga",
+      "short": "ULS Entre Douro e Vouga",
+      "municipality": "Santa Maria da Feira",
+      "holiday": "01-20",
+      "holidayName": {
+        "pt": "Festa das Fogaceiras",
+        "en": "Festa das Fogaceiras"
+      }
+    },
+    {
+      "id": "uls-estuario-do-tejo",
+      "name": "ULS do Estuário do Tejo",
+      "short": "ULS Estuário do Tejo",
+      "municipality": "Vila Franca de Xira",
+      "holiday": "easter+39",
+      "holidayName": {
+        "pt": "Quinta-feira da Ascensão",
+        "en": "Ascension Thursday"
+      }
+    },
+    {
+      "id": "uls-gaia-espinho",
+      "name": "ULS de Gaia/Espinho",
+      "short": "ULS Gaia/Espinho",
+      "municipality": "Vila Nova de Gaia",
+      "holiday": "06-24",
+      "holidayName": {
+        "pt": "São João",
+        "en": "São João"
+      }
+    },
+    {
+      "id": "uls-guarda",
+      "name": "ULS da Guarda",
+      "short": "ULS Guarda",
+      "municipality": "Guarda",
+      "holiday": "11-27",
+      "holidayName": {
+        "pt": "Dia da Cidade",
+        "en": "City Day"
+      }
+    },
+    {
+      "id": "uls-leziria",
+      "name": "ULS da Lezíria",
+      "short": "ULS Lezíria",
+      "municipality": "Santarém",
+      "holiday": "03-19",
+      "holidayName": {
+        "pt": "São José",
+        "en": "São José"
+      }
+    },
+    {
+      "id": "uls-lisboa-ocidental",
+      "name": "ULS de Lisboa Ocidental",
+      "short": "ULS Lisboa Ocidental",
+      "municipality": "Lisboa",
+      "holiday": "06-13",
+      "holidayName": {
+        "pt": "Santo António",
+        "en": "Santo António"
+      }
+    },
+    {
+      "id": "uls-litoral-alentejano",
+      "name": "ULS do Litoral Alentejano",
+      "short": "ULS Litoral Alentejano",
+      "municipality": "Santiago do Cacém",
+      "holiday": "07-25",
+      "holidayName": {
+        "pt": "Dia do Município",
+        "en": "Municipality Day"
+      }
+    },
+    {
+      "id": "uls-loures-odivelas",
+      "name": "ULS de Loures-Odivelas",
+      "short": "ULS Loures-Odivelas",
+      "municipality": "Loures",
+      "holiday": "07-26",
+      "holidayName": {
+        "pt": "Dia do Município",
+        "en": "Municipality Day"
+      }
+    },
+    {
+      "id": "uls-matosinhos",
+      "name": "ULS de Matosinhos",
+      "short": "ULS Matosinhos",
+      "municipality": "Matosinhos",
+      "holiday": "easter+51",
+      "holidayName": {
+        "pt": "Senhor de Matosinhos",
+        "en": "Senhor de Matosinhos"
+      }
+    },
+    {
+      "id": "uls-medio-ave",
+      "name": "ULS do Médio Ave",
+      "short": "ULS Médio Ave",
+      "municipality": "Santo Tirso",
+      "holiday": "07-11",
+      "holidayName": {
+        "pt": "São Bento",
+        "en": "São Bento"
+      }
+    },
+    {
+      "id": "uls-medio-tejo",
+      "name": "ULS do Médio Tejo",
+      "short": "ULS Médio Tejo",
+      "municipality": "Tomar",
+      "holiday": "03-01",
+      "holidayName": {
+        "pt": "Dia da Cidade",
+        "en": "City Day"
+      }
+    },
+    {
+      "id": "uls-nordeste",
+      "name": "ULS do Nordeste",
+      "short": "ULS Nordeste",
+      "municipality": "Bragança",
+      "holiday": "08-22",
+      "holidayName": {
+        "pt": "Nossa Senhora das Graças",
+        "en": "Nossa Senhora das Graças"
+      }
+    },
+    {
+      "id": "uls-oeste",
+      "name": "ULS do Oeste",
+      "short": "ULS Oeste",
+      "municipality": "Caldas da Rainha",
+      "holiday": "05-15",
+      "holidayName": {
+        "pt": "Dia da Cidade",
+        "en": "City Day"
+      }
+    },
+    {
+      "id": "uls-povoa-de-varzim-vila-do-conde",
+      "name": "ULS da Póvoa de Varzim/Vila do Conde",
+      "short": "ULS Póvoa de Varzim/Vila do Conde",
+      "municipality": "Póvoa de Varzim",
+      "holiday": "06-29",
+      "holidayName": {
+        "pt": "São Pedro",
+        "en": "São Pedro"
+      }
+    },
+    {
+      "id": "uls-regiao-de-aveiro",
+      "name": "ULS da Região de Aveiro",
+      "short": "ULS Região de Aveiro",
+      "municipality": "Aveiro",
+      "holiday": "05-12",
+      "holidayName": {
+        "pt": "Santa Joana",
+        "en": "Santa Joana"
+      }
+    },
+    {
+      "id": "uls-regiao-de-leiria",
+      "name": "ULS da Região de Leiria",
+      "short": "ULS Região de Leiria",
+      "municipality": "Leiria",
+      "holiday": "05-22",
+      "holidayName": {
+        "pt": "Dia do Município",
+        "en": "Municipality Day"
+      }
+    },
+    {
+      "id": "uls-santa-maria",
+      "name": "ULS de Santa Maria",
+      "short": "ULS Santa Maria",
+      "municipality": "Lisboa",
+      "holiday": "06-13",
+      "holidayName": {
+        "pt": "Santo António",
+        "en": "Santo António"
+      }
+    },
+    {
+      "id": "uls-santo-antonio",
+      "name": "ULS de Santo António",
+      "short": "ULS Santo António",
+      "municipality": "Porto",
+      "holiday": "06-24",
+      "holidayName": {
+        "pt": "São João",
+        "en": "São João"
+      }
+    },
+    {
+      "id": "uls-sao-joao",
+      "name": "ULS de São João",
+      "short": "ULS São João",
+      "municipality": "Porto",
+      "holiday": "06-24",
+      "holidayName": {
+        "pt": "São João",
+        "en": "São João"
+      }
+    },
+    {
+      "id": "uls-sao-jose",
+      "name": "ULS de São José",
+      "short": "ULS São José",
+      "municipality": "Lisboa",
+      "holiday": "06-13",
+      "holidayName": {
+        "pt": "Santo António",
+        "en": "Santo António"
+      }
+    },
+    {
+      "id": "uls-tamega-e-sousa",
+      "name": "ULS do Tâmega e Sousa",
+      "short": "ULS Tâmega e Sousa",
+      "municipality": "Penafiel",
+      "holiday": "11-11",
+      "holidayName": {
+        "pt": "São Martinho",
+        "en": "São Martinho"
+      }
+    },
+    {
+      "id": "uls-tras-os-montes-e-alto-douro",
+      "name": "ULS de Trás-os-Montes e Alto Douro",
+      "short": "ULS Trás-os-Montes e Alto Douro",
+      "municipality": "Vila Real",
+      "holiday": "06-13",
+      "holidayName": {
+        "pt": "Santo António",
+        "en": "Santo António"
+      }
+    },
+    {
+      "id": "uls-viseu-dao-lafoes",
+      "name": "ULS de Viseu Dão-Lafões",
+      "short": "ULS Viseu Dão-Lafões",
+      "municipality": "Viseu",
+      "holiday": "09-21",
+      "holidayName": {
+        "pt": "Dia de Viseu",
+        "en": "Viseu Day"
+      }
+    },
+    {
+      "id": "ipo-coimbra",
+      "name": "IPO de Coimbra Francisco Gentil",
+      "short": "IPO Coimbra",
+      "municipality": "Coimbra",
+      "holiday": "07-04",
+      "holidayName": {
+        "pt": "Rainha Santa Isabel",
+        "en": "Rainha Santa Isabel"
+      }
+    },
+    {
+      "id": "ipo-lisboa",
+      "name": "IPO de Lisboa Francisco Gentil",
+      "short": "IPO Lisboa",
+      "municipality": "Lisboa",
+      "holiday": "06-13",
+      "holidayName": {
+        "pt": "Santo António",
+        "en": "Santo António"
+      }
+    },
+    {
+      "id": "ipo-porto",
+      "name": "IPO do Porto Francisco Gentil",
+      "short": "IPO Porto",
+      "municipality": "Porto",
+      "holiday": "06-24",
+      "holidayName": {
+        "pt": "São João",
+        "en": "São João"
+      }
+    },
+    {
+      "id": "hospital-de-cascais",
+      "name": "Hospital de Cascais Dr. José de Almeida",
+      "short": "Hospital de Cascais",
+      "municipality": "Cascais",
+      "holiday": "06-13",
+      "holidayName": {
+        "pt": "Santo António",
+        "en": "Santo António"
+      }
+    },
+    {
+      "id": "hospital-sao-paulo-serpa",
+      "name": "Hospital de S. Paulo – Serpa",
+      "short": "Hospital S. Paulo (Serpa)",
+      "municipality": "Serpa",
+      "holiday": "easter+2",
+      "holidayName": {
+        "pt": "Terça-feira depois da Páscoa",
+        "en": "Easter Tuesday"
+      }
+    },
+    {
+      "id": "hospital-luciano-de-castro-anadia",
+      "name": "Hospital Luciano de Castro – Anadia",
+      "short": "Hospital Luciano de Castro (Anadia)",
+      "municipality": "Anadia",
+      "holiday": "easter+39",
+      "holidayName": {
+        "pt": "Quinta-feira da Ascensão",
+        "en": "Ascension Thursday"
+      }
+    },
+    {
+      "id": "hospital-sao-jose-fafe",
+      "name": "Hospital São José – Fafe",
+      "short": "Hospital São José (Fafe)",
+      "municipality": "Fafe",
+      "holiday": "05-16",
+      "holidayName": {
+        "pt": "Feriado municipal",
+        "en": "Municipal holiday"
+      }
+    }
+  ]
+}

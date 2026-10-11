@@ -1,0 +1,42 @@
+{
+  "format": 2,
+  "id": "seguranca",
+  "published": "2026-10-07",
+  "job": {
+    "color": 4293668883,
+    "colorMode": "tonal",
+    "weeklyHours": 40,
+    "maxConsecutive": 4,
+    "prohibitNightMorning": true,
+    "prohibitTriple": true,
+    "allExtra": false,
+    "overlapTolerance": 30,
+    "templates": [
+      {
+        "id": "D",
+        "name": "Dia 12 h",
+        "category": "D",
+        "start": 480,
+        "end": 1200,
+        "timed": true
+      },
+      {
+        "id": "N",
+        "name": "Noite 12 h",
+        "category": "N",
+        "start": 1200,
+        "end": 480,
+        "timed": true,
+        "color": 4280294941
+      }
+    ],
+    "reminders": []
+  },
+  "pay": {
+    "calculationHours": 40,
+    "supplementDelay": 1,
+    "extraDelay": 1,
+    "extraFirst": 0,
+    "extraLater": 0
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "format": 2,
+  "id": "retalho",
+  "published": "2026-10-10",
+  "title": {
+    "pt": "Comércio · loja de rua",
+    "en": "Retail · high-street shop"
+  },
+  "sectors": {
+    "private": {
+      "templates": "templates/retalho.json",
+      "institutions": false,
+      "categories": [
+        {
+          "id": "retalho",
+          "title": {
+            "pt": "Comércio · loja de rua",
+            "en": "Retail · high-street shop"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana",
+                "en": "40 h/week"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "smn",
+                  "label": {
+                    "pt": "Salário mínimo",
+                    "en": "Minimum wage"
+                  },
+                  "table": "smn",
+                  "key": "smn"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rules": "rules/ct-2026.json",
+      "rotations": [
+        {
+          "id": "2-turnos-semanal",
+          "title": {
+            "pt": "Abertura e fecho · uma semana de cada",
+            "en": "Opening and closing · one week of each"
+          },
+          "codes": [
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "F",
+            "F",
+            "C",
+            "C",
+            "C",
+            "C",
+            "C",
+            "F",
+            "F"
+          ]
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Código do Trabalho (Lei n.º 7/2009, de 12 de fevereiro), artigos 203.º, 221.º, 266.º e 268.º (texto consolidado do Diário da República)",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2009-34546475",
+      "consulted": "2026-10-10"
+    }
+  ]
+}

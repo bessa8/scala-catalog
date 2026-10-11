@@ -1,0 +1,75 @@
+{
+  "format": 2,
+  "id": "ct-2026",
+  "published": "2026-10-10",
+  "title": {
+    "pt": "Código do Trabalho · trabalho noturno e extra",
+    "en": "Labour Code · night and extra work"
+  },
+  "rules": [
+    {
+      "name": "Extra em feriado/domingo",
+      "dayType": "holiday",
+      "start": 0,
+      "end": 1440,
+      "extra": true,
+      "mode": "factor",
+      "value": 1500,
+      "counter": "rule",
+      "from": 0,
+      "to": 0
+    },
+    {
+      "name": "Extra em domingo",
+      "dayType": "sunday",
+      "start": 0,
+      "end": 1440,
+      "extra": true,
+      "mode": "factor",
+      "value": 1500,
+      "counter": "rule",
+      "from": 0,
+      "to": 0
+    },
+    {
+      "name": "Extra · 1.ª hora",
+      "dayType": "all",
+      "start": 0,
+      "end": 1440,
+      "extra": true,
+      "mode": "factor",
+      "value": 1250,
+      "counter": "extra",
+      "from": 0,
+      "to": 60
+    },
+    {
+      "name": "Extra · horas seguintes",
+      "dayType": "all",
+      "start": 0,
+      "end": 1440,
+      "extra": true,
+      "mode": "factor",
+      "value": 1375,
+      "counter": "extra",
+      "from": 60,
+      "to": 0
+    },
+    {
+      "name": "Trabalho noturno (22:00–07:00)",
+      "dayType": "all",
+      "start": 1320,
+      "end": 420,
+      "extra": false,
+      "mode": "factor",
+      "value": 1250,
+      "counter": "rule",
+      "from": 0,
+      "to": 0
+    }
+  ],
+  "subtitle": {
+    "pt": "Noite +25 %; extra +25 % na 1.ª hora e +37,5 % nas seguintes; +50 % no dia de descanso semanal e no feriado. Assume que o domingo é o teu dia de descanso semanal; se for outro, ajusta a regra.",
+    "en": "Night +25%; extra +25% in the 1st hour and +37.5% after; +50% on the weekly rest day and on holidays. Assumes Sunday is your weekly rest day; if it is another, adjust the rule."
+  }
+}

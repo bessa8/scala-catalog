@@ -1,0 +1,436 @@
+{
+  "format": 2,
+  "id": "medicina-usf-b",
+  "published": "2026-10-11",
+  "title": {
+    "pt": "Médico de família · USF modelo B",
+    "en": "Family doctor · USF model B"
+  },
+  "sources": [
+    {
+      "title": "Decreto-Lei n.º 103/2023, de 7 de novembro, anexo I (regime das USF): artigos 9.º, 10.º, 23.º, 27.º, 28.º e 29.º (texto no Diário da República, 1.ª série n.º 215, págs. 21 a 48)",
+      "url": "https://files.diariodarepublica.pt/1s/2023/11/21500/0002100048.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 81/2024, de 31 de outubro (altera os artigos 2.º, 3.º, 7.º e 9.º do anexo I; não toca nos artigos 28.º e 29.º)",
+      "url": "https://files.diariodarepublica.pt/1s/2024/10/21200/0000400006.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 46/2025, de 27 de março (anexos VII e VIII: tabelas da dedicação plena, das 40 h e dos regimes transitórios)",
+      "url": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/46-2025-912653923",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 46/2025, de 27 de março (texto no Diário da República, 1.ª série n.º 61)",
+      "url": "https://files.diariodarepublica.pt/1s/2025/03/06100/0002600033.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: valores dos níveis da TRU em 2026)",
+      "url": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/29-a-2026-1031110272",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026), carreira médica",
+      "url": "https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "ACSS, FAQ sobre o regime de dedicação plena (22-12-2023), perguntas 18, 19, 24, 25 e 26",
+      "url": "https://www.acss.min-saude.pt/wp-content/uploads/2016/09/FAQs-Dedicacao-Plena_22DEZ2023_VF.pdf",
+      "consulted": "2026-10-10"
+    }
+  ],
+  "sectors": {
+    "public": {
+      "templates": "templates/medico-familiar.json",
+      "institutions": true,
+      "categories": [
+        {
+          "id": "assistente",
+          "title": {
+            "pt": "Assistente",
+            "en": "Specialist doctor"
+          },
+          "regimes": [
+            {
+              "id": "usf-b",
+              "title": {
+                "pt": "Dedicação plena · USF modelo B · 35 h/semana (mais incrementos por UP)",
+                "en": "Full dedication · USF model B · 35 h/week (plus increments for UW)"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 53 · tabela da dedicação plena, sem o suplemento de 25 % (DL 46/2025, anexo VII)",
+                    "en": "1st position · level 53 · full-dedication table, without the 25% supplement (DL 46/2025, annex VII)"
+                  },
+                  "table": "medica",
+                  "key": "assistente-40h-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 55 · tabela da dedicação plena, sem o suplemento de 25 % (DL 46/2025, anexo VII)",
+                    "en": "2nd position · level 55 · full-dedication table, without the 25% supplement (DL 46/2025, annex VII)"
+                  },
+                  "table": "medica",
+                  "key": "assistente-40h-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 57 · tabela da dedicação plena, sem o suplemento de 25 % (DL 46/2025, anexo VII)",
+                    "en": "3rd position · level 57 · full-dedication table, without the 25% supplement (DL 46/2025, annex VII)"
+                  },
+                  "table": "medica",
+                  "key": "assistente-40h-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 58 · tabela da dedicação plena, sem o suplemento de 25 % (DL 46/2025, anexo VII)",
+                    "en": "4th position · level 58 · full-dedication table, without the 25% supplement (DL 46/2025, annex VII)"
+                  },
+                  "table": "medica",
+                  "key": "assistente-40h-4"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 59 · tabela da dedicação plena, sem o suplemento de 25 % (DL 46/2025, anexo VII)",
+                    "en": "5th position · level 59 · full-dedication table, without the 25% supplement (DL 46/2025, annex VII)"
+                  },
+                  "table": "medica",
+                  "key": "assistente-40h-5"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 60 · tabela da dedicação plena, sem o suplemento de 25 % (DL 46/2025, anexo VII)",
+                    "en": "6th position · level 60 · full-dedication table, without the 25% supplement (DL 46/2025, annex VII)"
+                  },
+                  "table": "medica",
+                  "key": "assistente-40h-6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "assistente-graduado",
+          "title": {
+            "pt": "Assistente graduado",
+            "en": "Consultant"
+          },
+          "regimes": [
+            {
+              "id": "usf-b",
+              "title": {
+                "pt": "Dedicação plena · USF modelo B · 35 h/semana (mais incrementos por UP)",
+                "en": "Full dedication · USF model B · 35 h/week (plus increments for UW)"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 61 · tabela da dedicação plena, sem o suplemento de 25 % (DL 46/2025, anexo VII)",
+                    "en": "1st position · level 61 · full-dedication table, without the 25% supplement (DL 46/2025, annex VII)"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-40h-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 63 · tabela da dedicação plena, sem o suplemento de 25 % (DL 46/2025, anexo VII)",
+                    "en": "2nd position · level 63 · full-dedication table, without the 25% supplement (DL 46/2025, annex VII)"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-40h-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 65 · tabela da dedicação plena, sem o suplemento de 25 % (DL 46/2025, anexo VII)",
+                    "en": "3rd position · level 65 · full-dedication table, without the 25% supplement (DL 46/2025, annex VII)"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-40h-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 67 · tabela da dedicação plena, sem o suplemento de 25 % (DL 46/2025, anexo VII)",
+                    "en": "4th position · level 67 · full-dedication table, without the 25% supplement (DL 46/2025, annex VII)"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-40h-4"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 69 · tabela da dedicação plena, sem o suplemento de 25 % (DL 46/2025, anexo VII)",
+                    "en": "5th position · level 69 · full-dedication table, without the 25% supplement (DL 46/2025, annex VII)"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-40h-5"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 71 · tabela da dedicação plena, sem o suplemento de 25 % (DL 46/2025, anexo VII)",
+                    "en": "6th position · level 71 · full-dedication table, without the 25% supplement (DL 46/2025, annex VII)"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-40h-6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "assistente-graduado-senior",
+          "title": {
+            "pt": "Assistente graduado sénior",
+            "en": "Senior consultant"
+          },
+          "regimes": [
+            {
+              "id": "usf-b",
+              "title": {
+                "pt": "Dedicação plena · USF modelo B · 35 h/semana (mais incrementos por UP)",
+                "en": "Full dedication · USF model B · 35 h/week (plus increments for UW)"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 76 · tabela da dedicação plena, sem o suplemento de 25 % (DL 46/2025, anexo VII)",
+                    "en": "1st position · level 76 · full-dedication table, without the 25% supplement (DL 46/2025, annex VII)"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-40h-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 86 · tabela da dedicação plena, sem o suplemento de 25 % (DL 46/2025, anexo VII)",
+                    "en": "2nd position · level 86 · full-dedication table, without the 25% supplement (DL 46/2025, annex VII)"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-40h-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 96 · tabela da dedicação plena, sem o suplemento de 25 % (DL 46/2025, anexo VII)",
+                    "en": "3rd position · level 96 · full-dedication table, without the 25% supplement (DL 46/2025, annex VII)"
+                  },
+                  "table": "medica",
+                  "key": "assistente-graduado-senior-40h-3"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "up",
+          "label": {
+            "pt": "Unidades ponderadas (UP) da tua lista (conta com listas de 1 550 utentes ou mais)",
+            "en": "Weighted units (WU) on your list (applies to lists of 1,550 patients or more)"
+          },
+          "unit": {
+            "pt": "UP",
+            "en": "WU"
+          },
+          "effect": {
+            "monthlySupplement": {
+              "brackets": [
+                {
+                  "from": 1972,
+                  "cents": 23400
+                },
+                {
+                  "from": 2027,
+                  "cents": 46800
+                },
+                {
+                  "from": 2082,
+                  "cents": 70200
+                },
+                {
+                  "from": 2137,
+                  "cents": 93600
+                },
+                {
+                  "from": 2192,
+                  "cents": 117000
+                },
+                {
+                  "from": 2247,
+                  "cents": 140400
+                },
+                {
+                  "from": 2302,
+                  "cents": 153400
+                },
+                {
+                  "from": 2357,
+                  "cents": 166400
+                },
+                {
+                  "from": 2412,
+                  "cents": 179400
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "domicilios",
+          "label": {
+            "pt": "Domicílios médicos por mês (30 € cada, até 20 por mês)",
+            "en": "Medical home visits per month (€30 each, up to 20 a month)"
+          },
+          "unit": {
+            "pt": "domicílios",
+            "en": "home visits"
+          },
+          "effect": {
+            "monthlySupplement": {
+              "brackets": [
+                {
+                  "from": 1,
+                  "cents": 3000
+                },
+                {
+                  "from": 2,
+                  "cents": 6000
+                },
+                {
+                  "from": 3,
+                  "cents": 9000
+                },
+                {
+                  "from": 4,
+                  "cents": 12000
+                },
+                {
+                  "from": 5,
+                  "cents": 15000
+                },
+                {
+                  "from": 6,
+                  "cents": 18000
+                },
+                {
+                  "from": 7,
+                  "cents": 21000
+                },
+                {
+                  "from": 8,
+                  "cents": 24000
+                },
+                {
+                  "from": 9,
+                  "cents": 27000
+                },
+                {
+                  "from": 10,
+                  "cents": 30000
+                },
+                {
+                  "from": 11,
+                  "cents": 33000
+                },
+                {
+                  "from": 12,
+                  "cents": 36000
+                },
+                {
+                  "from": 13,
+                  "cents": 39000
+                },
+                {
+                  "from": 14,
+                  "cents": 42000
+                },
+                {
+                  "from": 15,
+                  "cents": 45000
+                },
+                {
+                  "from": 16,
+                  "cents": 48000
+                },
+                {
+                  "from": 17,
+                  "cents": 51000
+                },
+                {
+                  "from": 18,
+                  "cents": 54000
+                },
+                {
+                  "from": 19,
+                  "cents": 57000
+                },
+                {
+                  "from": 20,
+                  "cents": 60000
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "orientador",
+          "label": {
+            "pt": "Orientador de formação do internato de medicina geral e familiar (1 = sim, 0 = não)",
+            "en": "Family medicine residency trainer (1 = yes, 0 = no)"
+          },
+          "effect": {
+            "monthlySupplement": {
+              "brackets": [
+                {
+                  "from": 1,
+                  "cents": 52000
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "coordenador",
+          "label": {
+            "pt": "Coordenador da USF (1 = sim, 0 = não)",
+            "en": "USF coordinator (1 = yes, 0 = no)"
+          },
+          "effect": {
+            "monthlySupplement": {
+              "brackets": [
+                {
+                  "from": 1,
+                  "cents": 91000
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "rotations": []
+    }
+  }
+}

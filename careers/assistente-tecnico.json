@@ -1,0 +1,242 @@
+{
+  "format": 2,
+  "id": "assistente-tecnico",
+  "published": "2026-10-10",
+  "title": {
+    "pt": "Assistente técnico · hospital público",
+    "en": "Technical assistant · public hospital"
+  },
+  "sources": [
+    {
+      "title": "Decreto-Lei n.º 84-F/2022, de 16 de dezembro (anexos III e V: carreira geral de assistente técnico)",
+      "url": "https://files.diariodarepublica.pt/1s/2022/12/24101/0000200031.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026)",
+      "url": "https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026)",
+      "url": "https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Lei n.º 18/2016, de 20 de junho (artigo 105.º da LTFP: período normal de trabalho de 35 horas por semana)",
+      "url": "https://files.diariodarepublica.pt/1s/2016/06/11600/0190401905.pdf",
+      "consulted": "2026-10-10"
+    }
+  ],
+  "sectors": {
+    "public": {
+      "templates": "templates/tas.json",
+      "institutions": true,
+      "categories": [
+        {
+          "id": "assistente-tecnico",
+          "title": {
+            "pt": "Assistente técnico",
+            "en": "Technical assistant"
+          },
+          "regimes": [
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana",
+                "en": "35 h/week"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 7",
+                    "en": "1st position · level 7"
+                  },
+                  "table": "tru",
+                  "key": "7"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 8",
+                    "en": "2nd position · level 8"
+                  },
+                  "table": "tru",
+                  "key": "8"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 9",
+                    "en": "3rd position · level 9"
+                  },
+                  "table": "tru",
+                  "key": "9"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 10",
+                    "en": "4th position · level 10"
+                  },
+                  "table": "tru",
+                  "key": "10"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 11",
+                    "en": "5th position · level 11"
+                  },
+                  "table": "tru",
+                  "key": "11"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 12",
+                    "en": "6th position · level 12"
+                  },
+                  "table": "tru",
+                  "key": "12"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição · nível 13",
+                    "en": "7th position · level 13"
+                  },
+                  "table": "tru",
+                  "key": "13"
+                },
+                {
+                  "id": "8",
+                  "label": {
+                    "pt": "8.ª posição · nível 14",
+                    "en": "8th position · level 14"
+                  },
+                  "table": "tru",
+                  "key": "14"
+                },
+                {
+                  "id": "9",
+                  "label": {
+                    "pt": "9.ª posição · nível 15",
+                    "en": "9th position · level 15"
+                  },
+                  "table": "tru",
+                  "key": "15"
+                },
+                {
+                  "id": "10",
+                  "label": {
+                    "pt": "10.ª posição complementar · nível 16 · posição de transição, confirma no recibo",
+                    "en": "10th complementary position · level 16 · transition position, check your payslip"
+                  },
+                  "table": "tru",
+                  "key": "16"
+                },
+                {
+                  "id": "11",
+                  "label": {
+                    "pt": "11.ª posição complementar · nível 17 · posição de transição, confirma no recibo",
+                    "en": "11th complementary position · level 17 · transition position, check your payslip"
+                  },
+                  "table": "tru",
+                  "key": "17"
+                },
+                {
+                  "id": "12",
+                  "label": {
+                    "pt": "12.ª posição complementar · nível 18 · posição de transição, confirma no recibo",
+                    "en": "12th complementary position · level 18 · transition position, check your payslip"
+                  },
+                  "table": "tru",
+                  "key": "18"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "coordenador-tecnico",
+          "title": {
+            "pt": "Coordenador técnico",
+            "en": "Technical coordinator"
+          },
+          "regimes": [
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana",
+                "en": "35 h/week"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 15",
+                    "en": "1st position · level 15"
+                  },
+                  "table": "tru",
+                  "key": "15"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 17",
+                    "en": "2nd position · level 17"
+                  },
+                  "table": "tru",
+                  "key": "17"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 20",
+                    "en": "3rd position · level 20"
+                  },
+                  "table": "tru",
+                  "key": "20"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 22",
+                    "en": "4th position · level 22"
+                  },
+                  "table": "tru",
+                  "key": "22"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição complementar · nível 23 · posição de transição, confirma no recibo",
+                    "en": "5th complementary position · level 23 · transition position, check your payslip"
+                  },
+                  "table": "tru",
+                  "key": "23"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição complementar · nível 24 · posição de transição, confirma no recibo",
+                    "en": "6th complementary position · level 24 · transition position, check your payslip"
+                  },
+                  "table": "tru",
+                  "key": "24"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rules": "rules/ct-2026.json"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "format": 2,
+  "id": "limpeza",
+  "published": "2026-10-10",
+  "job": {
+    "color": 4293668883,
+    "colorMode": "tonal",
+    "weeklyHours": 40,
+    "maxConsecutive": 6,
+    "prohibitNightMorning": false,
+    "prohibitTriple": false,
+    "allExtra": false,
+    "overlapTolerance": 30,
+    "templates": [
+      {
+        "id": "M",
+        "name": "Manhã",
+        "category": "M",
+        "start": 420,
+        "end": 900,
+        "timed": true,
+        "color": 4294952120
+      },
+      {
+        "id": "T",
+        "name": "Tarde",
+        "category": "T",
+        "start": 900,
+        "end": 1380,
+        "timed": true
+      },
+      {
+        "id": "P",
+        "name": "Fim de dia",
+        "category": "P",
+        "start": 1020,
+        "end": 1260,
+        "timed": true
+      }
+    ],
+    "reminders": []
+  },
+  "pay": {
+    "calculationHours": 40,
+    "supplementDelay": 1,
+    "extraDelay": 1,
+    "extraFirst": 0,
+    "extraLater": 0
+  }
+}

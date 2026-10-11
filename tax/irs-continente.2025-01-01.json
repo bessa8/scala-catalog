@@ -1,0 +1,96 @@
+{
+  "format": 2,
+  "id": "irs-continente",
+  "published": "2026-10-11",
+  "effective": "2025-01-01",
+  "title": {"pt": "Retenção na fonte de IRS — trabalho dependente (Continente), de janeiro a julho de 2025", "en": "IRS withholding — employment income (mainland Portugal), January to July 2025"},
+  "tables": {
+    "I": [
+      {"upTo": 87000, "rate": 0, "deduction": 0, "perDependent": 0, "effectiveAtLimit": 0},
+      {"upTo": 99200, "rate": 1300, "deductionFormula": {"factor": 2.6, "limit": 120832}, "perDependent": 2143, "effectiveAtLimit": 56},
+      {"upTo": 107000, "rate": 1650, "deductionFormula": {"factor": 1.35, "limit": 147767}, "perDependent": 2143, "effectiveAtLimit": 80},
+      {"upTo": 113600, "rate": 1650, "deduction": 9081, "perDependent": 2143, "effectiveAtLimit": 85},
+      {"upTo": 118700, "rate": 2200, "deduction": 15329, "perDependent": 2143, "effectiveAtLimit": 91},
+      {"upTo": 178700, "rate": 2500, "deduction": 18890, "perDependent": 2143, "effectiveAtLimit": 144},
+      {"upTo": 207800, "rate": 3200, "deduction": 31399, "perDependent": 2143, "effectiveAtLimit": 169},
+      {"upTo": 243200, "rate": 3550, "deduction": 38672, "perDependent": 2143, "effectiveAtLimit": 196},
+      {"upTo": 323300, "rate": 3872, "deduction": 46503, "perDependent": 2143, "effectiveAtLimit": 243},
+      {"upTo": 554700, "rate": 4005, "deduction": 50803, "perDependent": 2143, "effectiveAtLimit": 309},
+      {"upTo": 2022100, "rate": 4495, "deduction": 77983, "perDependent": 2143, "effectiveAtLimit": 411},
+      {"upTo": null, "rate": 4717, "deduction": 122874, "perDependent": 2143}
+    ],
+    "II": [
+      {"upTo": 87000, "rate": 0, "deduction": 0, "perDependent": 0, "effectiveAtLimit": 0},
+      {"upTo": 99200, "rate": 1300, "deductionFormula": {"factor": 2.6, "limit": 120832}, "perDependent": 3429, "effectiveAtLimit": 56},
+      {"upTo": 107000, "rate": 1650, "deductionFormula": {"factor": 1.35, "limit": 147767}, "perDependent": 3429, "effectiveAtLimit": 80},
+      {"upTo": 113600, "rate": 1650, "deduction": 9081, "perDependent": 3429, "effectiveAtLimit": 85},
+      {"upTo": 118700, "rate": 2200, "deduction": 15329, "perDependent": 3429, "effectiveAtLimit": 91},
+      {"upTo": 178700, "rate": 2500, "deduction": 18890, "perDependent": 3429, "effectiveAtLimit": 144},
+      {"upTo": 207800, "rate": 3200, "deduction": 31399, "perDependent": 3429, "effectiveAtLimit": 169},
+      {"upTo": 243200, "rate": 3550, "deduction": 38672, "perDependent": 3429, "effectiveAtLimit": 196},
+      {"upTo": 323300, "rate": 3872, "deduction": 46503, "perDependent": 3429, "effectiveAtLimit": 243},
+      {"upTo": 554700, "rate": 4005, "deduction": 50803, "perDependent": 3429, "effectiveAtLimit": 309},
+      {"upTo": 2022100, "rate": 4495, "deduction": 77983, "perDependent": 3429, "effectiveAtLimit": 411},
+      {"upTo": null, "rate": 4717, "deduction": 122874, "perDependent": 3429}
+    ],
+    "III": [
+      {"upTo": 95700, "rate": 0, "deduction": 0, "perDependent": 0, "effectiveAtLimit": 0},
+      {"upTo": 99200, "rate": 1300, "deductionFormula": {"factor": 2.6, "limit": 132455}, "perDependent": 4286, "effectiveAtLimit": 17},
+      {"upTo": 107000, "rate": 1300, "deductionFormula": {"factor": 1.35, "limit": 163265}, "perDependent": 4286, "effectiveAtLimit": 38},
+      {"upTo": 108100, "rate": 1300, "deduction": 9875, "perDependent": 4286, "effectiveAtLimit": 39},
+      {"upTo": 140800, "rate": 1320, "deduction": 10091, "perDependent": 4286, "effectiveAtLimit": 60},
+      {"upTo": 193100, "rate": 1650, "deduction": 14737, "perDependent": 4286, "effectiveAtLimit": 89},
+      {"upTo": 220000, "rate": 2018, "deduction": 21843, "perDependent": 4286, "effectiveAtLimit": 103},
+      {"upTo": 269800, "rate": 2362, "deduction": 29411, "perDependent": 4286, "effectiveAtLimit": 127},
+      {"upTo": 331700, "rate": 2594, "deduction": 35670, "perDependent": 4286, "effectiveAtLimit": 152},
+      {"upTo": 596500, "rate": 3072, "deduction": 51525, "perDependent": 4286, "effectiveAtLimit": 221},
+      {"upTo": 2026500, "rate": 3872, "deduction": 99245, "perDependent": 4286, "effectiveAtLimit": 338},
+      {"upTo": null, "rate": 4717, "deduction": 270484, "perDependent": 4286}
+    ],
+    "IV": [
+      {"upTo": 169400, "rate": 0, "deduction": 0, "perDependent": 0, "effectiveAtLimit": 0},
+      {"upTo": 203200, "rate": 2200, "deduction": 37268, "perDependent": 0, "effectiveAtLimit": 37},
+      {"upTo": 245200, "rate": 3200, "deduction": 57588, "perDependent": 0, "effectiveAtLimit": 85},
+      {"upTo": 442000, "rate": 3550, "deduction": 66170, "perDependent": 0, "effectiveAtLimit": 205},
+      {"upTo": 468000, "rate": 3872, "deduction": 80402, "perDependent": 0, "effectiveAtLimit": 215},
+      {"upTo": 668700, "rate": 4005, "deduction": 86626, "perDependent": 0, "effectiveAtLimit": 271},
+      {"upTo": 2046800, "rate": 4495, "deduction": 119392, "perDependent": 0, "effectiveAtLimit": 391},
+      {"upTo": null, "rate": 4717, "deduction": 164831, "perDependent": 0}
+    ],
+    "V": [
+      {"upTo": 193800, "rate": 0, "deduction": 0, "perDependent": 0, "effectiveAtLimit": 0},
+      {"upTo": 203200, "rate": 2212, "deduction": 42869, "perDependent": 4286, "effectiveAtLimit": 10},
+      {"upTo": 281300, "rate": 3200, "deduction": 62945, "perDependent": 4286, "effectiveAtLimit": 96},
+      {"upTo": 443800, "rate": 3550, "deduction": 72791, "perDependent": 4286, "effectiveAtLimit": 191},
+      {"upTo": 675400, "rate": 3872, "deduction": 87081, "perDependent": 4286, "effectiveAtLimit": 258},
+      {"upTo": 704800, "rate": 4005, "deduction": 96064, "perDependent": 4286, "effectiveAtLimit": 264},
+      {"upTo": 2046800, "rate": 4495, "deduction": 130599, "perDependent": 4286, "effectiveAtLimit": 386},
+      {"upTo": null, "rate": 4717, "deduction": 176038, "perDependent": 4286}
+    ],
+    "VI": [
+      {"upTo": 166800, "rate": 0, "deduction": 0, "perDependent": 0, "effectiveAtLimit": 0},
+      {"upTo": 204300, "rate": 2200, "deduction": 36696, "perDependent": 2143, "effectiveAtLimit": 40},
+      {"upTo": 246500, "rate": 2500, "deduction": 42825, "perDependent": 2143, "effectiveAtLimit": 76},
+      {"upTo": 306700, "rate": 3200, "deduction": 60080, "perDependent": 2143, "effectiveAtLimit": 124},
+      {"upTo": 443800, "rate": 3550, "deduction": 70815, "perDependent": 2143, "effectiveAtLimit": 195},
+      {"upTo": 675400, "rate": 3872, "deduction": 85105, "perDependent": 2143, "effectiveAtLimit": 261},
+      {"upTo": 704800, "rate": 4005, "deduction": 94088, "perDependent": 2143, "effectiveAtLimit": 267},
+      {"upTo": 2046800, "rate": 4495, "deduction": 128623, "perDependent": 2143, "effectiveAtLimit": 387},
+      {"upTo": null, "rate": 4717, "deduction": 174062, "perDependent": 2143}
+    ],
+    "VII": [
+      {"upTo": 232500, "rate": 0, "deduction": 0, "perDependent": 0, "effectiveAtLimit": 0},
+      {"upTo": 342800, "rate": 2362, "deduction": 54917, "perDependent": 4286, "effectiveAtLimit": 76},
+      {"upTo": 368900, "rate": 2594, "deduction": 62870, "perDependent": 4286, "effectiveAtLimit": 89},
+      {"upTo": 668700, "rate": 3072, "deduction": 80503, "perDependent": 4286, "effectiveAtLimit": 187},
+      {"upTo": 2046800, "rate": 4244, "deduction": 158875, "perDependent": 4286, "effectiveAtLimit": 347},
+      {"upTo": null, "rate": 4717, "deduction": 255689, "perDependent": 4286}
+    ]
+  },
+  "extras": {"disabledDependent": {"single": 8482, "married1": 8482, "married2": 4241}, "spouseDisabled": 13571, "threePlusCut": 100, "overtimeShare": 50},
+  "sources": [
+    {"title": "Despacho n.º 236-A/2025 (SEAF, 2 jan 2025; Diário da República, 2.ª série, n.º 3, suplemento, de 6 jan 2025): tabelas de retenção na fonte para o Continente a partir de 1 jan 2025", "url": "https://files.diariodarepublica.pt/2s/2025/01/003000001/0000200009.pdf", "consulted": "2026-10-11"},
+    {"title": "Despacho n.º 236-A/2025 (cópia do Portal das Finanças)", "url": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/diplomas_legislativos/Documents/Despacho_236_A_2025.pdf", "consulted": "2026-10-11"},
+    {"title": "Circular n.º 2/2025 (AT): divulgação das tabelas I a XI do Despacho n.º 236-A/2025", "url": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Circular_2_2025.pdf", "consulted": "2026-10-11"}
+  ]
+}

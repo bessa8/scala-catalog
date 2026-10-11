@@ -1,0 +1,103 @@
+{
+  "format": 2,
+  "id": "handling-aeroportuario",
+  "published": "2026-10-10",
+  "title": {
+    "pt": "Handling aeroportuário",
+    "en": "Airport ground handling"
+  },
+  "sectors": {
+    "private": {
+      "templates": "templates/handling.json",
+      "institutions": false,
+      "categories": [
+        {
+          "id": "handling-aeroportuario",
+          "title": {
+            "pt": "Handling aeroportuário",
+            "en": "Airport ground handling"
+          },
+          "regimes": [
+            {
+              "id": "40h",
+              "title": {
+                "pt": "40 h/semana",
+                "en": "40 h/week"
+              },
+              "weeklyHours": 40,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "smn",
+                  "label": {
+                    "pt": "Salário mínimo",
+                    "en": "Minimum wage"
+                  },
+                  "table": "smn",
+                  "key": "smn"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rules": "rules/ct-2026.json",
+      "rotations": [
+        {
+          "id": "3-turnos-semanal",
+          "title": {
+            "pt": "Manhã, tarde e noite · uma semana de cada",
+            "en": "Morning, afternoon, night · one week of each"
+          },
+          "codes": [
+            "M",
+            "M",
+            "M",
+            "M",
+            "M",
+            "F",
+            "F",
+            "T",
+            "T",
+            "T",
+            "T",
+            "T",
+            "F",
+            "F",
+            "N",
+            "N",
+            "N",
+            "N",
+            "N",
+            "F",
+            "F"
+          ]
+        },
+        {
+          "id": "4-equipas",
+          "title": {
+            "pt": "4 equipas · 2 manhãs, 2 tardes, 2 noites, 2 folgas · média 42 h/semana, acima das 40 h",
+            "en": "4 teams · 2 mornings, 2 afternoons, 2 nights, 2 days off · average 42 h/week, above 40 h"
+          },
+          "codes": [
+            "M",
+            "M",
+            "T",
+            "T",
+            "N",
+            "N",
+            "F",
+            "F"
+          ]
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Código do Trabalho (Lei n.º 7/2009, de 12 de fevereiro), artigos 203.º, 221.º, 266.º e 268.º (texto consolidado do Diário da República)",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2009-34546475",
+      "consulted": "2026-10-10"
+    }
+  ]
+}

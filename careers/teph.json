@@ -1,0 +1,289 @@
+{
+  "format": 2,
+  "id": "teph",
+  "published": "2026-10-10",
+  "title": {
+    "pt": "Técnico de emergência pré-hospitalar (TEPH) · INEM",
+    "en": "Pre-hospital emergency technician (TEPH) · INEM"
+  },
+  "sources": [
+    {
+      "title": "Decreto-Lei n.º 19/2016, de 15 de abril, versão consolidada de 2025-04-03 (artigo 2.º: âmbito, contrato de trabalho em funções públicas; artigo 3.º: categorias; artigo 12.º: remuneração e suplementos; artigo 13.º: turnos)",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/2016-205052826",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 60/2025, de 2 de abril (artigo 4.º e anexo II: posições e níveis remuneratórios; artigo 12.º, n.os 3 e 4: suplementos)",
+      "url": "https://files.diariodarepublica.pt/1s/2025/04/06500/0000200011.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026)",
+      "url": "https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026): posições e níveis remuneratórios",
+      "url": "https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Lei n.º 18/2016, de 20 de junho (artigo 105.º da LTFP: período normal de trabalho de 35 horas por semana)",
+      "url": "https://files.diariodarepublica.pt/1s/2016/06/11600/0190401905.pdf",
+      "consulted": "2026-10-10"
+    }
+  ],
+  "sectors": {
+    "public": {
+      "templates": "templates/forcas.json",
+      "institutions": false,
+      "categories": [
+        {
+          "id": "teph",
+          "title": {
+            "pt": "Técnico de emergência pré-hospitalar",
+            "en": "Pre-hospital emergency technician"
+          },
+          "regimes": [
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana (regime geral)",
+                "en": "35 h/week (general regime)"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 10",
+                    "en": "1st position · level 10"
+                  },
+                  "table": "tru",
+                  "key": "10"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 11",
+                    "en": "2nd position · level 11"
+                  },
+                  "table": "tru",
+                  "key": "11"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 12",
+                    "en": "3rd position · level 12"
+                  },
+                  "table": "tru",
+                  "key": "12"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 13",
+                    "en": "4th position · level 13"
+                  },
+                  "table": "tru",
+                  "key": "13"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 14",
+                    "en": "5th position · level 14"
+                  },
+                  "table": "tru",
+                  "key": "14"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 15",
+                    "en": "6th position · level 15"
+                  },
+                  "table": "tru",
+                  "key": "15"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição · nível 16",
+                    "en": "7th position · level 16"
+                  },
+                  "table": "tru",
+                  "key": "16"
+                },
+                {
+                  "id": "8",
+                  "label": {
+                    "pt": "8.ª posição · nível 17",
+                    "en": "8th position · level 17"
+                  },
+                  "table": "tru",
+                  "key": "17"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "teph-avancado",
+          "title": {
+            "pt": "Técnico de emergência pré-hospitalar avançado",
+            "en": "Advanced pre-hospital emergency technician"
+          },
+          "regimes": [
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana (regime geral)",
+                "en": "35 h/week (general regime)"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 17",
+                    "en": "1st position · level 17"
+                  },
+                  "table": "tru",
+                  "key": "17"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 18",
+                    "en": "2nd position · level 18"
+                  },
+                  "table": "tru",
+                  "key": "18"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 19",
+                    "en": "3rd position · level 19"
+                  },
+                  "table": "tru",
+                  "key": "19"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 20",
+                    "en": "4th position · level 20"
+                  },
+                  "table": "tru",
+                  "key": "20"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 21",
+                    "en": "5th position · level 21"
+                  },
+                  "table": "tru",
+                  "key": "21"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "teph-principal",
+          "title": {
+            "pt": "Técnico de emergência pré-hospitalar principal",
+            "en": "Senior pre-hospital emergency technician"
+          },
+          "regimes": [
+            {
+              "id": "35h",
+              "title": {
+                "pt": "35 h/semana (regime geral)",
+                "en": "35 h/week (general regime)"
+              },
+              "weeklyHours": 35,
+              "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 21",
+                    "en": "1st position · level 21"
+                  },
+                  "table": "tru",
+                  "key": "21"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 22",
+                    "en": "2nd position · level 22"
+                  },
+                  "table": "tru",
+                  "key": "22"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 23",
+                    "en": "3rd position · level 23"
+                  },
+                  "table": "tru",
+                  "key": "23"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "responsavel-turno",
+          "label": {
+            "pt": "Responsável de turno · suplemento mensal de 100 € (1 = sim, 0 = não)",
+            "en": "Shift leader · monthly supplement of €100 (1 = yes, 0 = no)"
+          },
+          "effect": {
+            "monthlySupplement": {
+              "table": "teph-supl",
+              "key": "responsavel-turno"
+            }
+          }
+        },
+        {
+          "id": "coordenador-operacional",
+          "label": {
+            "pt": "Coordenador operacional · suplemento mensal de 200 € (1 = sim, 0 = não)",
+            "en": "Operational coordinator · monthly supplement of €200 (1 = yes, 0 = no)"
+          },
+          "effect": {
+            "monthlySupplement": {
+              "table": "teph-supl",
+              "key": "coordenador-operacional"
+            }
+          }
+        },
+        {
+          "id": "coordenador-geral",
+          "label": {
+            "pt": "Coordenador geral · suplemento mensal de 250 € (1 = sim, 0 = não)",
+            "en": "General coordinator · monthly supplement of €250 (1 = yes, 0 = no)"
+          },
+          "effect": {
+            "monthlySupplement": {
+              "table": "teph-supl",
+              "key": "coordenador-geral"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
