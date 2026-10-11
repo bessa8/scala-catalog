@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """Valida e publica o catálogo da Scala (formato 2, um JSON por ficheiro).
 
-    python3 tools/catalog/catalog.py validate   # confere tools/catalog/data
-    python3 tools/catalog/catalog.py build      # valida e copia para assets/catalog + manifest.json
-    python3 tools/catalog/catalog.py list       # o que há, com datas
-    python3 tools/catalog/catalog.py verify DIR # confere uma pasta publicada (manifest, sha256)
-    python3 tools/catalog/catalog.py publish --out DIR  # prepara a pasta do repositório público
-    python3 tools/catalog/catalog.py report [--out FILE]  # VERIFICAR.md: todos os valores e fontes, para ler antes de publicar
+    python3 tools/catalog.py validate              # confere o catálogo (a raiz deste repositório)
+    python3 tools/catalog.py build                 # valida e escreve o manifest.json
+    python3 tools/catalog.py build --src . --out DIR  # valida e copia para DIR (a app: assets/catalog)
+    python3 tools/catalog.py list                  # o que há, com datas
+    python3 tools/catalog.py verify DIR            # confere uma pasta publicada (manifest, sha256)
+    python3 tools/catalog.py report [--out FILE]   # VERIFICAR.md: todos os valores e fontes
 
-O formato está descrito em tools/catalog/README.md.
+O formato está descrito no README.md.
 """
 import argparse
 import datetime
@@ -19,9 +19,9 @@ import shutil
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
-SRC = ROOT / "tools" / "catalog" / "data"
-OUT = ROOT / "assets" / "catalog"
+ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT
+OUT = ROOT
 FORMAT = 2
 FOLDERS = ("careers", "tables", "rules", "templates", "tax")
 ROOT_FILES = ("professions.json", "institutions.json")
@@ -75,11 +75,13 @@ def head(data, where):
 
 
 def load(src):
+    src = Path(src)
+    paths = [src / name for name in ROOT_FILES if (src / name).exists()]
+    for folder in FOLDERS:
+        paths += (src / folder).rglob("*.json")
     files = {}
-    for path in sorted(Path(src).rglob("*.json")):
+    for path in sorted(paths):
         rel = path.relative_to(src).as_posix()
-        if rel == "manifest.json":
-            continue
         try:
             files[rel] = json.loads(path.read_text(encoding="utf-8"))
         except json.JSONDecodeError as e:
@@ -373,18 +375,21 @@ def validate(src=SRC):
 
 def build(src=SRC, out=OUT):
     files = validate(src)
-    out = Path(out)
+    src, out = Path(src), Path(out)
+    in_place = src.resolve() == out.resolve()
     out.mkdir(parents=True, exist_ok=True)
-    for folder in FOLDERS:
-        shutil.rmtree(out / folder, ignore_errors=True)
-    for name in ROOT_FILES + ("manifest.json",):
-        (out / name).unlink(missing_ok=True)
+    if not in_place:
+        for folder in FOLDERS:
+            shutil.rmtree(out / folder, ignore_errors=True)
+        for name in ROOT_FILES + ("manifest.json",):
+            (out / name).unlink(missing_ok=True)
     entries = []
     for rel, d in sorted(files.items()):
-        target = out / rel
-        target.parent.mkdir(parents=True, exist_ok=True)
-        data = (Path(src) / rel).read_bytes()
-        target.write_bytes(data)
+        data = (src / rel).read_bytes()
+        if not in_place:
+            target = out / rel
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(data)
         entries.append({
             "path": rel,
             "sha256": hashlib.sha256(data).hexdigest(),
@@ -515,7 +520,7 @@ def report(src=SRC):
         return money(d.get("unit", "monthly"), d["values"][key])
 
     out = ["# Verificar catálogo", "",
-           "Gerado por `python3 tools/catalog/catalog.py report`. Ler valor a valor antes de publicar.", "",
+           "Gerado por `python3 tools/catalog.py report`. Ler valor a valor antes de publicar.", "",
            "## Tabelas", ""]
     for tid in sorted(versions):
         for d in versions[tid]:
@@ -575,54 +580,21 @@ def report(src=SRC):
     return "\n".join(out) + "\n"
 
 
-WORKFLOW = """name: Validar catálogo
-on: [push, pull_request]
-jobs:
-  validate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - run: python3 tools/catalog.py verify .
-"""
-
-PUBLIC_README = """# Catálogo da Scala
-
-Ficheiros publicados do catálogo da app Scala (profissões, tabelas salariais, regras e modelos de turno), servidos por GitHub Pages. Não editar aqui: a fonte está no repositório da app (`tools/catalog/data`) e esta pasta é gerada por `python3 tools/catalog/catalog.py publish --out <esta pasta>`.
-"""
-
-
-def publish(src=SRC, out=None):
-    out = Path(out)
-    manifest = build(src, out)
-    (out / "tools").mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(Path(__file__), out / "tools" / "catalog.py")
-    (out / ".github" / "workflows").mkdir(parents=True, exist_ok=True)
-    (out / ".github" / "workflows" / "validate.yml").write_text(WORKFLOW, encoding="utf-8")
-    (out / "README.md").write_text(PUBLIC_README, encoding="utf-8")
-    return manifest
-
-
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = parser.add_subparsers(dest="command", required=True)
     v = sub.add_parser("validate", help="confere o catálogo")
     v.add_argument("--src", default=SRC)
-    b = sub.add_parser("build", help="valida e copia para os assets da app")
+    b = sub.add_parser("build", help="valida e escreve o manifest.json (ou copia para --out)")
     b.add_argument("--src", default=SRC)
     b.add_argument("--out", default=OUT)
     l = sub.add_parser("list", help="lista os ficheiros do catálogo")
     l.add_argument("--src", default=SRC)
     vf = sub.add_parser("verify", help="confere uma pasta publicada (manifest e ficheiros)")
     vf.add_argument("dir")
-    pb = sub.add_parser("publish", help="prepara a pasta do repositório público")
-    pb.add_argument("--src", default=SRC)
-    pb.add_argument("--out", required=True)
     rp = sub.add_parser("report", help="escreve o relatório de verificação (valores, fontes, por confirmar)")
     rp.add_argument("--src", default=SRC)
-    rp.add_argument("--out", default=SRC.parent / "VERIFICAR.md")
+    rp.add_argument("--out", default=ROOT / "VERIFICAR.md")
     args = parser.parse_args()
     try:
         if args.command == "validate":
@@ -637,9 +609,6 @@ def main():
         elif args.command == "report":
             Path(args.out).write_text(report(args.src), encoding="utf-8")
             print(f"relatório em {args.out}")
-        elif args.command == "publish":
-            manifest = publish(args.src, args.out)
-            print(f"publicado em {args.out}: {len(manifest['files'])} ficheiros")
         else:
             for rel, d in sorted(load(args.src).items()):
                 print(f"{d.get('published', '?')}  {rel}")
