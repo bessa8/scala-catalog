@@ -45,3 +45,7 @@ Como rever: abrir `VERIFICAR.md`, conferir cada valor com a fonte indicada (os n
 Automático: a vigia (`tools/vigia.py`, todos os dias) procura novidades nas fontes oficiais; às segundas abre uma *issue* `novidade` que dispara a rotina do Claude (`ROTINA.md`); a rotina faz push de um ramo `claude/…` e a Action «Publicar» valida, junta ao `main`, publica o Pages e abre as *issues* «Publicado» e «Precisa de ti». À mão: editar no `main`, correr `validate`, `build`, `report` e os testes, e fazer push; a Action «Pages» publica.
 
 Mudar de endereço: no `manifest.json` publicado, `"movedTo": "https://novo-endereco/"` (só `https://`); na próxima consulta, as apps passam a usar o endereço novo.
+
+### Se a publicação falhar
+
+A Action «Publicar» abre uma *issue* `precisa-de-ti` com a ligação para a execução e diz se o ramo ficou por juntar ou se já estava juntado ao `main` (e falhou um passo seguinte: Pages, *issues* ou apagar o ramo). Para voltar a tentar, comentar na *issue* tratada («tenta outra vez») e pôr-lhe a etiqueta `rever` (se já a tiver, tirá-la e voltar a pô-la): a rotina corre outra vez e prepara um ramo novo. Um ramo `claude/…` que ficou por apagar pode apagar-se à mão. Se o `main` já tem os dados mas o Pages não saiu, basta correr à mão a Action «Pages» (`gh workflow run pages.yml`).
