@@ -70,4 +70,5 @@ jobs:
         env:
           ROTINA_URL: ${{ secrets.ROTINA_URL }}
           ROTINA_TOKEN: ${{ secrets.ROTINA_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
         run: python3 tools/disparar.py --criadas "$RUNNER_TEMP/criadas.json"

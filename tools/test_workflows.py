@@ -48,10 +48,12 @@ class WorkflowsTest(unittest.TestCase):
         self.assertIn('--criadas "$RUNNER_TEMP/criadas.json"', step)
         self.assertIn("ROTINA_URL: ${{ secrets.ROTINA_URL }}", step)
         self.assertIn("ROTINA_TOKEN: ${{ secrets.ROTINA_TOKEN }}", step)
+        self.assertIn("GH_TOKEN: ${{ github.token }}", step)  # a Action lê a issue e manda-a no disparo
 
     def test_rotina_only_for_bessa8_and_never_interpolates_into_the_script(self):
         text = read("rotina.yml")
-        self.assertRegex(text, r"(?m)^permissions:\n  contents: read$")
+        self.assertRegex(text, r"(?m)^permissions:\n  contents: read\n  issues: read$")
+        self.assertIn("GH_TOKEN: ${{ github.token }}", text[text.index("- name: Disparar a rotina"):])
         self.assertIn("types: [labeled]", text)
         self.assertIn("github.event.label.name == 'rever'", text)
         self.assertIn("github.event.sender.login == 'bessa8'", text)

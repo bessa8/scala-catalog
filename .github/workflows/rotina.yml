@@ -10,6 +10,7 @@ on:
         required: true
 permissions:
   contents: read
+  issues: read
 concurrency:
   group: rotina
   cancel-in-progress: false
@@ -32,4 +33,5 @@ jobs:
           NUMERO: ${{ github.event.issue.number || inputs.numero }}
           ROTINA_URL: ${{ secrets.ROTINA_URL }}
           ROTINA_TOKEN: ${{ secrets.ROTINA_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
         run: python3 tools/disparar.py --issue "$NUMERO"
