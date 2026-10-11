@@ -2,6 +2,7 @@ name: Vigia
 on:
   schedule:
     - cron: '0 6 * * *'   # todos os dias, 06:00 UTC (07:00 em Lisboa no verão)
+    - cron: '0 21 * * *'  # segunda leitura diária, 21:00 UTC (o DR publica ao fim do dia)
     - cron: '0 7 * * 1'   # às segundas, 07:00 UTC: a issue semanal
   workflow_dispatch:
     inputs:
@@ -23,7 +24,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Ler as fontes
+      - name: Modo
+        id: modo
         env:
           AGENDA: ${{ github.event.schedule }}
           MODO_PEDIDO: ${{ inputs.modo }}
@@ -31,7 +33,23 @@ jobs:
           MODO=diario
           if [ "$AGENDA" = "0 7 * * 1" ]; then MODO=semanal; fi
           if [ -n "$MODO_PEDIDO" ]; then MODO="$MODO_PEDIDO"; fi
-          python3 tools/vigia.py "$MODO" --issues "$RUNNER_TEMP/issues.json"
+          echo "modo=$MODO" >> "$GITHUB_OUTPUT"
+      # Só na semanal: a vigia avisa das issues novidade/rever que a rotina não tratou.
+      # Uma só listagem (o gh junta com «E» as etiquetas repetidas); a vigia filtra por etiqueta.
+      - name: Listar as issues abertas
+        if: steps.modo.outputs.modo == 'semanal'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue list --state open --limit 200 --json number,title,createdAt,updatedAt,labels > "$RUNNER_TEMP/abertas.json"
+      - name: Ler as fontes
+        env:
+          MODO: ${{ steps.modo.outputs.modo }}
+        run: |
+          if [ "$MODO" = "semanal" ]; then
+            python3 tools/vigia.py semanal --issues "$RUNNER_TEMP/issues.json" --abertas "$RUNNER_TEMP/abertas.json"
+          else
+            python3 tools/vigia.py "$MODO" --issues "$RUNNER_TEMP/issues.json"
+          fi
       # As issues abrem-se antes de guardar o estado: se falhar, as pistas não se perdem.
       - name: Abrir issues
         env:

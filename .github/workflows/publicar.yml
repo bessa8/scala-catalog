@@ -39,6 +39,7 @@ jobs:
           python3 confiavel/tools/catalog.py verify .
           python3 confiavel/tools/relatorio.py "$RELATORIO" --issues "$RUNNER_TEMP/issues.json"
       - name: Juntar ao main
+        id: juntar
         run: git push origin HEAD:main
       - name: Publicar o Pages
         env:
@@ -54,8 +55,15 @@ jobs:
         if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
+          JUNTAR: ${{ steps.juntar.outcome }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
+          if [ "$JUNTAR" = "success" ]; then
+            ESTADO="O ramo já foi juntado ao main; falhou um passo seguinte (Pages, issues ou apagar o ramo)."
+          else
+            ESTADO="O ramo ficou por juntar."
+          fi
           gh label create precisa-de-ti --force
           gh issue create --label precisa-de-ti \
             --title "Precisa de ti: a publicação de $GITHUB_REF_NAME falhou" \
-            --body "O ramo ficou por juntar. Ver ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            --body "$ESTADO Ver $RUN_URL"

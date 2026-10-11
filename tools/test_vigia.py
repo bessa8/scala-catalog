@@ -216,5 +216,113 @@ class VigiaTest(unittest.TestCase):
         self.assertEqual(len(json.loads((d / "issues.json").read_text())), 1)
 
 
+    def test_rss_ignores_recruitment_and_mobility_notices_but_keeps_retifications(self):
+        rss = """<rss version="2.0"><channel>
+<item><title>Aviso n.º 1/2027</title><description>Procedimento concursal: carreira especial de enfermagem, tabela remuneratoria unica.</description>
+<link>https://diariodarepublica.pt/dr/detalhe/aviso/1-2027-9</link></item>
+<item><title>Aviso (extrato) n.º 2/2027</title><description>Mobilidade, tabela remuneratoria unica.</description>
+<link>https://diariodarepublica.pt/dr/detalhe/aviso-extrato/2-2027-8</link></item>
+<item><title>Declaração de Retificação n.º 3/2027</title><description>Retifica a tabela remuneratoria unica.</description>
+<link>https://diariodarepublica.pt/dr/detalhe/declaracao-retificacao/3-2027-7</link></item>
+<item><title>Decreto-Lei n.º 4/2027</title><description>Altera a tabela remuneratoria unica.</description>
+<link>https://diariodarepublica.pt/dr/detalhe/decreto-lei/4-2027-6</link></item>
+</channel></rss>"""
+        config = {"fontes": {"dr2": {"tipo": "rss", "url": "https://dr/serie2.xml"}}, "temas": CONFIG["temas"]}
+        state, _ = vigia.daily(vigia.empty_state(), config, lambda url: rss, lambda url: False, NOW)
+        links = [p["link"] for p in state["pistas"]]
+        self.assertEqual(links, ["https://diariodarepublica.pt/dr/detalhe/declaracao-retificacao/3-2027-7",
+                                 "https://diariodarepublica.pt/dr/detalhe/decreto-lei/4-2027-6"])
+        self.assertEqual(sorted(state["fontes"]["dr2"]["vistos"]), sorted(links))
+
+    def test_rss_with_zero_items_counts_as_a_failure(self):
+        empty = '<rss version="2.0"><channel><title>Diário</title></channel></rss>'
+        config = {"fontes": {"dr2": {"tipo": "rss", "url": "https://dr/serie2.xml"}}, "temas": CONFIG["temas"]}
+        state, issues = vigia.empty_state(), []
+        for day in range(3):
+            state, new = vigia.daily(state, config, lambda url: empty, lambda url: False, NOW + datetime.timedelta(days=day))
+            issues += new
+        self.assertEqual(state["falhas"]["dr2"], ["2027-01-05", "2027-01-06", "2027-01-07"])
+        self.assertEqual([i["titulo"] for i in issues], ["Fonte inacessível: dr2"])
+        self.assertIn("nenhum item", issues[0]["corpo"])
+
+    def test_twice_a_day_counts_one_failure_per_day(self):
+        config = {"fontes": {"dr1": {"tipo": "rss", "url": "https://dr/off.xml"}}, "temas": CONFIG["temas"]}
+        fetch, exists = pages()
+        state = vigia.empty_state()
+        for hours in (0, 15, 24, 39):
+            state, _ = vigia.daily(state, config, fetch, exists, NOW + datetime.timedelta(hours=hours))
+        self.assertEqual(state["falhas"]["dr1"], ["2027-01-05", "2027-01-06"])
+
+
+def open_issue(number, labels, created, title="Novidades da semana (2027-01-01)", updated=None):
+    return {"number": number, "title": title, "createdAt": created, "updatedAt": updated or created,
+            "labels": [{"name": n} for n in labels]}
+
+
+class StaleIssuesTest(unittest.TestCase):
+    NOW = datetime.datetime(2027, 1, 11, 7, 0, tzinfo=datetime.timezone.utc)
+
+    def test_old_novidade_and_rever_issues_get_one_warning_each(self):
+        abertas = [open_issue(5, ["novidade"], "2027-01-04T07:00:00Z"),
+                   open_issue(9, ["rever", "precisa-de-ti"], "2026-12-01T10:00:00Z", "Precisa de ti: X", "2027-01-08T10:00:00Z")]
+        out = vigia.stale_issues(abertas, self.NOW)
+        self.assertEqual([i["titulo"] for i in out], ["Precisa de ti: a rotina não tratou #5", "Precisa de ti: a rotina não tratou #9"])
+        for i in out:
+            self.assertEqual(i["tipo"], "criar")
+            self.assertEqual(i["etiquetas"], ["precisa-de-ti"])
+            self.assertFalse(i["fechar"])
+        self.assertIn("#5", out[0]["corpo"])
+
+    def test_recent_unlabelled_and_other_issues_are_ignored(self):
+        abertas = [open_issue(5, ["novidade"], "2027-01-09T08:00:00Z"),            # 1 dia 23 h: ainda não
+                   open_issue(6, ["precisa-de-ti"], "2027-01-01T08:00:00Z"),       # etiqueta que não conta
+                   open_issue(7, [], "2027-01-01T08:00:00Z"),
+                   open_issue(8, ["rever"], "2026-12-01T08:00:00Z", "Precisa de ti: Y", "2027-01-10T08:00:00Z")]  # reaberta ontem
+        self.assertEqual(vigia.stale_issues(abertas, self.NOW), [])
+
+    def test_exactly_two_days_is_not_yet_stale(self):
+        abertas = [open_issue(5, ["novidade"], "2027-01-09T07:00:00Z")]
+        self.assertEqual(vigia.stale_issues(abertas, self.NOW), [])
+        abertas = [open_issue(5, ["novidade"], "2027-01-09T06:59:59Z")]
+        self.assertEqual(len(vigia.stale_issues(abertas, self.NOW)), 1)
+
+    def test_no_duplicate_when_the_warning_is_already_open(self):
+        abertas = [open_issue(5, ["novidade"], "2027-01-04T07:00:00Z"),
+                   open_issue(6, ["precisa-de-ti"], "2027-01-05T07:00:00Z", "Precisa de ti: a rotina não tratou #5")]
+        self.assertEqual(vigia.stale_issues(abertas, self.NOW), [])
+
+    def test_cli_weekly_with_abertas_adds_the_warning_after_the_weekly_issue(self):
+        d = Path(tempfile.mkdtemp())
+        (d / "vigia.json").write_text(json.dumps(CONFIG), encoding="utf-8")
+        state = vigia.empty_state()
+        state["pistas"] = [{"temas": ["irs"], "titulo": "T", "resumo": "", "link": "https://x", "fonte": "dr2", "vistaEm": "2027-01-04"}]
+        (d / "estado.json").write_text(json.dumps(state), encoding="utf-8")
+        (d / "abertas.json").write_text(json.dumps([open_issue(5, ["novidade"], "2020-01-01T00:00:00Z")]), encoding="utf-8")
+        vigia.main(["semanal", "--config", str(d / "vigia.json"), "--estado", str(d / "estado.json"),
+                    "--issues", str(d / "issues.json"), "--abertas", str(d / "abertas.json")])
+        titles = [i["titulo"] for i in json.loads((d / "issues.json").read_text())]
+        self.assertEqual(len(titles), 2)
+        self.assertTrue(titles[0].startswith("Novidades da semana"))
+        self.assertEqual(titles[1], "Precisa de ti: a rotina não tratou #5")
+
+    def test_cli_weekly_without_leads_still_warns(self):
+        d = Path(tempfile.mkdtemp())
+        (d / "vigia.json").write_text(json.dumps(CONFIG), encoding="utf-8")
+        (d / "abertas.json").write_text(json.dumps([open_issue(5, ["novidade"], "2020-01-01T00:00:00Z")]), encoding="utf-8")
+        vigia.main(["semanal", "--config", str(d / "vigia.json"), "--estado", str(d / "estado.json"),
+                    "--issues", str(d / "issues.json"), "--abertas", str(d / "abertas.json")])
+        self.assertEqual(len(json.loads((d / "issues.json").read_text())), 1)
+
+    def test_cli_bad_abertas_file_is_a_clear_error_and_keeps_the_state(self):
+        d = Path(tempfile.mkdtemp())
+        (d / "vigia.json").write_text(json.dumps(CONFIG), encoding="utf-8")
+        (d / "abertas.json").write_text("{nao", encoding="utf-8")
+        with self.assertRaises(SystemExit) as cm:
+            vigia.main(["semanal", "--config", str(d / "vigia.json"), "--estado", str(d / "estado.json"),
+                        "--abertas", str(d / "abertas.json")])
+        self.assertIn("issues abertas", str(cm.exception))
+        self.assertFalse((d / "estado.json").exists())
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,5 +1,10 @@
 name: Validar catálogo
-on: [push, pull_request]
+on:
+  push:
+    branches-ignore: ['claude/**']
+  pull_request:
+permissions:
+  contents: read
 jobs:
   validar:
     runs-on: ubuntu-latest
