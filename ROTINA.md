@@ -32,9 +32,18 @@ Faz isto **primeiro**, antes de editares o que quer que seja, haja ou não algo 
 2. Escolhe o nome: olha para `relatorios/` em `origin/main` (`git ls-tree --name-only origin/main relatorios/`) e para os ramos existentes (`git ls-remote --heads origin 'claude/*'`). Usa o primeiro nome livre entre `AAAA-MM-DD`, `AAAA-MM-DD-2`, `AAAA-MM-DD-3`… (hoje), livre nas duas listas. O **mesmo sufixo** serve o ramo (`claude/atualizacao-<sufixo>`) e o relatório (`relatorios/<sufixo>.json`).
 3. `git checkout -b claude/atualizacao-<sufixo> origin/main`. O portão recusa um ramo que não parta do `origin/main` atual.
 
+## Ler um diploma do Diário da República
+
+As páginas `diariodarepublica.pt/dr/detalhe/…` só mostram o conteúdo com JavaScript: um pedido direto devolve uma página vazia. Lê sempre o PDF:
+
+1. O número no fim do link é o `conteudoId` (em `…/despacho/233-a-2026-998488151` é `998488151`).
+2. `curl -s -o /dev/null -w '%{redirect_url}' "https://diariodarepublica.pt/redirect/LinkFicheiroAntigo.aspx?conteudoId=<conteudoId>"` devolve o endereço do PDF. Só o aceitas se começar por `https://files.diariodarepublica.pt/`.
+3. Descarrega-o (`curl -s -o /tmp/diploma.pdf "<endereço>"`) e tira o texto com `pdftotext -layout /tmp/diploma.pdf -`. Se não houver `pdftotext`, usa `python3` com `pypdf`. O PDF vem cifrado sem palavra-passe, por isso o `pypdf` precisa do `cryptography`. Se não houver nenhuma das duas ferramentas, a pista vai para `precisaDeTi` com o motivo «sem ferramenta para ler o PDF».
+4. Em `sources`, põe o endereço do PDF (`files.diariodarepublica.pt`). O link da página de detalhe pode ir junto.
+
 ## Para cada pista
 
-1. Abre o link e lê o título e o sumário. Liga-a a uma tabela pelo tema (`tools/vigia.json`: cada tema diz que tabelas cobre).
+1. Abre o link e lê o título e o sumário (num link do Diário da República, pelo PDF: ver acima). Liga-a a uma tabela pelo tema (`tools/vigia.json`: cada tema diz que tabelas cobre).
 2. Não toca o catálogo (outro assunto, ou nada de novo face ao que já está publicado) → `semAlteracoes` com uma frase de motivo.
 3. Pede estrutura nova (uma carreira muda as posições ou os níveis de forma que o mapa abaixo não cobre, um suplemento novo, uma regra de cálculo nova, uma região nova) → `precisaDeTi` com o que encontraste e as fontes.
 4. É uma versão nova ou uma retificação de uma tabela que já existe → segue «Preparar uma versão».
