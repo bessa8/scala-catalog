@@ -281,10 +281,12 @@ class WorkflowsTest(unittest.TestCase):
         # só apaga quando o ramo não foi trazido e o nome é inválido; um ramo válido nunca se apaga por um fetch falhado
         self.assertIn("git rev-parse --verify -q refs/remotes/propostas/ramo", script)
         self.assertIn('elif ! python3 -I confiavel/tools/propostas.py nome "$RAMO" && git push "$PROPOSTAS_SSH" ":refs/heads/$RAMO"', script)
-        # uma só issue aberta por ramo
+        # uma só issue aberta por ramo: se já houver, comenta nela; o erro fica no registo antes das issues
         self.assertLess(script.index("gh issue list --state open --search"), script.index("gh issue create"))
         self.assertIn('select(.title == \\"$TITULO\\")', script)
-        self.assertIn('if [ "$JA" = "0" ]', script)
+        self.assertIn('if [ -z "$JA" ]', script)
+        self.assertIn('gh issue comment "$JA"', script)
+        self.assertLess(script.index('echo "::error::$ESTADO $DESTINO"'), script.index("gh issue list"))
 
     def test_publicar_other_failure_opens_a_single_issue(self):
         publicar = self.job(read("publicar.yml"), "publicar")

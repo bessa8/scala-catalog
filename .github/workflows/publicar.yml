@@ -207,12 +207,15 @@ jobs:
           else
             DESTINO="O ramo ficou no repositório das propostas."
           fi
+          echo "::error::$ESTADO $DESTINO"  # fica no registo mesmo que as issues falhem
           TITULO="Precisa de ti: a publicação de $RAMO falhou"
-          JA=$(gh issue list --state open --search "in:title \"$TITULO\"" --json title --jq "[.[] | select(.title == \"$TITULO\")] | length")
-          if [ "$JA" = "0" ]; then
+          JA=$(gh issue list --state open --search "in:title \"$TITULO\"" --json number,title --jq "[.[] | select(.title == \"$TITULO\")][0].number // empty")
+          if [ -z "$JA" ]; then
             gh label create precisa-de-ti --force
             gh issue create --label precisa-de-ti --title "$TITULO" \
               --body "$ESTADO $DESTINO Ver $RUN_URL"
+          else
+            gh issue comment "$JA" --body "Voltou a falhar. $ESTADO $DESTINO Ver $RUN_URL"
           fi
       - name: Avisar outra falha
         if: (failure() && needs.ver.outputs.ramo == '') || steps.espelhar.outcome == 'failure'
