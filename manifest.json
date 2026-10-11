@@ -61,10 +61,10 @@
     },
     {
       "path": "careers/enfermagem.json",
-      "sha256": "536d029c3ade6fed28bb754b5c65c2072305b20611fced00e34030650ccb0cb8",
-      "bytes": 20790,
+      "sha256": "30aa4c69086fb2b4c12649e3692d5b2bc3eea2924a5b3699525f29919a89b077",
+      "bytes": 20332,
       "format": 2,
-      "published": "2026-10-10"
+      "published": "2026-10-11"
     },
     {
       "path": "careers/enfermeiro-privado.json",
@@ -82,10 +82,10 @@
     },
     {
       "path": "careers/farmaceutico.json",
-      "sha256": "2ea851b31d73c0709d3785a2a54cc728ccadfd1ba5915ff69944594843478871",
-      "bytes": 8282,
+      "sha256": "0c94a157f8c7b30615e732f24966c3d52ab2e33539714f9d2e9c3450bfcfbf6b",
+      "bytes": 8187,
       "format": 2,
-      "published": "2026-10-10"
+      "published": "2026-10-11"
     },
     {
       "path": "careers/farmacia.json",
@@ -345,6 +345,20 @@
       "bytes": 5860,
       "format": 2,
       "published": "2026-10-07"
+    },
+    {
+      "path": "tables/enfermagem.2026-01-01.json",
+      "sha256": "b77cb231b79180d698f55fa95d560677933cca4f15118843028f9870eceae808",
+      "bytes": 2923,
+      "format": 2,
+      "published": "2026-10-11"
+    },
+    {
+      "path": "tables/farmaceutico.2026-01-01.json",
+      "sha256": "3c889308ac9cc04e5d84c6e827ff26db4553ba07b32789e27caf5ba19debfa41",
+      "bytes": 2453,
+      "format": 2,
+      "published": "2026-10-11"
     },
     {
       "path": "tables/medica.2026-01-01.json",

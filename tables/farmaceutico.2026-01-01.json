@@ -1,0 +1,68 @@
+{
+  "format": 2,
+  "id": "farmaceutico",
+  "published": "2026-10-11",
+  "effective": "2026-01-01",
+  "title": {
+    "pt": "Carreira especial farmacêutica",
+    "en": "Pharmacist career"
+  },
+  "unit": "monthly",
+  "values": {
+    "assistente-1": 208284,
+    "assistente-2": 219127,
+    "assistente-3": 229969,
+    "assistente-4": 240811,
+    "assistente-5": 251653,
+    "assistente-6": 262497,
+    "assistente-7": 273436,
+    "assessor-1": 267917,
+    "assessor-2": 284725,
+    "assessor-3": 296189,
+    "assessor-4": 307729,
+    "assessor-5": 319267,
+    "assessor-6": 330807,
+    "assessor-senior-1": 319267,
+    "assessor-senior-2": 330807,
+    "assessor-senior-3": 359657,
+    "assessor-senior-4": 388506,
+    "assessor-senior-5": 417355
+  },
+  "sources": [
+    {
+      "title": "Decreto-Lei n.º 109/2017, de 30 de agosto (artigos 5.º e 15.º: categorias e posições da carreira especial farmacêutica)",
+      "url": "https://files.diariodarepublica.pt/1s/2017/08/16700/0523305238.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 45/2025, de 27 de março (artigos 5.º e 6.º e anexo III: tabela de 2026)",
+      "url": "https://files.diariodarepublica.pt/1s/2025/03/06100/0001900025.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026)",
+      "url": "https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026)",
+      "url": "https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Lei n.º 18/2016, de 20 de junho (artigo 105.º da LTFP: período normal de trabalho de 35 horas por semana)",
+      "url": "https://files.diariodarepublica.pt/1s/2016/06/11600/0190401905.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026)",
+      "url": "https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026)",
+      "url": "https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf",
+      "consulted": "2026-10-10"
+    }
+  ]
+}

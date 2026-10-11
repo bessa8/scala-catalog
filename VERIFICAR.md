@@ -4,6 +4,77 @@ Gerado por `python3 tools/catalog.py report`. Ler valor a valor antes de publica
 
 ## Tabelas
 
+### Carreira especial de enfermagem (`enfermagem`) — vigência 2026-01-01, publicada 2026-10-11
+
+- `enfermeiro-1`: 1 657,04 €
+- `enfermeiro-2`: 1 867,57 €
+- `enfermeiro-3`: 2 082,84 €
+- `enfermeiro-4`: 2 299,69 €
+- `enfermeiro-5`: 2 462,31 €
+- `enfermeiro-6`: 2 624,97 €
+- `enfermeiro-7`: 2 790,67 €
+- `enfermeiro-8`: 2 961,89 €
+- `enfermeiro-9`: 3 134,97 €
+- `enfermeiro-10`: 3 308,07 €
+- `enfermeiro-11`: 3 481,16 €
+- `especialista-1`: 1 920,20 €
+- `especialista-2`: 2 137,05 €
+- `especialista-3`: 2 299,69 €
+- `especialista-4`: 2 462,31 €
+- `especialista-5`: 2 624,97 €
+- `especialista-6`: 2 790,67 €
+- `especialista-7`: 2 961,89 €
+- `especialista-8`: 3 134,97 €
+- `especialista-9`: 3 308,07 €
+- `especialista-10`: 3 481,16 €
+- `gestor-1`: 2 679,17 €
+- `gestor-2`: 2 904,18 €
+- `gestor-3`: 3 134,97 €
+- `gestor-4`: 3 365,77 €
+- `gestor-5`: 3 538,86 €
+- `gestor-6`: 3 711,96 €
+- `gestor-7`: 3 827,36 €
+
+Fontes:
+  - Decreto-Lei n.º 111/2024, de 19 de dezembro (artigo 4.º e anexo III: tabela remuneratória de 2026) — https://files.diariodarepublica.pt/1s/2024/12/24600/0001200016.pdf (consultado em 2026-10-10)
+  - Decreto-Lei n.º 71/2019, de 27 de maio (regime da carreira especial de enfermagem) — https://files.diariodarepublica.pt/1s/2019/05/10100/0262602642.pdf (consultado em 2026-10-10)
+  - Lei n.º 51/2025, de 7 de abril (elimina as posições intermédias; não altera a tabela de 2026) — https://files.diariodarepublica.pt/1s/2025/04/06800/0000700009.pdf (consultado em 2026-10-10)
+  - Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026) — https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf (consultado em 2026-10-10)
+  - DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026) — https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf (consultado em 2026-10-10)
+  - Lei n.º 18/2016, de 20 de junho (artigo 105.º da LTFP: período normal de trabalho de 35 horas por semana) — https://files.diariodarepublica.pt/1s/2016/06/11600/0190401905.pdf (consultado em 2026-10-10)
+  - Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026) — https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf (consultado em 2026-10-10)
+  - DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026) — https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf (consultado em 2026-10-10)
+
+### Carreira especial farmacêutica (`farmaceutico`) — vigência 2026-01-01, publicada 2026-10-11
+
+- `assistente-1`: 2 082,84 €
+- `assistente-2`: 2 191,27 €
+- `assistente-3`: 2 299,69 €
+- `assistente-4`: 2 408,11 €
+- `assistente-5`: 2 516,53 €
+- `assistente-6`: 2 624,97 €
+- `assistente-7`: 2 734,36 €
+- `assessor-1`: 2 679,17 €
+- `assessor-2`: 2 847,25 €
+- `assessor-3`: 2 961,89 €
+- `assessor-4`: 3 077,29 €
+- `assessor-5`: 3 192,67 €
+- `assessor-6`: 3 308,07 €
+- `assessor-senior-1`: 3 192,67 €
+- `assessor-senior-2`: 3 308,07 €
+- `assessor-senior-3`: 3 596,57 €
+- `assessor-senior-4`: 3 885,06 €
+- `assessor-senior-5`: 4 173,55 €
+
+Fontes:
+  - Decreto-Lei n.º 109/2017, de 30 de agosto (artigos 5.º e 15.º: categorias e posições da carreira especial farmacêutica) — https://files.diariodarepublica.pt/1s/2017/08/16700/0523305238.pdf (consultado em 2026-10-10)
+  - Decreto-Lei n.º 45/2025, de 27 de março (artigos 5.º e 6.º e anexo III: tabela de 2026) — https://files.diariodarepublica.pt/1s/2025/03/06100/0001900025.pdf (consultado em 2026-10-10)
+  - Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026) — https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf (consultado em 2026-10-10)
+  - DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026) — https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf (consultado em 2026-10-10)
+  - Lei n.º 18/2016, de 20 de junho (artigo 105.º da LTFP: período normal de trabalho de 35 horas por semana) — https://files.diariodarepublica.pt/1s/2016/06/11600/0190401905.pdf (consultado em 2026-10-10)
+  - Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026) — https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf (consultado em 2026-10-10)
+  - DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026) — https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf (consultado em 2026-10-10)
+
 ### Carreira médica e internato médico (`medica`) — vigência 2026-01-01, publicada 2026-10-10
 
 - `assistente-graduado-senior-40h-1`: 4 865,94 €
@@ -407,67 +478,67 @@ Fontes da carreira:
 #### Setor Público
 
 - Enfermeiro / 35 h/semana (35 h/semana, salário mensal)
-  - 1.ª posição · nível 19 — tabela `tru`, chave `19`: 1 657,04 €
-  - 2.ª posição · nível 23 — tabela `tru`, chave `23`: 1 867,57 €
-  - 3.ª posição · nível 27 — tabela `tru`, chave `27`: 2 082,84 €
-  - 4.ª posição · nível 31 — tabela `tru`, chave `31`: 2 299,69 €
-  - 5.ª posição · nível 34 — tabela `tru`, chave `34`: 2 462,31 €
-  - 6.ª posição · nível 37 — tabela `tru`, chave `37`: 2 624,97 €
-  - 7.ª posição · nível 40 — tabela `tru`, chave `40`: 2 790,67 €
-  - 8.ª posição · nível 43 — tabela `tru`, chave `43`: 2 961,89 €
-  - 9.ª posição · nível 46 — tabela `tru`, chave `46`: 3 134,97 €
-  - 10.ª posição · nível 49 — tabela `tru`, chave `49`: 3 308,07 €
-  - 11.ª posição · nível 52 — tabela `tru`, chave `52`: 3 481,16 €
+  - 1.ª posição — tabela `enfermagem`, chave `enfermeiro-1`: 1 657,04 €
+  - 2.ª posição — tabela `enfermagem`, chave `enfermeiro-2`: 1 867,57 €
+  - 3.ª posição — tabela `enfermagem`, chave `enfermeiro-3`: 2 082,84 €
+  - 4.ª posição — tabela `enfermagem`, chave `enfermeiro-4`: 2 299,69 €
+  - 5.ª posição — tabela `enfermagem`, chave `enfermeiro-5`: 2 462,31 €
+  - 6.ª posição — tabela `enfermagem`, chave `enfermeiro-6`: 2 624,97 €
+  - 7.ª posição — tabela `enfermagem`, chave `enfermeiro-7`: 2 790,67 €
+  - 8.ª posição — tabela `enfermagem`, chave `enfermeiro-8`: 2 961,89 €
+  - 9.ª posição — tabela `enfermagem`, chave `enfermeiro-9`: 3 134,97 €
+  - 10.ª posição — tabela `enfermagem`, chave `enfermeiro-10`: 3 308,07 €
+  - 11.ª posição — tabela `enfermagem`, chave `enfermeiro-11`: 3 481,16 €
 - Enfermeiro / Só horas extra (expansão) (0 h/semana, à hora, tirado do mensal (só extra))
-  - 1.ª posição · nível 19 — tabela `tru`, chave `19`: 1 657,04 €
-  - 2.ª posição · nível 23 — tabela `tru`, chave `23`: 1 867,57 €
-  - 3.ª posição · nível 27 — tabela `tru`, chave `27`: 2 082,84 €
-  - 4.ª posição · nível 31 — tabela `tru`, chave `31`: 2 299,69 €
-  - 5.ª posição · nível 34 — tabela `tru`, chave `34`: 2 462,31 €
-  - 6.ª posição · nível 37 — tabela `tru`, chave `37`: 2 624,97 €
-  - 7.ª posição · nível 40 — tabela `tru`, chave `40`: 2 790,67 €
-  - 8.ª posição · nível 43 — tabela `tru`, chave `43`: 2 961,89 €
-  - 9.ª posição · nível 46 — tabela `tru`, chave `46`: 3 134,97 €
-  - 10.ª posição · nível 49 — tabela `tru`, chave `49`: 3 308,07 €
-  - 11.ª posição · nível 52 — tabela `tru`, chave `52`: 3 481,16 €
+  - 1.ª posição — tabela `enfermagem`, chave `enfermeiro-1`: 1 657,04 €
+  - 2.ª posição — tabela `enfermagem`, chave `enfermeiro-2`: 1 867,57 €
+  - 3.ª posição — tabela `enfermagem`, chave `enfermeiro-3`: 2 082,84 €
+  - 4.ª posição — tabela `enfermagem`, chave `enfermeiro-4`: 2 299,69 €
+  - 5.ª posição — tabela `enfermagem`, chave `enfermeiro-5`: 2 462,31 €
+  - 6.ª posição — tabela `enfermagem`, chave `enfermeiro-6`: 2 624,97 €
+  - 7.ª posição — tabela `enfermagem`, chave `enfermeiro-7`: 2 790,67 €
+  - 8.ª posição — tabela `enfermagem`, chave `enfermeiro-8`: 2 961,89 €
+  - 9.ª posição — tabela `enfermagem`, chave `enfermeiro-9`: 3 134,97 €
+  - 10.ª posição — tabela `enfermagem`, chave `enfermeiro-10`: 3 308,07 €
+  - 11.ª posição — tabela `enfermagem`, chave `enfermeiro-11`: 3 481,16 €
 - Enfermeiro especialista / 35 h/semana (35 h/semana, salário mensal)
-  - 1.ª posição · nível 24 — tabela `tru`, chave `24`: 1 920,20 €
-  - 2.ª posição · nível 28 — tabela `tru`, chave `28`: 2 137,05 €
-  - 3.ª posição · nível 31 — tabela `tru`, chave `31`: 2 299,69 €
-  - 4.ª posição · nível 34 — tabela `tru`, chave `34`: 2 462,31 €
-  - 5.ª posição · nível 37 — tabela `tru`, chave `37`: 2 624,97 €
-  - 6.ª posição · nível 40 — tabela `tru`, chave `40`: 2 790,67 €
-  - 7.ª posição · nível 43 — tabela `tru`, chave `43`: 2 961,89 €
-  - 8.ª posição · nível 46 — tabela `tru`, chave `46`: 3 134,97 €
-  - 9.ª posição · nível 49 — tabela `tru`, chave `49`: 3 308,07 €
-  - 10.ª posição · nível 52 — tabela `tru`, chave `52`: 3 481,16 €
+  - 1.ª posição — tabela `enfermagem`, chave `especialista-1`: 1 920,20 €
+  - 2.ª posição — tabela `enfermagem`, chave `especialista-2`: 2 137,05 €
+  - 3.ª posição — tabela `enfermagem`, chave `especialista-3`: 2 299,69 €
+  - 4.ª posição — tabela `enfermagem`, chave `especialista-4`: 2 462,31 €
+  - 5.ª posição — tabela `enfermagem`, chave `especialista-5`: 2 624,97 €
+  - 6.ª posição — tabela `enfermagem`, chave `especialista-6`: 2 790,67 €
+  - 7.ª posição — tabela `enfermagem`, chave `especialista-7`: 2 961,89 €
+  - 8.ª posição — tabela `enfermagem`, chave `especialista-8`: 3 134,97 €
+  - 9.ª posição — tabela `enfermagem`, chave `especialista-9`: 3 308,07 €
+  - 10.ª posição — tabela `enfermagem`, chave `especialista-10`: 3 481,16 €
 - Enfermeiro especialista / Só horas extra (expansão) (0 h/semana, à hora, tirado do mensal (só extra))
-  - 1.ª posição · nível 24 — tabela `tru`, chave `24`: 1 920,20 €
-  - 2.ª posição · nível 28 — tabela `tru`, chave `28`: 2 137,05 €
-  - 3.ª posição · nível 31 — tabela `tru`, chave `31`: 2 299,69 €
-  - 4.ª posição · nível 34 — tabela `tru`, chave `34`: 2 462,31 €
-  - 5.ª posição · nível 37 — tabela `tru`, chave `37`: 2 624,97 €
-  - 6.ª posição · nível 40 — tabela `tru`, chave `40`: 2 790,67 €
-  - 7.ª posição · nível 43 — tabela `tru`, chave `43`: 2 961,89 €
-  - 8.ª posição · nível 46 — tabela `tru`, chave `46`: 3 134,97 €
-  - 9.ª posição · nível 49 — tabela `tru`, chave `49`: 3 308,07 €
-  - 10.ª posição · nível 52 — tabela `tru`, chave `52`: 3 481,16 €
+  - 1.ª posição — tabela `enfermagem`, chave `especialista-1`: 1 920,20 €
+  - 2.ª posição — tabela `enfermagem`, chave `especialista-2`: 2 137,05 €
+  - 3.ª posição — tabela `enfermagem`, chave `especialista-3`: 2 299,69 €
+  - 4.ª posição — tabela `enfermagem`, chave `especialista-4`: 2 462,31 €
+  - 5.ª posição — tabela `enfermagem`, chave `especialista-5`: 2 624,97 €
+  - 6.ª posição — tabela `enfermagem`, chave `especialista-6`: 2 790,67 €
+  - 7.ª posição — tabela `enfermagem`, chave `especialista-7`: 2 961,89 €
+  - 8.ª posição — tabela `enfermagem`, chave `especialista-8`: 3 134,97 €
+  - 9.ª posição — tabela `enfermagem`, chave `especialista-9`: 3 308,07 €
+  - 10.ª posição — tabela `enfermagem`, chave `especialista-10`: 3 481,16 €
 - Enfermeiro gestor / 35 h/semana (35 h/semana, salário mensal)
-  - 1.ª posição · nível 38 — tabela `tru`, chave `38`: 2 679,17 €
-  - 2.ª posição · nível 42 — tabela `tru`, chave `42`: 2 904,18 €
-  - 3.ª posição · nível 46 — tabela `tru`, chave `46`: 3 134,97 €
-  - 4.ª posição · nível 50 — tabela `tru`, chave `50`: 3 365,77 €
-  - 5.ª posição · nível 53 — tabela `tru`, chave `53`: 3 538,86 €
-  - 6.ª posição · nível 56 — tabela `tru`, chave `56`: 3 711,96 €
-  - 7.ª posição · nível 58 — tabela `tru`, chave `58`: 3 827,36 €
+  - 1.ª posição — tabela `enfermagem`, chave `gestor-1`: 2 679,17 €
+  - 2.ª posição — tabela `enfermagem`, chave `gestor-2`: 2 904,18 €
+  - 3.ª posição — tabela `enfermagem`, chave `gestor-3`: 3 134,97 €
+  - 4.ª posição — tabela `enfermagem`, chave `gestor-4`: 3 365,77 €
+  - 5.ª posição — tabela `enfermagem`, chave `gestor-5`: 3 538,86 €
+  - 6.ª posição — tabela `enfermagem`, chave `gestor-6`: 3 711,96 €
+  - 7.ª posição — tabela `enfermagem`, chave `gestor-7`: 3 827,36 €
 - Enfermeiro gestor / Só horas extra (expansão) (0 h/semana, à hora, tirado do mensal (só extra))
-  - 1.ª posição · nível 38 — tabela `tru`, chave `38`: 2 679,17 €
-  - 2.ª posição · nível 42 — tabela `tru`, chave `42`: 2 904,18 €
-  - 3.ª posição · nível 46 — tabela `tru`, chave `46`: 3 134,97 €
-  - 4.ª posição · nível 50 — tabela `tru`, chave `50`: 3 365,77 €
-  - 5.ª posição · nível 53 — tabela `tru`, chave `53`: 3 538,86 €
-  - 6.ª posição · nível 56 — tabela `tru`, chave `56`: 3 711,96 €
-  - 7.ª posição · nível 58 — tabela `tru`, chave `58`: 3 827,36 €
+  - 1.ª posição — tabela `enfermagem`, chave `gestor-1`: 2 679,17 €
+  - 2.ª posição — tabela `enfermagem`, chave `gestor-2`: 2 904,18 €
+  - 3.ª posição — tabela `enfermagem`, chave `gestor-3`: 3 134,97 €
+  - 4.ª posição — tabela `enfermagem`, chave `gestor-4`: 3 365,77 €
+  - 5.ª posição — tabela `enfermagem`, chave `gestor-5`: 3 538,86 €
+  - 6.ª posição — tabela `enfermagem`, chave `gestor-6`: 3 711,96 €
+  - 7.ª posição — tabela `enfermagem`, chave `gestor-7`: 3 827,36 €
 
 Fontes da carreira:
   - Decreto-Lei n.º 111/2024, de 19 de dezembro (artigo 4.º e anexo III: tabela remuneratória de 2026) — https://files.diariodarepublica.pt/1s/2024/12/24600/0001200016.pdf (consultado em 2026-10-10)
@@ -509,26 +580,26 @@ Fontes da carreira:
 #### Setor Público
 
 - Farmacêutico assistente / 35 h/semana (35 h/semana, salário mensal)
-  - 1.ª posição · nível 27 — tabela `tru`, chave `27`: 2 082,84 €
-  - 2.ª posição · nível 29 — tabela `tru`, chave `29`: 2 191,27 €
-  - 3.ª posição · nível 31 — tabela `tru`, chave `31`: 2 299,69 €
-  - 4.ª posição · nível 33 — tabela `tru`, chave `33`: 2 408,11 €
-  - 5.ª posição · nível 35 — tabela `tru`, chave `35`: 2 516,53 €
-  - 6.ª posição · nível 37 — tabela `tru`, chave `37`: 2 624,97 €
-  - 7.ª posição · nível 39 — tabela `tru`, chave `39`: 2 734,36 €
+  - 1.ª posição — tabela `farmaceutico`, chave `assistente-1`: 2 082,84 €
+  - 2.ª posição — tabela `farmaceutico`, chave `assistente-2`: 2 191,27 €
+  - 3.ª posição — tabela `farmaceutico`, chave `assistente-3`: 2 299,69 €
+  - 4.ª posição — tabela `farmaceutico`, chave `assistente-4`: 2 408,11 €
+  - 5.ª posição — tabela `farmaceutico`, chave `assistente-5`: 2 516,53 €
+  - 6.ª posição — tabela `farmaceutico`, chave `assistente-6`: 2 624,97 €
+  - 7.ª posição — tabela `farmaceutico`, chave `assistente-7`: 2 734,36 €
 - Farmacêutico assessor / 35 h/semana (35 h/semana, salário mensal)
-  - 1.ª posição · nível 38 — tabela `tru`, chave `38`: 2 679,17 €
-  - 2.ª posição · nível 41 — tabela `tru`, chave `41`: 2 847,25 €
-  - 3.ª posição · nível 43 — tabela `tru`, chave `43`: 2 961,89 €
-  - 4.ª posição · nível 45 — tabela `tru`, chave `45`: 3 077,29 €
-  - 5.ª posição · nível 47 — tabela `tru`, chave `47`: 3 192,67 €
-  - 6.ª posição · nível 49 — tabela `tru`, chave `49`: 3 308,07 €
+  - 1.ª posição — tabela `farmaceutico`, chave `assessor-1`: 2 679,17 €
+  - 2.ª posição — tabela `farmaceutico`, chave `assessor-2`: 2 847,25 €
+  - 3.ª posição — tabela `farmaceutico`, chave `assessor-3`: 2 961,89 €
+  - 4.ª posição — tabela `farmaceutico`, chave `assessor-4`: 3 077,29 €
+  - 5.ª posição — tabela `farmaceutico`, chave `assessor-5`: 3 192,67 €
+  - 6.ª posição — tabela `farmaceutico`, chave `assessor-6`: 3 308,07 €
 - Farmacêutico assessor sénior / 35 h/semana (35 h/semana, salário mensal)
-  - 1.ª posição · nível 47 — tabela `tru`, chave `47`: 3 192,67 €
-  - 2.ª posição · nível 49 — tabela `tru`, chave `49`: 3 308,07 €
-  - 3.ª posição · nível 54 — tabela `tru`, chave `54`: 3 596,57 €
-  - 4.ª posição · nível 59 — tabela `tru`, chave `59`: 3 885,06 €
-  - 5.ª posição · nível 64 — tabela `tru`, chave `64`: 4 173,55 €
+  - 1.ª posição — tabela `farmaceutico`, chave `assessor-senior-1`: 3 192,67 €
+  - 2.ª posição — tabela `farmaceutico`, chave `assessor-senior-2`: 3 308,07 €
+  - 3.ª posição — tabela `farmaceutico`, chave `assessor-senior-3`: 3 596,57 €
+  - 4.ª posição — tabela `farmaceutico`, chave `assessor-senior-4`: 3 885,06 €
+  - 5.ª posição — tabela `farmaceutico`, chave `assessor-senior-5`: 4 173,55 €
 
 Fontes da carreira:
   - Decreto-Lei n.º 109/2017, de 30 de agosto (artigos 5.º e 15.º: categorias e posições da carreira especial farmacêutica) — https://files.diariodarepublica.pt/1s/2017/08/16700/0523305238.pdf (consultado em 2026-10-10)
@@ -2803,7 +2874,7 @@ Fontes:
 
 ### Task 4 — Outras carreiras de saúde
 
-- **Níveis de 2027 (sem euros): enfermagem e carreira farmacêutica.** O DL 111/2024 (anexo IV: enfermeiro 21, 25, 29, 33, 36, 39, 42, 45, 48, 51, 54; especialista 26, 30, 33, 36, 39, 42, 45, 48, 51, 54; gestor 40, 44, 48, 52, 55, 58, 60) e o DL 45/2025 (anexo III, a partir de 2027-01-01: assistente 29 a 41 de dois em dois; assessor 40, 43, 45, 47, 49, 51; assessor sénior 50, 52, 57, 62, 67) já publicam os níveis de 2027, mas os euros dependem da TRU de 2027, ainda não publicada (o DL 29-A/2026 só atualiza 2026). Quando sair, criar `tables/tru.2027-01-01.json` e passar as posições a ler os novos níveis (a estrutura de posições muda, por isso é preciso uma versão nova das carreiras, não só da tabela). Em 2027 as posições de enfermagem (DL 111/2024) e da carreira farmacêutica (DL 45/2025) passam para outros níveis da TRU: antes de publicar a TRU de 2027, estas carreiras precisam de tabelas por posição, como a `medica`, e não da chave de nível da `tru`; sem isso, o aviso de tabela nova aplicaria a cada posição o nível de 2026. URLs: https://files.diariodarepublica.pt/1s/2024/12/24600/0001200016.pdf e https://files.diariodarepublica.pt/1s/2025/03/06100/0001900025.pdf (consultados em 2026-10-10).
+- **Níveis de 2027 (sem euros): enfermagem e carreira farmacêutica.** O DL 111/2024 (anexo IV: enfermeiro 21, 25, 29, 33, 36, 39, 42, 45, 48, 51, 54; especialista 26, 30, 33, 36, 39, 42, 45, 48, 51, 54; gestor 40, 44, 48, 52, 55, 58, 60) e o DL 45/2025 (anexo III, a partir de 2027-01-01: assistente 29 a 41 de dois em dois; assessor 40, 43, 45, 47, 49, 51; assessor sénior 50, 52, 57, 62, 67) já publicam os níveis de 2027, mas os euros dependem da TRU de 2027, ainda não publicada (o DL 29-A/2026 só atualiza 2026). As carreiras já usam tabelas por posição (`tables/enfermagem` e `tables/farmaceutico`, iguais à TRU de 2026); quando sair a TRU de 2027, a rotina publica as versões de 2027 com os níveis acima (mapas em `ROTINA.md`). URLs: https://files.diariodarepublica.pt/1s/2024/12/24600/0001200016.pdf e https://files.diariodarepublica.pt/1s/2025/03/06100/0001900025.pdf (consultados em 2026-10-10).
 - **Enfermeiros, TAS e farmacêuticos com contrato individual de trabalho (ULS e hospitais EPE).** O catálogo usa as tabelas das carreiras especiais com contrato de trabalho em funções públicas. Para quem tem contrato de trabalho (Código do Trabalho) nas EPE: o DL 120/2023, anexo II, artigo 8.º, diz que a tabela salarial dos TAS «é fixada em instrumento de regulamentação coletiva de trabalho»; o DL 45/2025 revogou o artigo 14.º do DL 108/2017 (farmacêuticos das EPE); os ACT/CCT de cada entidade não foram lidos e o formato 2 não distingue o vínculo. **TSDT: sem esta reserva** — a Lei n.º 34/2021, artigo 3.º (que adita o artigo 5.º-A ao DL 25/2019), aplica o regime remuneratório da carreira TSDT «a todos os trabalhadores que estejam integrados» nela, «independentemente do vínculo contratual» (https://files.diariodarepublica.pt/1s/2021/06/11000/0000300006.pdf, lido em 2026-10-10); o DL 110/2017 (TSDT nas EPE) não foi lido.
 - **Técnico superior de saúde: diploma de base (DL 414/91) e ramos.** A carreira (assessor superior, assessor, assistente principal, assistente; escalões por índice) e os euros de 2026 vêm só do SRAP 2026 da DGAEP (secção «carreiras/categorias não revistas de corpos especiais», 35 h e 42 h com «remunerações acrescidas de 32 %»; conferi que os valores de 42 h são os de 35 h × 1,32 ao cêntimo). Não consegui abrir o DL 414/91 (a página do DR https://diariodarepublica.pt/dr/detalhe/decreto-lei/414-1991-344424 é dinâmica e o PDF original não o localizei), por isso não confirmei no diploma a lista dos ramos (artigo 9.º; só encontrei em pesquisas, sem fonte oficial lida, nutrição, psicologia clínica, engenharia sanitária e física hospitalar, por isso as palavras de pesquisa da profissão `tss` não incluem ramos), nem a regra do tempo prolongado, nem os índices. Os euros não saem de uma tabela da TRU, por isso a tabela `tss` guarda os valores do SRAP; fora do catálogo: estagiários (índices 100 e 90; 1 601,06 € e 1 462,79 €), que não são carreira. Atualizar quando o SRAP for revisto.
 - **Residentes farmacêuticos (DL 45/2025, anexo IV).** Em 2026, níveis TRU 18 (1.º e 2.º anos) e 20 (3.º e 4.º anos). Não incluídos: o regime de horas da residência (DL 6/2020) não foi lido.

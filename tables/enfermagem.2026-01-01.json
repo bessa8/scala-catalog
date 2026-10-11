@@ -1,0 +1,83 @@
+{
+  "format": 2,
+  "id": "enfermagem",
+  "published": "2026-10-11",
+  "effective": "2026-01-01",
+  "title": {
+    "pt": "Carreira especial de enfermagem",
+    "en": "Nursing career"
+  },
+  "unit": "monthly",
+  "values": {
+    "enfermeiro-1": 165704,
+    "enfermeiro-2": 186757,
+    "enfermeiro-3": 208284,
+    "enfermeiro-4": 229969,
+    "enfermeiro-5": 246231,
+    "enfermeiro-6": 262497,
+    "enfermeiro-7": 279067,
+    "enfermeiro-8": 296189,
+    "enfermeiro-9": 313497,
+    "enfermeiro-10": 330807,
+    "enfermeiro-11": 348116,
+    "especialista-1": 192020,
+    "especialista-2": 213705,
+    "especialista-3": 229969,
+    "especialista-4": 246231,
+    "especialista-5": 262497,
+    "especialista-6": 279067,
+    "especialista-7": 296189,
+    "especialista-8": 313497,
+    "especialista-9": 330807,
+    "especialista-10": 348116,
+    "gestor-1": 267917,
+    "gestor-2": 290418,
+    "gestor-3": 313497,
+    "gestor-4": 336577,
+    "gestor-5": 353886,
+    "gestor-6": 371196,
+    "gestor-7": 382736
+  },
+  "sources": [
+    {
+      "title": "Decreto-Lei n.º 111/2024, de 19 de dezembro (artigo 4.º e anexo III: tabela remuneratória de 2026)",
+      "url": "https://files.diariodarepublica.pt/1s/2024/12/24600/0001200016.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 71/2019, de 27 de maio (regime da carreira especial de enfermagem)",
+      "url": "https://files.diariodarepublica.pt/1s/2019/05/10100/0262602642.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Lei n.º 51/2025, de 7 de abril (elimina as posições intermédias; não altera a tabela de 2026)",
+      "url": "https://files.diariodarepublica.pt/1s/2025/04/06800/0000700009.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026)",
+      "url": "https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026)",
+      "url": "https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Lei n.º 18/2016, de 20 de junho (artigo 105.º da LTFP: período normal de trabalho de 35 horas por semana)",
+      "url": "https://files.diariodarepublica.pt/1s/2016/06/11600/0190401905.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "Decreto-Lei n.º 29-A/2026, de 30 de janeiro (anexo: montantes pecuniários dos níveis da TRU em 2026)",
+      "url": "https://files.diariodarepublica.pt/1s/2026/01/02103/0000200008.pdf",
+      "consulted": "2026-10-10"
+    },
+    {
+      "title": "DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026)",
+      "url": "https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf",
+      "consulted": "2026-10-10"
+    }
+  ]
+}

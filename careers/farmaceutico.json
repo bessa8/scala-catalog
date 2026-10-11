@@ -1,7 +1,7 @@
 {
   "format": 2,
   "id": "farmaceutico",
-  "published": "2026-10-10",
+  "published": "2026-10-11",
   "title": {
     "pt": "Farmacêutico · hospital público",
     "en": "Pharmacist · public hospital"
@@ -57,65 +57,65 @@
                 {
                   "id": "1",
                   "label": {
-                    "pt": "1.ª posição · nível 27",
-                    "en": "1st position · level 27"
+                    "pt": "1.ª posição",
+                    "en": "1st position"
                   },
-                  "table": "tru",
-                  "key": "27"
+                  "table": "farmaceutico",
+                  "key": "assistente-1"
                 },
                 {
                   "id": "2",
                   "label": {
-                    "pt": "2.ª posição · nível 29",
-                    "en": "2nd position · level 29"
+                    "pt": "2.ª posição",
+                    "en": "2nd position"
                   },
-                  "table": "tru",
-                  "key": "29"
+                  "table": "farmaceutico",
+                  "key": "assistente-2"
                 },
                 {
                   "id": "3",
                   "label": {
-                    "pt": "3.ª posição · nível 31",
-                    "en": "3rd position · level 31"
+                    "pt": "3.ª posição",
+                    "en": "3rd position"
                   },
-                  "table": "tru",
-                  "key": "31"
+                  "table": "farmaceutico",
+                  "key": "assistente-3"
                 },
                 {
                   "id": "4",
                   "label": {
-                    "pt": "4.ª posição · nível 33",
-                    "en": "4th position · level 33"
+                    "pt": "4.ª posição",
+                    "en": "4th position"
                   },
-                  "table": "tru",
-                  "key": "33"
+                  "table": "farmaceutico",
+                  "key": "assistente-4"
                 },
                 {
                   "id": "5",
                   "label": {
-                    "pt": "5.ª posição · nível 35",
-                    "en": "5th position · level 35"
+                    "pt": "5.ª posição",
+                    "en": "5th position"
                   },
-                  "table": "tru",
-                  "key": "35"
+                  "table": "farmaceutico",
+                  "key": "assistente-5"
                 },
                 {
                   "id": "6",
                   "label": {
-                    "pt": "6.ª posição · nível 37",
-                    "en": "6th position · level 37"
+                    "pt": "6.ª posição",
+                    "en": "6th position"
                   },
-                  "table": "tru",
-                  "key": "37"
+                  "table": "farmaceutico",
+                  "key": "assistente-6"
                 },
                 {
                   "id": "7",
                   "label": {
-                    "pt": "7.ª posição · nível 39",
-                    "en": "7th position · level 39"
+                    "pt": "7.ª posição",
+                    "en": "7th position"
                   },
-                  "table": "tru",
-                  "key": "39"
+                  "table": "farmaceutico",
+                  "key": "assistente-7"
                 }
               ]
             }
@@ -140,56 +140,56 @@
                 {
                   "id": "1",
                   "label": {
-                    "pt": "1.ª posição · nível 38",
-                    "en": "1st position · level 38"
+                    "pt": "1.ª posição",
+                    "en": "1st position"
                   },
-                  "table": "tru",
-                  "key": "38"
+                  "table": "farmaceutico",
+                  "key": "assessor-1"
                 },
                 {
                   "id": "2",
                   "label": {
-                    "pt": "2.ª posição · nível 41",
-                    "en": "2nd position · level 41"
+                    "pt": "2.ª posição",
+                    "en": "2nd position"
                   },
-                  "table": "tru",
-                  "key": "41"
+                  "table": "farmaceutico",
+                  "key": "assessor-2"
                 },
                 {
                   "id": "3",
                   "label": {
-                    "pt": "3.ª posição · nível 43",
-                    "en": "3rd position · level 43"
+                    "pt": "3.ª posição",
+                    "en": "3rd position"
                   },
-                  "table": "tru",
-                  "key": "43"
+                  "table": "farmaceutico",
+                  "key": "assessor-3"
                 },
                 {
                   "id": "4",
                   "label": {
-                    "pt": "4.ª posição · nível 45",
-                    "en": "4th position · level 45"
+                    "pt": "4.ª posição",
+                    "en": "4th position"
                   },
-                  "table": "tru",
-                  "key": "45"
+                  "table": "farmaceutico",
+                  "key": "assessor-4"
                 },
                 {
                   "id": "5",
                   "label": {
-                    "pt": "5.ª posição · nível 47",
-                    "en": "5th position · level 47"
+                    "pt": "5.ª posição",
+                    "en": "5th position"
                   },
-                  "table": "tru",
-                  "key": "47"
+                  "table": "farmaceutico",
+                  "key": "assessor-5"
                 },
                 {
                   "id": "6",
                   "label": {
-                    "pt": "6.ª posição · nível 49",
-                    "en": "6th position · level 49"
+                    "pt": "6.ª posição",
+                    "en": "6th position"
                   },
-                  "table": "tru",
-                  "key": "49"
+                  "table": "farmaceutico",
+                  "key": "assessor-6"
                 }
               ]
             }
@@ -214,47 +214,47 @@
                 {
                   "id": "1",
                   "label": {
-                    "pt": "1.ª posição · nível 47",
-                    "en": "1st position · level 47"
+                    "pt": "1.ª posição",
+                    "en": "1st position"
                   },
-                  "table": "tru",
-                  "key": "47"
+                  "table": "farmaceutico",
+                  "key": "assessor-senior-1"
                 },
                 {
                   "id": "2",
                   "label": {
-                    "pt": "2.ª posição · nível 49",
-                    "en": "2nd position · level 49"
+                    "pt": "2.ª posição",
+                    "en": "2nd position"
                   },
-                  "table": "tru",
-                  "key": "49"
+                  "table": "farmaceutico",
+                  "key": "assessor-senior-2"
                 },
                 {
                   "id": "3",
                   "label": {
-                    "pt": "3.ª posição · nível 54",
-                    "en": "3rd position · level 54"
+                    "pt": "3.ª posição",
+                    "en": "3rd position"
                   },
-                  "table": "tru",
-                  "key": "54"
+                  "table": "farmaceutico",
+                  "key": "assessor-senior-3"
                 },
                 {
                   "id": "4",
                   "label": {
-                    "pt": "4.ª posição · nível 59",
-                    "en": "4th position · level 59"
+                    "pt": "4.ª posição",
+                    "en": "4th position"
                   },
-                  "table": "tru",
-                  "key": "59"
+                  "table": "farmaceutico",
+                  "key": "assessor-senior-4"
                 },
                 {
                   "id": "5",
                   "label": {
-                    "pt": "5.ª posição · nível 64",
-                    "en": "5th position · level 64"
+                    "pt": "5.ª posição",
+                    "en": "5th position"
                   },
-                  "table": "tru",
-                  "key": "64"
+                  "table": "farmaceutico",
+                  "key": "assessor-senior-5"
                 }
               ]
             }

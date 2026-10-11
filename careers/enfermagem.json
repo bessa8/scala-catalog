@@ -1,7 +1,7 @@
 {
   "format": 2,
   "id": "enfermagem",
-  "published": "2026-10-10",
+  "published": "2026-10-11",
   "title": {
     "pt": "Enfermagem",
     "en": "Nursing"
@@ -30,101 +30,101 @@
                 {
                   "id": "1",
                   "label": {
-                    "pt": "1.ª posição · nível 19",
-                    "en": "1st position · level 19"
+                    "pt": "1.ª posição",
+                    "en": "1st position"
                   },
-                  "table": "tru",
-                  "key": "19"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-1"
                 },
                 {
                   "id": "2",
                   "label": {
-                    "pt": "2.ª posição · nível 23",
-                    "en": "2nd position · level 23"
+                    "pt": "2.ª posição",
+                    "en": "2nd position"
                   },
-                  "table": "tru",
-                  "key": "23"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-2"
                 },
                 {
                   "id": "3",
                   "label": {
-                    "pt": "3.ª posição · nível 27",
-                    "en": "3rd position · level 27"
+                    "pt": "3.ª posição",
+                    "en": "3rd position"
                   },
-                  "table": "tru",
-                  "key": "27"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-3"
                 },
                 {
                   "id": "4",
                   "label": {
-                    "pt": "4.ª posição · nível 31",
-                    "en": "4th position · level 31"
+                    "pt": "4.ª posição",
+                    "en": "4th position"
                   },
-                  "table": "tru",
-                  "key": "31"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-4"
                 },
                 {
                   "id": "5",
                   "label": {
-                    "pt": "5.ª posição · nível 34",
-                    "en": "5th position · level 34"
+                    "pt": "5.ª posição",
+                    "en": "5th position"
                   },
-                  "table": "tru",
-                  "key": "34"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-5"
                 },
                 {
                   "id": "6",
                   "label": {
-                    "pt": "6.ª posição · nível 37",
-                    "en": "6th position · level 37"
+                    "pt": "6.ª posição",
+                    "en": "6th position"
                   },
-                  "table": "tru",
-                  "key": "37"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-6"
                 },
                 {
                   "id": "7",
                   "label": {
-                    "pt": "7.ª posição · nível 40",
-                    "en": "7th position · level 40"
+                    "pt": "7.ª posição",
+                    "en": "7th position"
                   },
-                  "table": "tru",
-                  "key": "40"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-7"
                 },
                 {
                   "id": "8",
                   "label": {
-                    "pt": "8.ª posição · nível 43",
-                    "en": "8th position · level 43"
+                    "pt": "8.ª posição",
+                    "en": "8th position"
                   },
-                  "table": "tru",
-                  "key": "43"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-8"
                 },
                 {
                   "id": "9",
                   "label": {
-                    "pt": "9.ª posição · nível 46",
-                    "en": "9th position · level 46"
+                    "pt": "9.ª posição",
+                    "en": "9th position"
                   },
-                  "table": "tru",
-                  "key": "46"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-9"
                 },
                 {
                   "id": "10",
                   "label": {
-                    "pt": "10.ª posição · nível 49",
-                    "en": "10th position · level 49"
+                    "pt": "10.ª posição",
+                    "en": "10th position"
                   },
-                  "table": "tru",
-                  "key": "49"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-10"
                 },
                 {
                   "id": "11",
                   "label": {
-                    "pt": "11.ª posição · nível 52",
-                    "en": "11th position · level 52"
+                    "pt": "11.ª posição",
+                    "en": "11th position"
                   },
-                  "table": "tru",
-                  "key": "52"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-11"
                 }
               ]
             },
@@ -140,101 +140,101 @@
                 {
                   "id": "1",
                   "label": {
-                    "pt": "1.ª posição · nível 19",
-                    "en": "1st position · level 19"
+                    "pt": "1.ª posição",
+                    "en": "1st position"
                   },
-                  "table": "tru",
-                  "key": "19"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-1"
                 },
                 {
                   "id": "2",
                   "label": {
-                    "pt": "2.ª posição · nível 23",
-                    "en": "2nd position · level 23"
+                    "pt": "2.ª posição",
+                    "en": "2nd position"
                   },
-                  "table": "tru",
-                  "key": "23"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-2"
                 },
                 {
                   "id": "3",
                   "label": {
-                    "pt": "3.ª posição · nível 27",
-                    "en": "3rd position · level 27"
+                    "pt": "3.ª posição",
+                    "en": "3rd position"
                   },
-                  "table": "tru",
-                  "key": "27"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-3"
                 },
                 {
                   "id": "4",
                   "label": {
-                    "pt": "4.ª posição · nível 31",
-                    "en": "4th position · level 31"
+                    "pt": "4.ª posição",
+                    "en": "4th position"
                   },
-                  "table": "tru",
-                  "key": "31"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-4"
                 },
                 {
                   "id": "5",
                   "label": {
-                    "pt": "5.ª posição · nível 34",
-                    "en": "5th position · level 34"
+                    "pt": "5.ª posição",
+                    "en": "5th position"
                   },
-                  "table": "tru",
-                  "key": "34"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-5"
                 },
                 {
                   "id": "6",
                   "label": {
-                    "pt": "6.ª posição · nível 37",
-                    "en": "6th position · level 37"
+                    "pt": "6.ª posição",
+                    "en": "6th position"
                   },
-                  "table": "tru",
-                  "key": "37"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-6"
                 },
                 {
                   "id": "7",
                   "label": {
-                    "pt": "7.ª posição · nível 40",
-                    "en": "7th position · level 40"
+                    "pt": "7.ª posição",
+                    "en": "7th position"
                   },
-                  "table": "tru",
-                  "key": "40"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-7"
                 },
                 {
                   "id": "8",
                   "label": {
-                    "pt": "8.ª posição · nível 43",
-                    "en": "8th position · level 43"
+                    "pt": "8.ª posição",
+                    "en": "8th position"
                   },
-                  "table": "tru",
-                  "key": "43"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-8"
                 },
                 {
                   "id": "9",
                   "label": {
-                    "pt": "9.ª posição · nível 46",
-                    "en": "9th position · level 46"
+                    "pt": "9.ª posição",
+                    "en": "9th position"
                   },
-                  "table": "tru",
-                  "key": "46"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-9"
                 },
                 {
                   "id": "10",
                   "label": {
-                    "pt": "10.ª posição · nível 49",
-                    "en": "10th position · level 49"
+                    "pt": "10.ª posição",
+                    "en": "10th position"
                   },
-                  "table": "tru",
-                  "key": "49"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-10"
                 },
                 {
                   "id": "11",
                   "label": {
-                    "pt": "11.ª posição · nível 52",
-                    "en": "11th position · level 52"
+                    "pt": "11.ª posição",
+                    "en": "11th position"
                   },
-                  "table": "tru",
-                  "key": "52"
+                  "table": "enfermagem",
+                  "key": "enfermeiro-11"
                 }
               ],
               "calculationHours": 35,
@@ -262,92 +262,92 @@
                 {
                   "id": "1",
                   "label": {
-                    "pt": "1.ª posição · nível 24",
-                    "en": "1st position · level 24"
+                    "pt": "1.ª posição",
+                    "en": "1st position"
                   },
-                  "table": "tru",
-                  "key": "24"
+                  "table": "enfermagem",
+                  "key": "especialista-1"
                 },
                 {
                   "id": "2",
                   "label": {
-                    "pt": "2.ª posição · nível 28",
-                    "en": "2nd position · level 28"
+                    "pt": "2.ª posição",
+                    "en": "2nd position"
                   },
-                  "table": "tru",
-                  "key": "28"
+                  "table": "enfermagem",
+                  "key": "especialista-2"
                 },
                 {
                   "id": "3",
                   "label": {
-                    "pt": "3.ª posição · nível 31",
-                    "en": "3rd position · level 31"
+                    "pt": "3.ª posição",
+                    "en": "3rd position"
                   },
-                  "table": "tru",
-                  "key": "31"
+                  "table": "enfermagem",
+                  "key": "especialista-3"
                 },
                 {
                   "id": "4",
                   "label": {
-                    "pt": "4.ª posição · nível 34",
-                    "en": "4th position · level 34"
+                    "pt": "4.ª posição",
+                    "en": "4th position"
                   },
-                  "table": "tru",
-                  "key": "34"
+                  "table": "enfermagem",
+                  "key": "especialista-4"
                 },
                 {
                   "id": "5",
                   "label": {
-                    "pt": "5.ª posição · nível 37",
-                    "en": "5th position · level 37"
+                    "pt": "5.ª posição",
+                    "en": "5th position"
                   },
-                  "table": "tru",
-                  "key": "37"
+                  "table": "enfermagem",
+                  "key": "especialista-5"
                 },
                 {
                   "id": "6",
                   "label": {
-                    "pt": "6.ª posição · nível 40",
-                    "en": "6th position · level 40"
+                    "pt": "6.ª posição",
+                    "en": "6th position"
                   },
-                  "table": "tru",
-                  "key": "40"
+                  "table": "enfermagem",
+                  "key": "especialista-6"
                 },
                 {
                   "id": "7",
                   "label": {
-                    "pt": "7.ª posição · nível 43",
-                    "en": "7th position · level 43"
+                    "pt": "7.ª posição",
+                    "en": "7th position"
                   },
-                  "table": "tru",
-                  "key": "43"
+                  "table": "enfermagem",
+                  "key": "especialista-7"
                 },
                 {
                   "id": "8",
                   "label": {
-                    "pt": "8.ª posição · nível 46",
-                    "en": "8th position · level 46"
+                    "pt": "8.ª posição",
+                    "en": "8th position"
                   },
-                  "table": "tru",
-                  "key": "46"
+                  "table": "enfermagem",
+                  "key": "especialista-8"
                 },
                 {
                   "id": "9",
                   "label": {
-                    "pt": "9.ª posição · nível 49",
-                    "en": "9th position · level 49"
+                    "pt": "9.ª posição",
+                    "en": "9th position"
                   },
-                  "table": "tru",
-                  "key": "49"
+                  "table": "enfermagem",
+                  "key": "especialista-9"
                 },
                 {
                   "id": "10",
                   "label": {
-                    "pt": "10.ª posição · nível 52",
-                    "en": "10th position · level 52"
+                    "pt": "10.ª posição",
+                    "en": "10th position"
                   },
-                  "table": "tru",
-                  "key": "52"
+                  "table": "enfermagem",
+                  "key": "especialista-10"
                 }
               ]
             },
@@ -363,92 +363,92 @@
                 {
                   "id": "1",
                   "label": {
-                    "pt": "1.ª posição · nível 24",
-                    "en": "1st position · level 24"
+                    "pt": "1.ª posição",
+                    "en": "1st position"
                   },
-                  "table": "tru",
-                  "key": "24"
+                  "table": "enfermagem",
+                  "key": "especialista-1"
                 },
                 {
                   "id": "2",
                   "label": {
-                    "pt": "2.ª posição · nível 28",
-                    "en": "2nd position · level 28"
+                    "pt": "2.ª posição",
+                    "en": "2nd position"
                   },
-                  "table": "tru",
-                  "key": "28"
+                  "table": "enfermagem",
+                  "key": "especialista-2"
                 },
                 {
                   "id": "3",
                   "label": {
-                    "pt": "3.ª posição · nível 31",
-                    "en": "3rd position · level 31"
+                    "pt": "3.ª posição",
+                    "en": "3rd position"
                   },
-                  "table": "tru",
-                  "key": "31"
+                  "table": "enfermagem",
+                  "key": "especialista-3"
                 },
                 {
                   "id": "4",
                   "label": {
-                    "pt": "4.ª posição · nível 34",
-                    "en": "4th position · level 34"
+                    "pt": "4.ª posição",
+                    "en": "4th position"
                   },
-                  "table": "tru",
-                  "key": "34"
+                  "table": "enfermagem",
+                  "key": "especialista-4"
                 },
                 {
                   "id": "5",
                   "label": {
-                    "pt": "5.ª posição · nível 37",
-                    "en": "5th position · level 37"
+                    "pt": "5.ª posição",
+                    "en": "5th position"
                   },
-                  "table": "tru",
-                  "key": "37"
+                  "table": "enfermagem",
+                  "key": "especialista-5"
                 },
                 {
                   "id": "6",
                   "label": {
-                    "pt": "6.ª posição · nível 40",
-                    "en": "6th position · level 40"
+                    "pt": "6.ª posição",
+                    "en": "6th position"
                   },
-                  "table": "tru",
-                  "key": "40"
+                  "table": "enfermagem",
+                  "key": "especialista-6"
                 },
                 {
                   "id": "7",
                   "label": {
-                    "pt": "7.ª posição · nível 43",
-                    "en": "7th position · level 43"
+                    "pt": "7.ª posição",
+                    "en": "7th position"
                   },
-                  "table": "tru",
-                  "key": "43"
+                  "table": "enfermagem",
+                  "key": "especialista-7"
                 },
                 {
                   "id": "8",
                   "label": {
-                    "pt": "8.ª posição · nível 46",
-                    "en": "8th position · level 46"
+                    "pt": "8.ª posição",
+                    "en": "8th position"
                   },
-                  "table": "tru",
-                  "key": "46"
+                  "table": "enfermagem",
+                  "key": "especialista-8"
                 },
                 {
                   "id": "9",
                   "label": {
-                    "pt": "9.ª posição · nível 49",
-                    "en": "9th position · level 49"
+                    "pt": "9.ª posição",
+                    "en": "9th position"
                   },
-                  "table": "tru",
-                  "key": "49"
+                  "table": "enfermagem",
+                  "key": "especialista-9"
                 },
                 {
                   "id": "10",
                   "label": {
-                    "pt": "10.ª posição · nível 52",
-                    "en": "10th position · level 52"
+                    "pt": "10.ª posição",
+                    "en": "10th position"
                   },
-                  "table": "tru",
-                  "key": "52"
+                  "table": "enfermagem",
+                  "key": "especialista-10"
                 }
               ],
               "calculationHours": 35,
@@ -476,65 +476,65 @@
                 {
                   "id": "1",
                   "label": {
-                    "pt": "1.ª posição · nível 38",
-                    "en": "1st position · level 38"
+                    "pt": "1.ª posição",
+                    "en": "1st position"
                   },
-                  "table": "tru",
-                  "key": "38"
+                  "table": "enfermagem",
+                  "key": "gestor-1"
                 },
                 {
                   "id": "2",
                   "label": {
-                    "pt": "2.ª posição · nível 42",
-                    "en": "2nd position · level 42"
+                    "pt": "2.ª posição",
+                    "en": "2nd position"
                   },
-                  "table": "tru",
-                  "key": "42"
+                  "table": "enfermagem",
+                  "key": "gestor-2"
                 },
                 {
                   "id": "3",
                   "label": {
-                    "pt": "3.ª posição · nível 46",
-                    "en": "3rd position · level 46"
+                    "pt": "3.ª posição",
+                    "en": "3rd position"
                   },
-                  "table": "tru",
-                  "key": "46"
+                  "table": "enfermagem",
+                  "key": "gestor-3"
                 },
                 {
                   "id": "4",
                   "label": {
-                    "pt": "4.ª posição · nível 50",
-                    "en": "4th position · level 50"
+                    "pt": "4.ª posição",
+                    "en": "4th position"
                   },
-                  "table": "tru",
-                  "key": "50"
+                  "table": "enfermagem",
+                  "key": "gestor-4"
                 },
                 {
                   "id": "5",
                   "label": {
-                    "pt": "5.ª posição · nível 53",
-                    "en": "5th position · level 53"
+                    "pt": "5.ª posição",
+                    "en": "5th position"
                   },
-                  "table": "tru",
-                  "key": "53"
+                  "table": "enfermagem",
+                  "key": "gestor-5"
                 },
                 {
                   "id": "6",
                   "label": {
-                    "pt": "6.ª posição · nível 56",
-                    "en": "6th position · level 56"
+                    "pt": "6.ª posição",
+                    "en": "6th position"
                   },
-                  "table": "tru",
-                  "key": "56"
+                  "table": "enfermagem",
+                  "key": "gestor-6"
                 },
                 {
                   "id": "7",
                   "label": {
-                    "pt": "7.ª posição · nível 58",
-                    "en": "7th position · level 58"
+                    "pt": "7.ª posição",
+                    "en": "7th position"
                   },
-                  "table": "tru",
-                  "key": "58"
+                  "table": "enfermagem",
+                  "key": "gestor-7"
                 }
               ]
             },
@@ -550,65 +550,65 @@
                 {
                   "id": "1",
                   "label": {
-                    "pt": "1.ª posição · nível 38",
-                    "en": "1st position · level 38"
+                    "pt": "1.ª posição",
+                    "en": "1st position"
                   },
-                  "table": "tru",
-                  "key": "38"
+                  "table": "enfermagem",
+                  "key": "gestor-1"
                 },
                 {
                   "id": "2",
                   "label": {
-                    "pt": "2.ª posição · nível 42",
-                    "en": "2nd position · level 42"
+                    "pt": "2.ª posição",
+                    "en": "2nd position"
                   },
-                  "table": "tru",
-                  "key": "42"
+                  "table": "enfermagem",
+                  "key": "gestor-2"
                 },
                 {
                   "id": "3",
                   "label": {
-                    "pt": "3.ª posição · nível 46",
-                    "en": "3rd position · level 46"
+                    "pt": "3.ª posição",
+                    "en": "3rd position"
                   },
-                  "table": "tru",
-                  "key": "46"
+                  "table": "enfermagem",
+                  "key": "gestor-3"
                 },
                 {
                   "id": "4",
                   "label": {
-                    "pt": "4.ª posição · nível 50",
-                    "en": "4th position · level 50"
+                    "pt": "4.ª posição",
+                    "en": "4th position"
                   },
-                  "table": "tru",
-                  "key": "50"
+                  "table": "enfermagem",
+                  "key": "gestor-4"
                 },
                 {
                   "id": "5",
                   "label": {
-                    "pt": "5.ª posição · nível 53",
-                    "en": "5th position · level 53"
+                    "pt": "5.ª posição",
+                    "en": "5th position"
                   },
-                  "table": "tru",
-                  "key": "53"
+                  "table": "enfermagem",
+                  "key": "gestor-5"
                 },
                 {
                   "id": "6",
                   "label": {
-                    "pt": "6.ª posição · nível 56",
-                    "en": "6th position · level 56"
+                    "pt": "6.ª posição",
+                    "en": "6th position"
                   },
-                  "table": "tru",
-                  "key": "56"
+                  "table": "enfermagem",
+                  "key": "gestor-6"
                 },
                 {
                   "id": "7",
                   "label": {
-                    "pt": "7.ª posição · nível 58",
-                    "en": "7th position · level 58"
+                    "pt": "7.ª posição",
+                    "en": "7th position"
                   },
-                  "table": "tru",
-                  "key": "58"
+                  "table": "enfermagem",
+                  "key": "gestor-7"
                 }
               ],
               "calculationHours": 35,
