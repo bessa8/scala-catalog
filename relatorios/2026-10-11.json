@@ -1,0 +1,12 @@
+{
+  "issue": 1,
+  "publicado": [],
+  "precisaDeTi": [
+    {
+      "titulo": "Despacho n.º 233-A/2026 (IRS) — não consegui ler o texto",
+      "texto": "A pista da vigia (fonte dr2, vista em 2026-10-11) aponta para https://diariodarepublica.pt/dr/detalhe/despacho/233-a-2026-998488151, com o tema IRS e sem resumo. A página do Diário da República é uma aplicação em JavaScript: o pedido direto devolve só a casca da página, sem título, número de diploma, data nem texto. O feed RSS da 2.ª série (files.diariodarepublica.pt/rss/serie2-html.xml), que tem as entradas recentes, não contém este despacho. Assim não consegui confirmar se o despacho altera tabelas de retenção na fonte do IRS (tax/irs-*) ou outro valor do catálogo. Nada foi publicado. Pedido: confirmar no Diário da República se é um despacho com efeitos em tabelas de IRS e, se for, colar aqui o texto ou o número do diploma e a data de publicação, para a rotina o tratar numa rever.",
+      "fontes": ["https://diariodarepublica.pt/dr/detalhe/despacho/233-a-2026-998488151"]
+    }
+  ],
+  "semAlteracoes": []
+}
