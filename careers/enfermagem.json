@@ -131,7 +131,7 @@
             {
               "id": "so-extra",
               "title": {
-                "pt": "Só horas extra (expansão)",
+                "pt": "Só horas extra",
                 "en": "Extra hours only"
               },
               "weeklyHours": 0,
@@ -354,7 +354,7 @@
             {
               "id": "so-extra",
               "title": {
-                "pt": "Só horas extra (expansão)",
+                "pt": "Só horas extra",
                 "en": "Extra hours only"
               },
               "weeklyHours": 0,
@@ -541,7 +541,7 @@
             {
               "id": "so-extra",
               "title": {
-                "pt": "Só horas extra (expansão)",
+                "pt": "Só horas extra",
                 "en": "Extra hours only"
               },
               "weeklyHours": 0,

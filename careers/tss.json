@@ -118,6 +118,56 @@
                   "key": "assessor-superior-42h-4"
                 }
               ]
+            },
+            {
+              "id": "so-extra",
+              "title": {
+                "pt": "Só horas extra",
+                "en": "Extra hours only"
+              },
+              "weeklyHours": 0,
+              "pay": "hourlyFromMonthly",
+              "calculationHours": 35,
+              "templates": "templates/extra.json",
+              "rules": "rules/dl62-79-extra.json",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · índice 195",
+                    "en": "1st position · index 195"
+                  },
+                  "table": "tss",
+                  "key": "assessor-superior-35h-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · índice 205",
+                    "en": "2nd position · index 205"
+                  },
+                  "table": "tss",
+                  "key": "assessor-superior-35h-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · índice 215",
+                    "en": "3rd position · index 215"
+                  },
+                  "table": "tss",
+                  "key": "assessor-superior-35h-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · índice 230",
+                    "en": "4th position · index 230"
+                  },
+                  "table": "tss",
+                  "key": "assessor-superior-35h-4"
+                }
+              ]
             }
           ]
         },
@@ -219,6 +269,56 @@
                   },
                   "table": "tss",
                   "key": "assessor-42h-4"
+                }
+              ]
+            },
+            {
+              "id": "so-extra",
+              "title": {
+                "pt": "Só horas extra",
+                "en": "Extra hours only"
+              },
+              "weeklyHours": 0,
+              "pay": "hourlyFromMonthly",
+              "calculationHours": 35,
+              "templates": "templates/extra.json",
+              "rules": "rules/dl62-79-extra.json",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · índice 160",
+                    "en": "1st position · index 160"
+                  },
+                  "table": "tss",
+                  "key": "assessor-35h-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · índice 175",
+                    "en": "2nd position · index 175"
+                  },
+                  "table": "tss",
+                  "key": "assessor-35h-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · índice 185",
+                    "en": "3rd position · index 185"
+                  },
+                  "table": "tss",
+                  "key": "assessor-35h-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · índice 195",
+                    "en": "4th position · index 195"
+                  },
+                  "table": "tss",
+                  "key": "assessor-35h-4"
                 }
               ]
             }
@@ -342,6 +442,65 @@
                   "key": "assistente-principal-42h-5"
                 }
               ]
+            },
+            {
+              "id": "so-extra",
+              "title": {
+                "pt": "Só horas extra",
+                "en": "Extra hours only"
+              },
+              "weeklyHours": 0,
+              "pay": "hourlyFromMonthly",
+              "calculationHours": 35,
+              "templates": "templates/extra.json",
+              "rules": "rules/dl62-79-extra.json",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · índice 135",
+                    "en": "1st position · index 135"
+                  },
+                  "table": "tss",
+                  "key": "assistente-principal-35h-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · índice 140",
+                    "en": "2nd position · index 140"
+                  },
+                  "table": "tss",
+                  "key": "assistente-principal-35h-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · índice 145",
+                    "en": "3rd position · index 145"
+                  },
+                  "table": "tss",
+                  "key": "assistente-principal-35h-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · índice 155",
+                    "en": "4th position · index 155"
+                  },
+                  "table": "tss",
+                  "key": "assistente-principal-35h-4"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · índice 165",
+                    "en": "5th position · index 165"
+                  },
+                  "table": "tss",
+                  "key": "assistente-principal-35h-5"
+                }
+              ]
             }
           ]
         },
@@ -461,6 +620,65 @@
                   },
                   "table": "tss",
                   "key": "assistente-42h-5"
+                }
+              ]
+            },
+            {
+              "id": "so-extra",
+              "title": {
+                "pt": "Só horas extra",
+                "en": "Extra hours only"
+              },
+              "weeklyHours": 0,
+              "pay": "hourlyFromMonthly",
+              "calculationHours": 35,
+              "templates": "templates/extra.json",
+              "rules": "rules/dl62-79-extra.json",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · índice 120",
+                    "en": "1st position · index 120"
+                  },
+                  "table": "tss",
+                  "key": "assistente-35h-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · índice 125",
+                    "en": "2nd position · index 125"
+                  },
+                  "table": "tss",
+                  "key": "assistente-35h-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · índice 135",
+                    "en": "3rd position · index 135"
+                  },
+                  "table": "tss",
+                  "key": "assistente-35h-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · índice 140",
+                    "en": "4th position · index 140"
+                  },
+                  "table": "tss",
+                  "key": "assistente-35h-4"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · índice 145",
+                    "en": "5th position · index 145"
+                  },
+                  "table": "tss",
+                  "key": "assistente-35h-5"
                 }
               ]
             }

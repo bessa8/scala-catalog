@@ -118,6 +118,83 @@
                   "key": "assistente-7"
                 }
               ]
+            },
+            {
+              "id": "so-extra",
+              "title": {
+                "pt": "Só horas extra",
+                "en": "Extra hours only"
+              },
+              "weeklyHours": 0,
+              "pay": "hourlyFromMonthly",
+              "calculationHours": 35,
+              "templates": "templates/extra.json",
+              "rules": "rules/dl62-79-extra.json",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição",
+                    "en": "1st position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assistente-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição",
+                    "en": "2nd position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assistente-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição",
+                    "en": "3rd position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assistente-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição",
+                    "en": "4th position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assistente-4"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição",
+                    "en": "5th position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assistente-5"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição",
+                    "en": "6th position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assistente-6"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição",
+                    "en": "7th position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assistente-7"
+                }
+              ]
             }
           ]
         },
@@ -192,6 +269,74 @@
                   "key": "assessor-6"
                 }
               ]
+            },
+            {
+              "id": "so-extra",
+              "title": {
+                "pt": "Só horas extra",
+                "en": "Extra hours only"
+              },
+              "weeklyHours": 0,
+              "pay": "hourlyFromMonthly",
+              "calculationHours": 35,
+              "templates": "templates/extra.json",
+              "rules": "rules/dl62-79-extra.json",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição",
+                    "en": "1st position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assessor-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição",
+                    "en": "2nd position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assessor-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição",
+                    "en": "3rd position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assessor-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição",
+                    "en": "4th position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assessor-4"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição",
+                    "en": "5th position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assessor-5"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição",
+                    "en": "6th position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assessor-6"
+                }
+              ]
             }
           ]
         },
@@ -210,6 +355,65 @@
               },
               "weeklyHours": 35,
               "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição",
+                    "en": "1st position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assessor-senior-1"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição",
+                    "en": "2nd position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assessor-senior-2"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição",
+                    "en": "3rd position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assessor-senior-3"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição",
+                    "en": "4th position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assessor-senior-4"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição",
+                    "en": "5th position"
+                  },
+                  "table": "farmaceutico",
+                  "key": "assessor-senior-5"
+                }
+              ]
+            },
+            {
+              "id": "so-extra",
+              "title": {
+                "pt": "Só horas extra",
+                "en": "Extra hours only"
+              },
+              "weeklyHours": 0,
+              "pay": "hourlyFromMonthly",
+              "calculationHours": 35,
+              "templates": "templates/extra.json",
+              "rules": "rules/dl62-79-extra.json",
               "positions": [
                 {
                   "id": "1",

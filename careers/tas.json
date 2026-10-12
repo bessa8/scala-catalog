@@ -127,6 +127,92 @@
                   "key": "13"
                 }
               ]
+            },
+            {
+              "id": "so-extra",
+              "title": {
+                "pt": "Só horas extra",
+                "en": "Extra hours only"
+              },
+              "weeklyHours": 0,
+              "pay": "hourlyFromMonthly",
+              "calculationHours": 35,
+              "templates": "templates/extra.json",
+              "rules": "rules/dl62-79-extra.json",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 6",
+                    "en": "1st position · level 6"
+                  },
+                  "table": "tru",
+                  "key": "6"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 7",
+                    "en": "2nd position · level 7"
+                  },
+                  "table": "tru",
+                  "key": "7"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 8",
+                    "en": "3rd position · level 8"
+                  },
+                  "table": "tru",
+                  "key": "8"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 9",
+                    "en": "4th position · level 9"
+                  },
+                  "table": "tru",
+                  "key": "9"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 10",
+                    "en": "5th position · level 10"
+                  },
+                  "table": "tru",
+                  "key": "10"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 11",
+                    "en": "6th position · level 11"
+                  },
+                  "table": "tru",
+                  "key": "11"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição · nível 12",
+                    "en": "7th position · level 12"
+                  },
+                  "table": "tru",
+                  "key": "12"
+                },
+                {
+                  "id": "8",
+                  "label": {
+                    "pt": "8.ª posição · nível 13",
+                    "en": "8th position · level 13"
+                  },
+                  "table": "tru",
+                  "key": "13"
+                }
+              ]
             }
           ]
         },
@@ -183,6 +269,56 @@
                   "key": "16"
                 }
               ]
+            },
+            {
+              "id": "so-extra",
+              "title": {
+                "pt": "Só horas extra",
+                "en": "Extra hours only"
+              },
+              "weeklyHours": 0,
+              "pay": "hourlyFromMonthly",
+              "calculationHours": 35,
+              "templates": "templates/extra.json",
+              "rules": "rules/dl62-79-extra.json",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 13",
+                    "en": "1st position · level 13"
+                  },
+                  "table": "tru",
+                  "key": "13"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 14",
+                    "en": "2nd position · level 14"
+                  },
+                  "table": "tru",
+                  "key": "14"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 15",
+                    "en": "3rd position · level 15"
+                  },
+                  "table": "tru",
+                  "key": "15"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 16",
+                    "en": "4th position · level 16"
+                  },
+                  "table": "tru",
+                  "key": "16"
+                }
+              ]
             }
           ]
         },
@@ -201,6 +337,92 @@
               },
               "weeklyHours": 35,
               "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 5",
+                    "en": "1st position · level 5"
+                  },
+                  "table": "tru",
+                  "key": "5"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 6",
+                    "en": "2nd position · level 6"
+                  },
+                  "table": "tru",
+                  "key": "6"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 7",
+                    "en": "3rd position · level 7"
+                  },
+                  "table": "tru",
+                  "key": "7"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 8",
+                    "en": "4th position · level 8"
+                  },
+                  "table": "tru",
+                  "key": "8"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 9",
+                    "en": "5th position · level 9"
+                  },
+                  "table": "tru",
+                  "key": "9"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 10",
+                    "en": "6th position · level 10"
+                  },
+                  "table": "tru",
+                  "key": "10"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição · nível 11",
+                    "en": "7th position · level 11"
+                  },
+                  "table": "tru",
+                  "key": "11"
+                },
+                {
+                  "id": "8",
+                  "label": {
+                    "pt": "8.ª posição · nível 12",
+                    "en": "8th position · level 12"
+                  },
+                  "table": "tru",
+                  "key": "12"
+                }
+              ]
+            },
+            {
+              "id": "so-extra",
+              "title": {
+                "pt": "Só horas extra",
+                "en": "Extra hours only"
+              },
+              "weeklyHours": 0,
+              "pay": "hourlyFromMonthly",
+              "calculationHours": 35,
+              "templates": "templates/extra.json",
+              "rules": "rules/dl62-79-extra.json",
               "positions": [
                 {
                   "id": "1",
@@ -358,6 +580,83 @@
                   "key": "14"
                 }
               ]
+            },
+            {
+              "id": "so-extra",
+              "title": {
+                "pt": "Só horas extra",
+                "en": "Extra hours only"
+              },
+              "weeklyHours": 0,
+              "pay": "hourlyFromMonthly",
+              "calculationHours": 35,
+              "templates": "templates/extra.json",
+              "rules": "rules/dl62-79-extra.json",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 8",
+                    "en": "1st position · level 8"
+                  },
+                  "table": "tru",
+                  "key": "8"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 9",
+                    "en": "2nd position · level 9"
+                  },
+                  "table": "tru",
+                  "key": "9"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 10",
+                    "en": "3rd position · level 10"
+                  },
+                  "table": "tru",
+                  "key": "10"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 11",
+                    "en": "4th position · level 11"
+                  },
+                  "table": "tru",
+                  "key": "11"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 12",
+                    "en": "5th position · level 12"
+                  },
+                  "table": "tru",
+                  "key": "12"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição complementar · nível 13 · posição de transição, confirma no recibo",
+                    "en": "6th complementary position · level 13 · transition position, check your payslip"
+                  },
+                  "table": "tru",
+                  "key": "13"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição complementar · nível 14 · posição de transição, confirma no recibo",
+                    "en": "7th complementary position · level 14 · transition position, check your payslip"
+                  },
+                  "table": "tru",
+                  "key": "14"
+                }
+              ]
             }
           ]
         },
@@ -376,6 +675,56 @@
               },
               "weeklyHours": 35,
               "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 12",
+                    "en": "1st position · level 12"
+                  },
+                  "table": "tru",
+                  "key": "12"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 14",
+                    "en": "2nd position · level 14"
+                  },
+                  "table": "tru",
+                  "key": "14"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição complementar · nível 15 · posição de transição, confirma no recibo",
+                    "en": "3rd complementary position · level 15 · transition position, check your payslip"
+                  },
+                  "table": "tru",
+                  "key": "15"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição complementar · nível 16 · posição de transição, confirma no recibo",
+                    "en": "4th complementary position · level 16 · transition position, check your payslip"
+                  },
+                  "table": "tru",
+                  "key": "16"
+                }
+              ]
+            },
+            {
+              "id": "so-extra",
+              "title": {
+                "pt": "Só horas extra",
+                "en": "Extra hours only"
+              },
+              "weeklyHours": 0,
+              "pay": "hourlyFromMonthly",
+              "calculationHours": 35,
+              "templates": "templates/extra.json",
+              "rules": "rules/dl62-79-extra.json",
               "positions": [
                 {
                   "id": "1",

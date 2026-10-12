@@ -158,6 +158,128 @@
                   "key": "18"
                 }
               ]
+            },
+            {
+              "id": "so-extra",
+              "title": {
+                "pt": "Só horas extra",
+                "en": "Extra hours only"
+              },
+              "weeklyHours": 0,
+              "pay": "hourlyFromMonthly",
+              "calculationHours": 35,
+              "templates": "templates/extra.json",
+              "rules": "rules/dl62-79-extra.json",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 7",
+                    "en": "1st position · level 7"
+                  },
+                  "table": "tru",
+                  "key": "7"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 8",
+                    "en": "2nd position · level 8"
+                  },
+                  "table": "tru",
+                  "key": "8"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 9",
+                    "en": "3rd position · level 9"
+                  },
+                  "table": "tru",
+                  "key": "9"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 10",
+                    "en": "4th position · level 10"
+                  },
+                  "table": "tru",
+                  "key": "10"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição · nível 11",
+                    "en": "5th position · level 11"
+                  },
+                  "table": "tru",
+                  "key": "11"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição · nível 12",
+                    "en": "6th position · level 12"
+                  },
+                  "table": "tru",
+                  "key": "12"
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "pt": "7.ª posição · nível 13",
+                    "en": "7th position · level 13"
+                  },
+                  "table": "tru",
+                  "key": "13"
+                },
+                {
+                  "id": "8",
+                  "label": {
+                    "pt": "8.ª posição · nível 14",
+                    "en": "8th position · level 14"
+                  },
+                  "table": "tru",
+                  "key": "14"
+                },
+                {
+                  "id": "9",
+                  "label": {
+                    "pt": "9.ª posição · nível 15",
+                    "en": "9th position · level 15"
+                  },
+                  "table": "tru",
+                  "key": "15"
+                },
+                {
+                  "id": "10",
+                  "label": {
+                    "pt": "10.ª posição complementar · nível 16 · posição de transição, confirma no recibo",
+                    "en": "10th complementary position · level 16 · transition position, check your payslip"
+                  },
+                  "table": "tru",
+                  "key": "16"
+                },
+                {
+                  "id": "11",
+                  "label": {
+                    "pt": "11.ª posição complementar · nível 17 · posição de transição, confirma no recibo",
+                    "en": "11th complementary position · level 17 · transition position, check your payslip"
+                  },
+                  "table": "tru",
+                  "key": "17"
+                },
+                {
+                  "id": "12",
+                  "label": {
+                    "pt": "12.ª posição complementar · nível 18 · posição de transição, confirma no recibo",
+                    "en": "12th complementary position · level 18 · transition position, check your payslip"
+                  },
+                  "table": "tru",
+                  "key": "18"
+                }
+              ]
             }
           ]
         },
@@ -176,6 +298,74 @@
               },
               "weeklyHours": 35,
               "pay": "monthly",
+              "positions": [
+                {
+                  "id": "1",
+                  "label": {
+                    "pt": "1.ª posição · nível 15",
+                    "en": "1st position · level 15"
+                  },
+                  "table": "tru",
+                  "key": "15"
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "pt": "2.ª posição · nível 17",
+                    "en": "2nd position · level 17"
+                  },
+                  "table": "tru",
+                  "key": "17"
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "pt": "3.ª posição · nível 20",
+                    "en": "3rd position · level 20"
+                  },
+                  "table": "tru",
+                  "key": "20"
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "pt": "4.ª posição · nível 22",
+                    "en": "4th position · level 22"
+                  },
+                  "table": "tru",
+                  "key": "22"
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "pt": "5.ª posição complementar · nível 23 · posição de transição, confirma no recibo",
+                    "en": "5th complementary position · level 23 · transition position, check your payslip"
+                  },
+                  "table": "tru",
+                  "key": "23"
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "pt": "6.ª posição complementar · nível 24 · posição de transição, confirma no recibo",
+                    "en": "6th complementary position · level 24 · transition position, check your payslip"
+                  },
+                  "table": "tru",
+                  "key": "24"
+                }
+              ]
+            },
+            {
+              "id": "so-extra",
+              "title": {
+                "pt": "Só horas extra",
+                "en": "Extra hours only"
+              },
+              "weeklyHours": 0,
+              "pay": "hourlyFromMonthly",
+              "calculationHours": 35,
+              "templates": "templates/extra.json",
+              "rules": "rules/dl62-79-extra.json",
               "positions": [
                 {
                   "id": "1",

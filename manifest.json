@@ -19,8 +19,8 @@
     },
     {
       "path": "careers/assistente-tecnico.json",
-      "sha256": "6c4bd7bb58f2cc37c480c097866deaf345e0eda0d6d2d805fbe706fda9538a39",
-      "bytes": 8145,
+      "sha256": "ffa48f7e41ec811ec56e82a0beebc6fc4e0526310b099a03bf7e6b09a16b41b2",
+      "bytes": 14841,
       "format": 2,
       "published": "2026-10-10"
     },
@@ -61,8 +61,8 @@
     },
     {
       "path": "careers/enfermagem.json",
-      "sha256": "30aa4c69086fb2b4c12649e3692d5b2bc3eea2924a5b3699525f29919a89b077",
-      "bytes": 20332,
+      "sha256": "34869f9ebb57bfb6a93cee30787069eeafce2bb969be771203c094827f7b3f4e",
+      "bytes": 20296,
       "format": 2,
       "published": "2026-10-11"
     },
@@ -82,8 +82,8 @@
     },
     {
       "path": "careers/farmaceutico.json",
-      "sha256": "0c94a157f8c7b30615e732f24966c3d52ab2e33539714f9d2e9c3450bfcfbf6b",
-      "bytes": 8187,
+      "sha256": "7b6410d22f339aada3eb9eed6ddb8a8925a32da2cc2b4719b40f5adc883ee314",
+      "bytes": 14641,
       "format": 2,
       "published": "2026-10-11"
     },
@@ -257,15 +257,15 @@
     },
     {
       "path": "careers/tas.json",
-      "sha256": "67dc70a12140122a254d3dd0f28b91827b1203ba093c7cc5d8da6241248e96ce",
-      "bytes": 13774,
+      "sha256": "d64c9eac16ec09ebdb9254e568ae79934c72b1a1b03b868a14d7c4410d092445",
+      "bytes": 25418,
       "format": 2,
       "published": "2026-10-11"
     },
     {
       "path": "careers/teph.json",
-      "sha256": "3683ce6ba421eaa91894e1cfe67d30fda130183f0b07721f8bfa7bfd0e006fd7",
-      "bytes": 9465,
+      "sha256": "210401cba3768762f858fc5e3992557fcdc896fbfb8cfc3125cae3d762f3366d",
+      "bytes": 15434,
       "format": 2,
       "published": "2026-10-10"
     },
@@ -292,15 +292,15 @@
     },
     {
       "path": "careers/tsdt.json",
-      "sha256": "e9d7d2f55e26f2808aeabf26c0d927cf0e12ea426261223f76c45bcf8c76a6a6",
-      "bytes": 10405,
+      "sha256": "3b89036a7e16f802e0811087e9127fe59114dd2056df71a615a2144258516103",
+      "bytes": 18615,
       "format": 2,
       "published": "2026-10-11"
     },
     {
       "path": "careers/tss.json",
-      "sha256": "8f10e1234fc9e535ff03231de9ecaaadefa74aca7e0aa4e835b3724c852df3b6",
-      "bytes": 15147,
+      "sha256": "1623c8b7263a8192deb0cd2da0502de05b51567b35e8a924968b855cd26dced3",
+      "bytes": 22515,
       "format": 2,
       "published": "2026-10-10"
     },

@@ -345,7 +345,27 @@ Fontes da carreira:
   - 10.ª posição complementar · nível 16 · posição de transição, confirma no recibo — tabela `tru`, chave `16`: 1 499,15 €
   - 11.ª posição complementar · nível 17 · posição de transição, confirma no recibo — tabela `tru`, chave `17`: 1 551,78 €
   - 12.ª posição complementar · nível 18 · posição de transição, confirma no recibo — tabela `tru`, chave `18`: 1 604,41 €
+- Assistente técnico / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
+  - 1.ª posição · nível 7 — tabela `tru`, chave `7`: 1 035,63 €
+  - 2.ª posição · nível 8 — tabela `tru`, chave `8`: 1 074,56 €
+  - 3.ª posição · nível 9 — tabela `tru`, chave `9`: 1 130,72 €
+  - 4.ª posição · nível 10 — tabela `tru`, chave `10`: 1 183,35 €
+  - 5.ª posição · nível 11 — tabela `tru`, chave `11`: 1 236,00 €
+  - 6.ª posição · nível 12 — tabela `tru`, chave `12`: 1 288,62 €
+  - 7.ª posição · nível 13 — tabela `tru`, chave `13`: 1 341,25 €
+  - 8.ª posição · nível 14 — tabela `tru`, chave `14`: 1 393,88 €
+  - 9.ª posição · nível 15 — tabela `tru`, chave `15`: 1 446,51 €
+  - 10.ª posição complementar · nível 16 · posição de transição, confirma no recibo — tabela `tru`, chave `16`: 1 499,15 €
+  - 11.ª posição complementar · nível 17 · posição de transição, confirma no recibo — tabela `tru`, chave `17`: 1 551,78 €
+  - 12.ª posição complementar · nível 18 · posição de transição, confirma no recibo — tabela `tru`, chave `18`: 1 604,41 €
 - Coordenador técnico / 35 h/semana (35 h/semana, salário mensal)
+  - 1.ª posição · nível 15 — tabela `tru`, chave `15`: 1 446,51 €
+  - 2.ª posição · nível 17 — tabela `tru`, chave `17`: 1 551,78 €
+  - 3.ª posição · nível 20 — tabela `tru`, chave `20`: 1 709,68 €
+  - 4.ª posição · nível 22 — tabela `tru`, chave `22`: 1 814,94 €
+  - 5.ª posição complementar · nível 23 · posição de transição, confirma no recibo — tabela `tru`, chave `23`: 1 867,57 €
+  - 6.ª posição complementar · nível 24 · posição de transição, confirma no recibo — tabela `tru`, chave `24`: 1 920,20 €
+- Coordenador técnico / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
   - 1.ª posição · nível 15 — tabela `tru`, chave `15`: 1 446,51 €
   - 2.ª posição · nível 17 — tabela `tru`, chave `17`: 1 551,78 €
   - 3.ª posição · nível 20 — tabela `tru`, chave `20`: 1 709,68 €
@@ -483,7 +503,7 @@ Fontes da carreira:
   - 9.ª posição — tabela `enfermagem`, chave `enfermeiro-9`: 3 134,97 €
   - 10.ª posição — tabela `enfermagem`, chave `enfermeiro-10`: 3 308,07 €
   - 11.ª posição — tabela `enfermagem`, chave `enfermeiro-11`: 3 481,16 €
-- Enfermeiro / Só horas extra (expansão) (0 h/semana, à hora, tirado do mensal (só extra))
+- Enfermeiro / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
   - 1.ª posição — tabela `enfermagem`, chave `enfermeiro-1`: 1 657,04 €
   - 2.ª posição — tabela `enfermagem`, chave `enfermeiro-2`: 1 867,57 €
   - 3.ª posição — tabela `enfermagem`, chave `enfermeiro-3`: 2 082,84 €
@@ -506,7 +526,7 @@ Fontes da carreira:
   - 8.ª posição — tabela `enfermagem`, chave `especialista-8`: 3 134,97 €
   - 9.ª posição — tabela `enfermagem`, chave `especialista-9`: 3 308,07 €
   - 10.ª posição — tabela `enfermagem`, chave `especialista-10`: 3 481,16 €
-- Enfermeiro especialista / Só horas extra (expansão) (0 h/semana, à hora, tirado do mensal (só extra))
+- Enfermeiro especialista / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
   - 1.ª posição — tabela `enfermagem`, chave `especialista-1`: 1 920,20 €
   - 2.ª posição — tabela `enfermagem`, chave `especialista-2`: 2 137,05 €
   - 3.ª posição — tabela `enfermagem`, chave `especialista-3`: 2 299,69 €
@@ -525,7 +545,7 @@ Fontes da carreira:
   - 5.ª posição — tabela `enfermagem`, chave `gestor-5`: 3 538,86 €
   - 6.ª posição — tabela `enfermagem`, chave `gestor-6`: 3 711,96 €
   - 7.ª posição — tabela `enfermagem`, chave `gestor-7`: 3 827,36 €
-- Enfermeiro gestor / Só horas extra (expansão) (0 h/semana, à hora, tirado do mensal (só extra))
+- Enfermeiro gestor / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
   - 1.ª posição — tabela `enfermagem`, chave `gestor-1`: 2 679,17 €
   - 2.ª posição — tabela `enfermagem`, chave `gestor-2`: 2 904,18 €
   - 3.ª posição — tabela `enfermagem`, chave `gestor-3`: 3 134,97 €
@@ -581,6 +601,14 @@ Fontes da carreira:
   - 5.ª posição — tabela `farmaceutico`, chave `assistente-5`: 2 516,53 €
   - 6.ª posição — tabela `farmaceutico`, chave `assistente-6`: 2 624,97 €
   - 7.ª posição — tabela `farmaceutico`, chave `assistente-7`: 2 734,36 €
+- Farmacêutico assistente / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
+  - 1.ª posição — tabela `farmaceutico`, chave `assistente-1`: 2 082,84 €
+  - 2.ª posição — tabela `farmaceutico`, chave `assistente-2`: 2 191,27 €
+  - 3.ª posição — tabela `farmaceutico`, chave `assistente-3`: 2 299,69 €
+  - 4.ª posição — tabela `farmaceutico`, chave `assistente-4`: 2 408,11 €
+  - 5.ª posição — tabela `farmaceutico`, chave `assistente-5`: 2 516,53 €
+  - 6.ª posição — tabela `farmaceutico`, chave `assistente-6`: 2 624,97 €
+  - 7.ª posição — tabela `farmaceutico`, chave `assistente-7`: 2 734,36 €
 - Farmacêutico assessor / 35 h/semana (35 h/semana, salário mensal)
   - 1.ª posição — tabela `farmaceutico`, chave `assessor-1`: 2 679,17 €
   - 2.ª posição — tabela `farmaceutico`, chave `assessor-2`: 2 847,25 €
@@ -588,7 +616,20 @@ Fontes da carreira:
   - 4.ª posição — tabela `farmaceutico`, chave `assessor-4`: 3 077,29 €
   - 5.ª posição — tabela `farmaceutico`, chave `assessor-5`: 3 192,67 €
   - 6.ª posição — tabela `farmaceutico`, chave `assessor-6`: 3 308,07 €
+- Farmacêutico assessor / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
+  - 1.ª posição — tabela `farmaceutico`, chave `assessor-1`: 2 679,17 €
+  - 2.ª posição — tabela `farmaceutico`, chave `assessor-2`: 2 847,25 €
+  - 3.ª posição — tabela `farmaceutico`, chave `assessor-3`: 2 961,89 €
+  - 4.ª posição — tabela `farmaceutico`, chave `assessor-4`: 3 077,29 €
+  - 5.ª posição — tabela `farmaceutico`, chave `assessor-5`: 3 192,67 €
+  - 6.ª posição — tabela `farmaceutico`, chave `assessor-6`: 3 308,07 €
 - Farmacêutico assessor sénior / 35 h/semana (35 h/semana, salário mensal)
+  - 1.ª posição — tabela `farmaceutico`, chave `assessor-senior-1`: 3 192,67 €
+  - 2.ª posição — tabela `farmaceutico`, chave `assessor-senior-2`: 3 308,07 €
+  - 3.ª posição — tabela `farmaceutico`, chave `assessor-senior-3`: 3 596,57 €
+  - 4.ª posição — tabela `farmaceutico`, chave `assessor-senior-4`: 3 885,06 €
+  - 5.ª posição — tabela `farmaceutico`, chave `assessor-senior-5`: 4 173,55 €
+- Farmacêutico assessor sénior / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
   - 1.ª posição — tabela `farmaceutico`, chave `assessor-senior-1`: 3 192,67 €
   - 2.ª posição — tabela `farmaceutico`, chave `assessor-senior-2`: 3 308,07 €
   - 3.ª posição — tabela `farmaceutico`, chave `assessor-senior-3`: 3 596,57 €
@@ -1290,12 +1331,35 @@ Fontes da carreira:
   - 6.ª posição · nível 11 — tabela `tru`, chave `11`: 1 236,00 €
   - 7.ª posição · nível 12 — tabela `tru`, chave `12`: 1 288,62 €
   - 8.ª posição · nível 13 — tabela `tru`, chave `13`: 1 341,25 €
+- Técnico auxiliar de saúde / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
+  - 1.ª posição · nível 6 — tabela `tru`, chave `6`: 983,00 €
+  - 2.ª posição · nível 7 — tabela `tru`, chave `7`: 1 035,63 €
+  - 3.ª posição · nível 8 — tabela `tru`, chave `8`: 1 074,56 €
+  - 4.ª posição · nível 9 — tabela `tru`, chave `9`: 1 130,72 €
+  - 5.ª posição · nível 10 — tabela `tru`, chave `10`: 1 183,35 €
+  - 6.ª posição · nível 11 — tabela `tru`, chave `11`: 1 236,00 €
+  - 7.ª posição · nível 12 — tabela `tru`, chave `12`: 1 288,62 €
+  - 8.ª posição · nível 13 — tabela `tru`, chave `13`: 1 341,25 €
 - Técnico auxiliar de saúde principal / 35 h/semana · um posto por unidade hospitalar, coordena pelo menos 10 técnicos auxiliares de saúde (35 h/semana, salário mensal)
   - 1.ª posição · nível 13 — tabela `tru`, chave `13`: 1 341,25 €
   - 2.ª posição · nível 14 — tabela `tru`, chave `14`: 1 393,88 €
   - 3.ª posição · nível 15 — tabela `tru`, chave `15`: 1 446,51 €
   - 4.ª posição · nível 16 — tabela `tru`, chave `16`: 1 499,15 €
+- Técnico auxiliar de saúde principal / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
+  - 1.ª posição · nível 13 — tabela `tru`, chave `13`: 1 341,25 €
+  - 2.ª posição · nível 14 — tabela `tru`, chave `14`: 1 393,88 €
+  - 3.ª posição · nível 15 — tabela `tru`, chave `15`: 1 446,51 €
+  - 4.ª posição · nível 16 — tabela `tru`, chave `16`: 1 499,15 €
 - Assistente operacional / 35 h/semana (35 h/semana, salário mensal)
+  - 1.ª posição · nível 5 — tabela `tru`, chave `5`: 934,99 €
+  - 2.ª posição · nível 6 — tabela `tru`, chave `6`: 983,00 €
+  - 3.ª posição · nível 7 — tabela `tru`, chave `7`: 1 035,63 €
+  - 4.ª posição · nível 8 — tabela `tru`, chave `8`: 1 074,56 €
+  - 5.ª posição · nível 9 — tabela `tru`, chave `9`: 1 130,72 €
+  - 6.ª posição · nível 10 — tabela `tru`, chave `10`: 1 183,35 €
+  - 7.ª posição · nível 11 — tabela `tru`, chave `11`: 1 236,00 €
+  - 8.ª posição · nível 12 — tabela `tru`, chave `12`: 1 288,62 €
+- Assistente operacional / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
   - 1.ª posição · nível 5 — tabela `tru`, chave `5`: 934,99 €
   - 2.ª posição · nível 6 — tabela `tru`, chave `6`: 983,00 €
   - 3.ª posição · nível 7 — tabela `tru`, chave `7`: 1 035,63 €
@@ -1312,7 +1376,20 @@ Fontes da carreira:
   - 5.ª posição · nível 12 — tabela `tru`, chave `12`: 1 288,62 €
   - 6.ª posição complementar · nível 13 · posição de transição, confirma no recibo — tabela `tru`, chave `13`: 1 341,25 €
   - 7.ª posição complementar · nível 14 · posição de transição, confirma no recibo — tabela `tru`, chave `14`: 1 393,88 €
+- Encarregado operacional / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
+  - 1.ª posição · nível 8 — tabela `tru`, chave `8`: 1 074,56 €
+  - 2.ª posição · nível 9 — tabela `tru`, chave `9`: 1 130,72 €
+  - 3.ª posição · nível 10 — tabela `tru`, chave `10`: 1 183,35 €
+  - 4.ª posição · nível 11 — tabela `tru`, chave `11`: 1 236,00 €
+  - 5.ª posição · nível 12 — tabela `tru`, chave `12`: 1 288,62 €
+  - 6.ª posição complementar · nível 13 · posição de transição, confirma no recibo — tabela `tru`, chave `13`: 1 341,25 €
+  - 7.ª posição complementar · nível 14 · posição de transição, confirma no recibo — tabela `tru`, chave `14`: 1 393,88 €
 - Encarregado geral operacional / 35 h/semana (35 h/semana, salário mensal)
+  - 1.ª posição · nível 12 — tabela `tru`, chave `12`: 1 288,62 €
+  - 2.ª posição · nível 14 — tabela `tru`, chave `14`: 1 393,88 €
+  - 3.ª posição complementar · nível 15 · posição de transição, confirma no recibo — tabela `tru`, chave `15`: 1 446,51 €
+  - 4.ª posição complementar · nível 16 · posição de transição, confirma no recibo — tabela `tru`, chave `16`: 1 499,15 €
+- Encarregado geral operacional / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
   - 1.ª posição · nível 12 — tabela `tru`, chave `12`: 1 288,62 €
   - 2.ª posição · nível 14 — tabela `tru`, chave `14`: 1 393,88 €
   - 3.ª posição complementar · nível 15 · posição de transição, confirma no recibo — tabela `tru`, chave `15`: 1 446,51 €
@@ -1338,13 +1415,32 @@ Fontes da carreira:
   - 6.ª posição · nível 15 — tabela `tru`, chave `15`: 1 446,51 €
   - 7.ª posição · nível 16 — tabela `tru`, chave `16`: 1 499,15 €
   - 8.ª posição · nível 17 — tabela `tru`, chave `17`: 1 551,78 €
+- Técnico de emergência pré-hospitalar / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
+  - 1.ª posição · nível 10 — tabela `tru`, chave `10`: 1 183,35 €
+  - 2.ª posição · nível 11 — tabela `tru`, chave `11`: 1 236,00 €
+  - 3.ª posição · nível 12 — tabela `tru`, chave `12`: 1 288,62 €
+  - 4.ª posição · nível 13 — tabela `tru`, chave `13`: 1 341,25 €
+  - 5.ª posição · nível 14 — tabela `tru`, chave `14`: 1 393,88 €
+  - 6.ª posição · nível 15 — tabela `tru`, chave `15`: 1 446,51 €
+  - 7.ª posição · nível 16 — tabela `tru`, chave `16`: 1 499,15 €
+  - 8.ª posição · nível 17 — tabela `tru`, chave `17`: 1 551,78 €
 - Técnico de emergência pré-hospitalar avançado / 35 h/semana (regime geral) (35 h/semana, salário mensal)
   - 1.ª posição · nível 17 — tabela `tru`, chave `17`: 1 551,78 €
   - 2.ª posição · nível 18 — tabela `tru`, chave `18`: 1 604,41 €
   - 3.ª posição · nível 19 — tabela `tru`, chave `19`: 1 657,04 €
   - 4.ª posição · nível 20 — tabela `tru`, chave `20`: 1 709,68 €
   - 5.ª posição · nível 21 — tabela `tru`, chave `21`: 1 762,31 €
+- Técnico de emergência pré-hospitalar avançado / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
+  - 1.ª posição · nível 17 — tabela `tru`, chave `17`: 1 551,78 €
+  - 2.ª posição · nível 18 — tabela `tru`, chave `18`: 1 604,41 €
+  - 3.ª posição · nível 19 — tabela `tru`, chave `19`: 1 657,04 €
+  - 4.ª posição · nível 20 — tabela `tru`, chave `20`: 1 709,68 €
+  - 5.ª posição · nível 21 — tabela `tru`, chave `21`: 1 762,31 €
 - Técnico de emergência pré-hospitalar principal / 35 h/semana (regime geral) (35 h/semana, salário mensal)
+  - 1.ª posição · nível 21 — tabela `tru`, chave `21`: 1 762,31 €
+  - 2.ª posição · nível 22 — tabela `tru`, chave `22`: 1 814,94 €
+  - 3.ª posição · nível 23 — tabela `tru`, chave `23`: 1 867,57 €
+- Técnico de emergência pré-hospitalar principal / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
   - 1.ª posição · nível 21 — tabela `tru`, chave `21`: 1 762,31 €
   - 2.ª posição · nível 22 — tabela `tru`, chave `22`: 1 814,94 €
   - 3.ª posição · nível 23 — tabela `tru`, chave `23`: 1 867,57 €
@@ -1410,13 +1506,38 @@ Fontes da carreira:
   - 10.ª posição complementar · nível 31 · só para quem transitou (lista nominativa) — tabela `tru`, chave `31`: 2 299,69 €
   - 11.ª posição complementar · nível 35 · só para quem transitou (lista nominativa) — tabela `tru`, chave `35`: 2 516,53 €
   - 12.ª posição complementar · nível 38 · só para quem transitou (lista nominativa) — tabela `tru`, chave `38`: 2 679,17 €
+- Técnico superior de diagnóstico e terapêutica / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
+  - 1.ª posição · nível 15 — tabela `tru`, chave `15`: 1 446,51 €
+  - 2.ª posição · nível 19 — tabela `tru`, chave `19`: 1 657,04 €
+  - 3.ª posição · nível 23 — tabela `tru`, chave `23`: 1 867,57 €
+  - 4.ª posição · nível 27 — tabela `tru`, chave `27`: 2 082,84 €
+  - 5.ª posição · nível 30 — tabela `tru`, chave `30`: 2 245,48 €
+  - 6.ª posição · nível 33 — tabela `tru`, chave `33`: 2 408,11 €
+  - 7.ª posição · nível 36 — tabela `tru`, chave `36`: 2 570,73 €
+  - 8.ª posição · nível 39 — tabela `tru`, chave `39`: 2 734,36 €
+  - 9.ª posição complementar · nível 29 · só para quem transitou (lista nominativa) — tabela `tru`, chave `29`: 2 191,27 €
+  - 10.ª posição complementar · nível 31 · só para quem transitou (lista nominativa) — tabela `tru`, chave `31`: 2 299,69 €
+  - 11.ª posição complementar · nível 35 · só para quem transitou (lista nominativa) — tabela `tru`, chave `35`: 2 516,53 €
+  - 12.ª posição complementar · nível 38 · só para quem transitou (lista nominativa) — tabela `tru`, chave `38`: 2 679,17 €
 - Técnico superior de diagnóstico e terapêutica especialista / 35 h/semana (35 h/semana, salário mensal)
   - 1.ª posição · nível 33 — tabela `tru`, chave `33`: 2 408,11 €
   - 2.ª posição · nível 36 — tabela `tru`, chave `36`: 2 570,73 €
   - 3.ª posição · nível 38 — tabela `tru`, chave `38`: 2 679,17 €
   - 4.ª posição · nível 40 — tabela `tru`, chave `40`: 2 790,67 €
   - 5.ª posição · nível 41 — tabela `tru`, chave `41`: 2 847,25 €
+- Técnico superior de diagnóstico e terapêutica especialista / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
+  - 1.ª posição · nível 33 — tabela `tru`, chave `33`: 2 408,11 €
+  - 2.ª posição · nível 36 — tabela `tru`, chave `36`: 2 570,73 €
+  - 3.ª posição · nível 38 — tabela `tru`, chave `38`: 2 679,17 €
+  - 4.ª posição · nível 40 — tabela `tru`, chave `40`: 2 790,67 €
+  - 5.ª posição · nível 41 — tabela `tru`, chave `41`: 2 847,25 €
 - TSDT especialista principal / 35 h/semana (35 h/semana, salário mensal)
+  - 1.ª posição · nível 38 — tabela `tru`, chave `38`: 2 679,17 €
+  - 2.ª posição · nível 42 — tabela `tru`, chave `42`: 2 904,18 €
+  - 3.ª posição · nível 47 — tabela `tru`, chave `47`: 3 192,67 €
+  - 4.ª posição · nível 52 — tabela `tru`, chave `52`: 3 481,16 €
+  - 5.ª posição · nível 57 — tabela `tru`, chave `57`: 3 769,65 €
+- TSDT especialista principal / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
   - 1.ª posição · nível 38 — tabela `tru`, chave `38`: 2 679,17 €
   - 2.ª posição · nível 42 — tabela `tru`, chave `42`: 2 904,18 €
   - 3.ª posição · nível 47 — tabela `tru`, chave `47`: 3 192,67 €
@@ -1445,6 +1566,11 @@ Fontes da carreira:
   - 2.ª posição · índice 205 — tabela `tss`, chave `assessor-superior-42h-2`: 4 101,56 €
   - 3.ª posição · índice 215 — tabela `tss`, chave `assessor-superior-42h-3`: 4 301,63 €
   - 4.ª posição · índice 230 — tabela `tss`, chave `assessor-superior-42h-4`: 4 601,76 €
+- Assessor superior / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
+  - 1.ª posição · índice 195 — tabela `tss`, chave `assessor-superior-35h-1`: 2 955,68 €
+  - 2.ª posição · índice 205 — tabela `tss`, chave `assessor-superior-35h-2`: 3 107,24 €
+  - 3.ª posição · índice 215 — tabela `tss`, chave `assessor-superior-35h-3`: 3 258,81 €
+  - 4.ª posição · índice 230 — tabela `tss`, chave `assessor-superior-35h-4`: 3 486,18 €
 - Assessor / Tempo completo · 35 h/semana (35 h/semana, salário mensal)
   - 1.ª posição · índice 160 — tabela `tss`, chave `assessor-35h-1`: 2 445,96 €
   - 2.ª posição · índice 175 — tabela `tss`, chave `assessor-35h-2`: 2 659,58 €
@@ -1455,6 +1581,11 @@ Fontes da carreira:
   - 2.ª posição · índice 175 — tabela `tss`, chave `assessor-42h-2`: 3 510,65 €
   - 3.ª posição · índice 185 — tabela `tss`, chave `assessor-42h-3`: 3 703,52 €
   - 4.ª posição · índice 195 — tabela `tss`, chave `assessor-42h-4`: 3 901,50 €
+- Assessor / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
+  - 1.ª posição · índice 160 — tabela `tss`, chave `assessor-35h-1`: 2 445,96 €
+  - 2.ª posição · índice 175 — tabela `tss`, chave `assessor-35h-2`: 2 659,58 €
+  - 3.ª posição · índice 185 — tabela `tss`, chave `assessor-35h-3`: 2 805,70 €
+  - 4.ª posição · índice 195 — tabela `tss`, chave `assessor-35h-4`: 2 955,68 €
 - Assistente principal / Tempo completo · 35 h/semana (35 h/semana, salário mensal)
   - 1.ª posição · índice 135 — tabela `tss`, chave `assistente-principal-35h-1`: 2 089,93 €
   - 2.ª posição · índice 140 — tabela `tss`, chave `assistente-principal-35h-2`: 2 161,13 €
@@ -1467,6 +1598,12 @@ Fontes da carreira:
   - 3.ª posição · índice 145 — tabela `tss`, chave `assistente-principal-42h-3`: 2 946,69 €
   - 4.ª posição · índice 155 — tabela `tss`, chave `assistente-principal-42h-4`: 3 134,67 €
   - 5.ª posição · índice 165 — tabela `tss`, chave `assistente-principal-42h-5`: 3 322,66 €
+- Assistente principal / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
+  - 1.ª posição · índice 135 — tabela `tss`, chave `assistente-principal-35h-1`: 2 089,93 €
+  - 2.ª posição · índice 140 — tabela `tss`, chave `assistente-principal-35h-2`: 2 161,13 €
+  - 3.ª posição · índice 145 — tabela `tss`, chave `assistente-principal-35h-3`: 2 232,34 €
+  - 4.ª posição · índice 155 — tabela `tss`, chave `assistente-principal-35h-4`: 2 374,75 €
+  - 5.ª posição · índice 165 — tabela `tss`, chave `assistente-principal-35h-5`: 2 517,17 €
 - Assistente / Tempo completo · 35 h/semana (35 h/semana, salário mensal)
   - 1.ª posição · índice 120 — tabela `tss`, chave `assistente-35h-1`: 1 877,59 €
   - 2.ª posição · índice 125 — tabela `tss`, chave `assistente-35h-2`: 1 947,51 €
@@ -1479,6 +1616,12 @@ Fontes da carreira:
   - 3.ª posição · índice 135 — tabela `tss`, chave `assistente-42h-3`: 2 758,71 €
   - 4.ª posição · índice 140 — tabela `tss`, chave `assistente-42h-4`: 2 852,69 €
   - 5.ª posição · índice 145 — tabela `tss`, chave `assistente-42h-5`: 2 946,69 €
+- Assistente / Só horas extra (0 h/semana, à hora, tirado do mensal (só extra))
+  - 1.ª posição · índice 120 — tabela `tss`, chave `assistente-35h-1`: 1 877,59 €
+  - 2.ª posição · índice 125 — tabela `tss`, chave `assistente-35h-2`: 1 947,51 €
+  - 3.ª posição · índice 135 — tabela `tss`, chave `assistente-35h-3`: 2 089,93 €
+  - 4.ª posição · índice 140 — tabela `tss`, chave `assistente-35h-4`: 2 161,13 €
+  - 5.ª posição · índice 145 — tabela `tss`, chave `assistente-35h-5`: 2 232,34 €
 
 Fontes da carreira:
   - DGAEP, Sistema Remuneratório da Administração Pública 2026 (10-04-2026), carreiras/categorias não revistas de corpos especiais: Técnico superior de saúde — https://www.dgaep.gov.pt/upload/catalogo/SRAP_2026.pdf (consultado em 2026-10-10)
