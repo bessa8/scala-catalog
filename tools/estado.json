@@ -12,6 +12,7 @@
     "dr2": {
       "vistos": {
         "https://diariodarepublica.pt/dr/detalhe/aviso/24812-2026-1178585165": "2026-10-11",
+        "https://diariodarepublica.pt/dr/detalhe/despacho/12523-a-2026-1180337885": "2026-10-14",
         "https://diariodarepublica.pt/dr/detalhe/portaria/419-2026-1178585157": "2026-10-11"
       }
     },
@@ -26,6 +27,17 @@
       ]
     }
   },
-  "pistas": [],
-  "ultimaVerificacao": "2026-10-14T00:12+00:00"
+  "pistas": [
+    {
+      "fonte": "dr2",
+      "link": "https://diariodarepublica.pt/dr/detalhe/despacho/12523-a-2026-1180337885",
+      "resumo": "Finanças - Gabinete do Ministro de Estado e das Finanças Aprova ajustamentos às tabelas de retenção na fonte de IRS para novembro de 2026.",
+      "temas": [
+        "irs"
+      ],
+      "titulo": "Despacho n.º 12523-A/2026 - Diário da República n.º 199/2026, Suplemento, Série II de 2026-10-14",
+      "vistaEm": "2026-10-14"
+    }
+  ],
+  "ultimaVerificacao": "2026-10-14T10:45+00:00"
 }
