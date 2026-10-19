@@ -1,0 +1,23 @@
+{
+  "issue": 3,
+  "publicado": [],
+  "precisaDeTi": [
+    {
+      "titulo": "Despacho n.º 12523-A/2026 (IRS, continente) — ajustamento temporário às retenções de novembro de 2026",
+      "texto": "Li o PDF (Suplemento da 2.ª série n.º 199, de 14-10-2026). O despacho não aprova valores novos de tabelas. Manda aplicar, aos rendimentos do trabalho dependente e de pensões pagos entre 1 e 30 de novembro de 2026, as tabelas do Despacho n.º 233-A/2026, de 6 de janeiro, com a retenção reduzida a 50 % desse valor (n.º 2). Exceção: titulares cujo valor mensal exceda o limite superior do penúltimo escalão, para os quais a retenção fica inalterada (n.º 3). Aplica-se a residentes no continente, excluindo Açores e Madeira (n.º 4). De 1 de dezembro de 2026 volta a aplicar-se o 233-A sem adaptação (n.º 7 e 9). A retificação das retenções de novembro pode ser feita até ao fim de dezembro (n.º 8). Não publiquei nada: é uma regra de cálculo temporária, por mês e com exceção por escalão, e não encontro na estrutura de tax/irs-* um campo para isso. Pedido: decidir se o catálogo deve representar este ajustamento (por exemplo, como nota ou como vigência de um mês) e, se sim, como. Esta decisão vale também para o item seguinte.",
+      "fontes": [
+        "https://files.diariodarepublica.pt/2s/2026/10/199000001/0000200003.pdf",
+        "https://diariodarepublica.pt/dr/detalhe/despacho/12523-a-2026-1180337885"
+      ]
+    },
+    {
+      "titulo": "Despacho n.º 12610-A/2026 (IRS, Açores) — o mesmo ajustamento de novembro de 2026 para a Região Autónoma dos Açores",
+      "texto": "Li o PDF (Suplemento da 2.ª série n.º 200, de 15-10-2026). A regra é a mesma do Despacho n.º 12523-A/2026 (retenção a 50 % para novembro de 2026, com a exceção do penúltimo escalão), mas aplica-se às tabelas do Despacho n.º 1179/2026, de 3 de fevereiro, que estão em tax/irs-acores.2026-01-01.json, e a titulares residentes nos Açores (n.º 4). Efeitos a 1 de novembro de 2026; de 1 de dezembro volta a aplicar-se o 1179/2026 sem adaptação (n.º 7 e 9). Não publiquei nada, pelo mesmo motivo do item anterior. Pedido: decidir em conjunto com o item anterior. Nota: o despacho exclui a Madeira do seu âmbito (n.º 4 do 12523-A) e não há pista para a Madeira; fica por saber se a Região tem ajustamento próprio.",
+      "fontes": [
+        "https://files.diariodarepublica.pt/2s/2026/10/200000001/0000200003.pdf",
+        "https://diariodarepublica.pt/dr/detalhe/despacho/12610-a-2026-1180906813"
+      ]
+    }
+  ],
+  "semAlteracoes": []
+}
