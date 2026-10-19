@@ -28,27 +28,6 @@
       ]
     }
   },
-  "pistas": [
-    {
-      "fonte": "dr2",
-      "link": "https://diariodarepublica.pt/dr/detalhe/despacho/12523-a-2026-1180337885",
-      "resumo": "Finanças - Gabinete do Ministro de Estado e das Finanças Aprova ajustamentos às tabelas de retenção na fonte de IRS para novembro de 2026.",
-      "temas": [
-        "irs"
-      ],
-      "titulo": "Despacho n.º 12523-A/2026 - Diário da República n.º 199/2026, Suplemento, Série II de 2026-10-14",
-      "vistaEm": "2026-10-14"
-    },
-    {
-      "fonte": "dr2",
-      "link": "https://diariodarepublica.pt/dr/detalhe/despacho/12610-a-2026-1180906813",
-      "resumo": "Finanças - Gabinete do Ministro de Estado e das Finanças Aprova ajustamentos às tabelas de retenção na fonte de IRS para novembro de 2026 na Região Autónoma dos Açores.",
-      "temas": [
-        "irs"
-      ],
-      "titulo": "Despacho n.º 12610-A/2026 - Diário da República n.º 200/2026, Suplemento, Série II de 2026-10-15",
-      "vistaEm": "2026-10-15"
-    }
-  ],
+  "pistas": [],
   "ultimaVerificacao": "2026-10-19T11:24+00:00"
 }
