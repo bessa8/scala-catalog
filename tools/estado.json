@@ -15,6 +15,7 @@
         "https://diariodarepublica.pt/dr/detalhe/aviso/24812-2026-1178585165": "2026-10-11",
         "https://diariodarepublica.pt/dr/detalhe/despacho/12523-a-2026-1180337885": "2026-10-14",
         "https://diariodarepublica.pt/dr/detalhe/despacho/12610-a-2026-1180906813": "2026-10-15",
+        "https://diariodarepublica.pt/dr/detalhe/despacho/12977-2026-1184834653": "2026-10-23",
         "https://diariodarepublica.pt/dr/detalhe/portaria/419-2026-1178585157": "2026-10-11"
       }
     },
@@ -39,7 +40,17 @@
       ],
       "titulo": "Anúncio de procedimento n.º 25613/2026 - Diário da República n.º 203/2026, Série II de 2026-10-20",
       "vistaEm": "2026-10-20"
+    },
+    {
+      "fonte": "dr2",
+      "link": "https://diariodarepublica.pt/dr/detalhe/despacho/12977-2026-1184834653",
+      "resumo": "Universidade Nova de Lisboa - Reitoria Fixação do número de vezes do Indexante dos Apoios Sociais (IAS), para efeitos do disposto na alínea a) do n.º 1 do artigo 5.º do Regulamento n.º 982/2024, de 27 de agosto.",
+      "temas": [
+        "ias-jovem"
+      ],
+      "titulo": "Despacho n.º 12977/2026 - Diário da República n.º 206/2026, Série II de 2026-10-23",
+      "vistaEm": "2026-10-23"
     }
   ],
-  "ultimaVerificacao": "2026-10-22T23:54+00:00"
+  "ultimaVerificacao": "2026-10-23T10:36+00:00"
 }
