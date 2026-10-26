@@ -30,27 +30,6 @@
       ]
     }
   },
-  "pistas": [
-    {
-      "fonte": "dr2",
-      "link": "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/25613-2026-1182897147",
-      "resumo": "Instituto de Proteção e Assistência na Doença, IP Contratação de Licenciamento de Software para a ADSE para suporte ao Projeto SAS® Payment Integrity for Health Care Premier para a ADSE (Produção e testes).",
-      "temas": [
-        "contribuicoes"
-      ],
-      "titulo": "Anúncio de procedimento n.º 25613/2026 - Diário da República n.º 203/2026, Série II de 2026-10-20",
-      "vistaEm": "2026-10-20"
-    },
-    {
-      "fonte": "dr2",
-      "link": "https://diariodarepublica.pt/dr/detalhe/despacho/12977-2026-1184834653",
-      "resumo": "Universidade Nova de Lisboa - Reitoria Fixação do número de vezes do Indexante dos Apoios Sociais (IAS), para efeitos do disposto na alínea a) do n.º 1 do artigo 5.º do Regulamento n.º 982/2024, de 27 de agosto.",
-      "temas": [
-        "ias-jovem"
-      ],
-      "titulo": "Despacho n.º 12977/2026 - Diário da República n.º 206/2026, Série II de 2026-10-23",
-      "vistaEm": "2026-10-23"
-    }
-  ],
+  "pistas": [],
   "ultimaVerificacao": "2026-10-26T11:42+00:00"
 }
