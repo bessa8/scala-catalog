@@ -12,6 +12,7 @@
     "dr2": {
       "vistos": {
         "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/25613-2026-1182897147": "2026-10-20",
+        "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/26211-2026-1186939174": "2026-10-30",
         "https://diariodarepublica.pt/dr/detalhe/aviso/24812-2026-1178585165": "2026-10-11",
         "https://diariodarepublica.pt/dr/detalhe/despacho/12523-a-2026-1180337885": "2026-10-14",
         "https://diariodarepublica.pt/dr/detalhe/despacho/12610-a-2026-1180906813": "2026-10-15",
@@ -30,6 +31,17 @@
       ]
     }
   },
-  "pistas": [],
-  "ultimaVerificacao": "2026-10-29T11:53+00:00"
+  "pistas": [
+    {
+      "fonte": "dr2",
+      "link": "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/26211-2026-1186939174",
+      "resumo": "Instituto de Proteção e Assistência na Doença, IP Renovação de Licença de Software para suporte ao SAS Detection & Investigation for Health Care ¿ Ambiente de Produção e Ambiente de Testes",
+      "temas": [
+        "contribuicoes"
+      ],
+      "titulo": "Anúncio de procedimento n.º 26211/2026 - Diário da República n.º 210/2026, Série II de 2026-10-29",
+      "vistaEm": "2026-10-30"
+    }
+  ],
+  "ultimaVerificacao": "2026-10-30T00:40+00:00"
 }
