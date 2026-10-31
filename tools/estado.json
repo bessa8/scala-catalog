@@ -3,7 +3,7 @@
   "fontes": {
     "at-circulares": {
       "ultimas": {
-        "2026": 4
+        "2026": 6
       }
     },
     "dr1": {
@@ -52,7 +52,27 @@
       ],
       "titulo": "Édito n.º 462/2026 - Diário da República n.º 211/2026, Série II de 2026-10-30",
       "vistaEm": "2026-10-30"
+    },
+    {
+      "fonte": "at-circulares",
+      "link": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Circular_5_2026.pdf",
+      "resumo": "",
+      "temas": [
+        "irs"
+      ],
+      "titulo": "Circular n.º 5/2026 da AT",
+      "vistaEm": "2026-10-31"
+    },
+    {
+      "fonte": "at-circulares",
+      "link": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Circular_6_2026.pdf",
+      "resumo": "",
+      "temas": [
+        "irs"
+      ],
+      "titulo": "Circular n.º 6/2026 da AT",
+      "vistaEm": "2026-10-31"
     }
   ],
-  "ultimaVerificacao": "2026-10-30T11:46+00:00"
+  "ultimaVerificacao": "2026-10-31T00:32+00:00"
 }
