@@ -1,0 +1,32 @@
+{
+  "issue": 7,
+  "publicado": [],
+  "precisaDeTi": [
+    {
+      "titulo": "IRS, Continente: ajuste excecional de novembro de 2026 (Circular n.º 5/2026, Despacho n.º 12523-A/2026)",
+      "texto": "A Circular n.º 5/2026 da AT divulga o Despacho n.º 12523-A/2026 (2.ª série, suplemento n.º 199, de 14/10/2026). Para rendimentos do trabalho dependente e pensões pagos ou colocados à disposição entre 1 e 30 de novembro de 2026, no Continente, a retenção é 50 % do montante apurado pelas tabelas do Despacho n.º 233-A/2026. Não se aplica a titulares cujo rendimento mensal exceda o limite superior do penúltimo escalão. A partir de 1 de dezembro de 2026 volta a aplicar-se a tabela sem ajuste. Não publiquei nada: o ajuste é uma regra de cálculo temporária e não um conjunto de valores novos para tax/irs-continente. Não tenho o Despacho n.º 12523-A/2026 (só a circular). Decisão pedida: o catálogo deve representar este ajuste de novembro (por exemplo, uma nota ou uma regra de cálculo) ou não o representar? Se for para representar, é preciso acrescentar a estrutura que o permita.",
+      "fontes": [
+        "Circular n.º 5/2026 da AT — https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Circular_5_2026.pdf",
+        "Despacho n.º 12523-A/2026 (citado na circular, Diário da República, 2.ª série, suplemento n.º 199, de 14/10/2026)"
+      ]
+    },
+    {
+      "titulo": "IRS, Região Autónoma dos Açores: ajuste excecional de novembro de 2026 (Circular n.º 6/2026, Despacho n.º 12610-A/2026)",
+      "texto": "A Circular n.º 6/2026 da AT divulga o Despacho n.º 12610-A/2026 (2.ª série, suplemento n.º 200, de 15/10/2026). Para rendimentos do trabalho dependente e pensões pagos ou colocados à disposição entre 1 e 30 de novembro de 2026, na Região Autónoma dos Açores, a retenção é 50 % do montante apurado pelas tabelas do Despacho n.º 1179/2026, de 3 de fevereiro. Não se aplica a titulares cujo rendimento mensal exceda o limite superior do penúltimo escalão. A partir de 1 de dezembro de 2026 volta a aplicar-se a tabela sem ajuste. Não publiquei nada, pelas mesmas razões do Continente. A circular cita o Despacho n.º 1179/2026 como base das tabelas de Açores: não conferi essa referência com a fonte de tax/irs-acores.2026-01-01. Não tenho o Despacho n.º 12610-A/2026 (só a circular). Decisão pedida: o mesmo que no Continente.",
+      "fontes": [
+        "Circular n.º 6/2026 da AT — https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Circular_6_2026.pdf",
+        "Despacho n.º 12610-A/2026 (citado na circular, Diário da República, 2.ª série, suplemento n.º 200, de 15/10/2026)"
+      ]
+    }
+  ],
+  "semAlteracoes": [
+    {
+      "pista": "Anúncio de procedimento n.º 26211/2026 (DR, 2.ª série, n.º 210, de 29/10/2026): renovação de licença de software do IPDA",
+      "motivo": "contratação pública, sem relação com valores ou regras do catálogo"
+    },
+    {
+      "pista": "Édito n.º 462/2026 (DR, 2.ª série, n.º 211, de 30/10/2026): requerimentos de pagamento de créditos por falecimento de beneficiários do IPDA",
+      "motivo": "aviso administrativo sobre requerimentos de pagamento, sem tabela, valor nem regra do catálogo"
+    }
+  ]
+}
