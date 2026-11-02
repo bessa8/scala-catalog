@@ -32,47 +32,6 @@
       ]
     }
   },
-  "pistas": [
-    {
-      "fonte": "dr2",
-      "link": "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/26211-2026-1186939174",
-      "resumo": "Instituto de Proteção e Assistência na Doença, IP Renovação de Licença de Software para suporte ao SAS Detection & Investigation for Health Care ¿ Ambiente de Produção e Ambiente de Testes",
-      "temas": [
-        "contribuicoes"
-      ],
-      "titulo": "Anúncio de procedimento n.º 26211/2026 - Diário da República n.º 210/2026, Série II de 2026-10-29",
-      "vistaEm": "2026-10-30"
-    },
-    {
-      "fonte": "dr2",
-      "link": "https://diariodarepublica.pt/dr/detalhe/edito/462-2026-1188733027",
-      "resumo": "Finanças - Instituto de Proteção e Assistência na Doença, IP Anúncio de requerimentos de pagamentos de créditos por falecimento de beneficiários.",
-      "temas": [
-        "contribuicoes"
-      ],
-      "titulo": "Édito n.º 462/2026 - Diário da República n.º 211/2026, Série II de 2026-10-30",
-      "vistaEm": "2026-10-30"
-    },
-    {
-      "fonte": "at-circulares",
-      "link": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Circular_5_2026.pdf",
-      "resumo": "",
-      "temas": [
-        "irs"
-      ],
-      "titulo": "Circular n.º 5/2026 da AT",
-      "vistaEm": "2026-10-31"
-    },
-    {
-      "fonte": "at-circulares",
-      "link": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Circular_6_2026.pdf",
-      "resumo": "",
-      "temas": [
-        "irs"
-      ],
-      "titulo": "Circular n.º 6/2026 da AT",
-      "vistaEm": "2026-10-31"
-    }
-  ],
+  "pistas": [],
   "ultimaVerificacao": "2026-11-02T13:59+00:00"
 }
