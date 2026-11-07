@@ -13,6 +13,7 @@
       "vistos": {
         "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/25613-2026-1182897147": "2026-10-20",
         "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/26211-2026-1186939174": "2026-10-30",
+        "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/26792-2026-1192129317": "2026-11-07",
         "https://diariodarepublica.pt/dr/detalhe/aviso/24812-2026-1178585165": "2026-10-11",
         "https://diariodarepublica.pt/dr/detalhe/despacho-extrato/13526-2026-1191166644": "2026-11-05",
         "https://diariodarepublica.pt/dr/detalhe/despacho/12523-a-2026-1180337885": "2026-10-14",
@@ -43,7 +44,17 @@
       ],
       "titulo": "Despacho (extrato) n.º 13526/2026 - Diário da República n.º 215/2026, Série II de 2026-11-05",
       "vistaEm": "2026-11-05"
+    },
+    {
+      "fonte": "dr2",
+      "link": "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/26792-2026-1192129317",
+      "resumo": "Instituto de Proteção e Assistência na Doença, IP Serviços de recolha de recibos de regime livre e respetiva codificação, pacote mínimo 28.336 horas - Ano 2027",
+      "temas": [
+        "contribuicoes"
+      ],
+      "titulo": "Anúncio de procedimento n.º 26792/2026 - Diário da República n.º 216/2026, Série II de 2026-11-06",
+      "vistaEm": "2026-11-07"
     }
   ],
-  "ultimaVerificacao": "2026-11-06T13:21+00:00"
+  "ultimaVerificacao": "2026-11-07T00:42+00:00"
 }
