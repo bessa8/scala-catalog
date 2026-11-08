@@ -1,9 +1,5 @@
 {
-  "falhas": {
-    "srap": [
-      "2026-11-07"
-    ]
-  },
+  "falhas": {},
   "fontes": {
     "at-circulares": {
       "ultimas": {
@@ -60,5 +56,5 @@
       "vistaEm": "2026-11-07"
     }
   ],
-  "ultimaVerificacao": "2026-11-07T11:59+00:00"
+  "ultimaVerificacao": "2026-11-08T00:15+00:00"
 }
