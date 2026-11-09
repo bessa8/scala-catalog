@@ -34,27 +34,6 @@
       ]
     }
   },
-  "pistas": [
-    {
-      "fonte": "dr2",
-      "link": "https://diariodarepublica.pt/dr/detalhe/despacho-extrato/13526-2026-1191166644",
-      "resumo": "Administração Interna - Polícia de Segurança Pública - Direção Nacional Renovação da comissão de serviço para o cargo de chefe da Divisão de Saúde do Departamento de Saúde e Assistência na Doença da Direção Nacional da Polícia de Segurança Pública da médica M/3111, Filipa Ribeiro Crespo Lucas.",
-      "temas": [
-        "contribuicoes"
-      ],
-      "titulo": "Despacho (extrato) n.º 13526/2026 - Diário da República n.º 215/2026, Série II de 2026-11-05",
-      "vistaEm": "2026-11-05"
-    },
-    {
-      "fonte": "dr2",
-      "link": "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/26792-2026-1192129317",
-      "resumo": "Instituto de Proteção e Assistência na Doença, IP Serviços de recolha de recibos de regime livre e respetiva codificação, pacote mínimo 28.336 horas - Ano 2027",
-      "temas": [
-        "contribuicoes"
-      ],
-      "titulo": "Anúncio de procedimento n.º 26792/2026 - Diário da República n.º 216/2026, Série II de 2026-11-06",
-      "vistaEm": "2026-11-07"
-    }
-  ],
+  "pistas": [],
   "ultimaVerificacao": "2026-11-09T14:31+00:00"
 }
