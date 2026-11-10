@@ -14,6 +14,7 @@
         "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/25613-2026-1182897147": "2026-10-20",
         "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/26211-2026-1186939174": "2026-10-30",
         "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/26792-2026-1192129317": "2026-11-07",
+        "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/26868-2026-1192709931": "2026-11-10",
         "https://diariodarepublica.pt/dr/detalhe/aviso/24812-2026-1178585165": "2026-10-11",
         "https://diariodarepublica.pt/dr/detalhe/despacho-extrato/13526-2026-1191166644": "2026-11-05",
         "https://diariodarepublica.pt/dr/detalhe/despacho/12523-a-2026-1180337885": "2026-10-14",
@@ -34,6 +35,17 @@
       ]
     }
   },
-  "pistas": [],
-  "ultimaVerificacao": "2026-11-09T14:31+00:00"
+  "pistas": [
+    {
+      "fonte": "dr2",
+      "link": "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/26868-2026-1192709931",
+      "resumo": "Instituto de Proteção e Assistência na Doença, IP Licenciamento de Software Projeto de desmaterialização da faturação convencionada e ADSE Direta.",
+      "temas": [
+        "contribuicoes"
+      ],
+      "titulo": "Anúncio de procedimento n.º 26868/2026 - Diário da República n.º 217/2026, Série II de 2026-11-09",
+      "vistaEm": "2026-11-10"
+    }
+  ],
+  "ultimaVerificacao": "2026-11-10T03:17+00:00"
 }
