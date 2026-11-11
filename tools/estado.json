@@ -17,6 +17,7 @@
         "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/26868-2026-1192709931": "2026-11-10",
         "https://diariodarepublica.pt/dr/detalhe/aviso/24812-2026-1178585165": "2026-10-11",
         "https://diariodarepublica.pt/dr/detalhe/declaracao-retificacao/970-2026-1192911573": "2026-11-10",
+        "https://diariodarepublica.pt/dr/detalhe/deliberacao/1260-2026-1194527333": "2026-11-11",
         "https://diariodarepublica.pt/dr/detalhe/despacho-extrato/13526-2026-1191166644": "2026-11-05",
         "https://diariodarepublica.pt/dr/detalhe/despacho/12523-a-2026-1180337885": "2026-10-14",
         "https://diariodarepublica.pt/dr/detalhe/despacho/12610-a-2026-1180906813": "2026-10-15",
@@ -56,7 +57,17 @@
       ],
       "titulo": "Declaração de Retificação n.º 970/2026/2 - Diário da República n.º 218/2026, Série II de 2026-11-10",
       "vistaEm": "2026-11-10"
+    },
+    {
+      "fonte": "dr2",
+      "link": "https://diariodarepublica.pt/dr/detalhe/deliberacao/1260-2026-1194527333",
+      "resumo": "Unidade Local de Saúde do Alto Minho, EPE Homologação da lista final do procedimento concursal comum para preenchimento de um posto de trabalho correspondente à categoria de assistente graduado sénior de pediatria da carreira especial médica e da carreira médica.",
+      "temas": [
+        "carreiras"
+      ],
+      "titulo": "Deliberação n.º 1260/2026 - Diário da República n.º 219/2026, Série II de 2026-11-11",
+      "vistaEm": "2026-11-11"
     }
   ],
-  "ultimaVerificacao": "2026-11-11T01:06+00:00"
+  "ultimaVerificacao": "2026-11-11T13:04+00:00"
 }
