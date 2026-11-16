@@ -39,57 +39,6 @@
       ]
     }
   },
-  "pistas": [
-    {
-      "fonte": "dr2",
-      "link": "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/26868-2026-1192709931",
-      "resumo": "Instituto de Proteção e Assistência na Doença, IP Licenciamento de Software Projeto de desmaterialização da faturação convencionada e ADSE Direta.",
-      "temas": [
-        "contribuicoes"
-      ],
-      "titulo": "Anúncio de procedimento n.º 26868/2026 - Diário da República n.º 217/2026, Série II de 2026-11-09",
-      "vistaEm": "2026-11-10"
-    },
-    {
-      "fonte": "dr2",
-      "link": "https://diariodarepublica.pt/dr/detalhe/declaracao-retificacao/970-2026-1192911573",
-      "resumo": "Unidade Local de Saúde do Estuário do Tejo, EPE Retifica-se o Aviso n.º 26974/2026/2, referente ao procedimento concursal comum para ocupação de um posto de trabalho na categoria de assistente graduado sénior, da carreira especial médica ou carreira médica, área hospitalar, especialidade de nefrologia.",
-      "temas": [
-        "carreiras"
-      ],
-      "titulo": "Declaração de Retificação n.º 970/2026/2 - Diário da República n.º 218/2026, Série II de 2026-11-10",
-      "vistaEm": "2026-11-10"
-    },
-    {
-      "fonte": "dr2",
-      "link": "https://diariodarepublica.pt/dr/detalhe/deliberacao/1260-2026-1194527333",
-      "resumo": "Unidade Local de Saúde do Alto Minho, EPE Homologação da lista final do procedimento concursal comum para preenchimento de um posto de trabalho correspondente à categoria de assistente graduado sénior de pediatria da carreira especial médica e da carreira médica.",
-      "temas": [
-        "carreiras"
-      ],
-      "titulo": "Deliberação n.º 1260/2026 - Diário da República n.º 219/2026, Série II de 2026-11-11",
-      "vistaEm": "2026-11-11"
-    },
-    {
-      "fonte": "dr2",
-      "link": "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/27143-2026-1194586719",
-      "resumo": "Instituto de Proteção e Assistência na Doença, IP Serviços de Apoio ao Atendimento ao Público da ADSE, I.P. - 2027",
-      "temas": [
-        "contribuicoes"
-      ],
-      "titulo": "Anúncio de procedimento n.º 27143/2026 - Diário da República n.º 220/2026, Série II de 2026-11-12",
-      "vistaEm": "2026-11-13"
-    },
-    {
-      "fonte": "dr2",
-      "link": "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/27316-2026-1195542909",
-      "resumo": "Instituto de Proteção e Assistência na Doença, IP Licenciamento de Software Projeto de desmaterialização da faturação convencionada e ADSE Direta.",
-      "temas": [
-        "contribuicoes"
-      ],
-      "titulo": "Anúncio de procedimento n.º 27316/2026 - Diário da República n.º 222/2026, Série II de 2026-11-16",
-      "vistaEm": "2026-11-16"
-    }
-  ],
+  "pistas": [],
   "ultimaVerificacao": "2026-11-16T14:08+00:00"
 }
