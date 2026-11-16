@@ -16,6 +16,7 @@
         "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/26792-2026-1192129317": "2026-11-07",
         "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/26868-2026-1192709931": "2026-11-10",
         "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/27143-2026-1194586719": "2026-11-13",
+        "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/27316-2026-1195542909": "2026-11-16",
         "https://diariodarepublica.pt/dr/detalhe/aviso/24812-2026-1178585165": "2026-10-11",
         "https://diariodarepublica.pt/dr/detalhe/declaracao-retificacao/970-2026-1192911573": "2026-11-10",
         "https://diariodarepublica.pt/dr/detalhe/deliberacao/1260-2026-1194527333": "2026-11-11",
@@ -78,7 +79,17 @@
       ],
       "titulo": "Anúncio de procedimento n.º 27143/2026 - Diário da República n.º 220/2026, Série II de 2026-11-12",
       "vistaEm": "2026-11-13"
+    },
+    {
+      "fonte": "dr2",
+      "link": "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/27316-2026-1195542909",
+      "resumo": "Instituto de Proteção e Assistência na Doença, IP Licenciamento de Software Projeto de desmaterialização da faturação convencionada e ADSE Direta.",
+      "temas": [
+        "contribuicoes"
+      ],
+      "titulo": "Anúncio de procedimento n.º 27316/2026 - Diário da República n.º 222/2026, Série II de 2026-11-16",
+      "vistaEm": "2026-11-16"
     }
   ],
-  "ultimaVerificacao": "2026-11-16T00:51+00:00"
+  "ultimaVerificacao": "2026-11-16T14:08+00:00"
 }
