@@ -17,6 +17,7 @@
         "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/26868-2026-1192709931": "2026-11-10",
         "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/27143-2026-1194586719": "2026-11-13",
         "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/27316-2026-1195542909": "2026-11-16",
+        "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/27571-2026-1196476882": "2026-11-19",
         "https://diariodarepublica.pt/dr/detalhe/aviso/24812-2026-1178585165": "2026-10-11",
         "https://diariodarepublica.pt/dr/detalhe/declaracao-retificacao/970-2026-1192911573": "2026-11-10",
         "https://diariodarepublica.pt/dr/detalhe/deliberacao/1260-2026-1194527333": "2026-11-11",
@@ -39,6 +40,17 @@
       ]
     }
   },
-  "pistas": [],
-  "ultimaVerificacao": "2026-11-18T14:41+00:00"
+  "pistas": [
+    {
+      "fonte": "dr2",
+      "link": "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/27571-2026-1196476882",
+      "resumo": "Instituto Português de Oncologia do Porto Francisco Gentil, EPE CP 3047/26 - Licenciamento manage Engine PAM360, ADSelfService, AdAudit Plaus e Addon",
+      "temas": [
+        "contribuicoes"
+      ],
+      "titulo": "Anúncio de procedimento n.º 27571/2026 - Diário da República n.º 224/2026, Série II de 2026-11-18",
+      "vistaEm": "2026-11-19"
+    }
+  ],
+  "ultimaVerificacao": "2026-11-19T02:22+00:00"
 }
