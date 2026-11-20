@@ -20,6 +20,9 @@
         "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/27571-2026-1196476882": "2026-11-19",
         "https://diariodarepublica.pt/dr/detalhe/aviso/24812-2026-1178585165": "2026-10-11",
         "https://diariodarepublica.pt/dr/detalhe/declaracao-retificacao/970-2026-1192911573": "2026-11-10",
+        "https://diariodarepublica.pt/dr/detalhe/deliberacao-extrato/1307-2026-1196862945": "2026-11-20",
+        "https://diariodarepublica.pt/dr/detalhe/deliberacao-extrato/1308-2026-1196862946": "2026-11-20",
+        "https://diariodarepublica.pt/dr/detalhe/deliberacao-extrato/1310-2026-1196862948": "2026-11-20",
         "https://diariodarepublica.pt/dr/detalhe/deliberacao/1260-2026-1194527333": "2026-11-11",
         "https://diariodarepublica.pt/dr/detalhe/despacho-extrato/13526-2026-1191166644": "2026-11-05",
         "https://diariodarepublica.pt/dr/detalhe/despacho/12523-a-2026-1180337885": "2026-10-14",
@@ -50,7 +53,37 @@
       ],
       "titulo": "Anúncio de procedimento n.º 27571/2026 - Diário da República n.º 224/2026, Série II de 2026-11-18",
       "vistaEm": "2026-11-19"
+    },
+    {
+      "fonte": "dr2",
+      "link": "https://diariodarepublica.pt/dr/detalhe/deliberacao-extrato/1307-2026-1196862945",
+      "resumo": "Unidade Local de Saúde de São João, EPE Promoção à categoria de assistente graduado sénior de psiquiatria, área hospitalar, da carreira especial médica.",
+      "temas": [
+        "carreiras"
+      ],
+      "titulo": "Deliberação (extrato) n.º 1307/2026 - Diário da República n.º 226/2026, Série II de 2026-11-20",
+      "vistaEm": "2026-11-20"
+    },
+    {
+      "fonte": "dr2",
+      "link": "https://diariodarepublica.pt/dr/detalhe/deliberacao-extrato/1308-2026-1196862946",
+      "resumo": "Unidade Local de Saúde de São João, EPE Promoção à categoria de assistente graduado sénior de radiologia, área hospitalar, da carreira especial médica.",
+      "temas": [
+        "carreiras"
+      ],
+      "titulo": "Deliberação (extrato) n.º 1308/2026 - Diário da República n.º 226/2026, Série II de 2026-11-20",
+      "vistaEm": "2026-11-20"
+    },
+    {
+      "fonte": "dr2",
+      "link": "https://diariodarepublica.pt/dr/detalhe/deliberacao-extrato/1310-2026-1196862948",
+      "resumo": "Unidade Local de Saúde de São João, EPE Promoção à categoria de assistente graduado sénior de ortopedia, área hospitalar, da carreira especial médica.",
+      "temas": [
+        "carreiras"
+      ],
+      "titulo": "Deliberação (extrato) n.º 1310/2026 - Diário da República n.º 226/2026, Série II de 2026-11-20",
+      "vistaEm": "2026-11-20"
     }
   ],
-  "ultimaVerificacao": "2026-11-20T02:05+00:00"
+  "ultimaVerificacao": "2026-11-20T14:30+00:00"
 }
