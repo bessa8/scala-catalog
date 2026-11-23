@@ -43,47 +43,6 @@
       ]
     }
   },
-  "pistas": [
-    {
-      "fonte": "dr2",
-      "link": "https://diariodarepublica.pt/dr/detalhe/anuncio-procedimento/27571-2026-1196476882",
-      "resumo": "Instituto Português de Oncologia do Porto Francisco Gentil, EPE CP 3047/26 - Licenciamento manage Engine PAM360, ADSelfService, AdAudit Plaus e Addon",
-      "temas": [
-        "contribuicoes"
-      ],
-      "titulo": "Anúncio de procedimento n.º 27571/2026 - Diário da República n.º 224/2026, Série II de 2026-11-18",
-      "vistaEm": "2026-11-19"
-    },
-    {
-      "fonte": "dr2",
-      "link": "https://diariodarepublica.pt/dr/detalhe/deliberacao-extrato/1307-2026-1196862945",
-      "resumo": "Unidade Local de Saúde de São João, EPE Promoção à categoria de assistente graduado sénior de psiquiatria, área hospitalar, da carreira especial médica.",
-      "temas": [
-        "carreiras"
-      ],
-      "titulo": "Deliberação (extrato) n.º 1307/2026 - Diário da República n.º 226/2026, Série II de 2026-11-20",
-      "vistaEm": "2026-11-20"
-    },
-    {
-      "fonte": "dr2",
-      "link": "https://diariodarepublica.pt/dr/detalhe/deliberacao-extrato/1308-2026-1196862946",
-      "resumo": "Unidade Local de Saúde de São João, EPE Promoção à categoria de assistente graduado sénior de radiologia, área hospitalar, da carreira especial médica.",
-      "temas": [
-        "carreiras"
-      ],
-      "titulo": "Deliberação (extrato) n.º 1308/2026 - Diário da República n.º 226/2026, Série II de 2026-11-20",
-      "vistaEm": "2026-11-20"
-    },
-    {
-      "fonte": "dr2",
-      "link": "https://diariodarepublica.pt/dr/detalhe/deliberacao-extrato/1310-2026-1196862948",
-      "resumo": "Unidade Local de Saúde de São João, EPE Promoção à categoria de assistente graduado sénior de ortopedia, área hospitalar, da carreira especial médica.",
-      "temas": [
-        "carreiras"
-      ],
-      "titulo": "Deliberação (extrato) n.º 1310/2026 - Diário da República n.º 226/2026, Série II de 2026-11-20",
-      "vistaEm": "2026-11-20"
-    }
-  ],
+  "pistas": [],
   "ultimaVerificacao": "2026-11-23T16:41+00:00"
 }
