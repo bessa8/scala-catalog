@@ -24,6 +24,7 @@
         "https://diariodarepublica.pt/dr/detalhe/deliberacao-extrato/1308-2026-1196862946": "2026-11-20",
         "https://diariodarepublica.pt/dr/detalhe/deliberacao-extrato/1310-2026-1196862948": "2026-11-20",
         "https://diariodarepublica.pt/dr/detalhe/deliberacao/1260-2026-1194527333": "2026-11-11",
+        "https://diariodarepublica.pt/dr/detalhe/deliberacao/1326-2026-1198074218": "2026-11-25",
         "https://diariodarepublica.pt/dr/detalhe/despacho-extrato/13526-2026-1191166644": "2026-11-05",
         "https://diariodarepublica.pt/dr/detalhe/despacho/12523-a-2026-1180337885": "2026-10-14",
         "https://diariodarepublica.pt/dr/detalhe/despacho/12610-a-2026-1180906813": "2026-10-15",
@@ -43,6 +44,17 @@
       ]
     }
   },
-  "pistas": [],
-  "ultimaVerificacao": "2026-11-25T03:59+00:00"
+  "pistas": [
+    {
+      "fonte": "dr2",
+      "link": "https://diariodarepublica.pt/dr/detalhe/deliberacao/1326-2026-1198074218",
+      "resumo": "Unidade Local de Saúde do Oeste, EPE Celebração de contrato de trabalho em funções públicas por tempo indeterminado na categoria de farmacêutico assessor sénior, da carreira especial farmacêutica.",
+      "temas": [
+        "carreiras"
+      ],
+      "titulo": "Deliberação n.º 1326/2026 - Diário da República n.º 229/2026, Série II de 2026-11-25",
+      "vistaEm": "2026-11-25"
+    }
+  ],
+  "ultimaVerificacao": "2026-11-25T16:19+00:00"
 }
